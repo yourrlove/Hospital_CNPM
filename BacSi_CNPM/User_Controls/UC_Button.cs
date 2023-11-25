@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 
 
-namespace BacSi_CNPM.User_Controls
+namespace Hospital.User_Controls
 {
     public partial class UC_Button : Button
     {

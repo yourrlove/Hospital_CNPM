@@ -1,4 +1,4 @@
-﻿namespace BacSi_CNPM.User_Controls
+﻿namespace Hospital.User_Controls
 {
     partial class MenuColorTable
     {

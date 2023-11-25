@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hospital.Views.Doctor;
+using Hospital.Views.Receptionist;
 
-namespace BacSi_CNPM
+namespace Hospital
 {
     internal static class Program
     {
@@ -16,7 +18,7 @@ namespace BacSi_CNPM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(new ReceptionForm());
             //Application.Run(new Form2());
         }
     }

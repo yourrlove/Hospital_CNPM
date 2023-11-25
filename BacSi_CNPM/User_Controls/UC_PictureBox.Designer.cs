@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace BacSi_CNPM.User_Controls
+namespace Hospital.User_Controls
 {
     partial class UC_PictureBox
     {

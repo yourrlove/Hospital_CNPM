@@ -1,4 +1,4 @@
-﻿namespace BacSi_CNPM
+﻿namespace Hospital.Views.Doctor
 {
     partial class Medical
     {

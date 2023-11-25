@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BacSi_CNPM.User_Controls
+namespace Hospital.User_Controls
 {
     [DefaultEvent("_TextChanged")]
     public partial class UC_TextBox : UserControl

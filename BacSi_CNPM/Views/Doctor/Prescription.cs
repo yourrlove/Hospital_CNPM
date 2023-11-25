@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BacSi_CNPM
+namespace Hospital.Views.Doctor
 {
     public partial class Prescription : Form
     {
@@ -18,6 +18,11 @@ namespace BacSi_CNPM
         }
 
         private void Prescription_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

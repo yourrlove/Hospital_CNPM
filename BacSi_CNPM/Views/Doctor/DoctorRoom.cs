@@ -1,4 +1,4 @@
-﻿using BacSi_CNPM.User_Controls;
+﻿using Hospital.User_Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,17 +13,17 @@ using static System.Windows.Forms.AxHost;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
-namespace BacSi_CNPM
+namespace Hospital.Views.Doctor
 {
 
-    public partial class Form2 : Form
+    public partial class DoctorForm : Form
     {
 
-        public Form2()
+        public DoctorForm()
         {
             InitializeComponent();
             CollapseMenu();
-            customDesign();
+            customDesign(); 
         }
 
         private void customDesign()
@@ -34,13 +34,16 @@ namespace BacSi_CNPM
 
         private void hideSubMenu()
         {
-            if(panelSubMenu.Visible) {
+            if (panelSubMenu.Visible)
+            {
                 panelSubMenu.Visible = false;
             }
         }
 
-        private void showSubMenu(Panel subMenu) {
-            if(subMenu.Visible == false) {
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
                 hideSubMenu();
                 subMenu.Visible = true;
             }
@@ -48,7 +51,7 @@ namespace BacSi_CNPM
             {
                 subMenu.Visible = false;
             }
-        
+
         }
 
 
@@ -108,7 +111,7 @@ namespace BacSi_CNPM
 
         private void container(object _form)
         {
-            if(guna2Panel_container.Controls.Count > 0) { guna2Panel_container.Controls.Clear(); }
+            if (guna2Panel_container.Controls.Count > 0) { guna2Panel_container.Controls.Clear(); }
             Form fm = _form as Form;
             fm.TopLevel = false;
             fm.FormBorderStyle = FormBorderStyle.None;
@@ -158,20 +161,20 @@ namespace BacSi_CNPM
         }
         private void CollapseMenu()
         {
-            if(this.sidebar.Width > 200)
+            if (this.sidebar.Width > 200)
             {
                 sidebar.Width = 75;
                 logoPictueBox.Visible = false;
                 menuBtn.Visible = true;
                 menuBtn.BringToFront();
                 menuBtn.Dock = DockStyle.Top;
-                foreach(Button menuButton in sidebar.Controls.OfType<Button>())
+                foreach (Button menuButton in sidebar.Controls.OfType<Button>())
                 {
                     menuButton.Text = "";
                     menuButton.ImageAlign = ContentAlignment.MiddleCenter;
                     menuButton.Padding = new Padding(0);
                 }
-                
+
             }
             else
             { //Expand menu
@@ -276,7 +279,7 @@ namespace BacSi_CNPM
 
         private void uC_Button1_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BacSi_CNPM
+namespace Hospital.Views.Doctor
 {
     public partial class Dashboard : Form
     {

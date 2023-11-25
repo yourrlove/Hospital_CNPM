@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BacSi_CNPM.User_Controls
+namespace Hospital.User_Controls
 {
     public partial class UC_DateTimePicker : DateTimePicker
     {
@@ -19,7 +19,7 @@ namespace BacSi_CNPM.User_Controls
         private Color borderColor = Color.PaleVioletRed;
         private int borderSize = 0;
         private bool droppedDown = false;
-        private Image calendarIcon = Properties.Resources.calendarwhite;
+        private Image calendarIcon = Hospital.Properties.Resources.calendarwhite;
         private RectangleF iconButtonArea;
         private const int calendarIconWidth = 34;
         private const int arrowIconWidth = 17;

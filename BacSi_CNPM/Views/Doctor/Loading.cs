@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BacSi_CNPM
+namespace Hospital.Views.Doctor
 {
     public partial class Loading : Form
     {
@@ -37,7 +37,7 @@ namespace BacSi_CNPM
             if (guna2CircleProgressBar1.Value == 100)
             {
                 timer1.Stop();
-                Form2 doctor_form = new Form2();
+                DoctorForm doctor_form = new DoctorForm();
                 doctor_form.Show();
                 this.Hide();
 
