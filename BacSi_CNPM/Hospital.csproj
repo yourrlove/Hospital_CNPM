@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="User_Controls\DropDownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="User_Controls\UC_Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="User_Controls\UC_ComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User_Controls\UC_DateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="User_Controls\UC_PictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="User_Controls\UC_TextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="User_Controls\UC_ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.5" />
+    <PackageReference Include="Microsoft.AspNetCore.SystemWebAdapters" Version="1.3.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessTier\DataAccessTier.csproj" />
+    <ProjectReference Include="..\DTO\DTO.csproj" />
+  </ItemGroup>
+</Project>
