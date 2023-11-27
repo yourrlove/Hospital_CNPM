@@ -1,0 +1,16 @@
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DTO.dll
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.sourcelink.json
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
