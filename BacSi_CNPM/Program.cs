@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Views.Doctor;
 using Hospital.Views.Receptionist;
+using Hospital.Views.Login;
 
 namespace Hospital
 {
@@ -18,7 +19,7 @@ namespace Hospital
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReceptionForm());
+            Application.Run(new Login());
             //Application.Run(new Form2());
         }
     }
