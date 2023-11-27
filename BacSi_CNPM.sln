@@ -4,15 +4,13 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hospital", "BacSi_CNPM\Hospital.csproj", "{FAEC4F65-659A-4994-91BC-12E9E5E41DDA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessTier", "DataAccessTier\DataAccessTier.csproj", "{B60A7A30-B1B4-4228-A62A-95788351899A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessTier", "DataAccessTier\DataAccessTier.csproj", "{B60A7A30-B1B4-4228-A62A-95788351899A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{93CB6AC9-3D70-4616-92AC-5C08F4B2AC5B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO", "DTO\DTO.csproj", "{8BB5B892-1C88-4312-A483-5D92AA853B90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{8BB5B892-1C88-4312-A483-5D92AA853B90}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{0DE3AE73-F76B-407B-9D72-23949FEB2E94}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseMigration", "DatabaseMigration\DatabaseMigration.csproj", "{BAFC171E-CDA4-42EC-98D6-76796DD44699}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +30,6 @@ Global
 		{8BB5B892-1C88-4312-A483-5D92AA853B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BB5B892-1C88-4312-A483-5D92AA853B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BB5B892-1C88-4312-A483-5D92AA853B90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BAFC171E-CDA4-42EC-98D6-76796DD44699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BAFC171E-CDA4-42EC-98D6-76796DD44699}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BAFC171E-CDA4-42EC-98D6-76796DD44699}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BAFC171E-CDA4-42EC-98D6-76796DD44699}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
