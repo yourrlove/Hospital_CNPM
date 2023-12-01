@@ -24,7 +24,7 @@ namespace Hospital.Views.Doctor
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -53,6 +53,11 @@ namespace Hospital.Views.Doctor
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
