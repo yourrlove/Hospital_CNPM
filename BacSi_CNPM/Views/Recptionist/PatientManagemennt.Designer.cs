@@ -47,6 +47,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             uC_PictureBox1 = new User_Controls.UC_PictureBox();
             uC_Button1 = new User_Controls.UC_Button();
             uC_Button2 = new User_Controls.UC_Button();
@@ -76,6 +78,7 @@
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label13 = new System.Windows.Forms.Label();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).BeginInit();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -479,11 +482,28 @@
             guna2ControlBox1.Size = new System.Drawing.Size(56, 36);
             guna2ControlBox1.TabIndex = 0;
             // 
+            // guna2DateTimePicker1
+            // 
+            guna2DateTimePicker1.Checked = true;
+            guna2DateTimePicker1.CustomizableEdges = customizableEdges19;
+            guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
+            guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            guna2DateTimePicker1.Location = new System.Drawing.Point(443, 858);
+            guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2DateTimePicker1.Size = new System.Drawing.Size(231, 45);
+            guna2DateTimePicker1.TabIndex = 35;
+            guna2DateTimePicker1.Value = new System.DateTime(2023, 12, 2, 10, 57, 0, 698);
+            // 
             // PatientManagemennt
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(714, 1049);
+            Controls.Add(guna2DateTimePicker1);
             Controls.Add(guna2Panel1);
             Controls.Add(guna2TextBox3);
             Controls.Add(label9);
@@ -553,5 +573,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
     }
 }

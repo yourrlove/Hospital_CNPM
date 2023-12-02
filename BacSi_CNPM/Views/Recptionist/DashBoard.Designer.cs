@@ -30,8 +30,6 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             uC_Button2 = new User_Controls.UC_Button();
@@ -50,7 +48,6 @@
             tabPage2_DoctorMajor2 = new System.Windows.Forms.TabPage();
             tabPage1_DoctorMajor3 = new System.Windows.Forms.TabPage();
             tabPage2_DoctorMajor4 = new System.Windows.Forms.TabPage();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             dashboardpanel.SuspendLayout();
             guna2Panel3.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -122,17 +119,16 @@
             // guna2Panel3
             // 
             guna2Panel3.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            guna2Panel3.Controls.Add(guna2Panel1);
             guna2Panel3.Controls.Add(label8);
             guna2Panel3.Controls.Add(label7);
             guna2Panel3.Controls.Add(label6);
-            guna2Panel3.CustomizableEdges = customizableEdges5;
+            guna2Panel3.CustomizableEdges = customizableEdges3;
             guna2Panel3.FillColor = System.Drawing.Color.FromArgb(30, 48, 88);
             guna2Panel3.Location = new System.Drawing.Point(13, 14);
             guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel3.Size = new System.Drawing.Size(746, 371);
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel3.Size = new System.Drawing.Size(746, 148);
             guna2Panel3.TabIndex = 122;
             // 
             // label8
@@ -262,7 +258,7 @@
             tabPage2_DoctorMajor2.Location = new System.Drawing.Point(4, 54);
             tabPage2_DoctorMajor2.Name = "tabPage2_DoctorMajor2";
             tabPage2_DoctorMajor2.Padding = new System.Windows.Forms.Padding(3);
-            tabPage2_DoctorMajor2.Size = new System.Drawing.Size(707, 412);
+            tabPage2_DoctorMajor2.Size = new System.Drawing.Size(738, 412);
             tabPage2_DoctorMajor2.TabIndex = 1;
             tabPage2_DoctorMajor2.Text = "Dotor Major 2";
             tabPage2_DoctorMajor2.UseVisualStyleBackColor = true;
@@ -272,7 +268,7 @@
             tabPage1_DoctorMajor3.Location = new System.Drawing.Point(4, 54);
             tabPage1_DoctorMajor3.Name = "tabPage1_DoctorMajor3";
             tabPage1_DoctorMajor3.Padding = new System.Windows.Forms.Padding(3);
-            tabPage1_DoctorMajor3.Size = new System.Drawing.Size(707, 412);
+            tabPage1_DoctorMajor3.Size = new System.Drawing.Size(738, 412);
             tabPage1_DoctorMajor3.TabIndex = 2;
             tabPage1_DoctorMajor3.Text = "Doctor Major 3";
             tabPage1_DoctorMajor3.UseVisualStyleBackColor = true;
@@ -282,19 +278,10 @@
             tabPage2_DoctorMajor4.Location = new System.Drawing.Point(4, 54);
             tabPage2_DoctorMajor4.Name = "tabPage2_DoctorMajor4";
             tabPage2_DoctorMajor4.Padding = new System.Windows.Forms.Padding(3);
-            tabPage2_DoctorMajor4.Size = new System.Drawing.Size(707, 412);
+            tabPage2_DoctorMajor4.Size = new System.Drawing.Size(738, 412);
             tabPage2_DoctorMajor4.TabIndex = 3;
             tabPage2_DoctorMajor4.Text = "Doctor Major 4";
             tabPage2_DoctorMajor4.UseVisualStyleBackColor = true;
-            // 
-            // guna2Panel1
-            // 
-            guna2Panel1.CustomizableEdges = customizableEdges3;
-            guna2Panel1.Location = new System.Drawing.Point(34, 108);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new System.Drawing.Size(675, 240);
-            guna2Panel1.TabIndex = 13;
             // 
             // DashBoard
             // 
@@ -333,6 +320,5 @@
         private User_Controls.UC_Button uC_Button3;
         private System.Windows.Forms.TabPage tabPage1_DoctorMajor3;
         private System.Windows.Forms.TabPage tabPage2_DoctorMajor4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
