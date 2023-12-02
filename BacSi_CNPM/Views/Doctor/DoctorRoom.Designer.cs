@@ -129,7 +129,7 @@
             guna2Button_changeSpecialty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Button_changeSpecialty.Name = "guna2Button_changeSpecialty";
             guna2Button_changeSpecialty.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button_changeSpecialty.Size = new System.Drawing.Size(180, 56);
+            guna2Button_changeSpecialty.Size = new System.Drawing.Size(181, 56);
             guna2Button_changeSpecialty.TabIndex = 3;
             guna2Button_changeSpecialty.Text = "Change Specialty";
             guna2Button_changeSpecialty.Click += guna2Button1_Click;
@@ -147,7 +147,7 @@
             guna2Panel1_container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Panel1_container.Name = "guna2Panel1_container";
             guna2Panel1_container.ShadowDecoration.CustomizableEdges = customizableEdges41;
-            guna2Panel1_container.Size = new System.Drawing.Size(1440, 1102);
+            guna2Panel1_container.Size = new System.Drawing.Size(1440, 1100);
             guna2Panel1_container.TabIndex = 2;
             guna2Panel1_container.Paint += guna2Panel1_container_Paint;
             // 
@@ -163,7 +163,7 @@
             guna2Panel_container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Panel_container.Name = "guna2Panel_container";
             guna2Panel_container.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel_container.Size = new System.Drawing.Size(1152, 965);
+            guna2Panel_container.Size = new System.Drawing.Size(1152, 963);
             guna2Panel_container.TabIndex = 9;
             // 
             // label2
@@ -198,12 +198,12 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges3;
             guna2PictureBox1.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new System.Drawing.Point(22, 74);
+            guna2PictureBox1.Location = new System.Drawing.Point(22, 75);
             guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.Color = System.Drawing.Color.DimGray;
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2PictureBox1.Size = new System.Drawing.Size(1118, 965);
+            guna2PictureBox1.Size = new System.Drawing.Size(1118, 963);
             guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
@@ -232,7 +232,7 @@
             // 
             label1_val.AutoSize = true;
             label1_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1_val.Location = new System.Drawing.Point(105, 42);
+            label1_val.Location = new System.Drawing.Point(105, 43);
             label1_val.Name = "label1_val";
             label1_val.Size = new System.Drawing.Size(0, 25);
             label1_val.TabIndex = 7;
@@ -367,7 +367,7 @@
             btnDashboard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges21;
-            btnDashboard.Size = new System.Drawing.Size(285, 94);
+            btnDashboard.Size = new System.Drawing.Size(285, 93);
             btnDashboard.TabIndex = 0;
             btnDashboard.Tag = "Dashboard";
             btnDashboard.Text = "Dashboard";
@@ -395,11 +395,11 @@
             btnPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnPatient.ImageOffset = new System.Drawing.Point(10, 0);
             btnPatient.ImageSize = new System.Drawing.Size(32, 32);
-            btnPatient.Location = new System.Drawing.Point(3, 386);
+            btnPatient.Location = new System.Drawing.Point(3, 385);
             btnPatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnPatient.Name = "btnPatient";
             btnPatient.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            btnPatient.Size = new System.Drawing.Size(285, 94);
+            btnPatient.Size = new System.Drawing.Size(285, 93);
             btnPatient.TabIndex = 2;
             btnPatient.Tag = "Patient List";
             btnPatient.Text = "Patient List";
@@ -428,11 +428,11 @@
             btnPrescription.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnPrescription.ImageOffset = new System.Drawing.Point(10, 0);
             btnPrescription.ImageSize = new System.Drawing.Size(32, 32);
-            btnPrescription.Location = new System.Drawing.Point(3, 488);
+            btnPrescription.Location = new System.Drawing.Point(3, 486);
             btnPrescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnPrescription.Name = "btnPrescription";
             btnPrescription.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            btnPrescription.Size = new System.Drawing.Size(285, 94);
+            btnPrescription.Size = new System.Drawing.Size(285, 93);
             btnPrescription.TabIndex = 3;
             btnPrescription.Tag = "Prescription";
             btnPrescription.Text = "Prescription";
@@ -461,11 +461,11 @@
             btnMedicalRecord.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnMedicalRecord.ImageOffset = new System.Drawing.Point(10, 0);
             btnMedicalRecord.ImageSize = new System.Drawing.Size(32, 32);
-            btnMedicalRecord.Location = new System.Drawing.Point(3, 590);
+            btnMedicalRecord.Location = new System.Drawing.Point(3, 587);
             btnMedicalRecord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnMedicalRecord.Name = "btnMedicalRecord";
             btnMedicalRecord.ShadowDecoration.CustomizableEdges = customizableEdges27;
-            btnMedicalRecord.Size = new System.Drawing.Size(285, 94);
+            btnMedicalRecord.Size = new System.Drawing.Size(285, 93);
             btnMedicalRecord.TabIndex = 4;
             btnMedicalRecord.Tag = "Medical Record";
             btnMedicalRecord.Text = "Medical Record";
@@ -478,7 +478,7 @@
             panelSubMenu.Controls.Add(guna2Button3);
             panelSubMenu.Controls.Add(guna2Button2);
             panelSubMenu.CustomizableEdges = customizableEdges34;
-            panelSubMenu.Location = new System.Drawing.Point(3, 692);
+            panelSubMenu.Location = new System.Drawing.Point(3, 688);
             panelSubMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panelSubMenu.Name = "panelSubMenu";
             panelSubMenu.ShadowDecoration.CustomizableEdges = customizableEdges35;
@@ -498,7 +498,7 @@
             guna2Button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges29;
-            guna2Button4.Size = new System.Drawing.Size(285, 62);
+            guna2Button4.Size = new System.Drawing.Size(285, 61);
             guna2Button4.TabIndex = 2;
             guna2Button4.Text = "guna2Button4";
             guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -514,11 +514,11 @@
             guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             guna2Button3.ForeColor = System.Drawing.Color.White;
-            guna2Button3.Location = new System.Drawing.Point(0, 62);
+            guna2Button3.Location = new System.Drawing.Point(0, 61);
             guna2Button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges31;
-            guna2Button3.Size = new System.Drawing.Size(285, 62);
+            guna2Button3.Size = new System.Drawing.Size(285, 61);
             guna2Button3.TabIndex = 1;
             guna2Button3.Text = "guna2Button3";
             guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -538,7 +538,7 @@
             guna2Button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges33;
-            guna2Button2.Size = new System.Drawing.Size(285, 62);
+            guna2Button2.Size = new System.Drawing.Size(285, 61);
             guna2Button2.TabIndex = 0;
             guna2Button2.Text = "guna2Button2";
             guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -567,11 +567,11 @@
             btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnSettings.ImageOffset = new System.Drawing.Point(10, 0);
             btnSettings.ImageSize = new System.Drawing.Size(32, 32);
-            btnSettings.Location = new System.Drawing.Point(3, 896);
+            btnSettings.Location = new System.Drawing.Point(3, 892);
             btnSettings.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnSettings.Name = "btnSettings";
             btnSettings.ShadowDecoration.CustomizableEdges = customizableEdges37;
-            btnSettings.Size = new System.Drawing.Size(285, 94);
+            btnSettings.Size = new System.Drawing.Size(285, 93);
             btnSettings.TabIndex = 6;
             btnSettings.Tag = "Settings";
             btnSettings.Text = "Settings";
@@ -598,7 +598,7 @@
             guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             guna2Button1.ImageOffset = new System.Drawing.Point(10, 0);
             guna2Button1.ImageSize = new System.Drawing.Size(32, 32);
-            guna2Button1.Location = new System.Drawing.Point(3, 998);
+            guna2Button1.Location = new System.Drawing.Point(3, 993);
             guna2Button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges39;
@@ -665,7 +665,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1440, 1102);
+            ClientSize = new System.Drawing.Size(1440, 1100);
             Controls.Add(guna2Panel1_container);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

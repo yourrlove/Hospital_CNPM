@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using Hospital.User_Controls;
 using Hospital.Views.Doctor;
+using Hospital.Views.Recptionist;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,41 +19,50 @@ namespace Hospital.Views.Receptionist
         public ReceptionForm()
         {
             InitializeComponent();
-            customDesign();
+
         }
 
         private void ReceptionForm_Load(object sender, EventArgs e)
         {
-            hideSubMenu();
+
 
         }
 
-        private void customDesign()
+        private void showFormMiddle(Form showForm)
         {
-            panelSubMenu.Visible = false;
-
-        }
-
-        private void hideSubMenu()
-        {
-            if (panelSubMenu.Visible)
+            Form fm = new Form();
+            try
             {
-                panelSubMenu.Visible = false;
-            }
-        }
+                using (showForm)
+                {
+                    fm.StartPosition = FormStartPosition.Manual;
+                    fm.FormBorderStyle = FormBorderStyle.None;
+                    fm.Opacity = .70d;
+                    fm.BackColor = Color.Black;
+                    fm.WindowState = FormWindowState.Maximized;
+                    fm.TopMost = true;
+                    fm.Location = this.Location;
+                    fm.ShowInTaskbar = false;
+                    fm.Show();
+                    showForm.StartPosition = FormStartPosition.CenterScreen;
+                    showForm.TopMost = true;
+                    showForm.Owner = fm;
+                    showForm.ShowDialog();
 
-        private void showSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-            {
-                subMenu.Visible = false;
+                    fm.Dispose();
+                }
+
             }
 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                fm.Dispose();
+            }
         }
 
         private void LoadForm(object Form)
@@ -72,6 +82,8 @@ namespace Hospital.Views.Receptionist
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            header_val.Text = "Dashboard Overview";
+            guna2PictureBox2_val.Image = Properties.Resources.icons8_dashboard_48;
             LoadForm(new DashBoard());
         }
 
@@ -84,5 +96,19 @@ namespace Hospital.Views.Receptionist
         {
 
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistPatient_Click(object sender, EventArgs e)
+        {
+            showFormMiddle(new PatientManagemennt());        }
     }
 }

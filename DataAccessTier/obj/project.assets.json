@@ -2636,19 +2636,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LEGION 5\\.nuget\\packages\\": {}
+    "C:\\Users\\Ngo Phat\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project-CNPM\\Hospital_CNPM\\DataAccessTier\\DataAccessTier.csproj",
+      "projectUniqueName": "E:\\RecepTest\\DataAccessTier\\DataAccessTier.csproj",
       "projectName": "DataAccessTier",
-      "projectPath": "D:\\Project-CNPM\\Hospital_CNPM\\DataAccessTier\\DataAccessTier.csproj",
-      "packagesPath": "C:\\Users\\LEGION 5\\.nuget\\packages\\",
-      "outputPath": "D:\\Project-CNPM\\Hospital_CNPM\\DataAccessTier\\obj\\",
+      "projectPath": "E:\\RecepTest\\DataAccessTier\\DataAccessTier.csproj",
+      "packagesPath": "C:\\Users\\Ngo Phat\\.nuget\\packages\\",
+      "outputPath": "E:\\RecepTest\\DataAccessTier\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\LEGION 5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ngo Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2656,14 +2661,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Project-CNPM\\Hospital_CNPM\\DTO\\DTO.csproj": {
-              "projectPath": "D:\\Project-CNPM\\Hospital_CNPM\\DTO\\DTO.csproj"
+            "E:\\RecepTest\\DTO\\DTO.csproj": {
+              "projectPath": "E:\\RecepTest\\DTO\\DTO.csproj"
             }
           }
         }

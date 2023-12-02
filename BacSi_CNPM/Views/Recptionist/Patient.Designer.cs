@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListPatient));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -38,22 +38,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            label1 = new System.Windows.Forms.Label();
             label1_patientnum = new System.Windows.Forms.Label();
             label1_patientcount = new System.Windows.Forms.Label();
             guna2Button4_Edit = new Guna.UI2.WinForms.Guna2Button();
@@ -77,18 +73,16 @@
             guna2Panel1.Controls.Add(guna2Button2);
             guna2Panel1.Controls.Add(guna2Button3);
             guna2Panel1.Controls.Add(guna2Button1);
-            guna2Panel1.Controls.Add(guna2ComboBox1);
-            guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(label1_patientnum);
             guna2Panel1.Controls.Add(label1_patientcount);
             guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
             guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            guna2Panel1.CustomizableEdges = customizableEdges9;
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             guna2Panel1.Location = new System.Drawing.Point(0, 0);
             guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new System.Drawing.Size(1152, 125);
             guna2Panel1.TabIndex = 0;
             // 
@@ -160,38 +154,6 @@
             guna2Button1.TabIndex = 4;
             guna2Button1.Text = "Edit column";
             // 
-            // guna2ComboBox1
-            // 
-            guna2ComboBox1.BackColor = System.Drawing.Color.FromArgb(245, 245, 250);
-            guna2ComboBox1.CustomizableEdges = customizableEdges7;
-            guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(245, 245, 250);
-            guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(68, 88, 112);
-            guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Items.AddRange(new object[] { "Last appointment" });
-            guna2ComboBox1.Location = new System.Drawing.Point(267, 40);
-            guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2ComboBox1.Size = new System.Drawing.Size(200, 36);
-            guna2ComboBox1.StartIndex = 0;
-            guna2ComboBox1.TabIndex = 3;
-            guna2ComboBox1.TextOffset = new System.Drawing.Point(2, 0);
-            guna2ComboBox1.SelectedIndexChanged += guna2ComboBox1_SelectedIndexChanged;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(208, 55);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(59, 20);
-            label1.TabIndex = 2;
-            label1.Text = "Sort By:";
-            // 
             // label1_patientnum
             // 
             label1_patientnum.AutoSize = true;
@@ -219,7 +181,7 @@
             guna2Button4_Edit.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
             guna2Button4_Edit.BorderRadius = 5;
             guna2Button4_Edit.BorderThickness = 1;
-            guna2Button4_Edit.CustomizableEdges = customizableEdges11;
+            guna2Button4_Edit.CustomizableEdges = customizableEdges9;
             guna2Button4_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             guna2Button4_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             guna2Button4_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
@@ -230,7 +192,7 @@
             guna2Button4_Edit.Location = new System.Drawing.Point(901, 607);
             guna2Button4_Edit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Button4_Edit.Name = "guna2Button4_Edit";
-            guna2Button4_Edit.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Button4_Edit.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Button4_Edit.Size = new System.Drawing.Size(108, 58);
             guna2Button4_Edit.TabIndex = 1;
             guna2Button4_Edit.Text = "Edit";
@@ -359,7 +321,7 @@
             guna2Button5_Delete.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
             guna2Button5_Delete.BorderRadius = 5;
             guna2Button5_Delete.BorderThickness = 1;
-            guna2Button5_Delete.CustomizableEdges = customizableEdges13;
+            guna2Button5_Delete.CustomizableEdges = customizableEdges11;
             guna2Button5_Delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             guna2Button5_Delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             guna2Button5_Delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
@@ -370,7 +332,7 @@
             guna2Button5_Delete.Location = new System.Drawing.Point(735, 607);
             guna2Button5_Delete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Button5_Delete.Name = "guna2Button5_Delete";
-            guna2Button5_Delete.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2Button5_Delete.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Button5_Delete.Size = new System.Drawing.Size(108, 58);
             guna2Button5_Delete.TabIndex = 3;
             guna2Button5_Delete.Text = "Delete";
@@ -403,8 +365,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1_patientcount;
         private System.Windows.Forms.Label label1_patientnum;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;

@@ -75,7 +75,7 @@
             guna2Panel3.Controls.Add(guna2PictureBox1);
             guna2Panel3.CustomizableEdges = customizableEdges3;
             guna2Panel3.FillColor = System.Drawing.Color.FromArgb(30, 48, 88);
-            guna2Panel3.Location = new System.Drawing.Point(22, 16);
+            guna2Panel3.Location = new System.Drawing.Point(26, 15);
             guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -125,11 +125,11 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges1;
             guna2PictureBox1.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new System.Drawing.Point(92, 144);
+            guna2PictureBox1.Location = new System.Drawing.Point(77, 191);
             guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new System.Drawing.Size(493, 286);
+            guna2PictureBox1.Size = new System.Drawing.Size(493, 232);
             guna2PictureBox1.TabIndex = 8;
             guna2PictureBox1.TabStop = false;
             guna2PictureBox1.Click += guna2PictureBox1_Click_1;
