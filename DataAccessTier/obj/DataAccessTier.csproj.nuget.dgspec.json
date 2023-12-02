@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\RecepTest\\DataAccessTier\\DataAccessTier.csproj": {}
+    "D:\\CNPM\\DataAccessTier\\DataAccessTier.csproj": {}
   },
   "projects": {
-    "E:\\RecepTest\\DataAccessTier\\DataAccessTier.csproj": {
+    "D:\\CNPM\\DataAccessTier\\DataAccessTier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\RecepTest\\DataAccessTier\\DataAccessTier.csproj",
+        "projectUniqueName": "D:\\CNPM\\DataAccessTier\\DataAccessTier.csproj",
         "projectName": "DataAccessTier",
-        "projectPath": "E:\\RecepTest\\DataAccessTier\\DataAccessTier.csproj",
-        "packagesPath": "C:\\Users\\Ngo Phat\\.nuget\\packages\\",
-        "outputPath": "E:\\RecepTest\\DataAccessTier\\obj\\",
+        "projectPath": "D:\\CNPM\\DataAccessTier\\DataAccessTier.csproj",
+        "packagesPath": "C:\\Users\\LEGION 5\\.nuget\\packages\\",
+        "outputPath": "D:\\CNPM\\DataAccessTier\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ngo Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\LEGION 5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\RecepTest\\DTO\\DTO.csproj": {
-                "projectPath": "E:\\RecepTest\\DTO\\DTO.csproj"
+              "D:\\CNPM\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\CNPM\\DTO\\DTO.csproj"
               }
             }
           }
@@ -74,21 +69,17 @@
         }
       }
     },
-    "E:\\RecepTest\\DTO\\DTO.csproj": {
+    "D:\\CNPM\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\RecepTest\\DTO\\DTO.csproj",
+        "projectUniqueName": "D:\\CNPM\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "E:\\RecepTest\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\Ngo Phat\\.nuget\\packages\\",
-        "outputPath": "E:\\RecepTest\\DTO\\obj\\",
+        "projectPath": "D:\\CNPM\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\LEGION 5\\.nuget\\packages\\",
+        "outputPath": "D:\\CNPM\\DTO\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ngo Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\LEGION 5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +87,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
