@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace Hospital.Views.Doctor
 {
-    public partial class Dashboard : Form
+    public partial class Requests : Form
     {
-        public Dashboard()
+        System.Timers.Timer timer;
+        int m, s;
+        public Requests()
         {
             InitializeComponent();
         }
@@ -53,70 +55,53 @@ namespace Hospital.Views.Doctor
                 fm.Dispose();
             }
         }
-        private void label1_Click(object sender, EventArgs e)
+
+        private void label1_patientnum_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Patient_Load(object sender, EventArgs e)
+        {
+            dtgvRequests.Rows.Add(9);
+            dtgvRequests.Rows[0].Cells[1].Value = Image.FromFile("status\\1.png");
+            dtgvRequests.Rows[0].Cells[2].Value = "001";
+            dtgvRequests.Rows[0].Cells[3].Value = "Nguyen Lam Nhat Anh";
+            dtgvRequests.Rows[0].Cells[4].Value = "23";
+            dtgvRequests.Rows[0].Cells[5].Value = "O+";
+            dtgvRequests.Rows[0].Cells[6].Value = "Headache";
+
+            dtgvRequests.Rows[1].Cells[1].Value = Image.FromFile("status\\2.png");
+            dtgvRequests.Rows[1].Cells[2].Value = "001";
+            dtgvRequests.Rows[1].Cells[3].Value = "Nguyen Lam Nhat Anh";
+            dtgvRequests.Rows[1].Cells[4].Value = "23";
+            dtgvRequests.Rows[1].Cells[5].Value = "O+";
+            dtgvRequests.Rows[1].Cells[6].Value = "Headache";
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            //if(txtSearch.TextLength >= 4)
-            //{
-
-            //}
-        }
-
-        private void searchResult_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //DataGridView row = this.searchResult.Rows[e.RowIndex];
-            //txtSearch.Text = row.Cells["result"].Value.ToString();
-            //searchResult.Height = 0;
-
-        }
-
-        private void uC_Button1_Click(object sender, EventArgs e)
+        private void uC_Button4_Click(object sender, EventArgs e)
         {
             showMiddleForm(new Prescription());
+        }
+
+        private void addRequest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

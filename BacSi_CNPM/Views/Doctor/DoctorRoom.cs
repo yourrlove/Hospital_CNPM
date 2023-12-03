@@ -1,4 +1,5 @@
-﻿using Hospital.User_Controls;
+﻿using Guna.UI2.WinForms.Suite;
+using Hospital.User_Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace Hospital.Views.Doctor
         {
             InitializeComponent();
             CollapseMenu();
-            customDesign(); 
+            customDesign();
         }
 
         private void customDesign()
@@ -54,7 +55,42 @@ namespace Hospital.Views.Doctor
 
         }
 
+        private void showMiddleForm(Form showForm)
+        {
+            Form fm = new Form();
+            try
+            {
+                using (showForm)
+                {
+                    fm.StartPosition = FormStartPosition.Manual;
+                    fm.FormBorderStyle = FormBorderStyle.None;
+                    fm.Opacity = .70d;
+                    fm.BackColor = Color.Black;
+                    fm.WindowState = FormWindowState.Maximized;
+                    fm.TopMost = true;
+                    fm.Location = this.Location;
+                    fm.ShowInTaskbar = false;
+                    fm.Show();
+                    showForm.StartPosition = FormStartPosition.CenterScreen;
+                    showForm.TopMost = true;
+                    showForm.Owner = fm;
+                    showForm.ShowDialog();
 
+                    fm.Dispose();
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                fm.Dispose();
+            }
+        }
         private void Form2_Load(object sender, EventArgs e)
         {
             guna2ShadowForm1.SetShadowForm(this);
@@ -193,71 +229,22 @@ namespace Hospital.Views.Doctor
 
         private void btnMedicalRecord_Click(object sender, EventArgs e)
         {
+            label1_val.Text = "Requests";
+            guna2PictureBox1_val.Image = Properties.Resources.icons8_person_64;
+            container(new Medical());
             showSubMenu(panelSubMenu);
         }
 
-        private void btnPatient_Click(object sender, EventArgs e)
-        {
-            label1_val.Text = "Patient List";
-            guna2PictureBox1_val.Image = Properties.Resources.icons8_person_64;
-            container(new Patient());
-        }
+
 
         private void btnPrescription_Click(object sender, EventArgs e)
         {
-            Form formBackGround = new Form();
-            using (Prescription prescribe = new Prescription())
-            {
-                formBackGround.StartPosition = FormStartPosition.Manual;
-                formBackGround.FormBorderStyle = FormBorderStyle.None;
-                formBackGround.Opacity = .70d;
-                formBackGround.BackColor = Color.Black;
-                formBackGround.WindowState = FormWindowState.Maximized;
-                formBackGround.TopMost = true;
-                formBackGround.Location = this.Location;
-                formBackGround.ShowInTaskbar = false;
-                formBackGround.Show(this);
-                prescribe.Owner = formBackGround;
-                prescribe.ShowDialog();
-
-                formBackGround.Dispose();
-            }
+            showMiddleForm(new Prescription());
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Form formBackGround = new Form();
-            try
-            {
-                using (Setting set = new Setting())
-                {
-                    formBackGround.StartPosition = FormStartPosition.Manual;
-                    formBackGround.FormBorderStyle = FormBorderStyle.None;
-                    formBackGround.Opacity = .70d;
-                    formBackGround.BackColor = Color.Black;
-                    formBackGround.WindowState = FormWindowState.Maximized;
-                    formBackGround.TopMost = true;
-                    formBackGround.Location = this.Location;
-                    formBackGround.ShowInTaskbar = false;
-                    formBackGround.Show();
-                    formBackGround.StartPosition = FormStartPosition.CenterScreen;
-                    set.Owner = formBackGround;
-                    set.ShowDialog();
-
-                    formBackGround.Dispose();
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-            finally
-            {
-                formBackGround.Dispose();
-            }
+            showMiddleForm(new Setting());
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -303,6 +290,30 @@ namespace Hospital.Views.Doctor
         }
 
         private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel_container_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        //button Requests
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            label1_val.Text = "Requests";
+            guna2PictureBox1_val.Image = Properties.Resources.icons8_user_50;
+            container(new Requests());
+        }
+
+        private void topBar_Paint(object sender, PaintEventArgs e)
         {
 
         }

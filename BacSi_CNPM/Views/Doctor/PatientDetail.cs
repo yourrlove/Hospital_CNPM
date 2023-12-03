@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace Hospital.Views.Doctor
 {
-    public partial class Prescription : Form
+    public partial class PatientDetail : Form
     {
-        public Prescription()
+        public PatientDetail()
         {
             InitializeComponent();
         }
 
-        private void Prescription_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
+        private void label26_Click(object sender, EventArgs e)
         {
 
         }

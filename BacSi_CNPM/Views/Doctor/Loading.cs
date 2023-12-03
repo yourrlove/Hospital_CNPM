@@ -59,7 +59,7 @@ namespace Hospital.Views.Doctor
 
         private void guna2CircleProgressBar1_ValueChanged(object sender, EventArgs e)
         {
-
+                
         }
     }
 }

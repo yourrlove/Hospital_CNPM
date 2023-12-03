@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fnO29HM2g+buJWCSsrwHY8DwrnnP+MTfzcUiDsX4iMMLtNXR88ZTtcb77o9HHEH5mZurjUUhwa4MRqYJtkk3RA==",
+  "dgSpecHash": "X3gRwYk9Nv21XM3tyKMycNOfXXwG37U8mXwvve+WRiaj15C9HyHSH/XrDs8Vzg+oz2/MfFgu+ro5mnn/qMLGKw==",
   "success": true,
-  "projectFilePath": "E:\\Doctor\\DataAccessTier\\DataAccessTier.csproj",
+  "projectFilePath": "E:\\Doctor\\DTO\\DTO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ngo Phat\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Ngo Phat\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

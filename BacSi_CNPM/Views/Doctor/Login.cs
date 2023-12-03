@@ -77,5 +77,10 @@ namespace Hospital.Views.Doctor
         {
 
         }
+
+        private void doctor_login_img_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
