@@ -94,7 +94,7 @@ namespace Hospital.Views.Doctor
         private void Form2_Load(object sender, EventArgs e)
         {
             guna2ShadowForm1.SetShadowForm(this);
-            dropDownMenu1.IsMainMenu = true;
+            //dropDownMenu1.IsMainMenu = true;
             //dropDownMenu1.PrimaryColor = Color.Orange;
             //dropDownMenu1.MenuItemTextColor = Color.OrangeRed;
         }
@@ -195,36 +195,36 @@ namespace Hospital.Views.Doctor
         {
             CollapseMenu();
         }
-        private void CollapseMenu()
-        {
-            if (this.sidebar.Width > 200)
+            private void CollapseMenu()
             {
-                sidebar.Width = 75;
-                logoPictueBox.Visible = false;
-                menuBtn.Visible = true;
-                menuBtn.BringToFront();
-                menuBtn.Dock = DockStyle.Top;
-                foreach (Button menuButton in sidebar.Controls.OfType<Button>())
+                if (this.sidebar.Width > 200)
                 {
-                    menuButton.Text = "";
-                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
-                    menuButton.Padding = new Padding(0);
-                }
+                    sidebar.Width = 75;
+                    logoPictueBox.Visible = false;
+                    menuBtn.Visible = true;
+                    menuBtn.BringToFront();
+                    menuBtn.Dock = DockStyle.Top;
+                    foreach (Button menuButton in sidebar.Controls.OfType<Button>())
+                    {
+                        menuButton.Text = "";
+                        menuButton.ImageAlign = ContentAlignment.MiddleCenter;
+                        menuButton.Padding = new Padding(0);
+                    }
 
-            }
-            else
-            { //Expand menu
-                sidebar.Width = 288;
-                logoPictueBox.Visible = true;
-                menuBtn.Dock = DockStyle.None;
-                foreach (Button menuButton in sidebar.Controls.OfType<Button>())
-                {
-                    menuButton.Text = "   " + menuButton.Tag.ToString();
-                    menuButton.ImageAlign = ContentAlignment.MiddleLeft;
-                    menuButton.Padding = new Padding(10, 0, 0, 0);
+                }
+                else
+                { //Expand menu
+                    sidebar.Width = 288;
+                    logoPictueBox.Visible = true;
+                    menuBtn.Dock = DockStyle.None;
+                    foreach (Button menuButton in sidebar.Controls.OfType<Button>())
+                    {
+                        menuButton.Text = "   " + menuButton.Tag.ToString();
+                        menuButton.ImageAlign = ContentAlignment.MiddleLeft;
+                        menuButton.Padding = new Padding(10, 0, 0, 0);
+                    }
                 }
             }
-        }
         #endregion
 
         private void btnMedicalRecord_Click(object sender, EventArgs e)

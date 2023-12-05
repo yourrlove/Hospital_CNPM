@@ -95,11 +95,6 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
-            guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            dropDownMenu1 = new User_Controls.DropDownMenu(components);
-            helloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            hello1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            hello2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             guna2Panel1_container.SuspendLayout();
             guna2Panel_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -109,7 +104,6 @@
             HospitalBrand.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logoPictueBox).BeginInit();
             panelSubMenu.SuspendLayout();
-            dropDownMenu1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Button_changeSpecialty
@@ -269,6 +263,8 @@
             guna2ControlBox1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             guna2ControlBox1.CustomizableEdges = customizableEdges11;
             guna2ControlBox1.FillColor = System.Drawing.Color.WhiteSmoke;
+            guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
+            guna2ControlBox1.HoverState.IconColor = System.Drawing.Color.White;
             guna2ControlBox1.IconColor = System.Drawing.Color.Black;
             guna2ControlBox1.Location = new System.Drawing.Point(1106, 0);
             guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -311,7 +307,7 @@
             menuBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             menuBtn.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             menuBtn.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            menuBtn.Size = new System.Drawing.Size(63, 75);
+            menuBtn.Size = new System.Drawing.Size(63, 63);
             menuBtn.TabIndex = 8;
             menuBtn.Click += menuBtn_Click;
             // 
@@ -320,7 +316,7 @@
             HospitalBrand.Controls.Add(logoPictueBox);
             HospitalBrand.CustomizableEdges = customizableEdges18;
             HospitalBrand.Dock = System.Windows.Forms.DockStyle.Top;
-            HospitalBrand.Location = new System.Drawing.Point(3, 87);
+            HospitalBrand.Location = new System.Drawing.Point(3, 75);
             HospitalBrand.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             HospitalBrand.Name = "HospitalBrand";
             HospitalBrand.ShadowDecoration.CustomizableEdges = customizableEdges19;
@@ -364,7 +360,7 @@
             btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnDashboard.ImageOffset = new System.Drawing.Point(10, 0);
             btnDashboard.ImageSize = new System.Drawing.Size(24, 24);
-            btnDashboard.Location = new System.Drawing.Point(3, 284);
+            btnDashboard.Location = new System.Drawing.Point(3, 272);
             btnDashboard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges21;
@@ -396,7 +392,7 @@
             btnRequest.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnRequest.ImageOffset = new System.Drawing.Point(10, 0);
             btnRequest.ImageSize = new System.Drawing.Size(32, 32);
-            btnRequest.Location = new System.Drawing.Point(3, 377);
+            btnRequest.Location = new System.Drawing.Point(3, 365);
             btnRequest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnRequest.Name = "btnRequest";
             btnRequest.ShadowDecoration.CustomizableEdges = customizableEdges23;
@@ -429,7 +425,7 @@
             btnMedicalRecord.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnMedicalRecord.ImageOffset = new System.Drawing.Point(10, 0);
             btnMedicalRecord.ImageSize = new System.Drawing.Size(32, 32);
-            btnMedicalRecord.Location = new System.Drawing.Point(3, 470);
+            btnMedicalRecord.Location = new System.Drawing.Point(3, 458);
             btnMedicalRecord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnMedicalRecord.Name = "btnMedicalRecord";
             btnMedicalRecord.ShadowDecoration.CustomizableEdges = customizableEdges25;
@@ -446,7 +442,7 @@
             panelSubMenu.Controls.Add(guna2Button3);
             panelSubMenu.Controls.Add(guna2Button2);
             panelSubMenu.CustomizableEdges = customizableEdges32;
-            panelSubMenu.Location = new System.Drawing.Point(3, 563);
+            panelSubMenu.Location = new System.Drawing.Point(3, 551);
             panelSubMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panelSubMenu.Name = "panelSubMenu";
             panelSubMenu.ShadowDecoration.CustomizableEdges = customizableEdges33;
@@ -535,7 +531,7 @@
             btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnSettings.ImageOffset = new System.Drawing.Point(10, 0);
             btnSettings.ImageSize = new System.Drawing.Size(32, 32);
-            btnSettings.Location = new System.Drawing.Point(3, 727);
+            btnSettings.Location = new System.Drawing.Point(3, 715);
             btnSettings.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnSettings.Name = "btnSettings";
             btnSettings.ShadowDecoration.CustomizableEdges = customizableEdges35;
@@ -566,7 +562,7 @@
             guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             guna2Button1.ImageOffset = new System.Drawing.Point(10, 0);
             guna2Button1.ImageSize = new System.Drawing.Size(32, 32);
-            guna2Button1.Location = new System.Drawing.Point(3, 820);
+            guna2Button1.Location = new System.Drawing.Point(3, 808);
             guna2Button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges37;
@@ -580,54 +576,6 @@
             guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             guna2DragControl1.TargetControl = topBar;
             guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // guna2ContextMenuStrip1
-            // 
-            guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
-            guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(151, 143, 255);
-            guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
-            guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
-            guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(100, 88, 255);
-            guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // dropDownMenu1
-            // 
-            dropDownMenu1.BackColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            dropDownMenu1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            dropDownMenu1.IsMainMenu = false;
-            dropDownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { helloToolStripMenuItem, hello1ToolStripMenuItem, hello2ToolStripMenuItem });
-            dropDownMenu1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            dropDownMenu1.MenuItemHeight = 25;
-            dropDownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
-            dropDownMenu1.Name = "dropDownMenu1";
-            dropDownMenu1.PrimaryColor = System.Drawing.Color.Empty;
-            dropDownMenu1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            dropDownMenu1.Size = new System.Drawing.Size(123, 76);
-            dropDownMenu1.Opening += dropDownMenu1_Opening;
-            // 
-            // helloToolStripMenuItem
-            // 
-            helloToolStripMenuItem.Name = "helloToolStripMenuItem";
-            helloToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
-            helloToolStripMenuItem.Text = "hello";
-            // 
-            // hello1ToolStripMenuItem
-            // 
-            hello1ToolStripMenuItem.Name = "hello1ToolStripMenuItem";
-            hello1ToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
-            hello1ToolStripMenuItem.Text = "Hello1";
-            // 
-            // hello2ToolStripMenuItem
-            // 
-            hello2ToolStripMenuItem.Name = "hello2ToolStripMenuItem";
-            hello2ToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
-            hello2ToolStripMenuItem.Text = "Hello2";
             // 
             // DoctorForm
             // 
@@ -651,7 +599,6 @@
             HospitalBrand.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)logoPictueBox).EndInit();
             panelSubMenu.ResumeLayout(false);
-            dropDownMenu1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -673,15 +620,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_container;
         private Guna.UI2.WinForms.Guna2PictureBox logoPictueBox;
         private Guna.UI2.WinForms.Guna2Panel HospitalBrand;
-        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private Guna.UI2.WinForms.Guna2ImageButton menuBtn;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private User_Controls.DropDownMenu dropDownMenu1;
-        private System.Windows.Forms.ToolStripMenuItem helloToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hello1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hello2ToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2Panel panelSubMenu;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;

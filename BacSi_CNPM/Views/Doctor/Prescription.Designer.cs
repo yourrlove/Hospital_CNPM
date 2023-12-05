@@ -119,6 +119,7 @@
             // 
             // leftBar
             // 
+            leftBar.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             leftBar.BackColor = System.Drawing.Color.White;
             leftBar.Controls.Add(guna2Panel1);
             leftBar.Controls.Add(label2);

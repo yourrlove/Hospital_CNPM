@@ -42,11 +42,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -79,11 +79,11 @@
             uC_Button2 = new User_Controls.UC_Button();
             txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             search_name = new System.Windows.Forms.Label();
-            Header_RS = new System.Windows.Forms.Label();
-            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             searchResult = new Guna.UI2.WinForms.Guna2DataGridView();
             ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Result = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Header_RS = new System.Windows.Forms.Label();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label5 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -95,30 +95,30 @@
             guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
-            label10 = new System.Windows.Forms.Label();
-            label11 = new System.Windows.Forms.Label();
-            label12 = new System.Windows.Forms.Label();
-            label13 = new System.Windows.Forms.Label();
-            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
-            label14 = new System.Windows.Forms.Label();
-            label15 = new System.Windows.Forms.Label();
-            label16 = new System.Windows.Forms.Label();
+            label23 = new System.Windows.Forms.Label();
             label17 = new System.Windows.Forms.Label();
-            label18 = new System.Windows.Forms.Label();
+            label15 = new System.Windows.Forms.Label();
+            label14 = new System.Windows.Forms.Label();
+            label13 = new System.Windows.Forms.Label();
+            label12 = new System.Windows.Forms.Label();
+            label10 = new System.Windows.Forms.Label();
+            guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
+            label22 = new System.Windows.Forms.Label();
             label19 = new System.Windows.Forms.Label();
             label20 = new System.Windows.Forms.Label();
+            label18 = new System.Windows.Forms.Label();
             label21 = new System.Windows.Forms.Label();
-            label22 = new System.Windows.Forms.Label();
-            label23 = new System.Windows.Forms.Label();
+            label16 = new System.Windows.Forms.Label();
+            label11 = new System.Windows.Forms.Label();
+            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
             guna2Panel3.SuspendLayout();
             guna2Panel1.SuspendLayout();
             guna2Panel4.SuspendLayout();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).BeginInit();
             guna2Panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)searchResult).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
             guna2Panel9.SuspendLayout();
             guna2Panel10.SuspendLayout();
@@ -148,7 +148,7 @@
             guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel3.Size = new System.Drawing.Size(702, 150);
+            guna2Panel3.Size = new System.Drawing.Size(702, 125);
             guna2Panel3.TabIndex = 121;
             // 
             // label8
@@ -157,7 +157,7 @@
             label8.BackColor = System.Drawing.Color.Transparent;
             label8.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label8.ForeColor = System.Drawing.Color.White;
-            label8.Location = new System.Drawing.Point(34, 86);
+            label8.Location = new System.Drawing.Point(34, 75);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(136, 24);
             label8.TabIndex = 12;
@@ -170,7 +170,7 @@
             label7.BackColor = System.Drawing.Color.Transparent;
             label7.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label7.ForeColor = System.Drawing.Color.White;
-            label7.Location = new System.Drawing.Point(181, 28);
+            label7.Location = new System.Drawing.Point(181, 20);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(273, 36);
             label7.TabIndex = 11;
@@ -182,7 +182,7 @@
             label6.BackColor = System.Drawing.Color.Transparent;
             label6.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label6.ForeColor = System.Drawing.Color.White;
-            label6.Location = new System.Drawing.Point(32, 28);
+            label6.Location = new System.Drawing.Point(32, 20);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(143, 36);
             label6.TabIndex = 10;
@@ -328,7 +328,7 @@
             guna2Panel5.Controls.Add(search_name);
             guna2Panel5.Controls.Add(searchResult);
             guna2Panel5.CustomizableEdges = customizableEdges11;
-            guna2Panel5.Location = new System.Drawing.Point(22, 248);
+            guna2Panel5.Location = new System.Drawing.Point(24, 217);
             guna2Panel5.Name = "guna2Panel5";
             guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Panel5.Size = new System.Drawing.Size(702, 109);
@@ -387,31 +387,6 @@
             search_name.Size = new System.Drawing.Size(64, 28);
             search_name.TabIndex = 0;
             search_name.Text = "Name";
-            // 
-            // Header_RS
-            // 
-            Header_RS.AutoSize = true;
-            Header_RS.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            Header_RS.Location = new System.Drawing.Point(22, 195);
-            Header_RS.Name = "Header_RS";
-            Header_RS.Size = new System.Drawing.Size(202, 38);
-            Header_RS.TabIndex = 129;
-            Header_RS.Text = "Record Search";
-            // 
-            // guna2PictureBox1
-            // 
-            guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            guna2PictureBox1.CustomizableEdges = customizableEdges13;
-            guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            guna2PictureBox1.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox1.Image");
-            guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new System.Drawing.Point(230, 195);
-            guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2PictureBox1.Size = new System.Drawing.Size(54, 47);
-            guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            guna2PictureBox1.TabIndex = 130;
-            guna2PictureBox1.TabStop = false;
             // 
             // searchResult
             // 
@@ -490,11 +465,36 @@
             Result.MinimumWidth = 6;
             Result.Name = "Result";
             // 
+            // Header_RS
+            // 
+            Header_RS.AutoSize = true;
+            Header_RS.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            Header_RS.Location = new System.Drawing.Point(22, 164);
+            Header_RS.Name = "Header_RS";
+            Header_RS.Size = new System.Drawing.Size(202, 38);
+            Header_RS.TabIndex = 129;
+            Header_RS.Text = "Record Search";
+            // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            guna2PictureBox1.CustomizableEdges = customizableEdges13;
+            guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            guna2PictureBox1.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox1.Image");
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new System.Drawing.Point(230, 164);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2PictureBox1.Size = new System.Drawing.Size(54, 47);
+            guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            guna2PictureBox1.TabIndex = 130;
+            guna2PictureBox1.TabStop = false;
+            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(22, 378);
+            label5.Location = new System.Drawing.Point(24, 357);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(108, 38);
             label5.TabIndex = 132;
@@ -514,6 +514,7 @@
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            guna2DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -603,7 +604,7 @@
             guna2Panel7.BackColor = System.Drawing.Color.Red;
             guna2Panel7.BorderRadius = 20;
             guna2Panel7.CustomizableEdges = customizableEdges17;
-            guna2Panel7.Location = new System.Drawing.Point(27, 437);
+            guna2Panel7.Location = new System.Drawing.Point(27, 413);
             guna2Panel7.Name = "guna2Panel7";
             guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2Panel7.Size = new System.Drawing.Size(24, 79);
@@ -614,7 +615,7 @@
             guna2Panel8.BackColor = System.Drawing.Color.DarkOrange;
             guna2Panel8.BorderRadius = 20;
             guna2Panel8.CustomizableEdges = customizableEdges19;
-            guna2Panel8.Location = new System.Drawing.Point(27, 522);
+            guna2Panel8.Location = new System.Drawing.Point(27, 498);
             guna2Panel8.Name = "guna2Panel8";
             guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2Panel8.Size = new System.Drawing.Size(24, 80);
@@ -622,6 +623,7 @@
             // 
             // guna2Panel9
             // 
+            guna2Panel9.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             guna2Panel9.BackColor = System.Drawing.Color.White;
             guna2Panel9.Controls.Add(label23);
             guna2Panel9.Controls.Add(label17);
@@ -631,105 +633,22 @@
             guna2Panel9.Controls.Add(label12);
             guna2Panel9.Controls.Add(label10);
             guna2Panel9.CustomizableEdges = customizableEdges21;
-            guna2Panel9.Location = new System.Drawing.Point(57, 437);
+            guna2Panel9.Location = new System.Drawing.Point(57, 413);
             guna2Panel9.Name = "guna2Panel9";
             guna2Panel9.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna2Panel9.Size = new System.Drawing.Size(515, 79);
             guna2Panel9.TabIndex = 138;
             // 
-            // guna2Panel10
+            // label23
             // 
-            guna2Panel10.BackColor = System.Drawing.Color.White;
-            guna2Panel10.Controls.Add(label22);
-            guna2Panel10.Controls.Add(label19);
-            guna2Panel10.Controls.Add(label20);
-            guna2Panel10.Controls.Add(label18);
-            guna2Panel10.Controls.Add(label21);
-            guna2Panel10.Controls.Add(label16);
-            guna2Panel10.Controls.Add(label11);
-            guna2Panel10.CustomizableEdges = customizableEdges23;
-            guna2Panel10.Location = new System.Drawing.Point(57, 523);
-            guna2Panel10.Name = "guna2Panel10";
-            guna2Panel10.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2Panel10.Size = new System.Drawing.Size(515, 79);
-            guna2Panel10.TabIndex = 139;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label10.ForeColor = System.Drawing.Color.Black;
-            label10.Location = new System.Drawing.Point(19, 9);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(120, 23);
-            label10.TabIndex = 0;
-            label10.Text = "Nguyen Van A";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label11.ForeColor = System.Drawing.Color.Black;
-            label11.Location = new System.Drawing.Point(20, 11);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(120, 23);
-            label11.TabIndex = 1;
-            label11.Text = "Nguyen Van A";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label12.ForeColor = System.Drawing.Color.Black;
-            label12.Location = new System.Drawing.Point(161, 9);
-            label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(28, 23);
-            label12.TabIndex = 1;
-            label12.Text = "23";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label13.ForeColor = System.Drawing.Color.Black;
-            label13.Location = new System.Drawing.Point(232, 10);
-            label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(47, 23);
-            label13.TabIndex = 2;
-            label13.Text = "Male";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label14.ForeColor = System.Drawing.Color.Black;
-            label14.Location = new System.Drawing.Point(339, 10);
-            label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(63, 23);
-            label14.TabIndex = 3;
-            label14.Text = "Type O";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label15.ForeColor = System.Drawing.Color.Black;
-            label15.Location = new System.Drawing.Point(20, 45);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(92, 23);
-            label15.TabIndex = 4;
-            label15.Text = "Wait Time";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label16.ForeColor = System.Drawing.Color.Black;
-            label16.Location = new System.Drawing.Point(20, 45);
-            label16.Name = "label16";
-            label16.Size = new System.Drawing.Size(92, 23);
-            label16.TabIndex = 5;
-            label16.Text = "Wait Time";
+            label23.AutoSize = true;
+            label23.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label23.ForeColor = System.Drawing.Color.Black;
+            label23.Location = new System.Drawing.Point(305, 45);
+            label23.Name = "label23";
+            label23.Size = new System.Drawing.Size(107, 23);
+            label23.TabIndex = 10;
+            label23.Text = "Description:";
             // 
             // label17
             // 
@@ -742,16 +661,89 @@
             label17.TabIndex = 5;
             label17.Text = "Room:";
             // 
-            // label18
+            // label15
             // 
-            label18.AutoSize = true;
-            label18.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label18.ForeColor = System.Drawing.Color.Black;
-            label18.Location = new System.Drawing.Point(173, 45);
-            label18.Name = "label18";
-            label18.Size = new System.Drawing.Size(62, 23);
-            label18.TabIndex = 6;
-            label18.Text = "Room:";
+            label15.AutoSize = true;
+            label15.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label15.ForeColor = System.Drawing.Color.Black;
+            label15.Location = new System.Drawing.Point(20, 45);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(92, 23);
+            label15.TabIndex = 4;
+            label15.Text = "Wait Time";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label14.ForeColor = System.Drawing.Color.Black;
+            label14.Location = new System.Drawing.Point(339, 10);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(63, 23);
+            label14.TabIndex = 3;
+            label14.Text = "Type O";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label13.ForeColor = System.Drawing.Color.Black;
+            label13.Location = new System.Drawing.Point(232, 10);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(47, 23);
+            label13.TabIndex = 2;
+            label13.Text = "Male";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label12.ForeColor = System.Drawing.Color.Black;
+            label12.Location = new System.Drawing.Point(161, 9);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(28, 23);
+            label12.TabIndex = 1;
+            label12.Text = "23";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label10.ForeColor = System.Drawing.Color.Black;
+            label10.Location = new System.Drawing.Point(19, 9);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(120, 23);
+            label10.TabIndex = 0;
+            label10.Text = "Nguyen Van A";
+            // 
+            // guna2Panel10
+            // 
+            guna2Panel10.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            guna2Panel10.BackColor = System.Drawing.Color.White;
+            guna2Panel10.Controls.Add(label22);
+            guna2Panel10.Controls.Add(label19);
+            guna2Panel10.Controls.Add(label20);
+            guna2Panel10.Controls.Add(label18);
+            guna2Panel10.Controls.Add(label21);
+            guna2Panel10.Controls.Add(label16);
+            guna2Panel10.Controls.Add(label11);
+            guna2Panel10.CustomizableEdges = customizableEdges23;
+            guna2Panel10.Location = new System.Drawing.Point(57, 499);
+            guna2Panel10.Name = "guna2Panel10";
+            guna2Panel10.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            guna2Panel10.Size = new System.Drawing.Size(515, 79);
+            guna2Panel10.TabIndex = 139;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label22.ForeColor = System.Drawing.Color.Black;
+            label22.Location = new System.Drawing.Point(305, 45);
+            label22.Name = "label22";
+            label22.Size = new System.Drawing.Size(107, 23);
+            label22.TabIndex = 9;
+            label22.Text = "Description:";
             // 
             // label19
             // 
@@ -775,6 +767,17 @@
             label20.TabIndex = 7;
             label20.Text = "Male";
             // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label18.ForeColor = System.Drawing.Color.Black;
+            label18.Location = new System.Drawing.Point(173, 45);
+            label18.Name = "label18";
+            label18.Size = new System.Drawing.Size(62, 23);
+            label18.TabIndex = 6;
+            label18.Text = "Room:";
+            // 
             // label21
             // 
             label21.AutoSize = true;
@@ -786,27 +789,27 @@
             label21.TabIndex = 6;
             label21.Text = "23";
             // 
-            // label22
+            // label16
             // 
-            label22.AutoSize = true;
-            label22.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label22.ForeColor = System.Drawing.Color.Black;
-            label22.Location = new System.Drawing.Point(305, 45);
-            label22.Name = "label22";
-            label22.Size = new System.Drawing.Size(107, 23);
-            label22.TabIndex = 9;
-            label22.Text = "Description:";
+            label16.AutoSize = true;
+            label16.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label16.ForeColor = System.Drawing.Color.Black;
+            label16.Location = new System.Drawing.Point(20, 45);
+            label16.Name = "label16";
+            label16.Size = new System.Drawing.Size(92, 23);
+            label16.TabIndex = 5;
+            label16.Text = "Wait Time";
             // 
-            // label23
+            // label11
             // 
-            label23.AutoSize = true;
-            label23.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label23.ForeColor = System.Drawing.Color.Black;
-            label23.Location = new System.Drawing.Point(305, 45);
-            label23.Name = "label23";
-            label23.Size = new System.Drawing.Size(107, 23);
-            label23.TabIndex = 10;
-            label23.Text = "Description:";
+            label11.AutoSize = true;
+            label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label11.ForeColor = System.Drawing.Color.Black;
+            label11.Location = new System.Drawing.Point(20, 11);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(120, 23);
+            label11.TabIndex = 1;
+            label11.Text = "Nguyen Van A";
             // 
             // Dashboard
             // 
@@ -843,8 +846,8 @@
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).EndInit();
             guna2Panel5.ResumeLayout(false);
             guna2Panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)searchResult).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
             guna2Panel9.ResumeLayout(false);
             guna2Panel9.PerformLayout();
