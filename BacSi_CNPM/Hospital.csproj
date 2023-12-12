@@ -7,6 +7,11 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Update="User_Controls\DropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -38,5 +43,11 @@
   <ItemGroup>
     <ProjectReference Include="..\DataAccessTier\DataAccessTier.csproj" />
     <ProjectReference Include="..\DTO\DTO.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>

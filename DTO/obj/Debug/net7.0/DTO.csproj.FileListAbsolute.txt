@@ -11,3 +11,16 @@ D:\Project-CNPM\Hospital_CNPM\DTO\obj\Debug\net7.0\DTO.dll
 D:\Project-CNPM\Hospital_CNPM\DTO\obj\Debug\net7.0\refint\DTO.dll
 D:\Project-CNPM\Hospital_CNPM\DTO\obj\Debug\net7.0\DTO.pdb
 D:\Project-CNPM\Hospital_CNPM\DTO\obj\Debug\net7.0\ref\DTO.dll
+E:\Pharmacist\DTO\bin\Debug\net7.0\DTO.deps.json
+E:\Pharmacist\DTO\bin\Debug\net7.0\DTO.dll
+E:\Pharmacist\DTO\bin\Debug\net7.0\DTO.pdb
+E:\Pharmacist\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+E:\Pharmacist\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Pharmacist\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+E:\Pharmacist\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+E:\Pharmacist\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+E:\Pharmacist\DTO\obj\Debug\net7.0\DTO.sourcelink.json
+E:\Pharmacist\DTO\obj\Debug\net7.0\DTO.dll
+E:\Pharmacist\DTO\obj\Debug\net7.0\refint\DTO.dll
+E:\Pharmacist\DTO\obj\Debug\net7.0\DTO.pdb
+E:\Pharmacist\DTO\obj\Debug\net7.0\ref\DTO.dll

@@ -1,0 +1,16 @@
+E:\Pharmacist\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+E:\Pharmacist\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+E:\Pharmacist\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+E:\Pharmacist\DataAccessTier\bin\Debug\net7.0\DTO.dll
+E:\Pharmacist\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\DataAccessTier.sourcelink.json
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+E:\Pharmacist\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
