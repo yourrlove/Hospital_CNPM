@@ -11,3 +11,16 @@ D:\Project-CNPM\Hospital_CNPM\DTO\obj\Debug\net7.0\DTO.dll
 D:\Project-CNPM\Hospital_CNPM\DTO\obj\Debug\net7.0\refint\DTO.dll
 D:\Project-CNPM\Hospital_CNPM\DTO\obj\Debug\net7.0\DTO.pdb
 D:\Project-CNPM\Hospital_CNPM\DTO\obj\Debug\net7.0\ref\DTO.dll
+E:\Admin\DTO\bin\Debug\net7.0\DTO.deps.json
+E:\Admin\DTO\bin\Debug\net7.0\DTO.dll
+E:\Admin\DTO\bin\Debug\net7.0\DTO.pdb
+E:\Admin\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+E:\Admin\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Admin\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+E:\Admin\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+E:\Admin\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+E:\Admin\DTO\obj\Debug\net7.0\DTO.sourcelink.json
+E:\Admin\DTO\obj\Debug\net7.0\DTO.dll
+E:\Admin\DTO\obj\Debug\net7.0\refint\DTO.dll
+E:\Admin\DTO\obj\Debug\net7.0\DTO.pdb
+E:\Admin\DTO\obj\Debug\net7.0\ref\DTO.dll

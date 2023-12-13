@@ -1,0 +1,16 @@
+E:\Admin\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+E:\Admin\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+E:\Admin\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+E:\Admin\DataAccessTier\bin\Debug\net7.0\DTO.dll
+E:\Admin\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+E:\Admin\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+E:\Admin\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+E:\Admin\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+E:\Admin\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+E:\Admin\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+E:\Admin\DataAccessTier\obj\Debug\net7.0\DataAccessTier.sourcelink.json
+E:\Admin\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+E:\Admin\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+E:\Admin\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+E:\Admin\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+E:\Admin\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
