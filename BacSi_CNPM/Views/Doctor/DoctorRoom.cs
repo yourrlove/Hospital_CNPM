@@ -1,4 +1,5 @@
-﻿using Hospital.User_Controls;
+﻿using Guna.UI2.WinForms.Suite;
+using Hospital.User_Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,72 +19,63 @@ namespace Hospital.Views.Doctor
 
     public partial class DoctorForm : Form
     {
-
+        private int BS_ID = 6;
+        private int PH_ID = 2;
+        private int KH_ID = 1;
         public DoctorForm()
         {
             InitializeComponent();
-            CollapseMenu();
-            customDesign(); 
+            //CollapseMenu();
         }
 
-        private void customDesign()
+        private void showMiddleForm(Form showForm)
         {
-            panelSubMenu.Visible = false;
-
-        }
-
-        private void hideSubMenu()
-        {
-            if (panelSubMenu.Visible)
+            Form fm = new Form();
+            try
             {
-                panelSubMenu.Visible = false;
+                using (showForm)
+                {
+                    fm.StartPosition = FormStartPosition.Manual;
+                    fm.FormBorderStyle = FormBorderStyle.None;
+                    fm.Opacity = .70d;
+                    fm.BackColor = Color.Black;
+                    fm.WindowState = FormWindowState.Maximized;
+                    fm.TopMost = true;
+                    fm.Location = this.Location;
+                    fm.ShowInTaskbar = false;
+                    fm.Show();
+                    showForm.StartPosition = FormStartPosition.CenterScreen;
+                    showForm.TopMost = true;
+                    showForm.Owner = fm;
+                    showForm.ShowDialog();
+
+                    fm.Dispose();
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                fm.Dispose();
             }
         }
-
-        private void showSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-            {
-                subMenu.Visible = false;
-            }
-
-        }
-
-
         private void Form2_Load(object sender, EventArgs e)
         {
             guna2ShadowForm1.SetShadowForm(this);
-            dropDownMenu1.IsMainMenu = true;
+           // dropDownMenu1.IsMainMenu = true;
             //dropDownMenu1.PrimaryColor = Color.Orange;
             //dropDownMenu1.MenuItemTextColor = Color.OrangeRed;
         }
 
-        private void left_side_bar_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void top_bar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -104,10 +96,6 @@ namespace Hospital.Views.Doctor
         }
 
 
-        private void guna2PictureBox1_val_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void container(object _form)
         {
@@ -127,37 +115,10 @@ namespace Hospital.Views.Doctor
         }
 
 
-
-        private void uC_Button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void uC_ComboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void uC_ComboBox1_OnSelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uC_Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uC_PlaceHolderTextBoX1__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         #region SlidingMenu
         private void menuBtn_Click(object sender, EventArgs e)
         {
-            CollapseMenu();
+           // CollapseMenu();
         }
         private void CollapseMenu()
         {
@@ -193,71 +154,15 @@ namespace Hospital.Views.Doctor
 
         private void btnMedicalRecord_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelSubMenu);
+            label1_val.Text = "Medical Record";
+            guna2PictureBox1_val.Image = (Image)Properties.Resources.ResourceManager.GetObject("icons8-medical-64");
+            container(new Medical());
         }
 
-        private void btnPatient_Click(object sender, EventArgs e)
-        {
-            label1_val.Text = "Patient List";
-            guna2PictureBox1_val.Image = Properties.Resources.icons8_person_64;
-            container(new Patient());
-        }
-
-        private void btnPrescription_Click(object sender, EventArgs e)
-        {
-            Form formBackGround = new Form();
-            using (Prescription prescribe = new Prescription())
-            {
-                formBackGround.StartPosition = FormStartPosition.Manual;
-                formBackGround.FormBorderStyle = FormBorderStyle.None;
-                formBackGround.Opacity = .70d;
-                formBackGround.BackColor = Color.Black;
-                formBackGround.WindowState = FormWindowState.Maximized;
-                formBackGround.TopMost = true;
-                formBackGround.Location = this.Location;
-                formBackGround.ShowInTaskbar = false;
-                formBackGround.Show(this);
-                prescribe.Owner = formBackGround;
-                prescribe.ShowDialog();
-
-                formBackGround.Dispose();
-            }
-        }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Form formBackGround = new Form();
-            try
-            {
-                using (Setting set = new Setting())
-                {
-                    formBackGround.StartPosition = FormStartPosition.Manual;
-                    formBackGround.FormBorderStyle = FormBorderStyle.None;
-                    formBackGround.Opacity = .70d;
-                    formBackGround.BackColor = Color.Black;
-                    formBackGround.WindowState = FormWindowState.Maximized;
-                    formBackGround.TopMost = true;
-                    formBackGround.Location = this.Location;
-                    formBackGround.ShowInTaskbar = false;
-                    formBackGround.Show();
-                    formBackGround.StartPosition = FormStartPosition.CenterScreen;
-                    set.Owner = formBackGround;
-                    set.ShowDialog();
-
-                    formBackGround.Dispose();
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-            finally
-            {
-                formBackGround.Dispose();
-            }
+            showMiddleForm(new Setting());
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -271,12 +176,6 @@ namespace Hospital.Views.Doctor
         }
 
 
-
-        private void dropDownMenu1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
         private void uC_Button1_Click_1(object sender, EventArgs e)
         {
 
@@ -287,22 +186,27 @@ namespace Hospital.Views.Doctor
 
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
 
         private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel_container_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        //button Requests
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            label1_val.Text = "Requests";
+            guna2PictureBox1_val.Image = Properties.Resources.icons8_user_50;
+            container(new Requests(BS_ID, PH_ID, KH_ID));
+        }
+
+        private void topBar_Paint(object sender, PaintEventArgs e)
         {
 
         }
