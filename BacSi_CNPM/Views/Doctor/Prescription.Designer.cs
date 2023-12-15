@@ -47,17 +47,17 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftBar = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -86,24 +86,24 @@
             label10 = new System.Windows.Forms.Label();
             uC_PictureBox1 = new User_Controls.UC_PictureBox();
             rightBar = new Guna.UI2.WinForms.Guna2Panel();
+            Date = new System.Windows.Forms.DateTimePicker();
+            label14 = new System.Windows.Forms.Label();
+            NamePrescription = new System.Windows.Forms.Label();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox_Quantity = new Guna.UI2.WinForms.Guna2TextBox();
             uC_Button_Delete = new User_Controls.UC_Button();
             uC_Button2 = new User_Controls.UC_Button();
             uC_Button_Save = new User_Controls.UC_Button();
             guna2ComboBox_Buoi = new Guna.UI2.WinForms.Guna2ComboBox();
+            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            label3 = new System.Windows.Forms.Label();
+            uC_Button_Add = new User_Controls.UC_Button();
             guna2DataGridView_KeDon = new Guna.UI2.WinForms.Guna2DataGridView();
             nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             buoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             medicineBindingSource = new System.Windows.Forms.BindingSource(components);
-            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            label3 = new System.Windows.Forms.Label();
-            uC_Button_Add = new User_Controls.UC_Button();
             chiTietDonThuocBindingSource = new System.Windows.Forms.BindingSource(components);
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            NamePrescription = new System.Windows.Forms.Label();
-            label14 = new System.Windows.Forms.Label();
-            Date = new System.Windows.Forms.DateTimePicker();
             leftBar.SuspendLayout();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
@@ -116,9 +116,9 @@
             patientTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).BeginInit();
             rightBar.SuspendLayout();
+            guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView_KeDon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)medicineBindingSource).BeginInit();
-            guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chiTietDonThuocBindingSource).BeginInit();
             SuspendLayout();
             // 
@@ -209,7 +209,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             guna2DataGridView_Medicines.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView_Medicines.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            guna2DataGridView_Medicines.Location = new System.Drawing.Point(11, 157);
+            guna2DataGridView_Medicines.Location = new System.Drawing.Point(11, 169);
             guna2DataGridView_Medicines.Name = "guna2DataGridView_Medicines";
             guna2DataGridView_Medicines.RowHeadersVisible = false;
             guna2DataGridView_Medicines.RowHeadersWidth = 51;
@@ -491,6 +491,54 @@
             rightBar.Size = new System.Drawing.Size(717, 749);
             rightBar.TabIndex = 2;
             // 
+            // Date
+            // 
+            Date.Location = new System.Drawing.Point(95, 588);
+            Date.Name = "Date";
+            Date.Size = new System.Drawing.Size(250, 27);
+            Date.TabIndex = 22;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label14.Location = new System.Drawing.Point(19, 586);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(59, 28);
+            label14.TabIndex = 21;
+            label14.Text = "Date:";
+            // 
+            // NamePrescription
+            // 
+            NamePrescription.AutoSize = true;
+            NamePrescription.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            NamePrescription.Location = new System.Drawing.Point(19, 534);
+            NamePrescription.Name = "NamePrescription";
+            NamePrescription.Size = new System.Drawing.Size(185, 28);
+            NamePrescription.TabIndex = 20;
+            NamePrescription.Text = "Prescription Name:";
+            // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.CustomizableEdges = customizableEdges9;
+            guna2TextBox1.DefaultText = "";
+            guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Location = new System.Drawing.Point(223, 534);
+            guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.PasswordChar = '\0';
+            guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2TextBox1.Size = new System.Drawing.Size(473, 31);
+            guna2TextBox1.TabIndex = 19;
+            // 
             // guna2TextBox_Quantity
             // 
             guna2TextBox_Quantity.CustomizableEdges = customizableEdges11;
@@ -594,6 +642,50 @@
             guna2ComboBox_Buoi.StartIndex = 0;
             guna2ComboBox_Buoi.TabIndex = 14;
             // 
+            // guna2Panel4
+            // 
+            guna2Panel4.Controls.Add(label3);
+            guna2Panel4.CustomBorderColor = System.Drawing.Color.LightGray;
+            guna2Panel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            guna2Panel4.CustomizableEdges = customizableEdges15;
+            guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            guna2Panel4.Location = new System.Drawing.Point(0, 0);
+            guna2Panel4.Name = "guna2Panel4";
+            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2Panel4.Size = new System.Drawing.Size(717, 55);
+            guna2Panel4.TabIndex = 11;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(33, 17);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(224, 31);
+            label3.TabIndex = 5;
+            label3.Text = "Prescription Details";
+            // 
+            // uC_Button_Add
+            // 
+            uC_Button_Add.BackColor = System.Drawing.Color.Blue;
+            uC_Button_Add.BackgroundColor = System.Drawing.Color.Blue;
+            uC_Button_Add.BorderColor = System.Drawing.Color.Blue;
+            uC_Button_Add.BorderRadius = 0;
+            uC_Button_Add.BorderSize = 0;
+            uC_Button_Add.FlatAppearance.BorderSize = 0;
+            uC_Button_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            uC_Button_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            uC_Button_Add.FontSize = 9;
+            uC_Button_Add.ForeColor = System.Drawing.Color.White;
+            uC_Button_Add.Location = new System.Drawing.Point(426, 96);
+            uC_Button_Add.Name = "uC_Button_Add";
+            uC_Button_Add.Size = new System.Drawing.Size(96, 36);
+            uC_Button_Add.TabIndex = 10;
+            uC_Button_Add.Text = "Add";
+            uC_Button_Add.TextColor = System.Drawing.Color.White;
+            uC_Button_Add.UseVisualStyleBackColor = false;
+            uC_Button_Add.Click += uC_Button4_Click;
+            // 
             // guna2DataGridView_KeDon
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -682,101 +774,9 @@
             // 
             medicineBindingSource.DataSource = typeof(DTO.Medicine);
             // 
-            // guna2Panel4
-            // 
-            guna2Panel4.Controls.Add(label3);
-            guna2Panel4.CustomBorderColor = System.Drawing.Color.LightGray;
-            guna2Panel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            guna2Panel4.CustomizableEdges = customizableEdges15;
-            guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            guna2Panel4.Location = new System.Drawing.Point(0, 0);
-            guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel4.Size = new System.Drawing.Size(717, 55);
-            guna2Panel4.TabIndex = 11;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(33, 17);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(224, 31);
-            label3.TabIndex = 5;
-            label3.Text = "Prescription Details";
-            // 
-            // uC_Button_Add
-            // 
-            uC_Button_Add.BackColor = System.Drawing.Color.Blue;
-            uC_Button_Add.BackgroundColor = System.Drawing.Color.Blue;
-            uC_Button_Add.BorderColor = System.Drawing.Color.Blue;
-            uC_Button_Add.BorderRadius = 0;
-            uC_Button_Add.BorderSize = 0;
-            uC_Button_Add.FlatAppearance.BorderSize = 0;
-            uC_Button_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            uC_Button_Add.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            uC_Button_Add.FontSize = 9;
-            uC_Button_Add.ForeColor = System.Drawing.Color.White;
-            uC_Button_Add.Location = new System.Drawing.Point(426, 96);
-            uC_Button_Add.Name = "uC_Button_Add";
-            uC_Button_Add.Size = new System.Drawing.Size(96, 36);
-            uC_Button_Add.TabIndex = 10;
-            uC_Button_Add.Text = "Add";
-            uC_Button_Add.TextColor = System.Drawing.Color.White;
-            uC_Button_Add.UseVisualStyleBackColor = false;
-            uC_Button_Add.Click += uC_Button4_Click;
-            // 
             // chiTietDonThuocBindingSource
             // 
             chiTietDonThuocBindingSource.DataSource = typeof(DTO.ChiTietDonThuoc);
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.CustomizableEdges = customizableEdges9;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new System.Drawing.Point(223, 534);
-            guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox1.Size = new System.Drawing.Size(473, 31);
-            guna2TextBox1.TabIndex = 19;
-            // 
-            // NamePrescription
-            // 
-            NamePrescription.AutoSize = true;
-            NamePrescription.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            NamePrescription.Location = new System.Drawing.Point(19, 534);
-            NamePrescription.Name = "NamePrescription";
-            NamePrescription.Size = new System.Drawing.Size(185, 28);
-            NamePrescription.TabIndex = 20;
-            NamePrescription.Text = "Prescription Name:";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label14.Location = new System.Drawing.Point(19, 586);
-            label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(59, 28);
-            label14.TabIndex = 21;
-            label14.Text = "Date:";
-            // 
-            // Date
-            // 
-            Date.Location = new System.Drawing.Point(95, 588);
-            Date.Name = "Date";
-            Date.Size = new System.Drawing.Size(250, 27);
-            Date.TabIndex = 22;
             // 
             // Prescription
             // 
@@ -808,10 +808,10 @@
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).EndInit();
             rightBar.ResumeLayout(false);
             rightBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView_KeDon).EndInit();
-            ((System.ComponentModel.ISupportInitialize)medicineBindingSource).EndInit();
             guna2Panel4.ResumeLayout(false);
             guna2Panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2DataGridView_KeDon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)medicineBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)chiTietDonThuocBindingSource).EndInit();
             ResumeLayout(false);
         }

@@ -18,6 +18,7 @@ namespace DataAccessTier
 
         public string PatientSex {  get; set; }
         public string PatientDoB {  get; set; }
+        public string Tel {  get; set; }
         public string CheckIn {  get; set; }
 
     }
@@ -215,6 +216,7 @@ namespace DataAccessTier
                          PatientName = patient.HoTen,
                          PatientSex = patient.GioiTinh,
                          PatientDoB = patient.NgaySinh.Date.ToString("dd/MM/yyyy"),
+                         Tel = patient.SoDienThoai,
                          RecordName = record.TenBenhAn ?? "",
                          CheckIn = record.Ngay.Date.ToString("dd/MM/yyyy")
                      }).ToList();
