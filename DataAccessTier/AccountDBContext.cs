@@ -14,13 +14,13 @@ namespace DataAccessTier
         public DbSet<Account> account { get; set; }
         public AccountDBContext() { }
 
-        public static BindingList<Account>? GetListAccount()
+        public static List<Account>? GetListAccount()
         {
             try
             {
                 var dbContext = new AccountDBContext();
-                dbContext.account.Load();
-                return dbContext.account.Local.ToBindingList();
+       
+                return dbContext.account.ToList();
 
             }
             catch (Exception e)

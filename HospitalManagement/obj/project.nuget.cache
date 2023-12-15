@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KvUjlkuCP2sFu3sixCQ+rVI0VpxA8/AACBgQcphI7AAKUo03cwfBrg5GBuAO6xvXvOS3nkcObnglouN0HRwjsg==",
+  "dgSpecHash": "xwdXcXCb7jkncHpc1zLU00Xzqyt26l3cHjAFBJYn/i8ftsNQviz7q5KMyask3rl8KgmQlAG/RRWrJnpkypBPKw==",
   "success": true,
-  "projectFilePath": "D:\\Project-CNPM\\Hospital_CNPM\\HospitalManagement\\HospitalManagement.csproj",
+  "projectFilePath": "D:\\CNPM\\HospitalManagement\\HospitalManagement.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

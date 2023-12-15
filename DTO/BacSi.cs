@@ -11,13 +11,12 @@ namespace DTO
     public class BacSi
     {
         [Key, Required]
-        [StringLength(50)]
-        public string BS_ID { set; get; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int BS_ID { set; get; }
         [Required]
         [StringLength(50)]
         public string HoTen { set; get; }
-        [StringLength(50)]
-        public string KH_ID { set; get; }
+        public int KH_ID { set; get; }
         [StringLength(50)]
         public string User_ID { set; get; }
         public DateTime NgaySinh { set; get; }

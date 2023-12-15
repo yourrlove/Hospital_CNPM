@@ -24,3 +24,16 @@ E:\RecepTest\DTO\obj\Debug\net7.0\DTO.dll
 E:\RecepTest\DTO\obj\Debug\net7.0\refint\DTO.dll
 E:\RecepTest\DTO\obj\Debug\net7.0\DTO.pdb
 E:\RecepTest\DTO\obj\Debug\net7.0\ref\DTO.dll
+D:\CNPM\DTO\bin\Debug\net7.0\DTO.deps.json
+D:\CNPM\DTO\bin\Debug\net7.0\DTO.dll
+D:\CNPM\DTO\bin\Debug\net7.0\DTO.pdb
+D:\CNPM\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+D:\CNPM\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\CNPM\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+D:\CNPM\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+D:\CNPM\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+D:\CNPM\DTO\obj\Debug\net7.0\DTO.sourcelink.json
+D:\CNPM\DTO\obj\Debug\net7.0\DTO.dll
+D:\CNPM\DTO\obj\Debug\net7.0\refint\DTO.dll
+D:\CNPM\DTO\obj\Debug\net7.0\DTO.pdb
+D:\CNPM\DTO\obj\Debug\net7.0\ref\DTO.dll

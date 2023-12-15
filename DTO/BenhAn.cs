@@ -5,36 +5,30 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DTO
 {
     public class BenhAn
     {
         [Key, Required]
-        [StringLength(50)]
-        public string BA_ID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int BA_ID { get; set; }
         [Required]
-        [StringLength(50)]
-        public string TenBenhAnh { get; set; }
-        [StringLength(50)]
-
-        public string TT_ID { get; set; }
-        [StringLength(50)]
-
-        public string KH_ID { get; set; }
-        [StringLength(50)]
-
-        public string BS_ID { get; set; }
-        [StringLength(50)]
-
-        public string BN_ID { get; set; }
-
+        [AllowNull, StringLength(50)]
+        public string TenBenhAn { get; set; }
+        [AllowNull, StringLength(50)]
+        public string? TrieuChung { get; set; }
+        public int BN_ID { get; set; }
         public DateTime Ngay { get; set; }
-        [StringLength(50)]
+        //[ForeignKey("BN_ID")]
+        //public BenhNhan BenhNhan { get; set; }
 
-        public string ChiTiet { get; set; }
+        //List<QuanLiBenhAn> QuanLiBenhAns { get; set; }
+        //List<ChiTietBenhAn> ChiTietBenhAns { get; set; }
+        //List<BS_BA> BS_BA { get; set; }
 
-        [ForeignKey("BN_ID")]
-        public BenhNhan BenhNhan { get; set; }
+        //List<PhanChiaDonThuoc> PhanChiaDonThuocs { get; set; }
     }
 }

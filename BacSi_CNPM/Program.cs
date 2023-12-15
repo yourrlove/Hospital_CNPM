@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Views.Doctor;
 using Hospital.Views.Login;
@@ -9,11 +6,12 @@ using Hospital.Views.Receptionist;
 
 namespace Hospital
 {
-    internal static class Program
+    public static class Program
     {
+        public static Form ReturnForm { get; set; }
         /// <summary>
         /// The main entry point for the application.
-        /// </summary>
+        /// </summary>  
         [STAThread]
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -26,8 +24,14 @@ namespace Hospital
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReceptionForm());
-            //Application.Run(new Form2());
+            Login fLogin = new Login();
+            Application.Run(new DoctorForm());
+            //Application.Run(new Reception());
+            //if (fLogin.UserSuccessfullyAuthenticated)
+            //{
+            //    // MainForm is defined elsewhere
+            //    Application.Run(ReturnForm);
+            //}
         }
     }
 }

@@ -5,18 +5,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace DTO
 {
+    [PrimaryKey(nameof(BN_ID), nameof(PH_ID))]
     public class PhanChiaBenhNhan
     {
-        [Key, Required]
-        [StringLength(50)]
-        public string PCBN_ID { set; get; }
+
         [Required]
-        [StringLength(50)]
-        public string BN_ID { get; set; }
-        [StringLength(50)]
-        public string PH_ID { set; get; }
+        public int BN_ID { get; set; }
+        [Required]
+        public int PH_ID { set; get; }    
     }
 }

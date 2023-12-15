@@ -11,7 +11,9 @@ namespace DTO
     {
         [Key]
         public string User_ID { get; set; }
+        [Required(ErrorMessage = "Username is required.")]
         public string username { get; set; }
+        [Required(ErrorMessage = "Password is required.")]
         public string password { get; set; }
         public string displayName { get; set; }
     }

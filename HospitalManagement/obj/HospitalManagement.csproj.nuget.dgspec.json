@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project-CNPM\\Hospital_CNPM\\HospitalManagement\\HospitalManagement.csproj": {}
+    "D:\\CNPM\\HospitalManagement\\HospitalManagement.csproj": {}
   },
   "projects": {
-    "D:\\Project-CNPM\\Hospital_CNPM\\HospitalManagement\\HospitalManagement.csproj": {
+    "D:\\CNPM\\HospitalManagement\\HospitalManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project-CNPM\\Hospital_CNPM\\HospitalManagement\\HospitalManagement.csproj",
+        "projectUniqueName": "D:\\CNPM\\HospitalManagement\\HospitalManagement.csproj",
         "projectName": "HospitalManagement",
-        "projectPath": "D:\\Project-CNPM\\Hospital_CNPM\\HospitalManagement\\HospitalManagement.csproj",
+        "projectPath": "D:\\CNPM\\HospitalManagement\\HospitalManagement.csproj",
         "packagesPath": "C:\\Users\\LEGION 5\\.nuget\\packages\\",
-        "outputPath": "D:\\Project-CNPM\\Hospital_CNPM\\HospitalManagement\\obj\\",
+        "outputPath": "D:\\CNPM\\HospitalManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LEGION 5\\AppData\\Roaming\\NuGet\\NuGet.Config",

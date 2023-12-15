@@ -29,33 +29,35 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShapesTool1 = new Guna.UI2.WinForms.Guna2ShapesTool(components);
             bluelayout = new Guna.UI2.WinForms.Guna2Panel();
             doctor_login_img = new Guna.UI2.WinForms.Guna2Panel();
-            passwordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            usernameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            password = new Guna.UI2.WinForms.Guna2TextBox();
+            username = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             ForgotPassword = new System.Windows.Forms.LinkLabel();
             Doctor_Login = new System.Windows.Forms.Label();
             rememberme = new System.Windows.Forms.Label();
             Sign_In = new Guna.UI2.WinForms.Guna2Button();
             guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            errorProvider1 = new System.Windows.Forms.ErrorProvider(components);
             bluelayout.SuspendLayout();
             doctor_login_img.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // guna2ShapesTool1
@@ -63,7 +65,7 @@
             guna2ShapesTool1.Location = new System.Drawing.Point(0, 0);
             guna2ShapesTool1.PolygonSkip = 1;
             guna2ShapesTool1.Rotate = 0F;
-            guna2ShapesTool1.RoundedEdges = customizableEdges1;
+            guna2ShapesTool1.RoundedEdges = customizableEdges14;
             guna2ShapesTool1.Size = new System.Drawing.Size(200, 200);
             guna2ShapesTool1.TargetControl = null;
             // 
@@ -71,12 +73,12 @@
             // 
             bluelayout.BackColor = System.Drawing.Color.Azure;
             bluelayout.Controls.Add(doctor_login_img);
-            bluelayout.CustomizableEdges = customizableEdges12;
+            bluelayout.CustomizableEdges = customizableEdges24;
             bluelayout.Dock = System.Windows.Forms.DockStyle.Fill;
             bluelayout.Location = new System.Drawing.Point(0, 0);
             bluelayout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             bluelayout.Name = "bluelayout";
-            bluelayout.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            bluelayout.ShadowDecoration.CustomizableEdges = customizableEdges25;
             bluelayout.Size = new System.Drawing.Size(1099, 881);
             bluelayout.TabIndex = 0;
             // 
@@ -85,69 +87,70 @@
             doctor_login_img.Anchor = System.Windows.Forms.AnchorStyles.None;
             doctor_login_img.BackgroundImage = (System.Drawing.Image)resources.GetObject("doctor_login_img.BackgroundImage");
             doctor_login_img.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            doctor_login_img.Controls.Add(passwordTextBox);
-            doctor_login_img.Controls.Add(usernameTextBox);
+            doctor_login_img.Controls.Add(password);
+            doctor_login_img.Controls.Add(username);
             doctor_login_img.Controls.Add(guna2ToggleSwitch1);
             doctor_login_img.Controls.Add(ForgotPassword);
             doctor_login_img.Controls.Add(Doctor_Login);
             doctor_login_img.Controls.Add(rememberme);
             doctor_login_img.Controls.Add(Sign_In);
-            doctor_login_img.CustomizableEdges = customizableEdges10;
+            doctor_login_img.CustomizableEdges = customizableEdges22;
             doctor_login_img.Location = new System.Drawing.Point(22, 0);
             doctor_login_img.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             doctor_login_img.Name = "doctor_login_img";
-            doctor_login_img.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            doctor_login_img.ShadowDecoration.CustomizableEdges = customizableEdges23;
             doctor_login_img.Size = new System.Drawing.Size(1041, 836);
             doctor_login_img.TabIndex = 0;
+            doctor_login_img.Paint += doctor_login_img_Paint;
             // 
-            // passwordTextBox
+            // password
             // 
-            passwordTextBox.BorderColor = System.Drawing.Color.Red;
-            passwordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            passwordTextBox.CustomizableEdges = customizableEdges2;
-            passwordTextBox.DefaultText = "";
-            passwordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
-            passwordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
-            passwordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            passwordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            passwordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            passwordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            passwordTextBox.Location = new System.Drawing.Point(442, 548);
-            passwordTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.PasswordChar = '●';
-            passwordTextBox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            passwordTextBox.PlaceholderText = "Enter password";
-            passwordTextBox.SelectedText = "";
-            passwordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            passwordTextBox.Size = new System.Drawing.Size(307, 60);
-            passwordTextBox.TabIndex = 9;
-            passwordTextBox.UseSystemPasswordChar = true;
+            password.BorderColor = System.Drawing.Color.Red;
+            password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            password.CustomizableEdges = customizableEdges1;
+            password.DefaultText = "";
+            password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
+            password.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
+            password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            password.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            password.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            password.Location = new System.Drawing.Point(442, 548);
+            password.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            password.Name = "password";
+            password.PasswordChar = '●';
+            password.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            password.PlaceholderText = "Enter password";
+            password.SelectedText = "";
+            password.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            password.Size = new System.Drawing.Size(307, 60);
+            password.TabIndex = 9;
+            password.UseSystemPasswordChar = true;
             // 
-            // usernameTextBox
+            // username
             // 
-            usernameTextBox.BorderColor = System.Drawing.Color.Red;
-            usernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            usernameTextBox.CustomizableEdges = customizableEdges4;
-            usernameTextBox.DefaultText = "";
-            usernameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
-            usernameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
-            usernameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            usernameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            usernameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            usernameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            usernameTextBox.Location = new System.Drawing.Point(442, 462);
-            usernameTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            usernameTextBox.Name = "usernameTextBox";
-            usernameTextBox.PasswordChar = '\0';
-            usernameTextBox.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            usernameTextBox.PlaceholderText = "Enter username";
-            usernameTextBox.SelectedText = "";
-            usernameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            usernameTextBox.Size = new System.Drawing.Size(307, 60);
-            usernameTextBox.TabIndex = 8;
+            username.BorderColor = System.Drawing.Color.Red;
+            username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            username.CustomizableEdges = customizableEdges16;
+            username.DefaultText = "";
+            username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
+            username.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
+            username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            username.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            username.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            username.Location = new System.Drawing.Point(442, 462);
+            username.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            username.Name = "username";
+            username.PasswordChar = '\0';
+            username.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            username.PlaceholderText = "Enter username";
+            username.SelectedText = "";
+            username.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            username.Size = new System.Drawing.Size(307, 60);
+            username.TabIndex = 8;
             // 
             // guna2ToggleSwitch1
             // 
@@ -156,11 +159,11 @@
             guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(94, 148, 255);
             guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            guna2ToggleSwitch1.CustomizableEdges = customizableEdges6;
+            guna2ToggleSwitch1.CustomizableEdges = customizableEdges18;
             guna2ToggleSwitch1.Location = new System.Drawing.Point(442, 636);
             guna2ToggleSwitch1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            guna2ToggleSwitch1.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna2ToggleSwitch1.ShadowDecoration.CustomizableEdges = customizableEdges19;
             guna2ToggleSwitch1.Size = new System.Drawing.Size(35, 25);
             guna2ToggleSwitch1.TabIndex = 7;
             guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(125, 137, 149);
@@ -210,7 +213,7 @@
             // Sign_In
             // 
             Sign_In.Anchor = System.Windows.Forms.AnchorStyles.None;
-            Sign_In.CustomizableEdges = customizableEdges8;
+            Sign_In.CustomizableEdges = customizableEdges20;
             Sign_In.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             Sign_In.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             Sign_In.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
@@ -221,7 +224,7 @@
             Sign_In.Location = new System.Drawing.Point(501, 698);
             Sign_In.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Sign_In.Name = "Sign_In";
-            Sign_In.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            Sign_In.ShadowDecoration.CustomizableEdges = customizableEdges21;
             Sign_In.Size = new System.Drawing.Size(180, 56);
             Sign_In.TabIndex = 2;
             Sign_In.Text = "Sign In";
@@ -242,6 +245,12 @@
             guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // errorProvider1
+            // 
+            errorProvider1.BlinkRate = 0;
+            errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            errorProvider1.ContainerControl = this;
+            // 
             // Login
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -256,6 +265,7 @@
             bluelayout.ResumeLayout(false);
             doctor_login_img.ResumeLayout(false);
             doctor_login_img.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
 
@@ -270,8 +280,9 @@
         private System.Windows.Forms.Label Doctor_Login;
         private System.Windows.Forms.LinkLabel ForgotPassword;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
-        private Guna.UI2.WinForms.Guna2TextBox passwordTextBox;
-        private Guna.UI2.WinForms.Guna2TextBox usernameTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox password;
+        private Guna.UI2.WinForms.Guna2TextBox username;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

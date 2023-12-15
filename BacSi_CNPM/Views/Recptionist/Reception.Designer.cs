@@ -1,6 +1,6 @@
 ﻿namespace Hospital.Views.Receptionist
 {
-    partial class ReceptionForm
+    partial class Reception
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceptionForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reception));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -244,7 +244,7 @@
             btnRegistPatient.Size = new System.Drawing.Size(285, 150);
             btnRegistPatient.TabIndex = 4;
             btnRegistPatient.Tag = "";
-            btnRegistPatient.Text = "Patient Management";
+            btnRegistPatient.Text = "Patient Registation";
             btnRegistPatient.TextOffset = new System.Drawing.Point(20, 0);
             btnRegistPatient.Click += btnRegistPatient_Click;
             // 
@@ -420,7 +420,7 @@
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.Color = System.Drawing.Color.DimGray;
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            guna2PictureBox1.Size = new System.Drawing.Size(1134, 840);
+            guna2PictureBox1.Size = new System.Drawing.Size(1134, 853);
             guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
@@ -431,7 +431,7 @@
             ReceptionDragControl.TargetControl = topBar;
             ReceptionDragControl.UseTransparentDrag = true;
             // 
-            // ReceptionForm
+            // Reception
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -441,7 +441,8 @@
             Controls.Add(sidebar);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            Name = "ReceptionForm";
+            Name = "Reception";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Reception";
             sidebar.ResumeLayout(false);
             HospitalBrand.ResumeLayout(false);

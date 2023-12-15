@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace Hospital.Views.Receptionist
 {
-    public partial class ReceptionForm : Form
+    public partial class Reception : Form
     {
-        public ReceptionForm()
+        public Reception()
         {
             InitializeComponent();
 
@@ -90,6 +90,7 @@ namespace Hospital.Views.Receptionist
         private void btnPatientList_Click(object sender, EventArgs e)
         {
             LoadForm(new ListPatient());
+            //MessageBox.Show("May dung r do");
         }
 
         private void mainPanelReception_Paint(object sender, PaintEventArgs e)
@@ -109,6 +110,7 @@ namespace Hospital.Views.Receptionist
 
         private void btnRegistPatient_Click(object sender, EventArgs e)
         {
-            showFormMiddle(new PatientManagemennt());        }
+            LoadForm(new PatientRegistation());
+        }
     }
 }
