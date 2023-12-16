@@ -442,7 +442,7 @@
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.Color = System.Drawing.Color.DimGray;
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges27;
-            guna2PictureBox1.Size = new System.Drawing.Size(1128, 764);
+            guna2PictureBox1.Size = new System.Drawing.Size(1128, 721);
             guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 5;
             guna2PictureBox1.TabStop = false;

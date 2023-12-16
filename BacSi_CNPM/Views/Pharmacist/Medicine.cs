@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DataAccessTier;
+using DTO;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,23 +13,121 @@ using System.Windows.Forms;
 
 namespace Hospital.Views.Pharmacist
 {
-    public partial class Medicine : Form
+    public partial class Medicine_details : Form
     {
-        public Medicine()
+        private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
+
+        public Medicine_details()
         {
             InitializeComponent();
+            LoadThuoc();
+            panel_medicineDetail.Visible = false;
+        }
+
+        Current curr = new Current();
+
+        /// <summary>
+        /// Load the prescription list in the datagridview
+        /// </summary>
+        private void LoadThuoc()
+        {
+            try
+            {
+                this.dtgv_medicine.AutoGenerateColumns = true;
+                bindingSource.DataSource = ThuocDBContext.GetThuoc();
+                this.dtgv_medicine.DataSource = bindingSource;
+                this.dtgv_medicine.BorderStyle = BorderStyle.Fixed3D;
+
+
+                this.dtgv_medicine.Columns[3].Visible = false;
+                this.dtgv_medicine.Columns[4].Visible = false;
+                this.dtgv_medicine.Columns[5].Visible = false;
+                this.dtgv_medicine.Columns[6].Visible = false;
+                this.dtgv_medicine.Columns[7].Visible = false;
+                this.dtgv_medicine.Columns[8].Visible = false;
+                this.dtgv_medicine.Columns[9].Visible = false;
+
+            }
+            catch (Exception ex) { }
+        }
+
+        /// <summary>
+        /// Searching the medicine and display realtime
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void search_medicine_TextChanged(object sender, EventArgs e)
+        {
+            if (search_medicine.Text != "")
+            {
+                dtgv_medicine.DataSource = ThuocDBContext.SearchThuoc(search_medicine.Text);
+            }
+            else
+            {
+
+            }
         }
 
         private void dtgv_medicine_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            if (e.RowIndex >= 0 && e.RowIndex < dtgv_medicine.Rows.Count)
+            {
+                var cellValue = dtgv_medicine.Rows[e.RowIndex].Cells[0].Value;
+                // MessageBox.Show("Thuoc ID " + Convert.ToString(cellValue));
+                if (cellValue != null)
+                {
+                    curr.TH_ID = Convert.ToInt32(cellValue);
+                    var image = ThuocDBContext.LoadImage(curr.TH_ID);
+                    if (image != null)
+                    {
+                        // Assuming you have a PictureBox named pictureBox
+                        medicine_box.Image = image;
+
+                    }
+                }
+            }
+
+            tenthuoc.Text = dtgv_medicine.Rows[e.RowIndex].Cells[1].Value.ToString().ToUpper();
+            giaban.Text = dtgv_medicine.Rows[e.RowIndex].Cells[2].Value.ToString() + "dong";
+            soluong.Text = dtgv_medicine.Rows[e.RowIndex].Cells[3].Value.ToString();
+            ngaynhap.Text = dtgv_medicine.Rows[e.RowIndex].Cells[4].Value.ToString();
+            ngayhethan.Text = dtgv_medicine.Rows[e.RowIndex].Cells[5].Value.ToString();
+            chongchidinh.Text = dtgv_medicine.Rows[e.RowIndex].Cells[6].Value.ToString();
+            xuatxu.Text = dtgv_medicine.Rows[e.RowIndex].Cells[7].Value.ToString();
+            tacdungjphu.Text = dtgv_medicine.Rows[e.RowIndex].Cells[8].Value.ToString();
+
+            panel_medicineDetail.Visible = true;
         }
 
-        private void Medicine_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            dtgv_medicine.Rows.Add(15);
-            dtgv_medicine.Rows[0].Cells[0].Value = "1234";
-            dtgv_medicine.Rows[0].Cells[1].Value = "Nguyen Lam Nhat Anh";
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void soluong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Medicine_details_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tenthuoc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

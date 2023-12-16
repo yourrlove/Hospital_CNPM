@@ -28,45 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prescription));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1_searchPatients = new Guna.UI2.WinForms.Guna2Panel();
+            btn_search = new Guna.UI2.WinForms.Guna2Button();
             dtgv_searchPatients = new Guna.UI2.WinForms.Guna2DataGridView();
-            patient_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            patient_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            patient_age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            bNIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            soDienThoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            benhNhanBindingSource1 = new System.Windows.Forms.BindingSource(components);
             search_patient = new Guna.UI2.WinForms.Guna2TextBox();
+            benhNhanBindingSource = new System.Windows.Forms.BindingSource(components);
             containerPrescription = new Guna.UI2.WinForms.Guna2Panel();
             guna2Panel1_searchPatients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_searchPatients).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)benhNhanBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)benhNhanBindingSource).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1_searchPatients
             // 
+            guna2Panel1_searchPatients.Controls.Add(btn_search);
             guna2Panel1_searchPatients.Controls.Add(dtgv_searchPatients);
             guna2Panel1_searchPatients.Controls.Add(search_patient);
-            guna2Panel1_searchPatients.CustomizableEdges = customizableEdges3;
+            guna2Panel1_searchPatients.CustomizableEdges = customizableEdges5;
             guna2Panel1_searchPatients.Dock = System.Windows.Forms.DockStyle.Left;
             guna2Panel1_searchPatients.Location = new System.Drawing.Point(0, 0);
+            guna2Panel1_searchPatients.Margin = new System.Windows.Forms.Padding(4);
             guna2Panel1_searchPatients.Name = "guna2Panel1_searchPatients";
-            guna2Panel1_searchPatients.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1_searchPatients.Size = new System.Drawing.Size(617, 793);
+            guna2Panel1_searchPatients.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1_searchPatients.Size = new System.Drawing.Size(673, 991);
             guna2Panel1_searchPatients.TabIndex = 0;
-            guna2Panel1_searchPatients.Paint += guna2Panel1_searchPatients_Paint;
+            // 
+            // btn_search
+            // 
+            btn_search.CustomizableEdges = customizableEdges1;
+            btn_search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            btn_search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            btn_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
+            btn_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
+            btn_search.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            btn_search.ForeColor = System.Drawing.Color.White;
+            btn_search.Location = new System.Drawing.Point(461, 47);
+            btn_search.Name = "btn_search";
+            btn_search.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_search.Size = new System.Drawing.Size(130, 49);
+            btn_search.TabIndex = 5;
+            btn_search.Text = "Search";
+            btn_search.Click += btn_search_Click;
             // 
             // dtgv_searchPatients
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dtgv_searchPatients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtgv_searchPatients.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtgv_searchPatients.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -77,7 +107,8 @@
             dtgv_searchPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgv_searchPatients.ColumnHeadersHeight = 22;
             dtgv_searchPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dtgv_searchPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { patient_ID, patient_name, patient_age });
+            dtgv_searchPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { bNIDDataGridViewTextBoxColumn, hoTenDataGridViewTextBoxColumn, gioiTinhDataGridViewTextBoxColumn, ngaySinhDataGridViewTextBoxColumn, diaChiDataGridViewTextBoxColumn, soDienThoaiDataGridViewTextBoxColumn });
+            dtgv_searchPatients.DataSource = benhNhanBindingSource1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -87,12 +118,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             dtgv_searchPatients.DefaultCellStyle = dataGridViewCellStyle3;
             dtgv_searchPatients.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            dtgv_searchPatients.Location = new System.Drawing.Point(24, 110);
+            dtgv_searchPatients.Location = new System.Drawing.Point(13, 127);
+            dtgv_searchPatients.Margin = new System.Windows.Forms.Padding(4);
             dtgv_searchPatients.Name = "dtgv_searchPatients";
             dtgv_searchPatients.RowHeadersVisible = false;
             dtgv_searchPatients.RowHeadersWidth = 51;
             dtgv_searchPatients.RowTemplate.Height = 29;
-            dtgv_searchPatients.Size = new System.Drawing.Size(569, 671);
+            dtgv_searchPatients.Size = new System.Drawing.Size(652, 679);
             dtgv_searchPatients.TabIndex = 4;
             dtgv_searchPatients.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_searchPatients.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -115,31 +147,73 @@
             dtgv_searchPatients.ThemeStyle.RowsStyle.Height = 29;
             dtgv_searchPatients.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_searchPatients.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
-            dtgv_searchPatients.CellContentClick += dtgv_seachPatients_CellContentClick;
+            dtgv_searchPatients.CellClick += dtgv_searchPatients_CellClick;
             dtgv_searchPatients.CellDoubleClick += dtgv_searchPatients_CellDoubleClick;
             // 
-            // patient_ID
+            // bNIDDataGridViewTextBoxColumn
             // 
-            patient_ID.HeaderText = "ID";
-            patient_ID.MinimumWidth = 6;
-            patient_ID.Name = "patient_ID";
+            bNIDDataGridViewTextBoxColumn.DataPropertyName = "BN_ID";
+            bNIDDataGridViewTextBoxColumn.HeaderText = "BN_ID";
+            bNIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            bNIDDataGridViewTextBoxColumn.Name = "bNIDDataGridViewTextBoxColumn";
+            bNIDDataGridViewTextBoxColumn.ReadOnly = true;
+            bNIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            bNIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // patient_name
+            // hoTenDataGridViewTextBoxColumn
             // 
-            patient_name.HeaderText = "Name";
-            patient_name.MinimumWidth = 6;
-            patient_name.Name = "patient_name";
+            hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
+            hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
+            hoTenDataGridViewTextBoxColumn.MinimumWidth = 8;
+            hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            hoTenDataGridViewTextBoxColumn.ReadOnly = true;
+            hoTenDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // patient_age
+            // gioiTinhDataGridViewTextBoxColumn
             // 
-            patient_age.HeaderText = "Age";
-            patient_age.MinimumWidth = 6;
-            patient_age.Name = "patient_age";
+            gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
+            gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
+            gioiTinhDataGridViewTextBoxColumn.MinimumWidth = 8;
+            gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
+            gioiTinhDataGridViewTextBoxColumn.ReadOnly = true;
+            gioiTinhDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ngaySinhDataGridViewTextBoxColumn
+            // 
+            ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
+            ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
+            ngaySinhDataGridViewTextBoxColumn.MinimumWidth = 8;
+            ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
+            ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
+            ngaySinhDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // diaChiDataGridViewTextBoxColumn
+            // 
+            diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
+            diaChiDataGridViewTextBoxColumn.HeaderText = "DiaChi";
+            diaChiDataGridViewTextBoxColumn.MinimumWidth = 8;
+            diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
+            diaChiDataGridViewTextBoxColumn.ReadOnly = true;
+            diaChiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            diaChiDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // soDienThoaiDataGridViewTextBoxColumn
+            // 
+            soDienThoaiDataGridViewTextBoxColumn.DataPropertyName = "SoDienThoai";
+            soDienThoaiDataGridViewTextBoxColumn.HeaderText = "SoDienThoai";
+            soDienThoaiDataGridViewTextBoxColumn.MinimumWidth = 8;
+            soDienThoaiDataGridViewTextBoxColumn.Name = "soDienThoaiDataGridViewTextBoxColumn";
+            soDienThoaiDataGridViewTextBoxColumn.ReadOnly = true;
+            soDienThoaiDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // benhNhanBindingSource1
+            // 
+            benhNhanBindingSource1.DataSource = typeof(DTO.BenhNhan);
             // 
             // search_patient
             // 
-            search_patient.CustomizableEdges = customizableEdges1;
-            search_patient.DefaultText = "Search Patients";
+            search_patient.CustomizableEdges = customizableEdges3;
+            search_patient.DefaultText = "";
             search_patient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
             search_patient.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
             search_patient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
@@ -149,40 +223,47 @@
             search_patient.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             search_patient.IconLeft = (System.Drawing.Image)resources.GetObject("search_patient.IconLeft");
             search_patient.IconLeftSize = new System.Drawing.Size(32, 32);
-            search_patient.Location = new System.Drawing.Point(24, 36);
-            search_patient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            search_patient.Location = new System.Drawing.Point(68, 47);
+            search_patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             search_patient.Name = "search_patient";
             search_patient.PasswordChar = '\0';
-            search_patient.PlaceholderText = "";
+            search_patient.PlaceholderText = "Search patient";
             search_patient.SelectedText = "";
-            search_patient.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            search_patient.Size = new System.Drawing.Size(286, 41);
+            search_patient.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            search_patient.Size = new System.Drawing.Size(358, 51);
             search_patient.TabIndex = 3;
+            search_patient.TextChanged += search_patient_TextChanged;
+            // 
+            // benhNhanBindingSource
+            // 
+            benhNhanBindingSource.DataSource = typeof(DTO.BenhNhan);
             // 
             // containerPrescription
             // 
-            containerPrescription.CustomizableEdges = customizableEdges5;
+            containerPrescription.CustomizableEdges = customizableEdges7;
             containerPrescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            containerPrescription.Location = new System.Drawing.Point(617, 0);
+            containerPrescription.Location = new System.Drawing.Point(673, 0);
+            containerPrescription.Margin = new System.Windows.Forms.Padding(4);
             containerPrescription.Name = "containerPrescription";
-            containerPrescription.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            containerPrescription.Size = new System.Drawing.Size(499, 793);
+            containerPrescription.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            containerPrescription.Size = new System.Drawing.Size(722, 991);
             containerPrescription.TabIndex = 1;
-            containerPrescription.Paint += containerPrescription_Paint;
             // 
             // Prescription
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1116, 793);
+            ClientSize = new System.Drawing.Size(1395, 991);
             Controls.Add(containerPrescription);
             Controls.Add(guna2Panel1_searchPatients);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(4);
             Name = "Prescription";
             Text = "Prescription";
-            Load += Prescription_Load;
             guna2Panel1_searchPatients.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgv_searchPatients).EndInit();
+            ((System.ComponentModel.ISupportInitialize)benhNhanBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)benhNhanBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -190,10 +271,16 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1_searchPatients;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_searchPatients;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patient_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patient_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patient_age;
         private Guna.UI2.WinForms.Guna2TextBox search_patient;
         private Guna.UI2.WinForms.Guna2Panel containerPrescription;
+        private System.Windows.Forms.BindingSource benhNhanBindingSource;
+        private System.Windows.Forms.BindingSource benhNhanBindingSource1;
+        private Guna.UI2.WinForms.Guna2Button btn_search;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bNIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soDienThoaiDataGridViewTextBoxColumn;
     }
 }

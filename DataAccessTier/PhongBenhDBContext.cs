@@ -21,6 +21,5 @@ namespace DataAccessTier
 
                 return dbContext.PhongBenh.ToDictionary(room => room.TenPhong, room => room.SucChua);
         }
-
     }
 }

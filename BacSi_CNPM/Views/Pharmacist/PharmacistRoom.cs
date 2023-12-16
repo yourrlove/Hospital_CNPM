@@ -104,7 +104,7 @@ namespace Hospital.Views.Pharmacist
         {
             text_val.Text = "Medicine Store";
             image_val.Image = Properties.Resources.icons8_dashboard_48;
-            container(new Medicine());
+            container(new Medicine_details());
         }
 
         private void btnPrescription_Click(object sender, EventArgs e)

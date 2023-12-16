@@ -28,20 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             dtgv_medicinePrescription = new Guna.UI2.WinForms.Guna2DataGridView();
-            Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ngayKeDonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            bSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenDonThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            donThuocBindingSource1 = new System.Windows.Forms.BindingSource(components);
+            donThuocBindingSource = new System.Windows.Forms.BindingSource(components);
             label1 = new System.Windows.Forms.Label();
+            sqlConnection1 = new Microsoft.Data.SqlClient.SqlConnection();
             ((System.ComponentModel.ISupportInitialize)dtgv_medicinePrescription).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)donThuocBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)donThuocBindingSource).BeginInit();
             SuspendLayout();
             // 
             // dtgv_medicinePrescription
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dtgv_medicinePrescription.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dtgv_medicinePrescription.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -52,7 +61,8 @@
             dtgv_medicinePrescription.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgv_medicinePrescription.ColumnHeadersHeight = 40;
             dtgv_medicinePrescription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dtgv_medicinePrescription.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Column1, Column2 });
+            dtgv_medicinePrescription.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dTIDDataGridViewTextBoxColumn, ngayKeDonDataGridViewTextBoxColumn, bSIDDataGridViewTextBoxColumn, tenDonThuocDataGridViewTextBoxColumn });
+            dtgv_medicinePrescription.DataSource = donThuocBindingSource1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -67,7 +77,7 @@
             dtgv_medicinePrescription.RowHeadersVisible = false;
             dtgv_medicinePrescription.RowHeadersWidth = 51;
             dtgv_medicinePrescription.RowTemplate.Height = 29;
-            dtgv_medicinePrescription.Size = new System.Drawing.Size(417, 616);
+            dtgv_medicinePrescription.Size = new System.Drawing.Size(417, 546);
             dtgv_medicinePrescription.TabIndex = 0;
             dtgv_medicinePrescription.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_medicinePrescription.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -90,19 +100,45 @@
             dtgv_medicinePrescription.ThemeStyle.RowsStyle.Height = 29;
             dtgv_medicinePrescription.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_medicinePrescription.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
-            dtgv_medicinePrescription.CellDoubleClick += dtgv_medicinePrescription_CellDoubleClick;
+            dtgv_medicinePrescription.CellClick += dtgv_medicinePrescription_CellClick;
             // 
-            // Column1
+            // dTIDDataGridViewTextBoxColumn
             // 
-            Column1.HeaderText = "Đơn thuốc";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
+            dTIDDataGridViewTextBoxColumn.DataPropertyName = "DT_ID";
+            dTIDDataGridViewTextBoxColumn.HeaderText = "DT_ID";
+            dTIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            dTIDDataGridViewTextBoxColumn.Name = "dTIDDataGridViewTextBoxColumn";
+            dTIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // Column2
+            // ngayKeDonDataGridViewTextBoxColumn
             // 
-            Column2.HeaderText = "Quantity";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
+            ngayKeDonDataGridViewTextBoxColumn.DataPropertyName = "NgayKeDon";
+            ngayKeDonDataGridViewTextBoxColumn.HeaderText = "NgayKeDon";
+            ngayKeDonDataGridViewTextBoxColumn.MinimumWidth = 8;
+            ngayKeDonDataGridViewTextBoxColumn.Name = "ngayKeDonDataGridViewTextBoxColumn";
+            // 
+            // bSIDDataGridViewTextBoxColumn
+            // 
+            bSIDDataGridViewTextBoxColumn.DataPropertyName = "BS_ID";
+            bSIDDataGridViewTextBoxColumn.HeaderText = "BS_ID";
+            bSIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            bSIDDataGridViewTextBoxColumn.Name = "bSIDDataGridViewTextBoxColumn";
+            bSIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tenDonThuocDataGridViewTextBoxColumn
+            // 
+            tenDonThuocDataGridViewTextBoxColumn.DataPropertyName = "TenDonThuoc";
+            tenDonThuocDataGridViewTextBoxColumn.HeaderText = "TenDonThuoc";
+            tenDonThuocDataGridViewTextBoxColumn.MinimumWidth = 8;
+            tenDonThuocDataGridViewTextBoxColumn.Name = "tenDonThuocDataGridViewTextBoxColumn";
+            // 
+            // donThuocBindingSource1
+            // 
+            donThuocBindingSource1.DataSource = typeof(DTO.DonThuoc);
+            // 
+            // donThuocBindingSource
+            // 
+            donThuocBindingSource.DataSource = typeof(DTO.DonThuoc);
             // 
             // label1
             // 
@@ -114,6 +150,10 @@
             label1.TabIndex = 1;
             label1.Text = "Prescription";
             // 
+            // sqlConnection1
+            // 
+            sqlConnection1.FireInfoMessageEventOnUserErrors = false;
+            // 
             // MedicinePrescription
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -124,8 +164,9 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "MedicinePrescription";
             Text = "MedicinePrescription";
-            Load += MedicinePrescription_Load;
             ((System.ComponentModel.ISupportInitialize)dtgv_medicinePrescription).EndInit();
+            ((System.ComponentModel.ISupportInitialize)donThuocBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)donThuocBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -134,7 +175,12 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_medicinePrescription;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.BindingSource donThuocBindingSource;
+        private System.Windows.Forms.BindingSource donThuocBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dTIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayKeDonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bSIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenDonThuocDataGridViewTextBoxColumn;
+        private Microsoft.Data.SqlClient.SqlConnection sqlConnection1;
     }
 }
