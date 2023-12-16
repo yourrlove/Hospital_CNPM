@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -47,7 +48,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            topbar_edit = new Guna.UI2.WinForms.Guna2Panel();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             label13 = new System.Windows.Forms.Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -62,7 +63,6 @@
             dateTimePicker_DoB = new System.Windows.Forms.DateTimePicker();
             guna2TextBox_Name = new Guna.UI2.WinForms.Guna2TextBox();
             radioButton_Female = new System.Windows.Forms.RadioButton();
-            uC_PictureBox1 = new User_Controls.UC_PictureBox();
             uC_Button_Delete = new User_Controls.UC_Button();
             uC_Button_Confirm = new User_Controls.UC_Button();
             CanNang = new Guna.UI2.WinForms.Guna2TextBox();
@@ -71,24 +71,24 @@
             label2 = new System.Windows.Forms.Label();
             NhomMau = new Guna.UI2.WinForms.Guna2ComboBox();
             label18 = new System.Windows.Forms.Label();
-            guna2Panel1.SuspendLayout();
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
+            topbar_edit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // guna2Panel1
+            // topbar_edit
             // 
-            guna2Panel1.BackColor = System.Drawing.Color.DarkCyan;
-            guna2Panel1.Controls.Add(guna2ControlBox1);
-            guna2Panel1.Controls.Add(label13);
-            guna2Panel1.Controls.Add(guna2PictureBox1);
-            guna2Panel1.CustomizableEdges = customizableEdges5;
-            guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel1.Size = new System.Drawing.Size(714, 63);
-            guna2Panel1.TabIndex = 0;
+            topbar_edit.BackColor = System.Drawing.Color.RoyalBlue;
+            topbar_edit.Controls.Add(guna2ControlBox1);
+            topbar_edit.Controls.Add(label13);
+            topbar_edit.Controls.Add(guna2PictureBox1);
+            topbar_edit.CustomizableEdges = customizableEdges5;
+            topbar_edit.Dock = System.Windows.Forms.DockStyle.Top;
+            topbar_edit.Location = new System.Drawing.Point(0, 0);
+            topbar_edit.Name = "topbar_edit";
+            topbar_edit.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            topbar_edit.Size = new System.Drawing.Size(714, 63);
+            topbar_edit.TabIndex = 0;
             // 
             // guna2ControlBox1
             // 
@@ -106,11 +106,11 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new System.Drawing.Font("Segoe UI Historic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label13.ForeColor = System.Drawing.Color.White;
-            label13.Location = new System.Drawing.Point(59, 9);
+            label13.Location = new System.Drawing.Point(59, 15);
             label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(281, 31);
+            label13.Size = new System.Drawing.Size(274, 31);
             label13.TabIndex = 4;
             label13.Text = "Edit Patient Information";
             label13.Click += label13_Click;
@@ -120,7 +120,7 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges3;
             guna2PictureBox1.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new System.Drawing.Point(12, 3);
+            guna2PictureBox1.Location = new System.Drawing.Point(3, 9);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2PictureBox1.Size = new System.Drawing.Size(50, 42);
@@ -139,33 +139,33 @@
             Address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             Address.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             Address.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            Address.Location = new System.Drawing.Point(365, 412);
+            Address.Location = new System.Drawing.Point(121, 422);
             Address.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             Address.Name = "Address";
             Address.PasswordChar = '\0';
-            Address.PlaceholderText = "Enter National ID";
+            Address.PlaceholderText = "Enter address";
             Address.SelectedText = "";
             Address.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            Address.Size = new System.Drawing.Size(258, 43);
+            Address.Size = new System.Drawing.Size(551, 43);
             Address.TabIndex = 49;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label10.Location = new System.Drawing.Point(274, 120);
+            label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label10.Location = new System.Drawing.Point(31, 120);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(80, 31);
+            label10.Size = new System.Drawing.Size(60, 23);
             label10.TabIndex = 43;
             label10.Text = "Name:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(252, 412);
+            label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label4.Location = new System.Drawing.Point(31, 422);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(102, 31);
+            label4.Size = new System.Drawing.Size(74, 23);
             label4.TabIndex = 36;
             label4.Text = "Address:";
             // 
@@ -180,23 +180,23 @@
             guna2TextBox_Tel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             guna2TextBox_Tel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             guna2TextBox_Tel.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            guna2TextBox_Tel.Location = new System.Drawing.Point(365, 242);
+            guna2TextBox_Tel.Location = new System.Drawing.Point(121, 252);
             guna2TextBox_Tel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             guna2TextBox_Tel.Name = "guna2TextBox_Tel";
             guna2TextBox_Tel.PasswordChar = '\0';
             guna2TextBox_Tel.PlaceholderText = "Enter telephone";
             guna2TextBox_Tel.SelectedText = "";
             guna2TextBox_Tel.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox_Tel.Size = new System.Drawing.Size(307, 43);
+            guna2TextBox_Tel.Size = new System.Drawing.Size(551, 43);
             guna2TextBox_Tel.TabIndex = 35;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label12.Location = new System.Drawing.Point(274, 242);
+            label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label12.Location = new System.Drawing.Point(31, 262);
             label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(47, 31);
+            label12.Size = new System.Drawing.Size(34, 23);
             label12.TabIndex = 45;
             label12.Text = "Tel:";
             // 
@@ -204,7 +204,7 @@
             // 
             radioButton_Male.AutoSize = true;
             radioButton_Male.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            radioButton_Male.Location = new System.Drawing.Point(375, 182);
+            radioButton_Male.Location = new System.Drawing.Point(121, 189);
             radioButton_Male.Name = "radioButton_Male";
             radioButton_Male.Size = new System.Drawing.Size(75, 32);
             radioButton_Male.TabIndex = 38;
@@ -215,26 +215,26 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label7.Location = new System.Drawing.Point(206, 327);
+            label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label7.Location = new System.Drawing.Point(31, 339);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(148, 31);
+            label7.Size = new System.Drawing.Size(111, 23);
             label7.TabIndex = 42;
             label7.Text = "Date of birth:";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label11.Location = new System.Drawing.Point(274, 182);
+            label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label11.Location = new System.Drawing.Point(31, 196);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(54, 31);
+            label11.Size = new System.Drawing.Size(40, 23);
             label11.TabIndex = 44;
             label11.Text = "Sex:";
             // 
             // dateTimePicker_DoB
             // 
-            dateTimePicker_DoB.Location = new System.Drawing.Point(365, 331);
+            dateTimePicker_DoB.Location = new System.Drawing.Point(177, 339);
             dateTimePicker_DoB.Name = "dateTimePicker_DoB";
             dateTimePicker_DoB.Size = new System.Drawing.Size(238, 27);
             dateTimePicker_DoB.TabIndex = 41;
@@ -250,21 +250,21 @@
             guna2TextBox_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             guna2TextBox_Name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             guna2TextBox_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            guna2TextBox_Name.Location = new System.Drawing.Point(365, 120);
+            guna2TextBox_Name.Location = new System.Drawing.Point(121, 111);
             guna2TextBox_Name.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             guna2TextBox_Name.Name = "guna2TextBox_Name";
             guna2TextBox_Name.PasswordChar = '\0';
             guna2TextBox_Name.PlaceholderText = "Enter name";
             guna2TextBox_Name.SelectedText = "";
             guna2TextBox_Name.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox_Name.Size = new System.Drawing.Size(307, 43);
+            guna2TextBox_Name.Size = new System.Drawing.Size(551, 43);
             guna2TextBox_Name.TabIndex = 34;
             // 
             // radioButton_Female
             // 
             radioButton_Female.AutoSize = true;
             radioButton_Female.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            radioButton_Female.Location = new System.Drawing.Point(463, 182);
+            radioButton_Female.Location = new System.Drawing.Point(252, 189);
             radioButton_Female.Name = "radioButton_Female";
             radioButton_Female.Size = new System.Drawing.Size(59, 32);
             radioButton_Female.TabIndex = 39;
@@ -272,60 +272,45 @@
             radioButton_Female.Text = "Nu";
             radioButton_Female.UseVisualStyleBackColor = true;
             // 
-            // uC_PictureBox1
-            // 
-            uC_PictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            uC_PictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            uC_PictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
-            uC_PictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            uC_PictureBox1.BorderSize = 2;
-            uC_PictureBox1.GradientAngle = 50F;
-            uC_PictureBox1.Location = new System.Drawing.Point(12, 105);
-            uC_PictureBox1.Name = "uC_PictureBox1";
-            uC_PictureBox1.Size = new System.Drawing.Size(230, 230);
-            uC_PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            uC_PictureBox1.TabIndex = 50;
-            uC_PictureBox1.TabStop = false;
-            // 
             // uC_Button_Delete
             // 
-            uC_Button_Delete.BackColor = System.Drawing.Color.Blue;
-            uC_Button_Delete.BackgroundColor = System.Drawing.Color.Blue;
-            uC_Button_Delete.BorderColor = System.Drawing.Color.Blue;
+            uC_Button_Delete.BackColor = System.Drawing.Color.Transparent;
+            uC_Button_Delete.BackgroundColor = System.Drawing.Color.Transparent;
+            uC_Button_Delete.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Delete.BorderRadius = 0;
-            uC_Button_Delete.BorderSize = 0;
+            uC_Button_Delete.BorderSize = 1;
             uC_Button_Delete.FlatAppearance.BorderSize = 0;
             uC_Button_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             uC_Button_Delete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             uC_Button_Delete.FontSize = 12;
-            uC_Button_Delete.ForeColor = System.Drawing.Color.White;
-            uC_Button_Delete.Location = new System.Drawing.Point(485, 826);
+            uC_Button_Delete.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
+            uC_Button_Delete.Location = new System.Drawing.Point(485, 668);
             uC_Button_Delete.Name = "uC_Button_Delete";
-            uC_Button_Delete.Size = new System.Drawing.Size(187, 59);
+            uC_Button_Delete.Size = new System.Drawing.Size(169, 58);
             uC_Button_Delete.TabIndex = 52;
             uC_Button_Delete.Text = "Delete";
-            uC_Button_Delete.TextColor = System.Drawing.Color.White;
+            uC_Button_Delete.TextColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Delete.UseVisualStyleBackColor = false;
             uC_Button_Delete.Click += uC_Button_Delete_Click;
             // 
             // uC_Button_Confirm
             // 
-            uC_Button_Confirm.BackColor = System.Drawing.Color.Blue;
-            uC_Button_Confirm.BackgroundColor = System.Drawing.Color.Blue;
-            uC_Button_Confirm.BorderColor = System.Drawing.Color.Blue;
+            uC_Button_Confirm.BackColor = System.Drawing.Color.Transparent;
+            uC_Button_Confirm.BackgroundColor = System.Drawing.Color.Transparent;
+            uC_Button_Confirm.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Confirm.BorderRadius = 0;
-            uC_Button_Confirm.BorderSize = 0;
+            uC_Button_Confirm.BorderSize = 1;
             uC_Button_Confirm.FlatAppearance.BorderSize = 0;
             uC_Button_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             uC_Button_Confirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             uC_Button_Confirm.FontSize = 12;
-            uC_Button_Confirm.ForeColor = System.Drawing.Color.White;
-            uC_Button_Confirm.Location = new System.Drawing.Point(274, 826);
+            uC_Button_Confirm.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
+            uC_Button_Confirm.Location = new System.Drawing.Point(278, 668);
             uC_Button_Confirm.Name = "uC_Button_Confirm";
-            uC_Button_Confirm.Size = new System.Drawing.Size(187, 59);
+            uC_Button_Confirm.Size = new System.Drawing.Size(169, 58);
             uC_Button_Confirm.TabIndex = 51;
             uC_Button_Confirm.Text = "Confirm";
-            uC_Button_Confirm.TextColor = System.Drawing.Color.White;
+            uC_Button_Confirm.TextColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Confirm.UseVisualStyleBackColor = false;
             uC_Button_Confirm.Click += uC_Button_Confirm_Click;
             // 
@@ -340,7 +325,7 @@
             CanNang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             CanNang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             CanNang.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            CanNang.Location = new System.Drawing.Point(327, 529);
+            CanNang.Location = new System.Drawing.Point(335, 527);
             CanNang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             CanNang.Name = "CanNang";
             CanNang.PasswordChar = '\0';
@@ -361,7 +346,7 @@
             ChieuCao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             ChieuCao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             ChieuCao.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            ChieuCao.Location = new System.Drawing.Point(111, 529);
+            ChieuCao.Location = new System.Drawing.Point(121, 527);
             ChieuCao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             ChieuCao.Name = "ChieuCao";
             ChieuCao.PasswordChar = '\0';
@@ -374,20 +359,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(239, 529);
+            label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(243, 529);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(82, 28);
+            label1.Size = new System.Drawing.Size(68, 23);
             label1.TabIndex = 54;
             label1.Text = "Weight:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(26, 529);
+            label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(31, 529);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(79, 28);
+            label2.Size = new System.Drawing.Size(65, 23);
             label2.TabIndex = 53;
             label2.Text = "Height:";
             // 
@@ -412,18 +397,24 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label18.Location = new System.Drawing.Point(457, 529);
+            label18.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label18.Location = new System.Drawing.Point(459, 529);
             label18.Name = "label18";
-            label18.Size = new System.Drawing.Size(119, 28);
+            label18.Size = new System.Drawing.Size(98, 23);
             label18.TabIndex = 57;
             label18.Text = "Blood Type:";
+            // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.TargetControl = topbar_edit;
+            guna2DragControl1.UseTransparentDrag = true;
             // 
             // EditPatientInfor
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(714, 897);
+            ClientSize = new System.Drawing.Size(714, 759);
             Controls.Add(NhomMau);
             Controls.Add(label18);
             Controls.Add(CanNang);
@@ -432,7 +423,6 @@
             Controls.Add(label2);
             Controls.Add(uC_Button_Delete);
             Controls.Add(uC_Button_Confirm);
-            Controls.Add(uC_PictureBox1);
             Controls.Add(Address);
             Controls.Add(label10);
             Controls.Add(label4);
@@ -444,23 +434,22 @@
             Controls.Add(dateTimePicker_DoB);
             Controls.Add(guna2TextBox_Name);
             Controls.Add(radioButton_Female);
-            Controls.Add(guna2Panel1);
+            Controls.Add(topbar_edit);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "EditPatientInfor";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "EditPatientInfor";
             Load += EditPatientInfor_Load;
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
+            topbar_edit.ResumeLayout(false);
+            topbar_edit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel topbar_edit;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
@@ -475,7 +464,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_DoB;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox_Name;
         private System.Windows.Forms.RadioButton radioButton_Female;
-        private User_Controls.UC_PictureBox uC_PictureBox1;
         private User_Controls.UC_Button uC_Button_Delete;
         private User_Controls.UC_Button uC_Button_Confirm;
         private Guna.UI2.WinForms.Guna2TextBox CanNang;
@@ -484,5 +472,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox NhomMau;
         private System.Windows.Forms.Label label18;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

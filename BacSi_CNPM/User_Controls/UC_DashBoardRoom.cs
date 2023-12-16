@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace Hospital.User_Controls
         {
             this.MaximumSize = new System.Drawing.Size(177, 200);
             this.MinimumSize = new System.Drawing.Size(177, 200);
+            
+
             //
             Label unitlabel = new System.Windows.Forms.Label();
             Label roomlabel = new System.Windows.Forms.Label();
@@ -30,7 +33,7 @@ namespace Hospital.User_Controls
             unitlabel.Text = (nOfWaiting > 0) ? $"UNIT: {nOfWaiting}" : "Full";
             unitlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
-            roomlabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            roomlabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             roomlabel.Location = new System.Drawing.Point(11, 21);
             roomlabel.Name = "roomlabel";
             roomlabel.Size = new System.Drawing.Size(160, 25);
@@ -38,7 +41,7 @@ namespace Hospital.User_Controls
             roomlabel.Text = $"Room: {TenPhong}";
             roomlabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
-            doctorlabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            doctorlabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             doctorlabel.Location = new System.Drawing.Point(11, 71);
             doctorlabel.Name = "doctorlabel";
             doctorlabel.Size = new System.Drawing.Size(140, 25);

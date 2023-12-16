@@ -43,20 +43,22 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             sidebar = new System.Windows.Forms.FlowLayoutPanel();
             menuBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             HospitalBrand = new Guna.UI2.WinForms.Guna2Panel();
@@ -64,8 +66,11 @@
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             btnPatientList = new Guna.UI2.WinForms.Guna2Button();
             btnRegistPatient = new Guna.UI2.WinForms.Guna2Button();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             topBar = new Guna.UI2.WinForms.Guna2Panel();
+            label3 = new System.Windows.Forms.Label();
+            changeLanguage = new System.Windows.Forms.ComboBox();
             guna2PictureBox2_val = new Guna.UI2.WinForms.Guna2PictureBox();
             header_val = new System.Windows.Forms.Label();
             label1_val = new System.Windows.Forms.Label();
@@ -73,10 +78,10 @@
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             mainPanelReception = new Guna.UI2.WinForms.Guna2Panel();
-            label2 = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
+            banner_welcome = new System.Windows.Forms.Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ReceptionDragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
+            guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(components);
             sidebar.SuspendLayout();
             HospitalBrand.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logoPictueBox).BeginInit();
@@ -95,15 +100,10 @@
             sidebar.Controls.Add(btnDashboard);
             sidebar.Controls.Add(btnPatientList);
             sidebar.Controls.Add(btnRegistPatient);
+            sidebar.Controls.Add(guna2Panel1);
             sidebar.Controls.Add(btnLogOut);
-            sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            sidebar.Location = new System.Drawing.Point(0, 0);
-            sidebar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            sidebar.MaximumSize = new System.Drawing.Size(288, 1280);
-            sidebar.MinimumSize = new System.Drawing.Size(69, 1280);
+            resources.ApplyResources(sidebar, "sidebar");
             sidebar.Name = "sidebar";
-            sidebar.Size = new System.Drawing.Size(288, 1280);
-            sidebar.TabIndex = 8;
             // 
             // menuBtn
             // 
@@ -113,41 +113,27 @@
             menuBtn.ImageOffset = new System.Drawing.Point(0, 0);
             menuBtn.ImageRotate = 0F;
             menuBtn.ImageSize = new System.Drawing.Size(32, 32);
-            menuBtn.Location = new System.Drawing.Point(3, 4);
-            menuBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(menuBtn, "menuBtn");
             menuBtn.Name = "menuBtn";
-            menuBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             menuBtn.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             menuBtn.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            menuBtn.Size = new System.Drawing.Size(88, 75);
-            menuBtn.TabIndex = 8;
             menuBtn.Click += menuBtn_Click;
             // 
             // HospitalBrand
             // 
             HospitalBrand.Controls.Add(logoPictueBox);
             HospitalBrand.CustomizableEdges = customizableEdges4;
-            HospitalBrand.Dock = System.Windows.Forms.DockStyle.Top;
-            HospitalBrand.Location = new System.Drawing.Point(3, 87);
-            HospitalBrand.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(HospitalBrand, "HospitalBrand");
             HospitalBrand.Name = "HospitalBrand";
             HospitalBrand.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            HospitalBrand.Size = new System.Drawing.Size(285, 189);
-            HospitalBrand.TabIndex = 0;
             // 
             // logoPictueBox
             // 
             logoPictueBox.CustomizableEdges = customizableEdges2;
-            logoPictueBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            logoPictueBox.Image = (System.Drawing.Image)resources.GetObject("logoPictueBox.Image");
+            resources.ApplyResources(logoPictueBox, "logoPictueBox");
             logoPictueBox.ImageRotate = 0F;
-            logoPictueBox.Location = new System.Drawing.Point(0, 0);
-            logoPictueBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             logoPictueBox.Name = "logoPictueBox";
             logoPictueBox.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            logoPictueBox.Size = new System.Drawing.Size(285, 189);
-            logoPictueBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            logoPictueBox.TabIndex = 1;
             logoPictueBox.TabStop = false;
             // 
             // btnDashboard
@@ -160,26 +146,20 @@
             btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
             btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
-            btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(btnDashboard, "btnDashboard");
             btnDashboard.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnDashboard.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnDashboard.ForeColor = System.Drawing.Color.Gainsboro;
+            btnDashboard.ForeColor = System.Drawing.Color.White;
             btnDashboard.HoverState.BorderColor = System.Drawing.Color.Navy;
-            btnDashboard.HoverState.FillColor = System.Drawing.Color.Blue;
+            btnDashboard.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
             btnDashboard.HoverState.ForeColor = System.Drawing.Color.White;
             btnDashboard.HoverState.Image = (System.Drawing.Image)resources.GetObject("resource.Image");
             btnDashboard.Image = (System.Drawing.Image)resources.GetObject("btnDashboard.Image");
             btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnDashboard.ImageOffset = new System.Drawing.Point(10, 0);
             btnDashboard.ImageSize = new System.Drawing.Size(24, 24);
-            btnDashboard.Location = new System.Drawing.Point(3, 284);
-            btnDashboard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            btnDashboard.Size = new System.Drawing.Size(285, 150);
-            btnDashboard.TabIndex = 0;
             btnDashboard.Tag = "Dashboard";
-            btnDashboard.Text = "Dashboard";
             btnDashboard.Click += btnDashboard_Click;
             // 
             // btnPatientList
@@ -192,26 +172,20 @@
             btnPatientList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             btnPatientList.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
             btnPatientList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
-            btnPatientList.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(btnPatientList, "btnPatientList");
             btnPatientList.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnPatientList.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnPatientList.ForeColor = System.Drawing.Color.LightGray;
+            btnPatientList.ForeColor = System.Drawing.Color.White;
             btnPatientList.HoverState.BorderColor = System.Drawing.Color.Navy;
-            btnPatientList.HoverState.FillColor = System.Drawing.Color.Blue;
+            btnPatientList.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
             btnPatientList.HoverState.ForeColor = System.Drawing.Color.White;
             btnPatientList.HoverState.Image = (System.Drawing.Image)resources.GetObject("resource.Image1");
             btnPatientList.Image = (System.Drawing.Image)resources.GetObject("btnPatientList.Image");
             btnPatientList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnPatientList.ImageOffset = new System.Drawing.Point(10, 0);
             btnPatientList.ImageSize = new System.Drawing.Size(32, 32);
-            btnPatientList.Location = new System.Drawing.Point(3, 442);
-            btnPatientList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnPatientList.Name = "btnPatientList";
             btnPatientList.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            btnPatientList.Size = new System.Drawing.Size(285, 150);
-            btnPatientList.TabIndex = 2;
             btnPatientList.Tag = "Patient List";
-            btnPatientList.Text = "Patient Designation";
             btnPatientList.TextOffset = new System.Drawing.Point(10, 0);
             btnPatientList.Click += btnPatientList_Click;
             // 
@@ -225,61 +199,59 @@
             btnRegistPatient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             btnRegistPatient.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
             btnRegistPatient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
-            btnRegistPatient.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(btnRegistPatient, "btnRegistPatient");
             btnRegistPatient.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnRegistPatient.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnRegistPatient.ForeColor = System.Drawing.Color.LightGray;
+            btnRegistPatient.ForeColor = System.Drawing.Color.White;
             btnRegistPatient.HoverState.BorderColor = System.Drawing.Color.Navy;
-            btnRegistPatient.HoverState.FillColor = System.Drawing.Color.Blue;
+            btnRegistPatient.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
             btnRegistPatient.HoverState.ForeColor = System.Drawing.Color.White;
             btnRegistPatient.HoverState.Image = (System.Drawing.Image)resources.GetObject("resource.Image2");
             btnRegistPatient.Image = (System.Drawing.Image)resources.GetObject("btnRegistPatient.Image");
             btnRegistPatient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnRegistPatient.ImageOffset = new System.Drawing.Point(10, 0);
             btnRegistPatient.ImageSize = new System.Drawing.Size(32, 32);
-            btnRegistPatient.Location = new System.Drawing.Point(3, 600);
-            btnRegistPatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnRegistPatient.Name = "btnRegistPatient";
             btnRegistPatient.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            btnRegistPatient.Size = new System.Drawing.Size(285, 150);
-            btnRegistPatient.TabIndex = 4;
-            btnRegistPatient.Tag = "";
-            btnRegistPatient.Text = "Patient Registation";
+            btnRegistPatient.Tag = "PatientRegistration";
             btnRegistPatient.TextOffset = new System.Drawing.Point(20, 0);
             btnRegistPatient.Click += btnRegistPatient_Click;
+            // 
+            // guna2Panel1
+            // 
+            guna2Panel1.CustomizableEdges = customizableEdges12;
+            resources.ApplyResources(guna2Panel1, "guna2Panel1");
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges13;
             // 
             // btnLogOut
             // 
             btnLogOut.BackColor = System.Drawing.Color.White;
             btnLogOut.CheckedState.FillColor = System.Drawing.Color.Red;
             btnLogOut.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            btnLogOut.CustomizableEdges = customizableEdges12;
+            btnLogOut.CustomizableEdges = customizableEdges14;
             btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
             btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
+            resources.ApplyResources(btnLogOut, "btnLogOut");
             btnLogOut.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnLogOut.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            btnLogOut.ForeColor = System.Drawing.Color.Gainsboro;
+            btnLogOut.ForeColor = System.Drawing.Color.White;
             btnLogOut.HoverState.BorderColor = System.Drawing.Color.Navy;
-            btnLogOut.HoverState.FillColor = System.Drawing.Color.Blue;
+            btnLogOut.HoverState.FillColor = System.Drawing.Color.CornflowerBlue;
             btnLogOut.HoverState.ForeColor = System.Drawing.Color.White;
             btnLogOut.Image = (System.Drawing.Image)resources.GetObject("btnLogOut.Image");
             btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btnLogOut.ImageOffset = new System.Drawing.Point(10, 0);
             btnLogOut.ImageSize = new System.Drawing.Size(32, 32);
-            btnLogOut.Location = new System.Drawing.Point(3, 758);
-            btnLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnLogOut.Name = "btnLogOut";
-            btnLogOut.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            btnLogOut.Size = new System.Drawing.Size(285, 150);
-            btnLogOut.TabIndex = 9;
-            btnLogOut.Tag = "Dashboard";
-            btnLogOut.Text = "Log out";
+            btnLogOut.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnLogOut.Tag = "Logout";
             // 
             // topBar
             // 
             topBar.BackColor = System.Drawing.Color.White;
+            topBar.Controls.Add(label3);
+            topBar.Controls.Add(changeLanguage);
             topBar.Controls.Add(guna2PictureBox2_val);
             topBar.Controls.Add(header_val);
             topBar.Controls.Add(label1_val);
@@ -288,141 +260,101 @@
             topBar.Controls.Add(guna2ControlBox1);
             topBar.CustomBorderColor = System.Drawing.Color.Silver;
             topBar.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            topBar.CustomizableEdges = customizableEdges22;
-            topBar.Dock = System.Windows.Forms.DockStyle.Top;
-            topBar.Location = new System.Drawing.Point(288, 0);
-            topBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            topBar.CustomizableEdges = customizableEdges24;
+            resources.ApplyResources(topBar, "topBar");
             topBar.Name = "topBar";
-            topBar.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            topBar.Size = new System.Drawing.Size(1152, 105);
-            topBar.TabIndex = 9;
+            topBar.ShadowDecoration.CustomizableEdges = customizableEdges25;
+            topBar.Paint += topBar_Paint;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(label3, "label3");
+            label3.Name = "label3";
+            // 
+            // changeLanguage
+            // 
+            resources.ApplyResources(changeLanguage, "changeLanguage");
+            changeLanguage.FormattingEnabled = true;
+            changeLanguage.Items.AddRange(new object[] { resources.GetString("changeLanguage.Items"), resources.GetString("changeLanguage.Items1") });
+            changeLanguage.Name = "changeLanguage";
+            changeLanguage.SelectedIndexChanged += changeLanguage_SelectedIndexChanged;
             // 
             // guna2PictureBox2_val
             // 
-            guna2PictureBox2_val.CustomizableEdges = customizableEdges14;
+            guna2PictureBox2_val.CustomizableEdges = customizableEdges16;
+            resources.ApplyResources(guna2PictureBox2_val, "guna2PictureBox2_val");
             guna2PictureBox2_val.ImageRotate = 0F;
-            guna2PictureBox2_val.Location = new System.Drawing.Point(23, 11);
             guna2PictureBox2_val.Name = "guna2PictureBox2_val";
-            guna2PictureBox2_val.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            guna2PictureBox2_val.Size = new System.Drawing.Size(82, 68);
-            guna2PictureBox2_val.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            guna2PictureBox2_val.TabIndex = 9;
+            guna2PictureBox2_val.ShadowDecoration.CustomizableEdges = customizableEdges17;
             guna2PictureBox2_val.TabStop = false;
             // 
             // header_val
             // 
-            header_val.AutoSize = true;
-            header_val.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            header_val.Location = new System.Drawing.Point(124, 17);
+            resources.ApplyResources(header_val, "header_val");
+            header_val.ForeColor = System.Drawing.Color.SteelBlue;
             header_val.Name = "header_val";
-            header_val.Size = new System.Drawing.Size(0, 31);
-            header_val.TabIndex = 8;
             // 
             // label1_val
             // 
-            label1_val.AutoSize = true;
-            label1_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1_val.Location = new System.Drawing.Point(105, 43);
+            resources.ApplyResources(label1_val, "label1_val");
             label1_val.Name = "label1_val";
-            label1_val.Size = new System.Drawing.Size(0, 25);
-            label1_val.TabIndex = 7;
             // 
             // guna2PictureBox1_val
             // 
-            guna2PictureBox1_val.CustomizableEdges = customizableEdges16;
+            guna2PictureBox1_val.CustomizableEdges = customizableEdges18;
             guna2PictureBox1_val.ImageRotate = 0F;
-            guna2PictureBox1_val.Location = new System.Drawing.Point(22, 29);
-            guna2PictureBox1_val.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            resources.ApplyResources(guna2PictureBox1_val, "guna2PictureBox1_val");
             guna2PictureBox1_val.Name = "guna2PictureBox1_val";
-            guna2PictureBox1_val.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            guna2PictureBox1_val.Size = new System.Drawing.Size(55, 61);
-            guna2PictureBox1_val.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            guna2PictureBox1_val.TabIndex = 6;
+            guna2PictureBox1_val.ShadowDecoration.CustomizableEdges = customizableEdges19;
             guna2PictureBox1_val.TabStop = false;
             // 
             // guna2ControlBox2
             // 
-            guna2ControlBox2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            resources.ApplyResources(guna2ControlBox2, "guna2ControlBox2");
             guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            guna2ControlBox2.CustomizableEdges = customizableEdges18;
+            guna2ControlBox2.CustomizableEdges = customizableEdges20;
             guna2ControlBox2.FillColor = System.Drawing.Color.WhiteSmoke;
             guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            guna2ControlBox2.Location = new System.Drawing.Point(1004, 0);
-            guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            guna2ControlBox2.Size = new System.Drawing.Size(73, 53);
-            guna2ControlBox2.TabIndex = 5;
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges21;
             // 
             // guna2ControlBox1
             // 
-            guna2ControlBox1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            guna2ControlBox1.CustomizableEdges = customizableEdges20;
+            resources.ApplyResources(guna2ControlBox1, "guna2ControlBox1");
+            guna2ControlBox1.CustomizableEdges = customizableEdges22;
             guna2ControlBox1.FillColor = System.Drawing.Color.WhiteSmoke;
             guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(255, 128, 128);
             guna2ControlBox1.HoverState.IconColor = System.Drawing.Color.White;
             guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            guna2ControlBox1.Location = new System.Drawing.Point(1073, 0);
-            guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges21;
-            guna2ControlBox1.Size = new System.Drawing.Size(78, 53);
-            guna2ControlBox1.TabIndex = 4;
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges23;
             // 
             // mainPanelReception
             // 
             mainPanelReception.BackColor = System.Drawing.Color.White;
-            mainPanelReception.Controls.Add(label2);
-            mainPanelReception.Controls.Add(label1);
+            mainPanelReception.Controls.Add(banner_welcome);
             mainPanelReception.Controls.Add(guna2PictureBox1);
-            mainPanelReception.CustomizableEdges = customizableEdges26;
-            mainPanelReception.Dock = System.Windows.Forms.DockStyle.Fill;
-            mainPanelReception.Location = new System.Drawing.Point(288, 105);
-            mainPanelReception.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            mainPanelReception.CustomizableEdges = customizableEdges28;
+            resources.ApplyResources(mainPanelReception, "mainPanelReception");
             mainPanelReception.Name = "mainPanelReception";
-            mainPanelReception.ShadowDecoration.CustomizableEdges = customizableEdges27;
-            mainPanelReception.Size = new System.Drawing.Size(1152, 919);
-            mainPanelReception.TabIndex = 10;
+            mainPanelReception.ShadowDecoration.CustomizableEdges = customizableEdges29;
             mainPanelReception.Paint += mainPanelReception_Paint;
             // 
-            // label2
+            // banner_welcome
             // 
-            label2.AutoSize = true;
-            label2.BackColor = System.Drawing.Color.White;
-            label2.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            label2.Location = new System.Drawing.Point(101, 109);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(333, 45);
-            label2.TabIndex = 2;
-            label2.Text = "NECTAR HOSPITAL";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.White;
-            label1.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            label1.Location = new System.Drawing.Point(33, 25);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(242, 45);
-            label1.TabIndex = 1;
-            label1.Text = "WELCOME TO";
+            resources.ApplyResources(banner_welcome, "banner_welcome");
+            banner_welcome.BackColor = System.Drawing.Color.White;
+            banner_welcome.ForeColor = System.Drawing.Color.RoyalBlue;
+            banner_welcome.Name = "banner_welcome";
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            guna2PictureBox1.CustomizableEdges = customizableEdges24;
-            guna2PictureBox1.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox1.Image");
+            resources.ApplyResources(guna2PictureBox1, "guna2PictureBox1");
+            guna2PictureBox1.CustomizableEdges = customizableEdges26;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new System.Drawing.Point(6, 66);
-            guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.Color = System.Drawing.Color.DimGray;
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            guna2PictureBox1.Size = new System.Drawing.Size(1134, 853);
-            guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            guna2PictureBox1.TabIndex = 0;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges27;
             guna2PictureBox1.TabStop = false;
             // 
             // ReceptionDragControl
@@ -431,19 +363,20 @@
             ReceptionDragControl.TargetControl = topBar;
             ReceptionDragControl.UseTransparentDrag = true;
             // 
+            // guna2ShadowForm1
+            // 
+            guna2ShadowForm1.TargetForm = this;
+            // 
             // Reception
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1440, 1024);
             Controls.Add(mainPanelReception);
             Controls.Add(topBar);
             Controls.Add(sidebar);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "Reception";
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "Reception";
+            Load += Reception_Load;
             sidebar.ResumeLayout(false);
             HospitalBrand.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)logoPictueBox).EndInit();
@@ -473,11 +406,14 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel mainPanelReception;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label banner_welcome;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2DragControl ReceptionDragControl;
         private System.Windows.Forms.Label header_val;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2_val;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox changeLanguage;
     }
 }

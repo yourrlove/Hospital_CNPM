@@ -8,6 +8,7 @@ namespace Hospital
 {
     public static class Program
     {
+        //public static int changeLanguage = 1;
         public static Form ReturnForm { get; set; }
         /// <summary>
         /// The main entry point for the application.
@@ -25,7 +26,7 @@ namespace Hospital
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Login fLogin = new Login();
-            Application.Run(new DoctorForm());
+            Application.Run(new Reception());
             //Application.Run(new Reception());
             //if (fLogin.UserSuccessfullyAuthenticated)
             //{

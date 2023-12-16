@@ -38,16 +38,20 @@ namespace Hospital.Views.Receptionist
                 List<Tuple<string, string, int>> list = new List<Tuple<string, string, int>>();
                 list = reception.GetRoomState(khoaInfor.ElementAt(K_idx).Key);
                 int count = 0;
-                int x = 130;
+                int x = 40;
                 int y = 70;
                 int flag = 1;
                 for (int i = 0; i < list.Count; i++)
                 {
                     var item = list.ElementAt(i);
                     UC_DashBoardRoom room = new UC_DashBoardRoom(item.Item1, item.Item2, item.Item3);
+                    room.FillColor = Color.LightSteelBlue;
+                    room.FillColor3 = Color.LightSteelBlue;
+                    room.FillColor2 = Color.LightSteelBlue;
+                    room.FillColor4 = Color.LightSteelBlue;
                     room.Location = new Point(x, y);
                     tab.Controls.Add(room);
-                    x += 300;
+                    x += 220;
                     if (flag == 3)
                     {
                         x = 130;
@@ -61,6 +65,11 @@ namespace Hospital.Views.Receptionist
                 }
                 K_idx++;
             }
+
+        }
+
+        private void tabPage1_DoctorMajor1_Click(object sender, EventArgs e)
+        {
 
         }
     }

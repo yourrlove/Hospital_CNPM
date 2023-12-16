@@ -17,7 +17,7 @@ namespace Hospital.User_Controls
         private int borderSize = 0;
         private int borderRadius = 0;
         private Color borderColor = Color.Blue;
-        private int fontSize = 9; // Default font size
+        private int fontSize = 10; // Default font size
 
         //Properties
         [Category("Button Advance")]

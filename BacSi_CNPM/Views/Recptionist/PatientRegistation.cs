@@ -13,12 +13,14 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tulpep.NotificationWindow;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Hospital.Views.Receptionist
 {
     public partial class PatientRegistation : Form
     {
+        private bool isUnderlined = false; //tạo biến bool khi nào sử dụng underline
         private ReceptionBUS reception;
         private Dictionary<int, string> specialists, rooms;
         private BenhAn record;
@@ -47,7 +49,7 @@ namespace Hospital.Views.Receptionist
 
             if (BN_ID > 0)
             {
-    
+
                 BenhNhan patient = reception.GetBenhNhan(BN_ID);
                 HoTen.Text = patient.HoTen;
                 Nu.Checked = (patient.GioiTinh == "Nu");
@@ -74,7 +76,7 @@ namespace Hospital.Views.Receptionist
         private void uC_Button_Save_Click(object sender, EventArgs e)
         {
 
-            string sex; 
+            string sex;
             if (Nu.Checked)
             {
                 sex = "Nu";
@@ -138,6 +140,7 @@ namespace Hospital.Views.Receptionist
                     PH_ID,
                     KH_ID
                     );
+                successNotification();
             }
             else
             {
@@ -155,6 +158,7 @@ namespace Hospital.Views.Receptionist
                         errorProvider1.SetError(textBox, result.ErrorMessage);
                     }
                 }
+                warningNotification();
 
             }
         }
@@ -176,14 +180,15 @@ namespace Hospital.Views.Receptionist
             TrieuChung.Text = string.Empty;
             CanNang.Text = string.Empty;
             Ngay.Value = DateTime.Now;
-            dateTimePicker2.Value = DateTime.Now;
+            //dateTimePicker2.Value = DateTime.Now;
+            successNotification();
         }
 
         private void guna2ComboBox_Specialist_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             this.TenPhong.Items.Clear();
-            if(TenKhoa.SelectedIndex >= 0)
+            if (TenKhoa.SelectedIndex >= 0)
             {
                 string specialist = this.TenKhoa.SelectedItem.ToString();
                 KH_ID = specialists.FirstOrDefault(x => x.Value == specialist).Key;
@@ -194,5 +199,198 @@ namespace Hospital.Views.Receptionist
                 }
             }
         }
+
+        private void panel_registerForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void HoTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        #region event handle for text box
+
+        //Text box Fullname
+        private void HoTen_Paint(object sender, PaintEventArgs e)
+        {
+            if (isUnderlined)
+            {
+                using (Pen pen = new Pen(Color.RoyalBlue, 2)) // Define the color and thickness of the underline
+                {
+                    e.Graphics.DrawLine(pen, 0, HoTen.Height - 1, HoTen.Width, HoTen.Height - 1);
+                }
+            }
+        }
+        private void HoTen_Click(object sender, EventArgs e)
+        {
+            isUnderlined = true;
+            HoTen.Invalidate(); //redraw the control
+        }
+
+        private void HoTen_Leave(object sender, EventArgs e)
+        {
+            isUnderlined = false;
+            HoTen.Invalidate(); // Redraw the control
+        }
+
+
+        //Text box telephone
+        private void SoDienThoai_Paint(object sender, PaintEventArgs e)
+        {
+            if (isUnderlined)
+            {
+                using (Pen pen = new Pen(Color.RoyalBlue, 2)) // Define the color and thickness of the underline
+                {
+                    e.Graphics.DrawLine(pen, 0, SoDienThoai.Height - 1, SoDienThoai.Width, SoDienThoai.Height - 1);
+                }
+            }
+        }
+
+        private void SoDienThoai_Leave(object sender, EventArgs e)
+        {
+            isUnderlined = false;
+            SoDienThoai.Invalidate(); // Redraw the control
+        }
+
+        private void SoDienThoai_Click(object sender, EventArgs e)
+        {
+            isUnderlined = true;
+            SoDienThoai.Invalidate(); // Redraw the control
+        }
+
+
+        //text box Address
+        private void DiaChi_Paint(object sender, PaintEventArgs e)
+        {
+            if (isUnderlined)
+            {
+                using (Pen pen = new Pen(Color.RoyalBlue, 2)) // Define the color and thickness of the underline
+                {
+                    e.Graphics.DrawLine(pen, 0, DiaChi.Height - 1, DiaChi.Width, DiaChi.Height - 1);
+                }
+            }
+        }
+
+        private void DiaChi_Click(object sender, EventArgs e)
+        {
+            isUnderlined = true;
+            DiaChi.Invalidate(); // Redraw the control
+        }
+
+        private void DiaChi_Leave(object sender, EventArgs e)
+        {
+            isUnderlined = false;
+            DiaChi.Invalidate(); // Redraw the control
+        }
+
+        //make undeerline textbox for Sympton
+        private void TrieuChung_Paint(object sender, PaintEventArgs e)
+        {
+            if (isUnderlined)
+            {
+                using (Pen pen = new Pen(Color.RoyalBlue, 2)) // Define the color and thickness of the underline
+                {
+                    e.Graphics.DrawLine(pen, 0, TrieuChung.Height - 1, TrieuChung.Width, TrieuChung.Height - 1);
+                }
+            }
+        }
+
+        private void TrieuChung_Click(object sender, EventArgs e)
+        {
+            isUnderlined = true;
+            TrieuChung.Invalidate(); // Redraw the control
+        }
+
+        private void TrieuChung_Leave(object sender, EventArgs e)
+        {
+            isUnderlined = false;
+            TrieuChung.Invalidate(); // Redraw the control
+        }
+
+
+        // make undeerline textbox for Height
+        private void ChieuCao_Paint(object sender, PaintEventArgs e)
+        {
+            if (isUnderlined)
+            {
+                using (Pen pen = new Pen(Color.RoyalBlue, 2)) // Define the color and thickness of the underline
+                {
+                    e.Graphics.DrawLine(pen, 0, ChieuCao.Height - 1, ChieuCao.Width, ChieuCao.Height - 1);
+                }
+            }
+        }
+
+        private void ChieuCao_Click(object sender, EventArgs e)
+        {
+            isUnderlined = true;
+            ChieuCao.Invalidate(); // Redraw the control
+        }
+
+        private void ChieuCao_Leave(object sender, EventArgs e)
+        {
+            isUnderlined = false;
+            ChieuCao.Invalidate(); // Redraw the control
+        }
+
+        private void CanNang_Paint(object sender, PaintEventArgs e)
+        {
+            if (isUnderlined)
+            {
+                using (Pen pen = new Pen(Color.RoyalBlue, 2)) // Define the color and thickness of the underline
+                {
+                    e.Graphics.DrawLine(pen, 0, CanNang.Height - 1, CanNang.Width, CanNang.Height - 1);
+                }
+            }
+        }
+
+        // make undeerline textbox for Weight
+        private void CanNang_Click(object sender, EventArgs e)
+        {
+            isUnderlined = true;
+            CanNang.Invalidate(); // Redraw the control
+        }
+
+        private void CanNang_Leave(object sender, EventArgs e)
+        {
+            isUnderlined = false;
+            CanNang.Invalidate(); // Redraw the control
+        }
+
+        #endregion
+
+        //Warning pop up notification
+        private void warningNotification()
+        {
+            PopupNotifier warning = new PopupNotifier();
+            warning.Image = (Image)Properties.Resources.ResourceManager.GetObject("errorcolor");
+            warning.BodyColor = Color.FromArgb(220, 53, 69);
+            warning.TitleText = "Warning!";
+            warning.TitleColor = Color.Black;
+            warning.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
+
+            warning.ContentText = "You must enter the required information";
+            warning.ContentColor = Color.White;
+            warning.ContentFont = new Font("Century Gothic", 12);
+            warning.Popup();
+        }
+
+        //success pop up notification 
+        private void successNotification()
+        {
+            PopupNotifier success = new PopupNotifier();
+            success.Image = (Image)Properties.Resources.ResourceManager.GetObject("successcolor");
+            success.BodyColor = Color.FromArgb(40, 167, 69);
+            success.TitleText = "Success!";
+            success.TitleColor = Color.Black;
+            success.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
+
+            success.ContentText = "Success!";
+            success.ContentColor = Color.White;
+            success.ContentFont = new Font("Century Gothic", 12);
+            success.Popup();
+        }
+        
     }
 }

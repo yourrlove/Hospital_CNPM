@@ -37,3 +37,16 @@ D:\CNPM\DTO\obj\Debug\net7.0\DTO.dll
 D:\CNPM\DTO\obj\Debug\net7.0\refint\DTO.dll
 D:\CNPM\DTO\obj\Debug\net7.0\DTO.pdb
 D:\CNPM\DTO\obj\Debug\net7.0\ref\DTO.dll
+E:\Reception1\DTO\bin\Debug\net7.0\DTO.deps.json
+E:\Reception1\DTO\bin\Debug\net7.0\DTO.dll
+E:\Reception1\DTO\bin\Debug\net7.0\DTO.pdb
+E:\Reception1\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+E:\Reception1\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Reception1\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+E:\Reception1\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+E:\Reception1\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+E:\Reception1\DTO\obj\Debug\net7.0\DTO.sourcelink.json
+E:\Reception1\DTO\obj\Debug\net7.0\DTO.dll
+E:\Reception1\DTO\obj\Debug\net7.0\refint\DTO.dll
+E:\Reception1\DTO\obj\Debug\net7.0\DTO.pdb
+E:\Reception1\DTO\obj\Debug\net7.0\ref\DTO.dll

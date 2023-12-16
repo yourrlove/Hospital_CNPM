@@ -7,8 +7,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,9 +18,14 @@ namespace Hospital.Views.Receptionist
 {
     public partial class Reception : Form
     {
+        private int borderSize = 2;
         public Reception()
         {
             InitializeComponent();
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("vi-VN");
+            this.Padding = new Padding(borderSize);//Border size
+            this.BackColor = Color.FromArgb(98, 102, 244);//Border color
+            CollapseMenu();
 
         }
 
@@ -27,7 +34,33 @@ namespace Hospital.Views.Receptionist
 
 
         }
-
+        private void CollapseMenu()
+        {
+            if (this.sidebar.Width > 200) //Collapse menu
+            {
+                sidebar.Width = 75;
+                logoPictueBox.Visible = false;
+                menuBtn.Dock = DockStyle.Top;
+                foreach (Button menuButton in sidebar.Controls.OfType<Button>())
+                {
+                    menuButton.Text = "";
+                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
+                    menuButton.Padding = new Padding(0);
+                }
+            }
+            else
+            { //Expand menu
+                sidebar.Width = 288;
+                logoPictueBox.Visible = true;
+                menuBtn.Dock = DockStyle.None;
+                foreach (Button menuButton in sidebar.Controls.OfType<Button>())
+                {
+                    menuButton.Text = "   " + menuButton.Tag.ToString();
+                    menuButton.ImageAlign = ContentAlignment.MiddleLeft;
+                    menuButton.Padding = new Padding(10, 0, 0, 0);
+                }
+            }
+        }
         private void showFormMiddle(Form showForm)
         {
             Form fm = new Form();
@@ -89,6 +122,8 @@ namespace Hospital.Views.Receptionist
 
         private void btnPatientList_Click(object sender, EventArgs e)
         {
+            header_val.Text = "Patient List";
+            guna2PictureBox2_val.Image = (Image)Properties.Resources.ResourceManager.GetObject("patientlist");
             LoadForm(new ListPatient());
             //MessageBox.Show("May dung r do");
         }
@@ -105,12 +140,80 @@ namespace Hospital.Views.Receptionist
 
         private void menuBtn_Click(object sender, EventArgs e)
         {
-
+            CollapseMenu();
         }
 
         private void btnRegistPatient_Click(object sender, EventArgs e)
         {
+            header_val.Text = "Patient Registration";
+            guna2PictureBox2_val.Image = (Image)Properties.Resources.ResourceManager.GetObject("registerpatient");
             LoadForm(new PatientRegistation());
         }
+
+        private void topBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Reception_Load(object sender, EventArgs e)
+        {
+            guna2ShadowForm1.SetShadowForm(this);
+        }
+
+        private void changeLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (changeLanguage.SelectedIndex)
+            {
+                case 0:
+                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+                    RightToLeftLayout = false;
+                    break;
+                case 1:
+                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("vi-VN");
+                    RightToLeftLayout = true;
+                    break;
+            }
+            this.Controls.Clear();
+            InitializeComponent();
+            RightToLeftLayout = true;
+            Reception_Load(sender, e);
+            
+            /*CultureInfo newCulture;
+            switch (changeLanguage.SelectedIndex)
+            {
+                case 0:
+                    newCulture = new CultureInfo("en-US");
+                    RightToLeftLayout = false;
+                    break;
+                case 1:
+                    newCulture = new CultureInfo("vi-VN");
+                    RightToLeftLayout = true;
+                    break;
+                default:
+                    return;
+            }
+
+            LanguageManager.ChangeLanguage(newCulture);
+            UpdateLanguageForAllForms();*/
+
+        }
+        /*private void UpdateLanguageForAllForms()
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is Reception)
+                {
+                    form.Controls.Clear();
+                    InitializeComponent();
+                    form.RightToLeftLayout = RightToLeftLayout;
+                }
+
+            }
+        }*/
     }
 }
