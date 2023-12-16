@@ -110,6 +110,7 @@
             topbar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             topbar.Size = new System.Drawing.Size(1152, 137);
             topbar.TabIndex = 7;
+            topbar.Paint += topbar_Paint;
             // 
             // guna2ControlBox2
             // 
@@ -143,7 +144,7 @@
             // text_val
             // 
             text_val.AutoSize = true;
-            text_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            text_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             text_val.Location = new System.Drawing.Point(115, 56);
             text_val.Name = "text_val";
             text_val.Size = new System.Drawing.Size(172, 25);
@@ -176,7 +177,7 @@
             guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             guna2Button2.Dock = System.Windows.Forms.DockStyle.Bottom;
             guna2Button2.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            guna2Button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            guna2Button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             guna2Button2.ForeColor = System.Drawing.Color.Gainsboro;
             guna2Button2.HoverState.BorderColor = System.Drawing.Color.Navy;
             guna2Button2.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -216,7 +217,7 @@
             btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
             btnSettings.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnSettings.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnSettings.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             btnSettings.ForeColor = System.Drawing.Color.LightGray;
             btnSettings.HoverState.BorderColor = System.Drawing.Color.Navy;
             btnSettings.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -234,6 +235,7 @@
             btnSettings.TabIndex = 14;
             btnSettings.Tag = "Settings";
             btnSettings.Text = "Settings";
+            btnSettings.Click += btnSettings_Click;
             // 
             // btnMedicine
             // 
@@ -247,7 +249,7 @@
             btnMedicine.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btnMedicine.Dock = System.Windows.Forms.DockStyle.Top;
             btnMedicine.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnMedicine.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnMedicine.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             btnMedicine.ForeColor = System.Drawing.Color.LightGray;
             btnMedicine.HoverState.BorderColor = System.Drawing.Color.Navy;
             btnMedicine.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -280,7 +282,7 @@
             btnPrescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btnPrescription.Dock = System.Windows.Forms.DockStyle.Top;
             btnPrescription.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnPrescription.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnPrescription.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             btnPrescription.ForeColor = System.Drawing.Color.LightGray;
             btnPrescription.HoverState.BorderColor = System.Drawing.Color.Navy;
             btnPrescription.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -313,7 +315,7 @@
             btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             btnDashboard.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnDashboard.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnDashboard.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             btnDashboard.ForeColor = System.Drawing.Color.Gainsboro;
             btnDashboard.HoverState.BorderColor = System.Drawing.Color.Navy;
             btnDashboard.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -390,7 +392,7 @@
             sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             sidebar.Location = new System.Drawing.Point(0, 0);
             sidebar.Name = "sidebar";
-            sidebar.Size = new System.Drawing.Size(288, 1024);
+            sidebar.Size = new System.Drawing.Size(288, 882);
             sidebar.TabIndex = 16;
             // 
             // panel_container
@@ -404,14 +406,14 @@
             panel_container.Location = new System.Drawing.Point(288, 137);
             panel_container.Name = "panel_container";
             panel_container.ShadowDecoration.CustomizableEdges = customizableEdges29;
-            panel_container.Size = new System.Drawing.Size(1152, 887);
+            panel_container.Size = new System.Drawing.Size(1152, 745);
             panel_container.TabIndex = 17;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = System.Drawing.Color.White;
-            label2.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold);
             label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             label2.Location = new System.Drawing.Point(134, 135);
             label2.Name = "label2";
@@ -423,7 +425,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = System.Drawing.Color.White;
-            label1.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold);
             label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             label1.Location = new System.Drawing.Point(66, 51);
             label1.Name = "label1";
@@ -442,7 +444,7 @@
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.Color = System.Drawing.Color.DimGray;
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges27;
-            guna2PictureBox1.Size = new System.Drawing.Size(1137, 783);
+            guna2PictureBox1.Size = new System.Drawing.Size(1137, 641);
             guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 8;
             guna2PictureBox1.TabStop = false;
@@ -451,7 +453,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1440, 1024);
+            ClientSize = new System.Drawing.Size(1440, 882);
             Controls.Add(panel_container);
             Controls.Add(topbar);
             Controls.Add(sidebar);

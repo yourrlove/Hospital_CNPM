@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Pharmacist\\DataAccessTier\\DataAccessTier.csproj": {}
+    "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DataAccessTier\\DataAccessTier.csproj": {}
   },
   "projects": {
-    "E:\\Pharmacist\\DataAccessTier\\DataAccessTier.csproj": {
+    "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DataAccessTier\\DataAccessTier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Pharmacist\\DataAccessTier\\DataAccessTier.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DataAccessTier\\DataAccessTier.csproj",
         "projectName": "DataAccessTier",
-        "projectPath": "E:\\Pharmacist\\DataAccessTier\\DataAccessTier.csproj",
-        "packagesPath": "C:\\Users\\Ngo Phat\\.nuget\\packages\\",
-        "outputPath": "E:\\Pharmacist\\DataAccessTier\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DataAccessTier\\DataAccessTier.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DataAccessTier\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ngo Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\Pharmacist\\DTO\\DTO.csproj": {
-                "projectPath": "E:\\Pharmacist\\DTO\\DTO.csproj"
+              "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DTO\\DTO.csproj"
               }
             }
           }
@@ -52,6 +47,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -70,25 +69,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Pharmacist\\DTO\\DTO.csproj": {
+    "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Pharmacist\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "E:\\Pharmacist\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\Ngo Phat\\.nuget\\packages\\",
-        "outputPath": "E:\\Pharmacist\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Documents\\nam3\\Parma\\DTO\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ngo Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +91,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -136,7 +130,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

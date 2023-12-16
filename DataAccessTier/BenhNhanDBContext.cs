@@ -14,7 +14,10 @@ namespace DataAccessTier
     {
         public DbSet<BenhNhan> BenhNhan { get; set; }
         public BenhNhanDBContext() { }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>patient list </returns>
         public static BindingList<BenhNhan>? GetListPatient()
         {
             try
@@ -29,6 +32,31 @@ namespace DataAccessTier
             }
             return null;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="BN_ID"></param>
+        /// <returns> patient name </returns>
+        public static string getName(int BN_ID)
+        {
+            try
+            {
+                using (var dbContext  = new BenhNhanDBContext())
+                {
+                    var query = (from bn in dbContext.BenhNhan
+                                where bn.BN_ID == BN_ID
+                                select bn.HoTen).FirstOrDefault();
+
+                    return query != null ? query.ToString() : "No matching record found";
+                }
+            }
+            catch(Exception e) 
+            {
+                return "Error";
+            }
+        }
+            
+
 
     }
 }

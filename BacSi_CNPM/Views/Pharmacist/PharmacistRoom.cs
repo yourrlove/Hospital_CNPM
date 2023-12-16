@@ -19,7 +19,10 @@ namespace Hospital.Views.Pharmacist
             InitializeComponent();
         }
 
-        //load container
+        /// <summary>
+        /// load the container
+        /// </summary>
+        /// <param name="_form"></param>
         private void container(object _form)
         {
             if (panel_container.Controls.Count > 0) { panel_container.Controls.Clear(); }
@@ -36,7 +39,11 @@ namespace Hospital.Views.Pharmacist
         {
 
         }
-
+        /// <summary>
+        /// Search the medicines and display the result realtime
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMedicine_Click(object sender, EventArgs e)
         {
             text_val.Text = "Search Medicine";
@@ -54,6 +61,18 @@ namespace Hospital.Views.Pharmacist
             text_val.Text = "Prescription";
             image_val.Image = (Image)Properties.Resources.ResourceManager.GetObject("prescription");
             container(new PharmacistPrescription());
+        }
+
+        private void topbar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            text_val.Text = "Prescription Checking";
+            image_val.Image = (Image)Properties.Resources.ResourceManager.GetObject("icons8-pill-48");
+            container(new PrescriptionChecking());
         }
     }
 }
