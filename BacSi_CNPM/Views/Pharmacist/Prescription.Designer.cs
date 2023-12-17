@@ -29,20 +29,17 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prescription));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1_searchPatients = new Guna.UI2.WinForms.Guna2Panel();
-            btn_search = new Guna.UI2.WinForms.Guna2Button();
             dtgv_searchPatients = new Guna.UI2.WinForms.Guna2DataGridView();
             bNIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,34 +59,15 @@
             // 
             // guna2Panel1_searchPatients
             // 
-            guna2Panel1_searchPatients.Controls.Add(btn_search);
             guna2Panel1_searchPatients.Controls.Add(dtgv_searchPatients);
             guna2Panel1_searchPatients.Controls.Add(search_patient);
-            guna2Panel1_searchPatients.CustomizableEdges = customizableEdges5;
+            guna2Panel1_searchPatients.CustomizableEdges = customizableEdges3;
             guna2Panel1_searchPatients.Dock = System.Windows.Forms.DockStyle.Left;
             guna2Panel1_searchPatients.Location = new System.Drawing.Point(0, 0);
-            guna2Panel1_searchPatients.Margin = new System.Windows.Forms.Padding(4);
             guna2Panel1_searchPatients.Name = "guna2Panel1_searchPatients";
-            guna2Panel1_searchPatients.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel1_searchPatients.Size = new System.Drawing.Size(673, 991);
+            guna2Panel1_searchPatients.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel1_searchPatients.Size = new System.Drawing.Size(538, 793);
             guna2Panel1_searchPatients.TabIndex = 0;
-            // 
-            // btn_search
-            // 
-            btn_search.CustomizableEdges = customizableEdges1;
-            btn_search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            btn_search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            btn_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
-            btn_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
-            btn_search.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            btn_search.ForeColor = System.Drawing.Color.White;
-            btn_search.Location = new System.Drawing.Point(461, 47);
-            btn_search.Name = "btn_search";
-            btn_search.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btn_search.Size = new System.Drawing.Size(130, 49);
-            btn_search.TabIndex = 5;
-            btn_search.Text = "Search";
-            btn_search.Click += btn_search_Click;
             // 
             // dtgv_searchPatients
             // 
@@ -99,7 +77,7 @@
             dtgv_searchPatients.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -111,20 +89,19 @@
             dtgv_searchPatients.DataSource = benhNhanBindingSource1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             dtgv_searchPatients.DefaultCellStyle = dataGridViewCellStyle3;
             dtgv_searchPatients.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            dtgv_searchPatients.Location = new System.Drawing.Point(13, 127);
-            dtgv_searchPatients.Margin = new System.Windows.Forms.Padding(4);
+            dtgv_searchPatients.Location = new System.Drawing.Point(10, 102);
             dtgv_searchPatients.Name = "dtgv_searchPatients";
             dtgv_searchPatients.RowHeadersVisible = false;
             dtgv_searchPatients.RowHeadersWidth = 51;
             dtgv_searchPatients.RowTemplate.Height = 29;
-            dtgv_searchPatients.Size = new System.Drawing.Size(652, 679);
+            dtgv_searchPatients.Size = new System.Drawing.Size(522, 543);
             dtgv_searchPatients.TabIndex = 4;
             dtgv_searchPatients.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_searchPatients.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -135,19 +112,20 @@
             dtgv_searchPatients.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_searchPatients.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dtgv_searchPatients.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dtgv_searchPatients.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dtgv_searchPatients.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             dtgv_searchPatients.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             dtgv_searchPatients.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dtgv_searchPatients.ThemeStyle.HeaderStyle.Height = 22;
             dtgv_searchPatients.ThemeStyle.ReadOnly = false;
             dtgv_searchPatients.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_searchPatients.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dtgv_searchPatients.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dtgv_searchPatients.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             dtgv_searchPatients.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_searchPatients.ThemeStyle.RowsStyle.Height = 29;
             dtgv_searchPatients.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_searchPatients.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_searchPatients.CellClick += dtgv_searchPatients_CellClick;
+            dtgv_searchPatients.CellContentClick += dtgv_searchPatients_CellContentClick;
             dtgv_searchPatients.CellDoubleClick += dtgv_searchPatients_CellDoubleClick;
             // 
             // bNIDDataGridViewTextBoxColumn
@@ -212,25 +190,25 @@
             // 
             // search_patient
             // 
-            search_patient.CustomizableEdges = customizableEdges3;
+            search_patient.CustomizableEdges = customizableEdges1;
             search_patient.DefaultText = "";
             search_patient.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
             search_patient.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
             search_patient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             search_patient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             search_patient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            search_patient.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            search_patient.Font = new System.Drawing.Font("Segoe UI", 9F);
             search_patient.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             search_patient.IconLeft = (System.Drawing.Image)resources.GetObject("search_patient.IconLeft");
             search_patient.IconLeftSize = new System.Drawing.Size(32, 32);
-            search_patient.Location = new System.Drawing.Point(68, 47);
-            search_patient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            search_patient.Location = new System.Drawing.Point(54, 38);
+            search_patient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             search_patient.Name = "search_patient";
             search_patient.PasswordChar = '\0';
             search_patient.PlaceholderText = "Search patient";
             search_patient.SelectedText = "";
-            search_patient.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            search_patient.Size = new System.Drawing.Size(358, 51);
+            search_patient.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            search_patient.Size = new System.Drawing.Size(286, 41);
             search_patient.TabIndex = 3;
             search_patient.TextChanged += search_patient_TextChanged;
             // 
@@ -240,24 +218,22 @@
             // 
             // containerPrescription
             // 
-            containerPrescription.CustomizableEdges = customizableEdges7;
+            containerPrescription.CustomizableEdges = customizableEdges5;
             containerPrescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            containerPrescription.Location = new System.Drawing.Point(673, 0);
-            containerPrescription.Margin = new System.Windows.Forms.Padding(4);
+            containerPrescription.Location = new System.Drawing.Point(538, 0);
             containerPrescription.Name = "containerPrescription";
-            containerPrescription.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            containerPrescription.Size = new System.Drawing.Size(722, 991);
+            containerPrescription.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            containerPrescription.Size = new System.Drawing.Size(578, 793);
             containerPrescription.TabIndex = 1;
             // 
             // Prescription
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1395, 991);
+            ClientSize = new System.Drawing.Size(1116, 793);
             Controls.Add(containerPrescription);
             Controls.Add(guna2Panel1_searchPatients);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Margin = new System.Windows.Forms.Padding(4);
             Name = "Prescription";
             Text = "Prescription";
             guna2Panel1_searchPatients.ResumeLayout(false);
@@ -275,7 +251,6 @@
         private Guna.UI2.WinForms.Guna2Panel containerPrescription;
         private System.Windows.Forms.BindingSource benhNhanBindingSource;
         private System.Windows.Forms.BindingSource benhNhanBindingSource1;
-        private Guna.UI2.WinForms.Guna2Button btn_search;
         private System.Windows.Forms.DataGridViewTextBoxColumn bNIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;

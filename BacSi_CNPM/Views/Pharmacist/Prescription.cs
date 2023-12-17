@@ -50,6 +50,13 @@ namespace Hospital.Views.Pharmacist
                 bindingSource.DataSource = BenhNhanDBContext.GetListBenhNhan();
                 this.dtgv_searchPatients.DataSource = bindingSource;
                 this.dtgv_searchPatients.BorderStyle = BorderStyle.Fixed3D;
+
+                this.dtgv_searchPatients.Columns[0].Visible = false;
+                this.dtgv_searchPatients.Columns[4].Visible = false;
+                this.dtgv_searchPatients.Columns[6].Visible = false;
+                this.dtgv_searchPatients.Columns[7].Visible = false;
+                this.dtgv_searchPatients.Columns[8].Visible = false;
+
             }
             catch (Exception ex) { }
         }
@@ -97,26 +104,6 @@ namespace Hospital.Views.Pharmacist
             }
         }
 
-        /// <summary>
-        /// click on the button search to display the results 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_search_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string name = search_patient.Text;
-                bindingSource.DataSource = BenhNhanDBContext.SearchPatient(name);
-                this.dtgv_searchPatients.DataSource = bindingSource;
-                this.dtgv_searchPatients.AutoGenerateColumns = true;
-                this.dtgv_searchPatients.BorderStyle = BorderStyle.Fixed3D;
-            }
-            catch
-            {
-
-            }
-        }
 
         /// <summary>
         /// display the results realtime the patient in searching process
@@ -132,6 +119,11 @@ namespace Hospital.Views.Pharmacist
             else
             {
             }
+        }
+
+        private void dtgv_searchPatients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -18,6 +18,8 @@ namespace DTO
         public double TongTien { get; set; }
         public int TN_ID { get; set; }
         public int BN_ID { get; set; }
+        [Required, StringLength(50)]
+        public string ThanhToan { get; set; }
 
     }
 

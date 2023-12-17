@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace DataAccessTier
     public class ChiTietHoaDonDBContext : DBConnection
     {
         public DbSet<ChiTietHoaDon> ChiTietHoaDon { get; set; }
+        public DbSet<Thuoc> Thuoc { get; set; }
         public ChiTietHoaDonDBContext() { }
         /// <summary>
         /// add the details of the medicine
@@ -39,6 +41,34 @@ namespace DataAccessTier
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
+        }
+
+
+        public static BindingList<ThuocHoaDon> loadHoaDon(int HD_ID)
+        {
+            try
+            {
+                using (var dbContext = new ChiTietHoaDonDBContext())
+                {
+                    var query = (from cthd in dbContext.ChiTietHoaDon
+                                join th in dbContext.Thuoc on cthd.TH_ID equals th.TH_ID
+                                where cthd.HD_ID == HD_ID
+                                select new ThuocHoaDon
+                                {
+                                    th_id = th.TH_ID,
+                                    tenthuoc = th.TenThuoc,
+                                    soluong = cthd.SoLuong,
+                                    giaban = th.GiaBan,
+                                    dongia = cthd.DonGia
+                                }).ToList();
+                    return new BindingList<ThuocHoaDon>(query);
+                }
+            }
+            catch 
+            {
+                return null;   
+            }
+
         }
     }
 }

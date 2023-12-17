@@ -84,6 +84,7 @@
             // 
             // dtgv_medicine
             // 
+            dtgv_medicine.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dtgv_medicine.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtgv_medicine.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -129,7 +130,7 @@
             dtgv_medicine.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             dtgv_medicine.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dtgv_medicine.ThemeStyle.HeaderStyle.Height = 40;
-            dtgv_medicine.ThemeStyle.ReadOnly = false;
+            dtgv_medicine.ThemeStyle.ReadOnly = true;
             dtgv_medicine.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_medicine.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dtgv_medicine.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);

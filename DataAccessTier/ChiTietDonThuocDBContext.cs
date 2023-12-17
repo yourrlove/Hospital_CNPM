@@ -18,31 +18,7 @@ namespace DataAccessTier
         public DbSet<DonThuoc> DonThuoc { get; set; }
 
         public ChiTietDonThuocDBContext() { }
-        /// <summary>
-        /// class to load the Prescription as a bill
-        /// </summary>
-        public class donthuocLoaded
-        {
-            public int DT_ID {  get; set; }
-            public int TH_ID {  get; set; }
-            public string TenThuoc { set; get; }
-            public string LieuDung { set; get; }
-            public int SoLuong { set; get; }
-            public double DonGia {  set; get; }
-        }
-        /// <summary>
-        /// Load medicines information the the number of these medicine in storage
-        /// </summary>
-        public class donthuocHT
-        {
-            public int DT_ID { set; get; }
-            public int TH_ID {  set; get; }
-            public string TenThuoc { set; get; }
-            public string LieuDung { get; set; }
-            public int SoLuong { get; set; }
-            public int TonKho { get; set; }
-
-        }
+        
 
         /// <summary>
         /// Return the prescription's name 
@@ -161,6 +137,8 @@ namespace DataAccessTier
             catch (Exception ex) { }
             return null;
         }
+
+
 
     }
 }

@@ -15,6 +15,8 @@ namespace DataAccessTier
     public class BenhNhanDBContext : DBConnection
     {
         public DbSet<BenhNhan> BenhNhan { get; set; }
+        public DbSet<BenhAn> BenhAn { get; set; }
+        public DbSet<HoaDon> HoaDon {  get; set; }
         public BenhNhanDBContext() { }
 
 
@@ -111,22 +113,6 @@ namespace DataAccessTier
             }
             return null;
         }
-        /*
-        public static int GetLastId()
-        {
-            var dbContext = new BenhNhanDBContext();
-            var lastId = dbContext.BenhNhan
-                               .OrderByDescending(x => x.BN_ID)
-                               .Select(x => x.BN_ID)
-                               .FirstOrDefault();
-
-            lastId = Convert.ToString(lastId);
-            lastId = lastId.Substring(3);
-
-            return Convert.ToInt32(lastId);
-        }
-        */
-
         public static List<BenhNhan> getPatientName(int BN_ID)
         {
             try

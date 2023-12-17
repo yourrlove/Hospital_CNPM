@@ -31,7 +31,7 @@ namespace DataAccessTier
         /// </summary>
         /// <param name="BN_ID"></param>
         /// <returns></returns>
-        public static BindingList<DonThuoc>? GetDonThuocBN(int BN_ID)
+        public static BindingList<DonThuoc>? GetDonThuocBenhNhan(int BN_ID)
         {
             try
             {

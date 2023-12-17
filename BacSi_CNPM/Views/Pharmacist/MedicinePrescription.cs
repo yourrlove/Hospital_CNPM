@@ -15,10 +15,14 @@ namespace Hospital.Views.Pharmacist
     public partial class MedicinePrescription : Form
     {
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
+        private System.Windows.Forms.BindingSource bindingSource1 = new System.Windows.Forms.BindingSource();
+
         public MedicinePrescription(int BN_ID)
         {
+            curr.patient = BN_ID;
             InitializeComponent();
             LoadDonThuoc(BN_ID);
+            Loadpatientbill(BN_ID);
         }
         /// <summary>
         /// show the pop up of bill and prescription
@@ -71,11 +75,11 @@ namespace Hospital.Views.Pharmacist
         {
             try
             {
-                curr.patient = BN_ID;
-                bindingSource.DataSource = DonThuocDBContext.GetDonThuocBN(BN_ID);
+                bindingSource.DataSource = DonThuocDBContext.GetDonThuocBenhNhan(BN_ID);
                 this.dtgv_medicinePrescription.DataSource = bindingSource;
                 this.dtgv_medicinePrescription.AutoGenerateColumns = true;
                 this.dtgv_medicinePrescription.BorderStyle = BorderStyle.Fixed3D;
+
             }
             catch (Exception ex)
             {
@@ -83,12 +87,7 @@ namespace Hospital.Views.Pharmacist
             }
         }
 
-        /// <summary>
-        /// 
-        /// Clicking on the cell to display the list of patient prescription
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void dtgv_medicinePrescription_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < dtgv_medicinePrescription.Rows.Count)
@@ -100,6 +99,41 @@ namespace Hospital.Views.Pharmacist
                     int DT_ID = Convert.ToInt32(cellValue);
 
                     showMiddleForm(new PrescriptionBills(DT_ID, curr.patient));
+                }
+            }
+        }
+
+        private void Loadpatientbill(int BN_ID)
+        {
+            try
+            {
+                bindingSource1.DataSource = HoaDonDBContext.GetHoaDonBenhNhan(BN_ID);
+                this.dtgv_patientBill.DataSource = bindingSource1;
+                this.dtgv_patientBill.AutoGenerateColumns = true;
+                this.dtgv_patientBill.BorderStyle = BorderStyle.Fixed3D;
+
+                this.dtgv_patientBill.Columns[0].Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void dtgv_patientBill_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dtgv_patientBill.Rows.Count)
+            {
+                var cellValue = dtgv_patientBill.Rows[e.RowIndex].Cells[0].Value;
+                var cellValue1 = dtgv_patientBill.Rows[e.RowIndex].Cells[3].Value;
+                var cellValue2 = dtgv_patientBill.Rows[e.RowIndex].Cells[4].Value;
+
+                if (cellValue != null)
+                {
+                    int HD_ID = Convert.ToInt32(cellValue);
+                    int tongtien = Convert.ToInt32(cellValue1);
+                    string thanhtoan = Convert.ToString(cellValue2);
+                    showMiddleForm(new BillDetail(HD_ID, tongtien, thanhtoan));
                 }
             }
         }
