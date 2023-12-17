@@ -96,7 +96,6 @@ namespace Hospital.User_Controls
         public UC_PictureBox()
         {
             this.Size = new Size(100, 100);
-            this.SizeMode = PictureBoxSizeMode.Zoom;
 
             this.Click += new EventHandler(pictureBox_Click);
         }

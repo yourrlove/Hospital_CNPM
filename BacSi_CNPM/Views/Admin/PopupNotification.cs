@@ -11,32 +11,36 @@ using Tulpep.NotificationWindow;
 
 namespace Hospital.Views.Admin
 {
-    public partial class NewAccount : Form
+    public partial class PopupNotification : Form
     {
-        public NewAccount()
+        public PopupNotification()
         {
             InitializeComponent();
         }
-        private void PopupNotification()
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            errorNotification();
+
+
+        }
+
+        private void errorNotification()
         {
             PopupNotifier popup = new PopupNotifier();
             popup.Image = (Image)Properties.Resources.ResourceManager.GetObject("warningblack");
-            popup.BodyColor = Color.FromArgb(255, 193, 7);
-            popup.TitleText = "Warning!";
-            popup.TitleColor = Color.Red;
+            popup.BodyColor = Color.FromArgb(220, 53, 69);
+            popup.TitleText = "Error!";
+            popup.TitleColor = Color.White;
             popup.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
 
-            popup.ContentText = "Your warning message";
-            popup.ContentColor = Color.Black;
+            popup.ContentText = "Your error message";
+            popup.ContentColor = Color.White;
             popup.ContentFont = new Font("Century Gothic", 12);
             popup.Popup();
         }
-        private void uC_Button1_Click(object sender, EventArgs e)
-        {
-            PopupNotification();
-        }
 
-        private void NewAccount_Load(object sender, EventArgs e)
+        private void PopupNotification_Load(object sender, EventArgs e)
         {
 
         }

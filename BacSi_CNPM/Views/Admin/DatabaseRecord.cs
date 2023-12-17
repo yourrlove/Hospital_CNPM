@@ -21,5 +21,15 @@ namespace Hospital.Views.Admin
         {
 
         }
+
+        private void uC_Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgv_DoctorRecord_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

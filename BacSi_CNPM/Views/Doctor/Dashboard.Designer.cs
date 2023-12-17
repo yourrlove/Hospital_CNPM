@@ -46,11 +46,13 @@
             label11 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            uC_PictureBox2 = new User_Controls.UC_PictureBox();
             label1 = new System.Windows.Forms.Label();
             uC_PictureBox1 = new User_Controls.UC_PictureBox();
             guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)uC_PictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -182,6 +184,7 @@
             // 
             guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             guna2Panel1.BackColor = System.Drawing.Color.White;
+            guna2Panel1.Controls.Add(uC_PictureBox2);
             guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(uC_PictureBox1);
             guna2Panel1.CustomizableEdges = customizableEdges5;
@@ -191,6 +194,20 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Panel1.Size = new System.Drawing.Size(396, 1091);
             guna2Panel1.TabIndex = 126;
+            // 
+            // uC_PictureBox2
+            // 
+            uC_PictureBox2.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            uC_PictureBox2.BorderColor = System.Drawing.Color.RoyalBlue;
+            uC_PictureBox2.BorderColor2 = System.Drawing.Color.HotPink;
+            uC_PictureBox2.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            uC_PictureBox2.BorderSize = 2;
+            uC_PictureBox2.GradientAngle = 50F;
+            uC_PictureBox2.Location = new System.Drawing.Point(144, 469);
+            uC_PictureBox2.Name = "uC_PictureBox2";
+            uC_PictureBox2.Size = new System.Drawing.Size(125, 125);
+            uC_PictureBox2.TabIndex = 2;
+            uC_PictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -211,7 +228,7 @@
             uC_PictureBox1.BorderSize = 10;
             uC_PictureBox1.GradientAngle = 50F;
             uC_PictureBox1.Image = (System.Drawing.Image)resources.GetObject("uC_PictureBox1.Image");
-            uC_PictureBox1.Location = new System.Drawing.Point(61, 28);
+            uC_PictureBox1.Location = new System.Drawing.Point(80, 29);
             uC_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             uC_PictureBox1.Name = "uC_PictureBox1";
             uC_PictureBox1.Size = new System.Drawing.Size(245, 245);
@@ -241,6 +258,7 @@
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)uC_PictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -260,5 +278,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private User_Controls.UC_PictureBox uC_PictureBox1;
+        private User_Controls.UC_PictureBox uC_PictureBox2;
     }
 }
