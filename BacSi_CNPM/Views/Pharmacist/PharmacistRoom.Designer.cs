@@ -186,7 +186,7 @@
             guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             guna2Button2.ImageOffset = new System.Drawing.Point(10, 0);
             guna2Button2.ImageSize = new System.Drawing.Size(32, 32);
-            guna2Button2.Location = new System.Drawing.Point(3, 937);
+            guna2Button2.Location = new System.Drawing.Point(3, 790);
             guna2Button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -202,7 +202,7 @@
             guna2Panel2.Location = new System.Drawing.Point(3, 641);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel2.Size = new System.Drawing.Size(285, 289);
+            guna2Panel2.Size = new System.Drawing.Size(285, 142);
             guna2Panel2.TabIndex = 15;
             // 
             // btnSettings

@@ -68,7 +68,7 @@ namespace Hospital.Views.Pharmacist
                 this.dtgv_done_prescription.DataSource = bindingSource1;
                 this.dtgv_done_prescription.AutoGenerateColumns = true;
                 //this.dtgv_done_prescription = BorderStyle.Fixed3D;
-            }
+            }//
             catch
             {
 
@@ -98,9 +98,11 @@ namespace Hospital.Views.Pharmacist
                 }
             }
         }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+
+            MessageBox.Show($"{Convert.ToString(curr.BN_ID)}");
+            MessageBox.Show($"{Convert.ToString(curr.HD_ID)}");
             DonePrescriptionDBContext.addPrescription(curr.BN_ID, curr.HD_ID);
             HoaDonDuocSiDBContext.deleteRecord(curr.BN_ID, curr.HD_ID);
             LoadHoaDon();
@@ -120,6 +122,18 @@ namespace Hospital.Views.Pharmacist
             curr.BN_ID = BN_ID;
             curr.HD_ID = HD_ID;
 
+        }
+
+        private void tx_search_completed_prescription_TextChanged_1(object sender, EventArgs e)
+        {
+            if (tx_search_completed_prescription.Text != "")
+            {
+                dtgv_done_prescription.DataSource = DonePrescriptionDBContext.SearchCompletedPrescription(tx_search_completed_prescription.Text);
+            }
+            else
+            {
+
+            }
         }
     }
 }

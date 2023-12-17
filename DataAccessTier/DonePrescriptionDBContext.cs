@@ -15,6 +15,7 @@ namespace DataAccessTier
         //public DbSet<HoaDonDuocSi> DonePrescription { get; set; }
         public DbSet<HoaDonDuocSi> DonePrescription { get; set; }
         public DbSet<BenhNhan> BenhNhan { get; set; }
+        public DbSet<listHTcho> listHTcho { get; set; }
         public DonePrescriptionDBContext() { }
 
         public static void addPrescription(int BN_ID, int HD_ID)
@@ -25,8 +26,8 @@ namespace DataAccessTier
                 {
                     dbContext.DonePrescription.Add(new HoaDonDuocSi
                     {
-                        BN_ID = BN_ID,
-                        HD_ID = HD_ID
+                        HD_ID = HD_ID,
+                        BN_ID = BN_ID
                     });
                     dbContext.SaveChanges();
                 }
@@ -73,6 +74,33 @@ namespace DataAccessTier
             {
 
             }
+        }
+
+
+        public static BindingList<listHTcho> SearchCompletedPrescription(string s)
+        {
+            BindingList<listHTcho> resultList = null;
+
+            if (!string.IsNullOrEmpty(s))
+            {
+                using (var dbContext = new DonePrescriptionDBContext())
+                {
+                    var query = (from hdds in dbContext.DonePrescription
+                                 join bn in dbContext.BenhNhan on hdds.BN_ID equals bn.BN_ID
+                                 where bn.HoTen.Contains(s) || bn.SoDienThoai.Contains(s)
+                                 select new listHTcho
+                                 {
+                                     HD_ID = hdds.HD_ID,
+                                     BN_ID = bn.BN_ID,
+                                     sodienthoai = bn.SoDienThoai,
+                                     tenbenhnhan = bn.HoTen
+                                 }).ToList();
+
+                    resultList = new BindingList<listHTcho>(query);
+                }
+            }
+
+            return resultList;
         }
 
 

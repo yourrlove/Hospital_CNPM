@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DataAccessTier.ChiTietHoaDonDBContext;
 
 namespace Hospital.Views.Pharmacist
 {
@@ -47,21 +48,46 @@ namespace Hospital.Views.Pharmacist
                 curr.BN_ID = Convert.ToInt32(cellValue1);
                 curr.HD_ID = Convert.ToInt32(cellValue);
 
-                bindingSource1.DataSource = ChiTietHoaDonDBContext.getHoaDon(curr.HD_ID);
+                BindingList<HoaDonTonKho> list = this.bindingSource1.DataSource as BindingList<HoaDonTonKho>;
+                bindingSource1.DataSource = ChiTietHoaDonDBContext.getHoaDonTonkho(curr.HD_ID);
                 this.dtgv_Updated.AutoGenerateColumns = true;
                 this.dtgv_Updated.DataSource = bindingSource1;
-                this.dtgv_Updated.BorderStyle = BorderStyle.Fixed3D;
-
             }
         }
 
         private void btn_reciept_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("hell");
-            MessageBox.Show($"{curr.BN_ID.ToString()}" + $"{curr.HD_ID.ToString()}");
-            Dictionary<int, int> item = ThuocDBContext.UpdateItem(curr.BN_ID, curr.HD_ID);
-            ThuocDBContext.UpdateQuantity(item);
+            Dictionary<int, int> items = ThuocDBContext.UpdateItem(curr.HD_ID);
+            BindingList<HoaDonTonKho> list = this.bindingSource1.DataSource as BindingList<HoaDonTonKho>;
 
+            ThuocDBContext.UpdateQuantity(items);
+
+            foreach (var item in items)
+            {
+                HoaDonTonKho existingItem = list.FirstOrDefault(i => i.th_id == item.Key);
+
+                if (existingItem != null)
+                {
+                    // Item already exists in the list, update quantity
+                    existingItem.TonKho += item.Value;
+                }
+                else
+                {
+                    // Item doesn't exist, add a new one
+                    HoaDonTonKho newItem = new HoaDonTonKho
+                    {
+                        th_id = item.Key,
+                        TonKho = item.Value
+                    };
+
+                    list.Add(newItem);
+                }
+            }
+            this.bindingSource1.DataSource = list;
+            this.dtgv_Updated.DataSource = this.bindingSource1;
+
+            DonePrescriptionDBContext.deleteRecord(curr.BN_ID, curr.HD_ID);
+            LoadNotRecievedPrescription();
         }
 
         private void dtgv_notRecieved_CellContentClick(object sender, DataGridViewCellEventArgs e)

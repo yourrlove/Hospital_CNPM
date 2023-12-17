@@ -102,17 +102,17 @@ namespace DataAccessTier
         }
 
 
-        public static Dictionary<int, int> UpdateItem(int BN_ID, int HD_ID)
+        public static Dictionary<int, int> UpdateItem(int HD_ID)
         {
-            Dictionary<int, int> thuoc = new Dictionary<int, int>();
             try
             {
                 using (var dbContext = new ThuocDBContext())
                 {
                     var query = (from cthd in dbContext.ChiTietHoaDon
                                  join th in dbContext.Thuoc on cthd.TH_ID equals th.TH_ID
-                                 where th.TH_ID == cthd.TH_ID
-                                 select new { th.TH_ID, cthd.SoLuong }).ToDictionary(p => p.TH_ID, p => p.SoLuong);
+                                 where cthd.HD_ID == HD_ID
+                                 select new { cthd.TH_ID, cthd.SoLuong })
+                                 .ToDictionary(t => t.TH_ID, t => t.SoLuong);
 
                     return query;
                 }
@@ -122,8 +122,6 @@ namespace DataAccessTier
                 Console.WriteLine($"Error in UpdateItem: {ex.Message}");
                 return null;
             }
-
-           
         }
 
         public static void UpdateQuantity(Dictionary<int, int> updated)
@@ -132,15 +130,18 @@ namespace DataAccessTier
             {
                 using (var dbContext = new ThuocDBContext())
                 {
-                    foreach (var items in updated)
+                    if (updated != null)
                     {
-                        var item = dbContext.Thuoc.FirstOrDefault(t => t.TH_ID == items.Key);
-                        if (item != null)
+                        foreach (var items in updated)
                         {
-                            item.SoLuong += items.Value;
+                            var item = dbContext.Thuoc.FirstOrDefault(t => t.TH_ID == items.Key);
+                            if (item != null)
+                            {
+                                item.SoLuong += items.Value;
+                            }
                         }
+                        dbContext.SaveChanges();
                     }
-                    dbContext.SaveChanges();
                 }
             }
             catch (Exception ex)
@@ -148,5 +149,6 @@ namespace DataAccessTier
                 Console.WriteLine($"Error in UpdateQuantity: {ex.Message}");
             }
         }
+
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace DTO
 {
@@ -18,7 +19,7 @@ namespace DTO
         public string TenThuoc { get; set; }
         public double GiaBan { get; set; }
         public int SoLuong { get; set; }
-
+        
         public DateTime NgayNhap { get; set; }
         public DateTime NgayHetHan { get; set; }
         [StringLength(50)]
@@ -28,15 +29,6 @@ namespace DTO
         [StringLength(50)]
         public string TacDungPhu { get; set; }
         public byte[] ImageData { get; set; }
-
-        /*
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-        */
     }
 }
 

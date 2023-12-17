@@ -16,16 +16,6 @@ namespace DataAccessTier
 
         public HoaDonDuocSiDBContext() { }
 
-        /// <summary>
-        /// class to display the list of prescription for pharmacist 
-        /// </summary>
-        public class listHTcho
-        {
-            public int HD_ID { get; set; }
-            public int BN_ID { get; set; }
-            public string sodienthoai { get; set; }
-            public string tenbenhnhan { get; set; }
-        }
  
         /// <summary>
         /// Join table Benh Nhan and HoaDonDuocSi for giving the details of prescription

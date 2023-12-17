@@ -33,15 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,6 +51,7 @@
             text_val = new System.Windows.Forms.Label();
             dtgv_patient = new Guna.UI2.WinForms.Guna2DataGridView();
             default_panel = new Guna.UI2.WinForms.Guna2Panel();
+            tx_search_completed_prescription = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new System.Windows.Forms.Label();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             dtgv_done_prescription = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -74,7 +77,7 @@
             // text_val
             // 
             text_val.AutoSize = true;
-            text_val.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            text_val.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Bold);
             text_val.Location = new System.Drawing.Point(26, 24);
             text_val.Name = "text_val";
             text_val.Size = new System.Drawing.Size(162, 28);
@@ -89,7 +92,7 @@
             dtgv_patient.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -99,7 +102,7 @@
             dtgv_patient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(0, 0, 192);
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -124,14 +127,14 @@
             dtgv_patient.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_patient.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dtgv_patient.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dtgv_patient.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dtgv_patient.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             dtgv_patient.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             dtgv_patient.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dtgv_patient.ThemeStyle.HeaderStyle.Height = 50;
             dtgv_patient.ThemeStyle.ReadOnly = true;
             dtgv_patient.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_patient.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dtgv_patient.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dtgv_patient.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             dtgv_patient.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_patient.ThemeStyle.RowsStyle.Height = 50;
             dtgv_patient.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(0, 0, 192);
@@ -141,6 +144,7 @@
             // default_panel
             // 
             default_panel.BackColor = System.Drawing.Color.White;
+            default_panel.Controls.Add(tx_search_completed_prescription);
             default_panel.Controls.Add(label1);
             default_panel.Controls.Add(guna2Button2);
             default_panel.Controls.Add(dtgv_done_prescription);
@@ -148,19 +152,43 @@
             default_panel.Controls.Add(text_val);
             default_panel.Controls.Add(dtgv_SearchMedicine);
             default_panel.Controls.Add(dtgv_patient);
-            default_panel.CustomizableEdges = customizableEdges7;
+            default_panel.CustomizableEdges = customizableEdges9;
             default_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             default_panel.Location = new System.Drawing.Point(568, 0);
             default_panel.Name = "default_panel";
-            default_panel.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            default_panel.ShadowDecoration.CustomizableEdges = customizableEdges10;
             default_panel.Size = new System.Drawing.Size(584, 882);
             default_panel.TabIndex = 1;
+            // 
+            // tx_search_completed_prescription
+            // 
+            tx_search_completed_prescription.BackColor = System.Drawing.Color.LightSkyBlue;
+            tx_search_completed_prescription.BorderColor = System.Drawing.Color.Blue;
+            tx_search_completed_prescription.CustomizableEdges = customizableEdges3;
+            tx_search_completed_prescription.DefaultText = "";
+            tx_search_completed_prescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
+            tx_search_completed_prescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
+            tx_search_completed_prescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            tx_search_completed_prescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            tx_search_completed_prescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            tx_search_completed_prescription.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tx_search_completed_prescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            tx_search_completed_prescription.Location = new System.Drawing.Point(309, 56);
+            tx_search_completed_prescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tx_search_completed_prescription.Name = "tx_search_completed_prescription";
+            tx_search_completed_prescription.PasswordChar = '\0';
+            tx_search_completed_prescription.PlaceholderText = "Search completed prescription";
+            tx_search_completed_prescription.SelectedText = "";
+            tx_search_completed_prescription.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            tx_search_completed_prescription.Size = new System.Drawing.Size(263, 48);
+            tx_search_completed_prescription.TabIndex = 22;
+            tx_search_completed_prescription.TextChanged += tx_search_completed_prescription_TextChanged_1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(318, 24);
+            label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Bold);
+            label1.Location = new System.Drawing.Point(309, 24);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(190, 28);
             label1.TabIndex = 21;
@@ -168,16 +196,16 @@
             // 
             // guna2Button2
             // 
-            guna2Button2.CustomizableEdges = customizableEdges3;
+            guna2Button2.CustomizableEdges = customizableEdges5;
             guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
             guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
-            guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             guna2Button2.ForeColor = System.Drawing.Color.White;
-            guna2Button2.Location = new System.Drawing.Point(461, 673);
+            guna2Button2.Location = new System.Drawing.Point(450, 681);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button2.Size = new System.Drawing.Size(99, 40);
             guna2Button2.TabIndex = 20;
             guna2Button2.Text = "Received";
@@ -190,7 +218,7 @@
             dtgv_done_prescription.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -200,19 +228,19 @@
             dtgv_done_prescription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             dtgv_done_prescription.DefaultCellStyle = dataGridViewCellStyle6;
             dtgv_done_prescription.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            dtgv_done_prescription.Location = new System.Drawing.Point(309, 69);
+            dtgv_done_prescription.Location = new System.Drawing.Point(309, 124);
             dtgv_done_prescription.Name = "dtgv_done_prescription";
             dtgv_done_prescription.RowHeadersVisible = false;
             dtgv_done_prescription.RowHeadersWidth = 51;
             dtgv_done_prescription.RowTemplate.Height = 29;
-            dtgv_done_prescription.Size = new System.Drawing.Size(263, 573);
+            dtgv_done_prescription.Size = new System.Drawing.Size(263, 518);
             dtgv_done_prescription.TabIndex = 19;
             dtgv_done_prescription.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_done_prescription.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -223,14 +251,14 @@
             dtgv_done_prescription.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_done_prescription.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dtgv_done_prescription.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dtgv_done_prescription.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dtgv_done_prescription.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             dtgv_done_prescription.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             dtgv_done_prescription.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dtgv_done_prescription.ThemeStyle.HeaderStyle.Height = 40;
             dtgv_done_prescription.ThemeStyle.ReadOnly = false;
             dtgv_done_prescription.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_done_prescription.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dtgv_done_prescription.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dtgv_done_prescription.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             dtgv_done_prescription.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_done_prescription.ThemeStyle.RowsStyle.Height = 29;
             dtgv_done_prescription.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
@@ -239,18 +267,18 @@
             // 
             // guna2Button1
             // 
-            guna2Button1.CustomizableEdges = customizableEdges5;
+            guna2Button1.CustomizableEdges = customizableEdges7;
             guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = System.Drawing.Color.FromArgb(192, 0, 0);
-            guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             guna2Button1.ForeColor = System.Drawing.Color.White;
             guna2Button1.Location = new System.Drawing.Point(196, 681);
             guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Button1.Size = new System.Drawing.Size(93, 32);
             guna2Button1.TabIndex = 18;
             guna2Button1.Text = "DONE";
@@ -263,7 +291,7 @@
             dtgv_SearchMedicine.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -273,7 +301,7 @@
             dtgv_SearchMedicine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F);
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(0, 0, 192);
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
@@ -297,14 +325,14 @@
             dtgv_SearchMedicine.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_SearchMedicine.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dtgv_SearchMedicine.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dtgv_SearchMedicine.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dtgv_SearchMedicine.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             dtgv_SearchMedicine.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             dtgv_SearchMedicine.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dtgv_SearchMedicine.ThemeStyle.HeaderStyle.Height = 50;
             dtgv_SearchMedicine.ThemeStyle.ReadOnly = false;
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dtgv_SearchMedicine.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dtgv_SearchMedicine.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.Height = 50;
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(0, 0, 192);
@@ -340,5 +368,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_done_prescription;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox tx_search_completed_prescription;
     }
 }
