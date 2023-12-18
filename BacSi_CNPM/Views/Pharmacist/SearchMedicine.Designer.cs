@@ -47,10 +47,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             searchBox = new Guna.UI2.WinForms.Guna2TextBox();
             dtgv_SearchMedicine = new Guna.UI2.WinForms.Guna2DataGridView();
-            tHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tenThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            giaBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             thuocBindingSource = new System.Windows.Forms.BindingSource(components);
             medicine_name = new System.Windows.Forms.Label();
             lb_gia = new System.Windows.Forms.Label();
@@ -75,6 +71,10 @@
             xuatxu = new System.Windows.Forms.Label();
             ngaysx = new System.Windows.Forms.Label();
             giaban = new System.Windows.Forms.Label();
+            soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            giaBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgv_SearchMedicine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)thuocBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picbox_medicineImage).BeginInit();
@@ -96,7 +96,7 @@
             searchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             searchBox.IconLeft = (System.Drawing.Image)resources.GetObject("searchBox.IconLeft");
             searchBox.IconLeftSize = new System.Drawing.Size(38, 38);
-            searchBox.Location = new System.Drawing.Point(43, 14);
+            searchBox.Location = new System.Drawing.Point(13, 63);
             searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             searchBox.Name = "searchBox";
             searchBox.PasswordChar = '\0';
@@ -110,6 +110,9 @@
             // 
             // dtgv_SearchMedicine
             // 
+            dtgv_SearchMedicine.AllowUserToDeleteRows = false;
+            dtgv_SearchMedicine.AllowUserToResizeColumns = false;
+            dtgv_SearchMedicine.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dtgv_SearchMedicine.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtgv_SearchMedicine.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -124,29 +127,30 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dtgv_SearchMedicine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgv_SearchMedicine.ColumnHeadersHeight = 50;
-            dtgv_SearchMedicine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dtgv_SearchMedicine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { tHIDDataGridViewTextBoxColumn, tenThuocDataGridViewTextBoxColumn, giaBanDataGridViewTextBoxColumn, soLuongDataGridViewTextBoxColumn });
             dtgv_SearchMedicine.Cursor = System.Windows.Forms.Cursors.Hand;
             dtgv_SearchMedicine.DataSource = thuocBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             dtgv_SearchMedicine.DefaultCellStyle = dataGridViewCellStyle3;
             dtgv_SearchMedicine.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            dtgv_SearchMedicine.Location = new System.Drawing.Point(43, 67);
+            dtgv_SearchMedicine.Location = new System.Drawing.Point(13, 142);
             dtgv_SearchMedicine.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             dtgv_SearchMedicine.Name = "dtgv_SearchMedicine";
+            dtgv_SearchMedicine.ReadOnly = true;
             dtgv_SearchMedicine.RowHeadersVisible = false;
-            dtgv_SearchMedicine.RowHeadersWidth = 51;
+            dtgv_SearchMedicine.RowHeadersWidth = 50;
+            dtgv_SearchMedicine.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             dtgv_SearchMedicine.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dtgv_SearchMedicine.RowTemplate.Height = 50;
             dtgv_SearchMedicine.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            dtgv_SearchMedicine.Size = new System.Drawing.Size(450, 592);
+            dtgv_SearchMedicine.Size = new System.Drawing.Size(543, 592);
             dtgv_SearchMedicine.TabIndex = 5;
             dtgv_SearchMedicine.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_SearchMedicine.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -157,48 +161,19 @@
             dtgv_SearchMedicine.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_SearchMedicine.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dtgv_SearchMedicine.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dtgv_SearchMedicine.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.8F);
+            dtgv_SearchMedicine.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             dtgv_SearchMedicine.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            dtgv_SearchMedicine.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dtgv_SearchMedicine.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dtgv_SearchMedicine.ThemeStyle.HeaderStyle.Height = 50;
-            dtgv_SearchMedicine.ThemeStyle.ReadOnly = false;
+            dtgv_SearchMedicine.ThemeStyle.ReadOnly = true;
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dtgv_SearchMedicine.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dtgv_SearchMedicine.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.Height = 50;
-            dtgv_SearchMedicine.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            dtgv_SearchMedicine.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            dtgv_SearchMedicine.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            dtgv_SearchMedicine.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_SearchMedicine.CellContentClick += dtgv_SearchMedicine_CellContentClick;
-            // 
-            // tHIDDataGridViewTextBoxColumn
-            // 
-            tHIDDataGridViewTextBoxColumn.DataPropertyName = "TH_ID";
-            tHIDDataGridViewTextBoxColumn.HeaderText = "TH_ID";
-            tHIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            tHIDDataGridViewTextBoxColumn.Name = "tHIDDataGridViewTextBoxColumn";
-            tHIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tenThuocDataGridViewTextBoxColumn
-            // 
-            tenThuocDataGridViewTextBoxColumn.DataPropertyName = "TenThuoc";
-            tenThuocDataGridViewTextBoxColumn.HeaderText = "TenThuoc";
-            tenThuocDataGridViewTextBoxColumn.MinimumWidth = 8;
-            tenThuocDataGridViewTextBoxColumn.Name = "tenThuocDataGridViewTextBoxColumn";
-            // 
-            // giaBanDataGridViewTextBoxColumn
-            // 
-            giaBanDataGridViewTextBoxColumn.DataPropertyName = "GiaBan";
-            giaBanDataGridViewTextBoxColumn.HeaderText = "GiaBan";
-            giaBanDataGridViewTextBoxColumn.MinimumWidth = 8;
-            giaBanDataGridViewTextBoxColumn.Name = "giaBanDataGridViewTextBoxColumn";
-            // 
-            // soLuongDataGridViewTextBoxColumn
-            // 
-            soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            soLuongDataGridViewTextBoxColumn.HeaderText = "SoLuong";
-            soLuongDataGridViewTextBoxColumn.MinimumWidth = 8;
-            soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
             // 
             // thuocBindingSource
             // 
@@ -208,7 +183,7 @@
             // 
             medicine_name.AutoSize = true;
             medicine_name.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 163);
-            medicine_name.Location = new System.Drawing.Point(152, 16);
+            medicine_name.Location = new System.Drawing.Point(185, 5);
             medicine_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             medicine_name.Name = "medicine_name";
             medicine_name.Size = new System.Drawing.Size(193, 31);
@@ -222,9 +197,10 @@
             lb_gia.Location = new System.Drawing.Point(45, 298);
             lb_gia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lb_gia.Name = "lb_gia";
-            lb_gia.Size = new System.Drawing.Size(78, 23);
+            lb_gia.Size = new System.Drawing.Size(56, 23);
             lb_gia.TabIndex = 7;
-            lb_gia.Text = "Gia Ban: ";
+            lb_gia.Text = "Price: ";
+            lb_gia.Click += lb_gia_Click;
             // 
             // lb_tonkho
             // 
@@ -233,9 +209,9 @@
             lb_tonkho.Location = new System.Drawing.Point(289, 298);
             lb_tonkho.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lb_tonkho.Name = "lb_tonkho";
-            lb_tonkho.Size = new System.Drawing.Size(76, 23);
+            lb_tonkho.Size = new System.Drawing.Size(89, 23);
             lb_tonkho.TabIndex = 8;
-            lb_tonkho.Text = "Ton Kho:";
+            lb_tonkho.Text = "Inventory:";
             // 
             // lb_ngaynhan
             // 
@@ -244,9 +220,9 @@
             lb_ngaynhan.Location = new System.Drawing.Point(45, 343);
             lb_ngaynhan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lb_ngaynhan.Name = "lb_ngaynhan";
-            lb_ngaynhan.Size = new System.Drawing.Size(134, 23);
+            lb_ngaynhan.Size = new System.Drawing.Size(174, 23);
             lb_ngaynhan.TabIndex = 9;
-            lb_ngaynhan.Text = "Ngay San Xuat: ";
+            lb_ngaynhan.Text = "Manufactoring Date: ";
             lb_ngaynhan.Click += lb_ngaynhan_Click;
             // 
             // lb_hethan
@@ -256,9 +232,9 @@
             lb_hethan.Location = new System.Drawing.Point(45, 382);
             lb_hethan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lb_hethan.Name = "lb_hethan";
-            lb_hethan.Size = new System.Drawing.Size(124, 23);
+            lb_hethan.Size = new System.Drawing.Size(108, 23);
             lb_hethan.TabIndex = 10;
-            lb_hethan.Text = "Ngay het han: ";
+            lb_hethan.Text = "Expiry Date: ";
             // 
             // picbox_medicineImage
             // 
@@ -281,9 +257,9 @@
             lb_chongchidinh.Location = new System.Drawing.Point(45, 466);
             lb_chongchidinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lb_chongchidinh.Name = "lb_chongchidinh";
-            lb_chongchidinh.Size = new System.Drawing.Size(136, 23);
+            lb_chongchidinh.Size = new System.Drawing.Size(146, 23);
             lb_chongchidinh.TabIndex = 13;
-            lb_chongchidinh.Text = "Chong chi dinh: ";
+            lb_chongchidinh.Text = "Contraindication: ";
             // 
             // lb_xuatxu
             // 
@@ -292,9 +268,9 @@
             lb_xuatxu.Location = new System.Drawing.Point(45, 422);
             lb_xuatxu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lb_xuatxu.Name = "lb_xuatxu";
-            lb_xuatxu.Size = new System.Drawing.Size(77, 23);
+            lb_xuatxu.Size = new System.Drawing.Size(66, 23);
             lb_xuatxu.TabIndex = 14;
-            lb_xuatxu.Text = "Xuat su: ";
+            lb_xuatxu.Text = "Origin: ";
             lb_xuatxu.Click += lb_xuatxu_Click;
             // 
             // lb_tacdungphu
@@ -304,13 +280,14 @@
             lb_tacdungphu.Location = new System.Drawing.Point(45, 509);
             lb_tacdungphu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lb_tacdungphu.Name = "lb_tacdungphu";
-            lb_tacdungphu.Size = new System.Drawing.Size(118, 23);
+            lb_tacdungphu.Size = new System.Drawing.Size(95, 23);
             lb_tacdungphu.TabIndex = 15;
-            lb_tacdungphu.Text = "Tac dung phu:";
+            lb_tacdungphu.Text = "Side effect:";
             lb_tacdungphu.Click += lb_tacdungphu_Click;
             // 
             // medicineDetailsForm
             // 
+            medicineDetailsForm.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             medicineDetailsForm.BackColor = System.Drawing.Color.Transparent;
             medicineDetailsForm.Controls.Add(guna2CircleButton5);
             medicineDetailsForm.Controls.Add(guna2CircleButton4);
@@ -335,10 +312,10 @@
             medicineDetailsForm.Controls.Add(lb_chongchidinh);
             medicineDetailsForm.Controls.Add(lb_tonkho);
             medicineDetailsForm.FillColor = System.Drawing.SystemColors.Menu;
-            medicineDetailsForm.Location = new System.Drawing.Point(582, 67);
+            medicineDetailsForm.Location = new System.Drawing.Point(574, 142);
             medicineDetailsForm.Name = "medicineDetailsForm";
             medicineDetailsForm.ShadowColor = System.Drawing.Color.Black;
-            medicineDetailsForm.Size = new System.Drawing.Size(491, 592);
+            medicineDetailsForm.Size = new System.Drawing.Size(540, 592);
             medicineDetailsForm.TabIndex = 16;
             // 
             // guna2CircleButton5
@@ -480,7 +457,7 @@
             // 
             chongchidinh.AutoSize = true;
             chongchidinh.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            chongchidinh.Location = new System.Drawing.Point(176, 466);
+            chongchidinh.Location = new System.Drawing.Point(198, 466);
             chongchidinh.Name = "chongchidinh";
             chongchidinh.Size = new System.Drawing.Size(114, 23);
             chongchidinh.TabIndex = 19;
@@ -500,7 +477,7 @@
             // 
             ngaysx.AutoSize = true;
             ngaysx.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            ngaysx.Location = new System.Drawing.Point(186, 343);
+            ngaysx.Location = new System.Drawing.Point(226, 343);
             ngaysx.Name = "ngaysx";
             ngaysx.Size = new System.Drawing.Size(62, 23);
             ngaysx.TabIndex = 17;
@@ -510,18 +487,54 @@
             // 
             giaban.AutoSize = true;
             giaban.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            giaban.Location = new System.Drawing.Point(130, 298);
+            giaban.Location = new System.Drawing.Point(108, 298);
             giaban.Name = "giaban";
             giaban.Size = new System.Drawing.Size(33, 23);
             giaban.TabIndex = 16;
             giaban.Text = "gia";
+            giaban.Click += giaban_Click;
+            // 
+            // soLuongDataGridViewTextBoxColumn
+            // 
+            soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
+            soLuongDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            soLuongDataGridViewTextBoxColumn.MinimumWidth = 8;
+            soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            soLuongDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // giaBanDataGridViewTextBoxColumn
+            // 
+            giaBanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            giaBanDataGridViewTextBoxColumn.DataPropertyName = "GiaBan";
+            giaBanDataGridViewTextBoxColumn.HeaderText = "Price";
+            giaBanDataGridViewTextBoxColumn.MinimumWidth = 10;
+            giaBanDataGridViewTextBoxColumn.Name = "giaBanDataGridViewTextBoxColumn";
+            giaBanDataGridViewTextBoxColumn.ReadOnly = true;
+            giaBanDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // tenThuocDataGridViewTextBoxColumn
+            // 
+            tenThuocDataGridViewTextBoxColumn.DataPropertyName = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn.HeaderText = "Medicine's Name";
+            tenThuocDataGridViewTextBoxColumn.MinimumWidth = 8;
+            tenThuocDataGridViewTextBoxColumn.Name = "tenThuocDataGridViewTextBoxColumn";
+            tenThuocDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tHIDDataGridViewTextBoxColumn
+            // 
+            tHIDDataGridViewTextBoxColumn.DataPropertyName = "TH_ID";
+            tHIDDataGridViewTextBoxColumn.HeaderText = "TH_ID";
+            tHIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            tHIDDataGridViewTextBoxColumn.Name = "tHIDDataGridViewTextBoxColumn";
+            tHIDDataGridViewTextBoxColumn.ReadOnly = true;
+            tHIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // SearchMedicine
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.White;
-            ClientSize = new System.Drawing.Size(1152, 745);
+            ClientSize = new System.Drawing.Size(1152, 919);
             Controls.Add(medicineDetailsForm);
             Controls.Add(dtgv_SearchMedicine);
             Controls.Add(searchBox);
@@ -544,10 +557,6 @@
         private Guna.UI2.WinForms.Guna2TextBox searchBox;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_SearchMedicine;
         private System.Windows.Forms.BindingSource thuocBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tHIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenThuocDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giaBanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label medicine_name;
         private System.Windows.Forms.Label lb_gia;
         private System.Windows.Forms.Label lb_tonkho;
@@ -571,5 +580,9 @@
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tHIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenThuocDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaBanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
     }
 }

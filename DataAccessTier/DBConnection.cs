@@ -12,7 +12,7 @@ namespace DataAccessTier
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                "Server=MSI;Database=hospital_121;Trusted_Connection=True;TrustServerCertificate=True;");
+                "Server=THUPHA-ACERAPPL\\SQLEXPRESS03;Database=hospital_121;Trusted_Connection=True;TrustServerCertificate=True;");
         }
     }
 }

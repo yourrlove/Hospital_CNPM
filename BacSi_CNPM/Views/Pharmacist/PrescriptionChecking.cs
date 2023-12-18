@@ -36,6 +36,7 @@ namespace Hospital.Views.Pharmacist
             this.dtgv_notRecieved.AutoGenerateColumns = true;
             this.dtgv_notRecieved.DataSource = bindingSource;
             this.dtgv_notRecieved.BorderStyle = BorderStyle.Fixed3D;
+            this.dtgv_notRecieved.AllowUserToAddRows = false;
         }
 
         Current curr = new Current();
@@ -91,6 +92,16 @@ namespace Hospital.Views.Pharmacist
         }
 
         private void dtgv_notRecieved_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void PrescriptionChecking_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgv_Updated_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

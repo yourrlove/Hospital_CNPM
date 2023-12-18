@@ -44,8 +44,10 @@ namespace Hospital.Views.Pharmacist
             {
                 bindingSource.DataSource = ChiTietHoaDonDBContext.getHoaDon(HD_ID);
                 this.dtgv_donthuoc.DataSource = bindingSource;
-                this.dtgv_donthuoc.AutoGenerateColumns = true;
-                this.dtgv_donthuoc.BorderStyle = BorderStyle.Fixed3D;
+                //this.dtgv_donthuoc.AutoGenerateColumns = true;
+                //this.dtgv_donthuoc.Columns[0].Visible = false;
+                //this.dtgv_donthuoc.BorderStyle = BorderStyle.Fixed3D;
+                this.dtgv_donthuoc.AllowUserToAddRows = false;
             }
             catch (Exception ex) { }
         }
@@ -70,6 +72,11 @@ namespace Hospital.Views.Pharmacist
                     // container(new PrescriptionDetail(HD_ID));
                 }
             }
+        }
+
+        private void PrescriptionDetail_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,8 +35,8 @@ namespace Hospital.Views.Pharmacist
                 bindingSource.DataSource = ThuocDBContext.GetThuoc();
                 this.dtgv_SearchMedicine.DataSource = bindingSource;
                 this.dtgv_SearchMedicine.BorderStyle = BorderStyle.Fixed3D;
+                this.dtgv_SearchMedicine.AllowUserToAddRows = false;
 
-                this.dtgv_SearchMedicine.Columns[3].Visible = false;
                 this.dtgv_SearchMedicine.Columns[4].Visible = false;
                 this.dtgv_SearchMedicine.Columns[5].Visible = false;
                 this.dtgv_SearchMedicine.Columns[6].Visible = false;
@@ -84,7 +84,7 @@ namespace Hospital.Views.Pharmacist
 
 
             medicine_name.Text = dtgv_SearchMedicine.Rows[e.RowIndex].Cells[1].Value.ToString().ToUpper();
-            giaban.Text = dtgv_SearchMedicine.Rows[e.RowIndex].Cells[2].Value.ToString() + " (dong)";
+            giaban.Text = dtgv_SearchMedicine.Rows[e.RowIndex].Cells[2].Value.ToString() + " (VND)";
             tonkho.Text = dtgv_SearchMedicine.Rows[e.RowIndex].Cells[3].Value.ToString();
             ngaysx.Text = dtgv_SearchMedicine.Rows[e.RowIndex].Cells[4].Value.ToString();
             ngayhethan.Text = dtgv_SearchMedicine.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -117,6 +117,16 @@ namespace Hospital.Views.Pharmacist
         }
 
         private void lb_ngaynhan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_gia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void giaban_Click(object sender, EventArgs e)
         {
 
         }

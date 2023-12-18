@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tulpep.NotificationWindow;
 
 namespace Hospital.Views.Pharmacist
 {
@@ -47,12 +48,12 @@ namespace Hospital.Views.Pharmacist
             {
                 bindingSource.DataSource = HoaDonDuocSiDBContext.ListHoaDon();
                 this.dtgv_patient.DataSource = bindingSource;
-                this.dtgv_patient.AutoGenerateColumns = true;
-
-                //this.dtgv_patient.Columns[0].Visible = false;
-                //this.dtgv_patient.Columns[1].Visible = false;
+                //this.dtgv_patient.AutoGenerateColumns = true;
+                this.dtgv_patient.Columns[0].Visible = false;
+                this.dtgv_patient.Columns[1].Visible = false;
 
                 this.dtgv_patient.BorderStyle = BorderStyle.Fixed3D;
+                this.dtgv_patient.AllowUserToAddRows = false;
             }
             catch
             {
@@ -66,7 +67,10 @@ namespace Hospital.Views.Pharmacist
             {
                 bindingSource1.DataSource = DonePrescriptionDBContext.ListHoaDon();
                 this.dtgv_done_prescription.DataSource = bindingSource1;
-                this.dtgv_done_prescription.AutoGenerateColumns = true;
+                //this.dtgv_done_prescription.AutoGenerateColumns = true;
+                this.dtgv_done_prescription.Columns[0].Visible = false;
+                this.dtgv_done_prescription.Columns[1].Visible = false;
+                this.dtgv_done_prescription.AllowUserToAddRows = false;
                 //this.dtgv_done_prescription = BorderStyle.Fixed3D;
             }//
             catch
@@ -108,8 +112,11 @@ namespace Hospital.Views.Pharmacist
             LoadHoaDon();
             LoadDonePrescription();
         }
+        //success pop up notification 
+
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+
             DonePrescriptionDBContext.deleteRecord(curr.BN_ID, curr.HD_ID);
             LoadDonePrescription();
         }
@@ -134,6 +141,26 @@ namespace Hospital.Views.Pharmacist
             {
 
             }
+        }
+
+        private void default_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dtgv_patient_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel_container_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dtgv_done_prescription_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
