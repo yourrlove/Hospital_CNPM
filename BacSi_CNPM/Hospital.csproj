@@ -37,6 +37,7 @@
     <PackageReference Include="Syncfusion.Pdf.WinForms" Version="23.2.7" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicTier\BusinessLogicTier.csproj" />
     <ProjectReference Include="..\DataAccessTier\DataAccessTier.csproj" />
     <ProjectReference Include="..\DTO\DTO.csproj" />
   </ItemGroup>

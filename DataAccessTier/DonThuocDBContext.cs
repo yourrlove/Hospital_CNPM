@@ -19,13 +19,6 @@ namespace DataAccessTier
 
         public DonThuocDBContext() { }
 
-
-        public class donthuoc
-        {
-            public string TenDT { get; set; }
-            public string TenBA { get; set; }
-            public DateTime Ngay { get; set; }
-        }
         /// <summary>
         /// Get the prescription of specific patient
         /// </summary>

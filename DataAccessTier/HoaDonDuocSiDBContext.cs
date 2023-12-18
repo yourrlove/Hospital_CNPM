@@ -18,7 +18,7 @@ namespace DataAccessTier
         /// </summary>
         /// <param name="HD_ID"></param>
         /// <param name="BN_ID"></param>
-        public static void addHoaDon(int HD_ID, int BN_ID)
+        public static void addHoaDonDS(int HD_ID, int BN_ID)
         {
             try
             {

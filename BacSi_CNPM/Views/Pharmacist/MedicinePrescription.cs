@@ -1,4 +1,5 @@
-﻿using DataAccessTier;
+﻿using BusinessLogicTier;
+using DataAccessTier;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,10 @@ namespace Hospital.Views.Pharmacist
     {
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
         private System.Windows.Forms.BindingSource bindingSource1 = new System.Windows.Forms.BindingSource();
-
+        private CashierBUS cashier;
         public MedicinePrescription(int BN_ID)
         {
+            cashier = CashierBUS.GetInstance();
             curr.patient = BN_ID;
             InitializeComponent();
             LoadDonThuoc(BN_ID);
@@ -75,10 +77,11 @@ namespace Hospital.Views.Pharmacist
         {
             try
             {
-                bindingSource.DataSource = DonThuocDBContext.GetDonThuocBenhNhan(BN_ID);
+                bindingSource.DataSource = cashier.GetDonThuocBenhNhan(BN_ID);
                 this.dtgv_medicinePrescription.DataSource = bindingSource;
                 this.dtgv_medicinePrescription.AutoGenerateColumns = true;
                 this.dtgv_medicinePrescription.BorderStyle = BorderStyle.Fixed3D;
+                this.dtgv_medicinePrescription.AllowUserToAddRows = false;
 
             }
             catch (Exception ex)
@@ -107,10 +110,11 @@ namespace Hospital.Views.Pharmacist
         {
             try
             {
-                bindingSource1.DataSource = HoaDonDBContext.GetHoaDonBenhNhan(BN_ID);
+                bindingSource1.DataSource = cashier.GetHoaDonBenhNhan(BN_ID);
                 this.dtgv_patientBill.DataSource = bindingSource1;
                 this.dtgv_patientBill.AutoGenerateColumns = true;
                 this.dtgv_patientBill.BorderStyle = BorderStyle.Fixed3D;
+                this.dtgv_patientBill.AllowUserToAddRows = false;
 
                 this.dtgv_patientBill.Columns[0].Visible = false;
 
@@ -136,6 +140,16 @@ namespace Hospital.Views.Pharmacist
                     showMiddleForm(new BillDetail(HD_ID, tongtien, thanhtoan));
                 }
             }
+        }
+
+        private void dtgv_medicinePrescription_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgv_patientBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

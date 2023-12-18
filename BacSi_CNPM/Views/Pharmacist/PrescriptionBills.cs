@@ -18,6 +18,7 @@ using Syncfusion.Pdf.Tables;
 
 
 using static DataAccessTier.ChiTietDonThuocDBContext;
+using BusinessLogicTier;
 
 namespace Hospital.Views.Pharmacist
 {
@@ -26,9 +27,11 @@ namespace Hospital.Views.Pharmacist
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
         private System.Windows.Forms.BindingSource bindingSource1 = new System.Windows.Forms.BindingSource();
 
+        private CashierBUS cashier;
         Current curr = new Current();
         public PrescriptionBills(int DT_ID, int BN_ID)
         {
+            cashier = CashierBUS.GetInstance();
             curr.patient = BN_ID;
             curr.DT_ID = DT_ID;
             InitializeComponent();
@@ -43,17 +46,18 @@ namespace Hospital.Views.Pharmacist
         public void LoadChiTietDonThuoc(int DT_ID)
         {
             // curr.DT_ID = DT_ID;
-            lb_prescriptionName.Text = ChiTietDonThuocDBContext.TenDon(DT_ID);
+            lb_prescriptionName.Text = cashier.TenDon(DT_ID);
             try
             {
 
-                bindingSource.DataSource = ChiTietDonThuocDBContext.LoadDonThuoc(DT_ID);
+                bindingSource.DataSource = cashier.LoadDonThuoc(DT_ID);
                 this.dtgv_Presciption.DataSource = bindingSource;
-                this.dtgv_Presciption.AutoGenerateColumns = true;
+                //this.dtgv_Presciption.AutoGenerateColumns = true;
                 this.dtgv_Presciption.BorderStyle = BorderStyle.Fixed3D;
 
                 this.dtgv_Presciption.Columns[0].Visible = false;
                 this.dtgv_Presciption.Columns[1].Visible = false;
+                this.dtgv_Presciption.AllowUserToAddRows = false;
 
                 LoadBill(DT_ID);
             }
@@ -69,16 +73,17 @@ namespace Hospital.Views.Pharmacist
         /// <param name="DT_ID"></param>
         public void LoadBill(int DT_ID)
         {
-            bill_name.Text = "Bill " + ChiTietDonThuocDBContext.TenDon(DT_ID);
+            bill_name.Text = "Bill " + cashier.TenDon(DT_ID);
             try
             {
-                bindingSource1.DataSource = ChiTietDonThuocDBContext.Kiemtradonthuoc(DT_ID);
+                bindingSource1.DataSource = cashier.Kiemtradonthuoc(DT_ID);
                 this.dtgv_bill.DataSource = bindingSource1;
                 this.dtgv_bill.AutoGenerateColumns = true;
                 this.dtgv_bill.BorderStyle = BorderStyle.Fixed3D;
 
                 this.dtgv_bill.Columns[0].Visible = false;
                 this.dtgv_bill.Columns[1].Visible = false;
+                this.dtgv_bill.AllowUserToAddRows = false;
 
                 TongTien_text.Text = Convert.ToString(TongTien(DT_ID));
 
@@ -98,10 +103,10 @@ namespace Hospital.Views.Pharmacist
         public double TongTien(int DT_ID)
         {
             double tongtien = 0;
-            BindingList<donthuocLoaded> HoaDon = ChiTietDonThuocDBContext.Kiemtradonthuoc(DT_ID);
+            BindingList<donthuocLoaded> HoaDon = cashier.Kiemtradonthuoc(DT_ID);
             foreach (var i in HoaDon)
             {
-                double gia = ThuocDBContext.getGiaBanThuoc(i.TH_ID);
+                double gia = cashier.getGiaBanThuoc(i.TH_ID);
                 double dongia = Convert.ToDouble(i.SoLuong) * gia;
                 tongtien += dongia;
             }
@@ -136,29 +141,29 @@ namespace Hospital.Views.Pharmacist
                     int TN_ID = 1;
                     int BN_ID = curr.patient;
                     //MessageBox.Show(Convert.ToString("benh Nhan" + BN_ID));
-                    HoaDonDBContext.addHoaDon(NgayLap, tongtien, TN_ID, BN_ID, thanhtoan);
+                    cashier.addHoaDon(NgayLap, tongtien, TN_ID, BN_ID, thanhtoan);
 
-                    int HD_ID = HoaDonDBContext.getLastHD_ID();
+                    int HD_ID = cashier.getLastHD_ID();
                     //int DT_ID = curr.DT_ID+1;
                     //MessageBox.Show(Convert.ToString("Hoa Don" + HD_ID));
-                    BindingList<donthuocLoaded> HoaDon = ChiTietDonThuocDBContext.Kiemtradonthuoc(curr.DT_ID);
+                    BindingList<donthuocLoaded> HoaDon = cashier.Kiemtradonthuoc(curr.DT_ID);
 
 
                     foreach (var i in HoaDon)
                     {
-                        double gia = ThuocDBContext.getGiaBanThuoc(i.TH_ID);
+                        double gia = cashier.getGiaBanThuoc(i.TH_ID);
 
                         int hd_id = HD_ID;
                         int th_id = i.TH_ID;
                         int soluong = i.SoLuong;
-                        ThuocDBContext.updateSoLuongThuoc(th_id, soluong);
+                        cashier.updateSoLuongThuoc(th_id, soluong);
                         double dongia = Convert.ToDouble(i.SoLuong) * gia;
                         //MessageBox.Show(Convert.ToString("Thuoc " + th_id));
-                        ChiTietHoaDonDBContext.addChiTietHoaDon(hd_id, th_id, soluong, dongia);
+                        cashier.addChiTietHoaDon(hd_id, th_id, soluong, dongia);
                     }
 
 
-                    HoaDonDuocSiDBContext.addHoaDon(HD_ID, BN_ID);
+                    cashier.addHoaDonDS(HD_ID, BN_ID);
                 }
                 catch (Exception ex)
                 {
@@ -227,8 +232,8 @@ namespace Hospital.Views.Pharmacist
                 "Website: hoanmithienduong.vn"
             };
 
-            List<BenhNhan> listBenhNhan = BenhNhanDBContext.getPatientName(curr.patient);
-            List<donthuocLoaded> donthuoc = ChiTietDonThuocDBContext.Kiemtradonthuoc(curr.DT_ID).ToList();
+            List<BenhNhan> listBenhNhan = cashier.getPatientName(curr.patient);
+            List<donthuocLoaded> donthuoc = cashier.Kiemtradonthuoc(curr.DT_ID).ToList();
             BenhNhan benhnhan = listBenhNhan.FirstOrDefault();
 
             StringFormat centerFormat = new StringFormat();
@@ -374,8 +379,8 @@ namespace Hospital.Views.Pharmacist
                 "Website: hoanmithienduong.vn"
             };
 
-            List<BenhNhan> listBenhNhan = BenhNhanDBContext.getPatientName(curr.patient);
-            List<donthuocLoaded> donthuoc = ChiTietDonThuocDBContext.Kiemtradonthuoc(curr.DT_ID).ToList();
+            List<BenhNhan> listBenhNhan = cashier.getPatientName(curr.patient);
+            List<donthuocLoaded> donthuoc = cashier.Kiemtradonthuoc(curr.DT_ID).ToList();
             BenhNhan benhnhan = listBenhNhan.FirstOrDefault();
 
             StringFormat centerFormat = new StringFormat();
@@ -423,7 +428,7 @@ namespace Hospital.Views.Pharmacist
             thanhtoan = "Tien mat";
         }
 
-        private void PrescriptionBills_Load(object sender, EventArgs e)
+        private void dtgv_Presciption_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

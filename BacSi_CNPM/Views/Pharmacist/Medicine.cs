@@ -1,4 +1,5 @@
-﻿using DataAccessTier;
+﻿using BusinessLogicTier;
+using DataAccessTier;
 using DTO;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,9 +17,10 @@ namespace Hospital.Views.Pharmacist
     public partial class Medicine_details : Form
     {
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
-
+        private CashierBUS cashier;
         public Medicine_details()
         {
+            cashier = CashierBUS.GetInstance();
             InitializeComponent();
             LoadThuoc();
             panel_medicineDetail.Visible = false;
@@ -34,7 +36,7 @@ namespace Hospital.Views.Pharmacist
             try
             {
                 this.dtgv_medicine.AutoGenerateColumns = true;
-                bindingSource.DataSource = ThuocDBContext.GetThuoc();
+                bindingSource.DataSource = cashier.GetThuoc();
                 this.dtgv_medicine.DataSource = bindingSource;
                 this.dtgv_medicine.BorderStyle = BorderStyle.Fixed3D;
 
@@ -46,6 +48,8 @@ namespace Hospital.Views.Pharmacist
                 this.dtgv_medicine.Columns[7].Visible = false;
                 this.dtgv_medicine.Columns[8].Visible = false;
                 this.dtgv_medicine.Columns[9].Visible = false;
+
+                this.dtgv_medicine.AllowUserToAddRows = false;
 
             }
             catch (Exception ex) { }
@@ -60,7 +64,7 @@ namespace Hospital.Views.Pharmacist
         {
             if (search_medicine.Text != "")
             {
-                dtgv_medicine.DataSource = ThuocDBContext.SearchThuoc(search_medicine.Text);
+                dtgv_medicine.DataSource = cashier.SearchThuoc(search_medicine.Text);
             }
             else
             {
@@ -78,7 +82,7 @@ namespace Hospital.Views.Pharmacist
                 if (cellValue != null)
                 {
                     curr.TH_ID = Convert.ToInt32(cellValue);
-                    var image = ThuocDBContext.LoadImage(curr.TH_ID);
+                    var image = cashier.LoadImage(curr.TH_ID);
                     if (image != null)
                     {
                         // Assuming you have a PictureBox named pictureBox
@@ -98,36 +102,6 @@ namespace Hospital.Views.Pharmacist
             tacdungjphu.Text = dtgv_medicine.Rows[e.RowIndex].Cells[8].Value.ToString();
 
             panel_medicineDetail.Visible = true;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void soluong_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Medicine_details_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tenthuoc_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -46,10 +46,17 @@
             sqlConnection1 = new Microsoft.Data.SqlClient.SqlConnection();
             lb_pre_bill = new System.Windows.Forms.Label();
             dtgv_patientBill = new Guna.UI2.WinForms.Guna2DataGridView();
+            hoaDonBenhNhanBindingSource = new System.Windows.Forms.BindingSource(components);
+            hdidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenhoadonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ngayxuatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tongtienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            thanhtoanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgv_medicinePrescription).BeginInit();
             ((System.ComponentModel.ISupportInitialize)donThuocBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)donThuocBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_patientBill).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hoaDonBenhNhanBindingSource).BeginInit();
             SuspendLayout();
             // 
             // dtgv_medicinePrescription
@@ -107,6 +114,7 @@
             dtgv_medicinePrescription.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_medicinePrescription.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_medicinePrescription.CellClick += dtgv_medicinePrescription_CellClick;
+            dtgv_medicinePrescription.CellContentClick += dtgv_medicinePrescription_CellContentClick;
             // 
             // dTIDDataGridViewTextBoxColumn
             // 
@@ -174,6 +182,7 @@
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dtgv_patientBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dtgv_patientBill.AutoGenerateColumns = false;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -184,6 +193,8 @@
             dtgv_patientBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dtgv_patientBill.ColumnHeadersHeight = 40;
             dtgv_patientBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dtgv_patientBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { hdidDataGridViewTextBoxColumn, tenhoadonDataGridViewTextBoxColumn, ngayxuatDataGridViewTextBoxColumn, tongtienDataGridViewTextBoxColumn, thanhtoanDataGridViewTextBoxColumn });
+            dtgv_patientBill.DataSource = hoaDonBenhNhanBindingSource;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -222,6 +233,49 @@
             dtgv_patientBill.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_patientBill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_patientBill.CellClick += dtgv_patientBill_CellClick;
+            dtgv_patientBill.CellContentClick += dtgv_patientBill_CellContentClick;
+            // 
+            // hoaDonBenhNhanBindingSource
+            // 
+            hoaDonBenhNhanBindingSource.DataSource = typeof(DTO.HoaDonBenhNhan);
+            // 
+            // hdidDataGridViewTextBoxColumn
+            // 
+            hdidDataGridViewTextBoxColumn.DataPropertyName = "hd_id";
+            hdidDataGridViewTextBoxColumn.HeaderText = "hd_id";
+            hdidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            hdidDataGridViewTextBoxColumn.Name = "hdidDataGridViewTextBoxColumn";
+            hdidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tenhoadonDataGridViewTextBoxColumn
+            // 
+            tenhoadonDataGridViewTextBoxColumn.DataPropertyName = "tenhoadon";
+            tenhoadonDataGridViewTextBoxColumn.HeaderText = "tenhoadon";
+            tenhoadonDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tenhoadonDataGridViewTextBoxColumn.Name = "tenhoadonDataGridViewTextBoxColumn";
+            // 
+            // ngayxuatDataGridViewTextBoxColumn
+            // 
+            ngayxuatDataGridViewTextBoxColumn.DataPropertyName = "ngayxuat";
+            ngayxuatDataGridViewTextBoxColumn.HeaderText = "ngayxuat";
+            ngayxuatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            ngayxuatDataGridViewTextBoxColumn.Name = "ngayxuatDataGridViewTextBoxColumn";
+            // 
+            // tongtienDataGridViewTextBoxColumn
+            // 
+            tongtienDataGridViewTextBoxColumn.DataPropertyName = "tongtien";
+            tongtienDataGridViewTextBoxColumn.HeaderText = "tongtien";
+            tongtienDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tongtienDataGridViewTextBoxColumn.Name = "tongtienDataGridViewTextBoxColumn";
+            tongtienDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // thanhtoanDataGridViewTextBoxColumn
+            // 
+            thanhtoanDataGridViewTextBoxColumn.DataPropertyName = "thanhtoan";
+            thanhtoanDataGridViewTextBoxColumn.HeaderText = "thanhtoan";
+            thanhtoanDataGridViewTextBoxColumn.MinimumWidth = 6;
+            thanhtoanDataGridViewTextBoxColumn.Name = "thanhtoanDataGridViewTextBoxColumn";
+            thanhtoanDataGridViewTextBoxColumn.Visible = false;
             // 
             // MedicinePrescription
             // 
@@ -239,6 +293,7 @@
             ((System.ComponentModel.ISupportInitialize)donThuocBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)donThuocBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_patientBill).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hoaDonBenhNhanBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -256,5 +311,11 @@
         private Microsoft.Data.SqlClient.SqlConnection sqlConnection1;
         private System.Windows.Forms.Label lb_pre_bill;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_patientBill;
+        private System.Windows.Forms.BindingSource hoaDonBenhNhanBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hdidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenhoadonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayxuatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongtienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thanhtoanDataGridViewTextBoxColumn;
     }
 }

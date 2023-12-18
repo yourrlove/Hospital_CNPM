@@ -1,4 +1,5 @@
-﻿using DataAccessTier;
+﻿using BusinessLogicTier;
+using DataAccessTier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,12 +13,15 @@ using static DataAccessTier.ChiTietDonThuocDBContext;
 
 namespace Hospital.Views.Pharmacist
 {
+
     public partial class BillDetail : Form
     {
+        private CashierBUS cashier;
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
 
         public BillDetail(int HD_ID, double tongtien, string thanhtoan)
         {
+            cashier = CashierBUS.GetInstance();
             InitializeComponent();
             LoadHoaDon(HD_ID);
             lb_tongtien.Text = Convert.ToString(tongtien);
@@ -27,20 +31,18 @@ namespace Hospital.Views.Pharmacist
         {
             try
             {
-                bindingSource.DataSource = ChiTietHoaDonDBContext.loadHoaDon(HD_ID);
+                bindingSource.DataSource = cashier.loadHoaDon(HD_ID);
                 this.dtgv_billdetail.DataSource = bindingSource;
                 this.dtgv_billdetail.AutoGenerateColumns = true;
                 this.dtgv_billdetail.BorderStyle = BorderStyle.Fixed3D;
-
-
+                this.dtgv_billdetail.AllowUserToAddRows = false;
             }
             catch
             {
-
             }
         }
 
-        private void bill_detail_Paint(object sender, PaintEventArgs e)
+        private void dtgv_billdetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

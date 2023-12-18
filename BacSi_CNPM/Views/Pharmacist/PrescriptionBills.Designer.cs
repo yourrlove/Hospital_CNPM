@@ -64,10 +64,26 @@
             printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             printDocument2 = new System.Drawing.Printing.PrintDocument();
             lb_prescriptionName = new System.Windows.Forms.Label();
+            donthuocHTBindingSource = new System.Windows.Forms.BindingSource(components);
+            dTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            lieuDungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tonKhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            donthuocLoadedBindingSource = new System.Windows.Forms.BindingSource(components);
+            dTIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tHIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenThuocDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            lieuDungDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            soLuongDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgv_bill).BeginInit();
             ((System.ComponentModel.ISupportInitialize)currentBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_Presciption).BeginInit();
             guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)donthuocHTBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)donthuocLoadedBindingSource).BeginInit();
             SuspendLayout();
             // 
             // tendt
@@ -105,6 +121,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dtgv_bill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dtgv_bill.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -115,6 +132,8 @@
             dtgv_bill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgv_bill.ColumnHeadersHeight = 40;
             dtgv_bill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dtgv_bill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dTIDDataGridViewTextBoxColumn1, tHIDDataGridViewTextBoxColumn1, tenThuocDataGridViewTextBoxColumn1, lieuDungDataGridViewTextBoxColumn1, soLuongDataGridViewTextBoxColumn1, donGiaDataGridViewTextBoxColumn });
+            dtgv_bill.DataSource = donthuocLoadedBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -183,6 +202,7 @@
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dtgv_Presciption.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dtgv_Presciption.AutoGenerateColumns = false;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -193,6 +213,8 @@
             dtgv_Presciption.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dtgv_Presciption.ColumnHeadersHeight = 40;
             dtgv_Presciption.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dtgv_Presciption.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { dTIDDataGridViewTextBoxColumn, tHIDDataGridViewTextBoxColumn, tenThuocDataGridViewTextBoxColumn, lieuDungDataGridViewTextBoxColumn, soLuongDataGridViewTextBoxColumn, tonKhoDataGridViewTextBoxColumn });
+            dtgv_Presciption.DataSource = donthuocHTBindingSource;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -232,6 +254,7 @@
             dtgv_Presciption.ThemeStyle.RowsStyle.Height = 33;
             dtgv_Presciption.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_Presciption.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            dtgv_Presciption.CellContentClick += dtgv_Presciption_CellContentClick;
             // 
             // TongTien_text
             // 
@@ -385,6 +408,108 @@
             lb_prescriptionName.TabIndex = 17;
             lb_prescriptionName.Text = "Prescription name";
             // 
+            // donthuocHTBindingSource
+            // 
+            donthuocHTBindingSource.DataSource = typeof(DTO.donthuocHT);
+            // 
+            // dTIDDataGridViewTextBoxColumn
+            // 
+            dTIDDataGridViewTextBoxColumn.DataPropertyName = "DT_ID";
+            dTIDDataGridViewTextBoxColumn.HeaderText = "DT_ID";
+            dTIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            dTIDDataGridViewTextBoxColumn.Name = "dTIDDataGridViewTextBoxColumn";
+            dTIDDataGridViewTextBoxColumn.ReadOnly = true;
+            dTIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tHIDDataGridViewTextBoxColumn
+            // 
+            tHIDDataGridViewTextBoxColumn.DataPropertyName = "TH_ID";
+            tHIDDataGridViewTextBoxColumn.HeaderText = "TH_ID";
+            tHIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tHIDDataGridViewTextBoxColumn.Name = "tHIDDataGridViewTextBoxColumn";
+            tHIDDataGridViewTextBoxColumn.ReadOnly = true;
+            tHIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tenThuocDataGridViewTextBoxColumn
+            // 
+            tenThuocDataGridViewTextBoxColumn.DataPropertyName = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn.HeaderText = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tenThuocDataGridViewTextBoxColumn.Name = "tenThuocDataGridViewTextBoxColumn";
+            tenThuocDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lieuDungDataGridViewTextBoxColumn
+            // 
+            lieuDungDataGridViewTextBoxColumn.DataPropertyName = "LieuDung";
+            lieuDungDataGridViewTextBoxColumn.HeaderText = "LieuDung";
+            lieuDungDataGridViewTextBoxColumn.MinimumWidth = 6;
+            lieuDungDataGridViewTextBoxColumn.Name = "lieuDungDataGridViewTextBoxColumn";
+            lieuDungDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // soLuongDataGridViewTextBoxColumn
+            // 
+            soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
+            soLuongDataGridViewTextBoxColumn.HeaderText = "SoLuong";
+            soLuongDataGridViewTextBoxColumn.MinimumWidth = 6;
+            soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            soLuongDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tonKhoDataGridViewTextBoxColumn
+            // 
+            tonKhoDataGridViewTextBoxColumn.DataPropertyName = "TonKho";
+            tonKhoDataGridViewTextBoxColumn.HeaderText = "TonKho";
+            tonKhoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tonKhoDataGridViewTextBoxColumn.Name = "tonKhoDataGridViewTextBoxColumn";
+            tonKhoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // donthuocLoadedBindingSource
+            // 
+            donthuocLoadedBindingSource.DataSource = typeof(DTO.donthuocLoaded);
+            // 
+            // dTIDDataGridViewTextBoxColumn1
+            // 
+            dTIDDataGridViewTextBoxColumn1.DataPropertyName = "DT_ID";
+            dTIDDataGridViewTextBoxColumn1.HeaderText = "DT_ID";
+            dTIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dTIDDataGridViewTextBoxColumn1.Name = "dTIDDataGridViewTextBoxColumn1";
+            dTIDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // tHIDDataGridViewTextBoxColumn1
+            // 
+            tHIDDataGridViewTextBoxColumn1.DataPropertyName = "TH_ID";
+            tHIDDataGridViewTextBoxColumn1.HeaderText = "TH_ID";
+            tHIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            tHIDDataGridViewTextBoxColumn1.Name = "tHIDDataGridViewTextBoxColumn1";
+            tHIDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // tenThuocDataGridViewTextBoxColumn1
+            // 
+            tenThuocDataGridViewTextBoxColumn1.DataPropertyName = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn1.HeaderText = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            tenThuocDataGridViewTextBoxColumn1.Name = "tenThuocDataGridViewTextBoxColumn1";
+            // 
+            // lieuDungDataGridViewTextBoxColumn1
+            // 
+            lieuDungDataGridViewTextBoxColumn1.DataPropertyName = "LieuDung";
+            lieuDungDataGridViewTextBoxColumn1.HeaderText = "LieuDung";
+            lieuDungDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            lieuDungDataGridViewTextBoxColumn1.Name = "lieuDungDataGridViewTextBoxColumn1";
+            // 
+            // soLuongDataGridViewTextBoxColumn1
+            // 
+            soLuongDataGridViewTextBoxColumn1.DataPropertyName = "SoLuong";
+            soLuongDataGridViewTextBoxColumn1.HeaderText = "SoLuong";
+            soLuongDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            soLuongDataGridViewTextBoxColumn1.Name = "soLuongDataGridViewTextBoxColumn1";
+            // 
+            // donGiaDataGridViewTextBoxColumn
+            // 
+            donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
+            donGiaDataGridViewTextBoxColumn.HeaderText = "DonGia";
+            donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            // 
             // PrescriptionBills
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -405,12 +530,13 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "PrescriptionBills";
             Text = "PrescriptionBill";
-            Load += PrescriptionBills_Load;
             ((System.ComponentModel.ISupportInitialize)dtgv_bill).EndInit();
             ((System.ComponentModel.ISupportInitialize)currentBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_Presciption).EndInit();
             guna2ShadowPanel1.ResumeLayout(false);
             guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)donthuocHTBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)donthuocLoadedBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -437,5 +563,19 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog2;
         private System.Drawing.Printing.PrintDocument printDocument2;
         private System.Windows.Forms.Label lb_prescriptionName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dTIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tHIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenThuocDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lieuDungDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tonKhoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource donthuocHTBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dTIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tHIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenThuocDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lieuDungDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource donthuocLoadedBindingSource;
     }
 }

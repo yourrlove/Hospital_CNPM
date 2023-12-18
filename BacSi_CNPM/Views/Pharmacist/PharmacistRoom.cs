@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicTier;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace Hospital.Views.Pharmacist
 {
     public partial class PharmacistRoom : Form
     {
+        private CashierBUS cashier;
         public PharmacistRoom()
         {
+            cashier = CashierBUS.GetInstance();
 
             InitializeComponent();
             text_val.Text = "Pharmacist View";

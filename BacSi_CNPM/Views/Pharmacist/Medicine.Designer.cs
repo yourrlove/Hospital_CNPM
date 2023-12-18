@@ -248,7 +248,6 @@
             label5.Size = new System.Drawing.Size(124, 23);
             label5.TabIndex = 9;
             label5.Text = "Ngay het han :";
-            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -289,7 +288,6 @@
             tenthuoc.Size = new System.Drawing.Size(97, 28);
             tenthuoc.TabIndex = 13;
             tenthuoc.Text = "tenthuoc";
-            tenthuoc.Click += tenthuoc_Click;
             // 
             // giaban
             // 
@@ -310,7 +308,6 @@
             soluong.Size = new System.Drawing.Size(64, 23);
             soluong.TabIndex = 15;
             soluong.Text = "tonkho";
-            soluong.Click += soluong_Click;
             // 
             // ngaynhap
             // 
@@ -502,7 +499,6 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "Medicine_details";
             Text = "Medicine";
-            Load += Medicine_details_Load;
             ((System.ComponentModel.ISupportInitialize)dtgv_medicine).EndInit();
             ((System.ComponentModel.ISupportInitialize)thuocBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)medicine_box).EndInit();
