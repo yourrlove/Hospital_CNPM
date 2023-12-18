@@ -47,6 +47,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             searchBox = new Guna.UI2.WinForms.Guna2TextBox();
             dtgv_SearchMedicine = new Guna.UI2.WinForms.Guna2DataGridView();
+            tHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            giaBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             thuocBindingSource = new System.Windows.Forms.BindingSource(components);
             medicine_name = new System.Windows.Forms.Label();
             lb_gia = new System.Windows.Forms.Label();
@@ -71,10 +75,6 @@
             xuatxu = new System.Windows.Forms.Label();
             ngaysx = new System.Windows.Forms.Label();
             giaban = new System.Windows.Forms.Label();
-            soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            giaBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tenThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgv_SearchMedicine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)thuocBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picbox_medicineImage).BeginInit();
@@ -110,6 +110,7 @@
             // 
             // dtgv_SearchMedicine
             // 
+            dtgv_SearchMedicine.AllowUserToAddRows = false;
             dtgv_SearchMedicine.AllowUserToDeleteRows = false;
             dtgv_SearchMedicine.AllowUserToResizeColumns = false;
             dtgv_SearchMedicine.AllowUserToResizeRows = false;
@@ -122,13 +123,12 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dtgv_SearchMedicine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgv_SearchMedicine.ColumnHeadersHeight = 50;
             dtgv_SearchMedicine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { tHIDDataGridViewTextBoxColumn, tenThuocDataGridViewTextBoxColumn, giaBanDataGridViewTextBoxColumn, soLuongDataGridViewTextBoxColumn });
-            dtgv_SearchMedicine.Cursor = System.Windows.Forms.Cursors.Hand;
             dtgv_SearchMedicine.DataSource = thuocBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -149,6 +149,8 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             dtgv_SearchMedicine.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dtgv_SearchMedicine.RowTemplate.Height = 50;
+            dtgv_SearchMedicine.RowTemplate.ReadOnly = true;
+            dtgv_SearchMedicine.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             dtgv_SearchMedicine.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             dtgv_SearchMedicine.Size = new System.Drawing.Size(543, 592);
             dtgv_SearchMedicine.TabIndex = 5;
@@ -174,6 +176,41 @@
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_SearchMedicine.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_SearchMedicine.CellContentClick += dtgv_SearchMedicine_CellContentClick;
+            // 
+            // tHIDDataGridViewTextBoxColumn
+            // 
+            tHIDDataGridViewTextBoxColumn.DataPropertyName = "TH_ID";
+            tHIDDataGridViewTextBoxColumn.HeaderText = "TH_ID";
+            tHIDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            tHIDDataGridViewTextBoxColumn.Name = "tHIDDataGridViewTextBoxColumn";
+            tHIDDataGridViewTextBoxColumn.ReadOnly = true;
+            tHIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tenThuocDataGridViewTextBoxColumn
+            // 
+            tenThuocDataGridViewTextBoxColumn.DataPropertyName = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn.HeaderText = "Medicine's Name";
+            tenThuocDataGridViewTextBoxColumn.MinimumWidth = 8;
+            tenThuocDataGridViewTextBoxColumn.Name = "tenThuocDataGridViewTextBoxColumn";
+            tenThuocDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // giaBanDataGridViewTextBoxColumn
+            // 
+            giaBanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            giaBanDataGridViewTextBoxColumn.DataPropertyName = "GiaBan";
+            giaBanDataGridViewTextBoxColumn.HeaderText = "Price";
+            giaBanDataGridViewTextBoxColumn.MinimumWidth = 10;
+            giaBanDataGridViewTextBoxColumn.Name = "giaBanDataGridViewTextBoxColumn";
+            giaBanDataGridViewTextBoxColumn.ReadOnly = true;
+            giaBanDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // soLuongDataGridViewTextBoxColumn
+            // 
+            soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
+            soLuongDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            soLuongDataGridViewTextBoxColumn.MinimumWidth = 8;
+            soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            soLuongDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // thuocBindingSource
             // 
@@ -493,41 +530,6 @@
             giaban.TabIndex = 16;
             giaban.Text = "gia";
             giaban.Click += giaban_Click;
-            // 
-            // soLuongDataGridViewTextBoxColumn
-            // 
-            soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            soLuongDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            soLuongDataGridViewTextBoxColumn.MinimumWidth = 8;
-            soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
-            soLuongDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // giaBanDataGridViewTextBoxColumn
-            // 
-            giaBanDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            giaBanDataGridViewTextBoxColumn.DataPropertyName = "GiaBan";
-            giaBanDataGridViewTextBoxColumn.HeaderText = "Price";
-            giaBanDataGridViewTextBoxColumn.MinimumWidth = 10;
-            giaBanDataGridViewTextBoxColumn.Name = "giaBanDataGridViewTextBoxColumn";
-            giaBanDataGridViewTextBoxColumn.ReadOnly = true;
-            giaBanDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // tenThuocDataGridViewTextBoxColumn
-            // 
-            tenThuocDataGridViewTextBoxColumn.DataPropertyName = "TenThuoc";
-            tenThuocDataGridViewTextBoxColumn.HeaderText = "Medicine's Name";
-            tenThuocDataGridViewTextBoxColumn.MinimumWidth = 8;
-            tenThuocDataGridViewTextBoxColumn.Name = "tenThuocDataGridViewTextBoxColumn";
-            tenThuocDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tHIDDataGridViewTextBoxColumn
-            // 
-            tHIDDataGridViewTextBoxColumn.DataPropertyName = "TH_ID";
-            tHIDDataGridViewTextBoxColumn.HeaderText = "TH_ID";
-            tHIDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            tHIDDataGridViewTextBoxColumn.Name = "tHIDDataGridViewTextBoxColumn";
-            tHIDDataGridViewTextBoxColumn.ReadOnly = true;
-            tHIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // SearchMedicine
             // 
