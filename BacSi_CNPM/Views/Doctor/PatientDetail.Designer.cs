@@ -32,14 +32,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientDetail));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             Ngay = new System.Windows.Forms.DateTimePicker();
             label4 = new System.Windows.Forms.Label();
@@ -63,19 +59,16 @@
             uC_Button_Save = new User_Controls.UC_Button();
             guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             gfhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            TenBenhAn = new Guna.UI2.WinForms.Guna2TextBox();
             TrieuChung = new System.Windows.Forms.RichTextBox();
-            TienSu = new System.Windows.Forms.RichTextBox();
             Prescription = new Guna.UI2.WinForms.Guna2DataGridView();
             label1 = new System.Windows.Forms.Label();
             errorProvider1 = new System.Windows.Forms.ErrorProvider(components);
-            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            TenBenhAn = new System.Windows.Forms.Label();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).BeginInit();
             guna2ContextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Prescription).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel1
@@ -262,7 +255,7 @@
             // 
             label.AutoSize = true;
             label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label.Location = new System.Drawing.Point(414, 95);
+            label.Location = new System.Drawing.Point(414, 76);
             label.Name = "label";
             label.Size = new System.Drawing.Size(105, 28);
             label.TabIndex = 28;
@@ -282,7 +275,7 @@
             // 
             label27.AutoSize = true;
             label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label27.Location = new System.Drawing.Point(414, 32);
+            label27.Location = new System.Drawing.Point(414, 22);
             label27.Name = "label27";
             label27.Size = new System.Drawing.Size(139, 28);
             label27.TabIndex = 30;
@@ -291,44 +284,44 @@
             // uC_Button_Prescription
             // 
             uC_Button_Prescription.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            uC_Button_Prescription.BackColor = System.Drawing.Color.Blue;
-            uC_Button_Prescription.BackgroundColor = System.Drawing.Color.Blue;
-            uC_Button_Prescription.BorderColor = System.Drawing.Color.Blue;
+            uC_Button_Prescription.BackColor = System.Drawing.Color.Transparent;
+            uC_Button_Prescription.BackgroundColor = System.Drawing.Color.Transparent;
+            uC_Button_Prescription.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Prescription.BorderRadius = 0;
-            uC_Button_Prescription.BorderSize = 0;
+            uC_Button_Prescription.BorderSize = 1;
             uC_Button_Prescription.FlatAppearance.BorderSize = 0;
             uC_Button_Prescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             uC_Button_Prescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Prescription.FontSize = 9;
-            uC_Button_Prescription.ForeColor = System.Drawing.Color.White;
-            uC_Button_Prescription.Location = new System.Drawing.Point(662, 752);
+            uC_Button_Prescription.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
+            uC_Button_Prescription.Location = new System.Drawing.Point(665, 730);
             uC_Button_Prescription.Name = "uC_Button_Prescription";
             uC_Button_Prescription.Size = new System.Drawing.Size(188, 50);
             uC_Button_Prescription.TabIndex = 31;
             uC_Button_Prescription.Text = "Create Prescription";
-            uC_Button_Prescription.TextColor = System.Drawing.Color.White;
+            uC_Button_Prescription.TextColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Prescription.UseVisualStyleBackColor = false;
             uC_Button_Prescription.Click += uC_Button_Prescription_Click;
             // 
             // uC_Button_Save
             // 
             uC_Button_Save.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            uC_Button_Save.BackColor = System.Drawing.Color.Blue;
-            uC_Button_Save.BackgroundColor = System.Drawing.Color.Blue;
-            uC_Button_Save.BorderColor = System.Drawing.Color.Blue;
+            uC_Button_Save.BackColor = System.Drawing.Color.Transparent;
+            uC_Button_Save.BackgroundColor = System.Drawing.Color.Transparent;
+            uC_Button_Save.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Save.BorderRadius = 0;
-            uC_Button_Save.BorderSize = 0;
+            uC_Button_Save.BorderSize = 1;
             uC_Button_Save.FlatAppearance.BorderSize = 0;
             uC_Button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             uC_Button_Save.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Save.FontSize = 9;
-            uC_Button_Save.ForeColor = System.Drawing.Color.White;
-            uC_Button_Save.Location = new System.Drawing.Point(883, 752);
+            uC_Button_Save.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
+            uC_Button_Save.Location = new System.Drawing.Point(883, 730);
             uC_Button_Save.Name = "uC_Button_Save";
             uC_Button_Save.Size = new System.Drawing.Size(188, 50);
             uC_Button_Save.TabIndex = 33;
             uC_Button_Save.Text = "Save";
-            uC_Button_Save.TextColor = System.Drawing.Color.White;
+            uC_Button_Save.TextColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Save.UseVisualStyleBackColor = false;
             uC_Button_Save.Click += uC_Button_Save_Click;
             // 
@@ -354,42 +347,14 @@
             gfhToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             gfhToolStripMenuItem.Text = "gfh";
             // 
-            // TenBenhAn
-            // 
-            TenBenhAn.CustomizableEdges = customizableEdges3;
-            TenBenhAn.DefaultText = "";
-            TenBenhAn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
-            TenBenhAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
-            TenBenhAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            TenBenhAn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            TenBenhAn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            TenBenhAn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            TenBenhAn.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            TenBenhAn.Location = new System.Drawing.Point(559, 32);
-            TenBenhAn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            TenBenhAn.Name = "TenBenhAn";
-            TenBenhAn.PasswordChar = '\0';
-            TenBenhAn.PlaceholderText = "";
-            TenBenhAn.SelectedText = "";
-            TenBenhAn.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            TenBenhAn.Size = new System.Drawing.Size(512, 28);
-            TenBenhAn.TabIndex = 38;
-            // 
             // TrieuChung
             // 
-            TrieuChung.Location = new System.Drawing.Point(414, 132);
+            TrieuChung.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            TrieuChung.Location = new System.Drawing.Point(414, 119);
             TrieuChung.Name = "TrieuChung";
-            TrieuChung.Size = new System.Drawing.Size(657, 69);
+            TrieuChung.Size = new System.Drawing.Size(657, 85);
             TrieuChung.TabIndex = 39;
             TrieuChung.Text = "";
-            // 
-            // TienSu
-            // 
-            TienSu.Location = new System.Drawing.Point(414, 254);
-            TienSu.Name = "TienSu";
-            TienSu.Size = new System.Drawing.Size(657, 88);
-            TienSu.TabIndex = 40;
-            TienSu.Text = "";
             // 
             // Prescription
             // 
@@ -400,6 +365,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             Prescription.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            Prescription.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -418,9 +384,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             Prescription.DefaultCellStyle = dataGridViewCellStyle3;
-            Prescription.Dock = System.Windows.Forms.DockStyle.Fill;
             Prescription.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            Prescription.Location = new System.Drawing.Point(0, 0);
+            Prescription.Location = new System.Drawing.Point(414, 481);
             Prescription.Name = "Prescription";
             Prescription.ReadOnly = true;
             Prescription.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -435,7 +400,7 @@
             Prescription.RowHeadersVisible = false;
             Prescription.RowHeadersWidth = 51;
             Prescription.RowTemplate.Height = 29;
-            Prescription.Size = new System.Drawing.Size(657, 76);
+            Prescription.Size = new System.Drawing.Size(657, 211);
             Prescription.TabIndex = 41;
             Prescription.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             Prescription.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -458,12 +423,13 @@
             Prescription.ThemeStyle.RowsStyle.Height = 29;
             Prescription.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             Prescription.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            Prescription.CellContentClick += Prescription_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(414, 358);
+            label1.Location = new System.Drawing.Point(414, 439);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(125, 28);
             label1.TabIndex = 42;
@@ -474,32 +440,31 @@
             errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             errorProvider1.ContainerControl = this;
             // 
-            // guna2CustomGradientPanel1
+            // TenBenhAn
             // 
-            guna2CustomGradientPanel1.Controls.Add(Prescription);
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges5;
-            guna2CustomGradientPanel1.Location = new System.Drawing.Point(414, 399);
-            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2CustomGradientPanel1.Size = new System.Drawing.Size(657, 76);
-            guna2CustomGradientPanel1.TabIndex = 43;
+            TenBenhAn.AutoSize = true;
+            TenBenhAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            TenBenhAn.Location = new System.Drawing.Point(573, 12);
+            TenBenhAn.Name = "TenBenhAn";
+            TenBenhAn.Size = new System.Drawing.Size(104, 41);
+            TenBenhAn.TabIndex = 44;
+            TenBenhAn.Text = "label2";
             // 
             // PatientDetail
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1113, 829);
-            Controls.Add(label1);
-            Controls.Add(TienSu);
-            Controls.Add(TrieuChung);
+            Controls.Add(Prescription);
             Controls.Add(TenBenhAn);
+            Controls.Add(label1);
+            Controls.Add(TrieuChung);
             Controls.Add(uC_Button_Save);
             Controls.Add(uC_Button_Prescription);
             Controls.Add(label27);
             Controls.Add(label26);
             Controls.Add(label);
             Controls.Add(guna2Panel1);
-            Controls.Add(guna2CustomGradientPanel1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "PatientDetail";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -511,7 +476,6 @@
             guna2ContextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)Prescription).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            guna2CustomGradientPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -540,16 +504,14 @@
         private User_Controls.UC_Button uC_Button_Save;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gfhToolStripMenuItem;
-        private Guna.UI2.WinForms.Guna2TextBox TenBenhAn;
         private Guna.UI2.WinForms.Guna2TextBox Symtompy;
         private Guna.UI2.WinForms.Guna2TextBox MedicalHistorys;
         private System.Windows.Forms.RichTextBox Symtomp;
         private System.Windows.Forms.RichTextBox MedicalHistory;
         private System.Windows.Forms.RichTextBox TrieuChung;
-        private System.Windows.Forms.RichTextBox TienSu;
         private Guna.UI2.WinForms.Guna2DataGridView Prescription;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private System.Windows.Forms.Label TenBenhAn;
     }
 }

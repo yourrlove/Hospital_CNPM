@@ -28,7 +28,7 @@ namespace Hospital
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Login fLogin = new Login();
-            //pplication.Run(new Reception(1));
+            //Application.Run(new Reception(1));
             Application.Run(new DoctorForm());
             //Application.Run(fLogin);
             //if (fLogin.UserSuccessfullyAuthenticated)

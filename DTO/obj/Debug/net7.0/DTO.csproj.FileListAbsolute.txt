@@ -63,3 +63,16 @@ D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.dll
 D:\new-recept ui\DTO\obj\Debug\net7.0\refint\DTO.dll
 D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.pdb
 D:\new-recept ui\DTO\obj\Debug\net7.0\ref\DTO.dll
+E:\Doctor\DTO\bin\Debug\net7.0\DTO.deps.json
+E:\Doctor\DTO\bin\Debug\net7.0\DTO.dll
+E:\Doctor\DTO\bin\Debug\net7.0\DTO.pdb
+E:\Doctor\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+E:\Doctor\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Doctor\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+E:\Doctor\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+E:\Doctor\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+E:\Doctor\DTO\obj\Debug\net7.0\DTO.sourcelink.json
+E:\Doctor\DTO\obj\Debug\net7.0\DTO.dll
+E:\Doctor\DTO\obj\Debug\net7.0\refint\DTO.dll
+E:\Doctor\DTO\obj\Debug\net7.0\DTO.pdb
+E:\Doctor\DTO\obj\Debug\net7.0\ref\DTO.dll

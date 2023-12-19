@@ -26,7 +26,7 @@ namespace Hospital.Views.Doctor
             firstSave = true;
 
             room = DoctorRoomBUS.GetInstance();
-            
+
             if (!room.temp1.list.IsNullOrEmpty())
             {
                 Prescription.DataSource = room.temp1.list;
@@ -126,7 +126,7 @@ namespace Hospital.Views.Doctor
             {
                 if (room.temp1.list.Count > 0)
                 {
-                    
+
                     if (room.ResolvePatientRecord(
                          room.KH_ID,
                          room.BA_ID,
@@ -145,7 +145,7 @@ namespace Hospital.Views.Doctor
                 }
                 else
                 {
-                    if(room.UpdateRerod(room.BA_ID, TenBenhAn.Text ?? "", Symtomp.Text ?? "", Ngay.Value))
+                    if (room.UpdateRerod(room.BA_ID, TenBenhAn.Text ?? "", Symtomp.Text ?? "", Ngay.Value))
                     {
                         Notification.SucccessNotification("Update record Successfully!");
                     }
@@ -198,5 +198,19 @@ namespace Hospital.Views.Doctor
             }
         }
 
+        private void TenBenhAn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TienSu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Prescription_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -52,3 +52,21 @@ D:\new-recept ui\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.dll
 D:\new-recept ui\BusinessLogicTier\obj\Debug\net7.0\refint\BusinessLogicTier.dll
 D:\new-recept ui\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.pdb
 D:\new-recept ui\BusinessLogicTier\obj\Debug\net7.0\ref\BusinessLogicTier.dll
+E:\Doctor\BusinessLogicTier\bin\Debug\net7.0\BusinessLogicTier.deps.json
+E:\Doctor\BusinessLogicTier\bin\Debug\net7.0\BusinessLogicTier.dll
+E:\Doctor\BusinessLogicTier\bin\Debug\net7.0\BusinessLogicTier.pdb
+E:\Doctor\BusinessLogicTier\bin\Debug\net7.0\DataAccessTier.dll
+E:\Doctor\BusinessLogicTier\bin\Debug\net7.0\DTO.dll
+E:\Doctor\BusinessLogicTier\bin\Debug\net7.0\DataAccessTier.pdb
+E:\Doctor\BusinessLogicTier\bin\Debug\net7.0\DTO.pdb
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.csproj.AssemblyReference.cache
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.GeneratedMSBuildEditorConfig.editorconfig
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.AssemblyInfoInputs.cache
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.AssemblyInfo.cs
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.csproj.CoreCompileInputs.cache
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.sourcelink.json
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.csproj.CopyComplete
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.dll
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\refint\BusinessLogicTier.dll
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.pdb
+E:\Doctor\BusinessLogicTier\obj\Debug\net7.0\ref\BusinessLogicTier.dll

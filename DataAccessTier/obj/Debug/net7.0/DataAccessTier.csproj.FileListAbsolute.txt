@@ -78,3 +78,19 @@ D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
 D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
 D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
 D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
+E:\Doctor\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+E:\Doctor\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+E:\Doctor\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+E:\Doctor\DataAccessTier\bin\Debug\net7.0\DTO.dll
+E:\Doctor\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\DataAccessTier.sourcelink.json
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+E:\Doctor\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
