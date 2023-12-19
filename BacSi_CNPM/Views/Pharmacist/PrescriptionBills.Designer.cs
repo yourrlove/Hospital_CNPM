@@ -48,9 +48,23 @@
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             bill_name = new System.Windows.Forms.Label();
             dtgv_bill = new Guna.UI2.WinForms.Guna2DataGridView();
+            dTIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tHIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenThuocDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            lieuDungDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            soLuongDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            donthuocLoadedBindingSource = new System.Windows.Forms.BindingSource(components);
             currentBindingSource = new System.Windows.Forms.BindingSource(components);
             save = new User_Controls.UC_Button();
             dtgv_Presciption = new Guna.UI2.WinForms.Guna2DataGridView();
+            dTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            lieuDungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tonKhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            donthuocHTBindingSource = new System.Windows.Forms.BindingSource(components);
             TongTien_text = new System.Windows.Forms.Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             label_TongTien = new System.Windows.Forms.Label();
@@ -64,26 +78,12 @@
             printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
             printDocument2 = new System.Drawing.Printing.PrintDocument();
             lb_prescriptionName = new System.Windows.Forms.Label();
-            donthuocHTBindingSource = new System.Windows.Forms.BindingSource(components);
-            dTIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tenThuocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            lieuDungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tonKhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            donthuocLoadedBindingSource = new System.Windows.Forms.BindingSource(components);
-            dTIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tHIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tenThuocDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            lieuDungDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            soLuongDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgv_bill).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)donthuocLoadedBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)currentBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_Presciption).BeginInit();
-            guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)donthuocHTBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)donthuocLoadedBindingSource).BeginInit();
+            guna2ShadowPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // tendt
@@ -173,6 +173,54 @@
             dtgv_bill.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_bill.CellContentClick += dtgv_bill_CellContentClick;
             // 
+            // dTIDDataGridViewTextBoxColumn1
+            // 
+            dTIDDataGridViewTextBoxColumn1.DataPropertyName = "DT_ID";
+            dTIDDataGridViewTextBoxColumn1.HeaderText = "DT_ID";
+            dTIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dTIDDataGridViewTextBoxColumn1.Name = "dTIDDataGridViewTextBoxColumn1";
+            dTIDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // tHIDDataGridViewTextBoxColumn1
+            // 
+            tHIDDataGridViewTextBoxColumn1.DataPropertyName = "TH_ID";
+            tHIDDataGridViewTextBoxColumn1.HeaderText = "TH_ID";
+            tHIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            tHIDDataGridViewTextBoxColumn1.Name = "tHIDDataGridViewTextBoxColumn1";
+            tHIDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // tenThuocDataGridViewTextBoxColumn1
+            // 
+            tenThuocDataGridViewTextBoxColumn1.DataPropertyName = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn1.HeaderText = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            tenThuocDataGridViewTextBoxColumn1.Name = "tenThuocDataGridViewTextBoxColumn1";
+            // 
+            // lieuDungDataGridViewTextBoxColumn1
+            // 
+            lieuDungDataGridViewTextBoxColumn1.DataPropertyName = "LieuDung";
+            lieuDungDataGridViewTextBoxColumn1.HeaderText = "LieuDung";
+            lieuDungDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            lieuDungDataGridViewTextBoxColumn1.Name = "lieuDungDataGridViewTextBoxColumn1";
+            // 
+            // soLuongDataGridViewTextBoxColumn1
+            // 
+            soLuongDataGridViewTextBoxColumn1.DataPropertyName = "SoLuong";
+            soLuongDataGridViewTextBoxColumn1.HeaderText = "SoLuong";
+            soLuongDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            soLuongDataGridViewTextBoxColumn1.Name = "soLuongDataGridViewTextBoxColumn1";
+            // 
+            // donGiaDataGridViewTextBoxColumn
+            // 
+            donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
+            donGiaDataGridViewTextBoxColumn.HeaderText = "DonGia";
+            donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            // 
+            // donthuocLoadedBindingSource
+            // 
+            donthuocLoadedBindingSource.DataSource = typeof(DTO.donthuocLoaded);
+            // 
             // currentBindingSource
             // 
             currentBindingSource.DataSource = typeof(DTO.Current);
@@ -256,6 +304,60 @@
             dtgv_Presciption.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_Presciption.CellContentClick += dtgv_Presciption_CellContentClick;
             // 
+            // dTIDDataGridViewTextBoxColumn
+            // 
+            dTIDDataGridViewTextBoxColumn.DataPropertyName = "DT_ID";
+            dTIDDataGridViewTextBoxColumn.HeaderText = "DT_ID";
+            dTIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            dTIDDataGridViewTextBoxColumn.Name = "dTIDDataGridViewTextBoxColumn";
+            dTIDDataGridViewTextBoxColumn.ReadOnly = true;
+            dTIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tHIDDataGridViewTextBoxColumn
+            // 
+            tHIDDataGridViewTextBoxColumn.DataPropertyName = "TH_ID";
+            tHIDDataGridViewTextBoxColumn.HeaderText = "TH_ID";
+            tHIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tHIDDataGridViewTextBoxColumn.Name = "tHIDDataGridViewTextBoxColumn";
+            tHIDDataGridViewTextBoxColumn.ReadOnly = true;
+            tHIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // tenThuocDataGridViewTextBoxColumn
+            // 
+            tenThuocDataGridViewTextBoxColumn.DataPropertyName = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn.HeaderText = "TenThuoc";
+            tenThuocDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tenThuocDataGridViewTextBoxColumn.Name = "tenThuocDataGridViewTextBoxColumn";
+            tenThuocDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lieuDungDataGridViewTextBoxColumn
+            // 
+            lieuDungDataGridViewTextBoxColumn.DataPropertyName = "LieuDung";
+            lieuDungDataGridViewTextBoxColumn.HeaderText = "LieuDung";
+            lieuDungDataGridViewTextBoxColumn.MinimumWidth = 6;
+            lieuDungDataGridViewTextBoxColumn.Name = "lieuDungDataGridViewTextBoxColumn";
+            lieuDungDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // soLuongDataGridViewTextBoxColumn
+            // 
+            soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
+            soLuongDataGridViewTextBoxColumn.HeaderText = "SoLuong";
+            soLuongDataGridViewTextBoxColumn.MinimumWidth = 6;
+            soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            soLuongDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tonKhoDataGridViewTextBoxColumn
+            // 
+            tonKhoDataGridViewTextBoxColumn.DataPropertyName = "TonKho";
+            tonKhoDataGridViewTextBoxColumn.HeaderText = "TonKho";
+            tonKhoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tonKhoDataGridViewTextBoxColumn.Name = "tonKhoDataGridViewTextBoxColumn";
+            tonKhoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // donthuocHTBindingSource
+            // 
+            donthuocHTBindingSource.DataSource = typeof(DTO.donthuocHT);
+            // 
             // TongTien_text
             // 
             TongTien_text.Location = new System.Drawing.Point(635, 465);
@@ -323,6 +425,7 @@
             printPreviewDialog1.Icon = (System.Drawing.Icon)resources.GetObject("printPreviewDialog1.Icon");
             printPreviewDialog1.Name = "printPreviewDialog1";
             printPreviewDialog1.Visible = false;
+            printPreviewDialog1.Load += printPreviewDialog1_Load;
             // 
             // printDocument1
             // 
@@ -408,108 +511,6 @@
             lb_prescriptionName.TabIndex = 17;
             lb_prescriptionName.Text = "Prescription name";
             // 
-            // donthuocHTBindingSource
-            // 
-            donthuocHTBindingSource.DataSource = typeof(DTO.donthuocHT);
-            // 
-            // dTIDDataGridViewTextBoxColumn
-            // 
-            dTIDDataGridViewTextBoxColumn.DataPropertyName = "DT_ID";
-            dTIDDataGridViewTextBoxColumn.HeaderText = "DT_ID";
-            dTIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            dTIDDataGridViewTextBoxColumn.Name = "dTIDDataGridViewTextBoxColumn";
-            dTIDDataGridViewTextBoxColumn.ReadOnly = true;
-            dTIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tHIDDataGridViewTextBoxColumn
-            // 
-            tHIDDataGridViewTextBoxColumn.DataPropertyName = "TH_ID";
-            tHIDDataGridViewTextBoxColumn.HeaderText = "TH_ID";
-            tHIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            tHIDDataGridViewTextBoxColumn.Name = "tHIDDataGridViewTextBoxColumn";
-            tHIDDataGridViewTextBoxColumn.ReadOnly = true;
-            tHIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tenThuocDataGridViewTextBoxColumn
-            // 
-            tenThuocDataGridViewTextBoxColumn.DataPropertyName = "TenThuoc";
-            tenThuocDataGridViewTextBoxColumn.HeaderText = "TenThuoc";
-            tenThuocDataGridViewTextBoxColumn.MinimumWidth = 6;
-            tenThuocDataGridViewTextBoxColumn.Name = "tenThuocDataGridViewTextBoxColumn";
-            tenThuocDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lieuDungDataGridViewTextBoxColumn
-            // 
-            lieuDungDataGridViewTextBoxColumn.DataPropertyName = "LieuDung";
-            lieuDungDataGridViewTextBoxColumn.HeaderText = "LieuDung";
-            lieuDungDataGridViewTextBoxColumn.MinimumWidth = 6;
-            lieuDungDataGridViewTextBoxColumn.Name = "lieuDungDataGridViewTextBoxColumn";
-            lieuDungDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // soLuongDataGridViewTextBoxColumn
-            // 
-            soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            soLuongDataGridViewTextBoxColumn.HeaderText = "SoLuong";
-            soLuongDataGridViewTextBoxColumn.MinimumWidth = 6;
-            soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
-            soLuongDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tonKhoDataGridViewTextBoxColumn
-            // 
-            tonKhoDataGridViewTextBoxColumn.DataPropertyName = "TonKho";
-            tonKhoDataGridViewTextBoxColumn.HeaderText = "TonKho";
-            tonKhoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            tonKhoDataGridViewTextBoxColumn.Name = "tonKhoDataGridViewTextBoxColumn";
-            tonKhoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // donthuocLoadedBindingSource
-            // 
-            donthuocLoadedBindingSource.DataSource = typeof(DTO.donthuocLoaded);
-            // 
-            // dTIDDataGridViewTextBoxColumn1
-            // 
-            dTIDDataGridViewTextBoxColumn1.DataPropertyName = "DT_ID";
-            dTIDDataGridViewTextBoxColumn1.HeaderText = "DT_ID";
-            dTIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dTIDDataGridViewTextBoxColumn1.Name = "dTIDDataGridViewTextBoxColumn1";
-            dTIDDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // tHIDDataGridViewTextBoxColumn1
-            // 
-            tHIDDataGridViewTextBoxColumn1.DataPropertyName = "TH_ID";
-            tHIDDataGridViewTextBoxColumn1.HeaderText = "TH_ID";
-            tHIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            tHIDDataGridViewTextBoxColumn1.Name = "tHIDDataGridViewTextBoxColumn1";
-            tHIDDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // tenThuocDataGridViewTextBoxColumn1
-            // 
-            tenThuocDataGridViewTextBoxColumn1.DataPropertyName = "TenThuoc";
-            tenThuocDataGridViewTextBoxColumn1.HeaderText = "TenThuoc";
-            tenThuocDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            tenThuocDataGridViewTextBoxColumn1.Name = "tenThuocDataGridViewTextBoxColumn1";
-            // 
-            // lieuDungDataGridViewTextBoxColumn1
-            // 
-            lieuDungDataGridViewTextBoxColumn1.DataPropertyName = "LieuDung";
-            lieuDungDataGridViewTextBoxColumn1.HeaderText = "LieuDung";
-            lieuDungDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            lieuDungDataGridViewTextBoxColumn1.Name = "lieuDungDataGridViewTextBoxColumn1";
-            // 
-            // soLuongDataGridViewTextBoxColumn1
-            // 
-            soLuongDataGridViewTextBoxColumn1.DataPropertyName = "SoLuong";
-            soLuongDataGridViewTextBoxColumn1.HeaderText = "SoLuong";
-            soLuongDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            soLuongDataGridViewTextBoxColumn1.Name = "soLuongDataGridViewTextBoxColumn1";
-            // 
-            // donGiaDataGridViewTextBoxColumn
-            // 
-            donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
-            donGiaDataGridViewTextBoxColumn.HeaderText = "DonGia";
-            donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
-            // 
             // PrescriptionBills
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -531,12 +532,12 @@
             Name = "PrescriptionBills";
             Text = "PrescriptionBill";
             ((System.ComponentModel.ISupportInitialize)dtgv_bill).EndInit();
+            ((System.ComponentModel.ISupportInitialize)donthuocLoadedBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)currentBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_Presciption).EndInit();
+            ((System.ComponentModel.ISupportInitialize)donthuocHTBindingSource).EndInit();
             guna2ShadowPanel1.ResumeLayout(false);
             guna2ShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)donthuocHTBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)donthuocLoadedBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

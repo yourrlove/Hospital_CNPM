@@ -116,6 +116,7 @@ namespace Hospital.Views.Pharmacist
 
         public bool isSave = false;
         public bool ispaid = false;
+        public bool isSaved = true;
         string thanhtoan;
         /// <summary>
         /// The button has many events
@@ -141,11 +142,13 @@ namespace Hospital.Views.Pharmacist
                     int TN_ID = 1;
                     int BN_ID = curr.patient;
                     //MessageBox.Show(Convert.ToString("benh Nhan" + BN_ID));
-                    cashier.addHoaDon(NgayLap, tongtien, TN_ID, BN_ID, thanhtoan);
+                    if (isSaved == true)
+                    {
+                        cashier.addHoaDon(NgayLap, tongtien, TN_ID, BN_ID, thanhtoan);
+                        isSaved = false;
+                    }
 
                     int HD_ID = cashier.getLastHD_ID();
-                    //int DT_ID = curr.DT_ID+1;
-                    //MessageBox.Show(Convert.ToString("Hoa Don" + HD_ID));
                     BindingList<donthuocLoaded> HoaDon = cashier.Kiemtradonthuoc(curr.DT_ID);
 
 
@@ -434,6 +437,11 @@ namespace Hospital.Views.Pharmacist
         }
 
         private void dtgv_bill_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
         {
 
         }

@@ -161,7 +161,7 @@
             btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             btnDashboard.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnDashboard.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnDashboard.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             btnDashboard.ForeColor = System.Drawing.Color.Gainsboro;
             btnDashboard.HoverState.BorderColor = System.Drawing.Color.Navy;
             btnDashboard.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -193,7 +193,7 @@
             btnPrescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btnPrescription.Dock = System.Windows.Forms.DockStyle.Top;
             btnPrescription.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnPrescription.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnPrescription.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             btnPrescription.ForeColor = System.Drawing.Color.LightGray;
             btnPrescription.HoverState.BorderColor = System.Drawing.Color.Navy;
             btnPrescription.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -226,7 +226,7 @@
             btnMedicine.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btnMedicine.Dock = System.Windows.Forms.DockStyle.Top;
             btnMedicine.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnMedicine.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnMedicine.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             btnMedicine.ForeColor = System.Drawing.Color.LightGray;
             btnMedicine.HoverState.BorderColor = System.Drawing.Color.Navy;
             btnMedicine.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -258,7 +258,7 @@
             btnSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btnSettings.Dock = System.Windows.Forms.DockStyle.Top;
             btnSettings.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            btnSettings.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            btnSettings.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             btnSettings.ForeColor = System.Drawing.Color.LightGray;
             btnSettings.HoverState.BorderColor = System.Drawing.Color.Navy;
             btnSettings.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -276,6 +276,7 @@
             btnSettings.TabIndex = 14;
             btnSettings.Tag = "Settings";
             btnSettings.Text = "Settings";
+            btnSettings.Click += btnSettings_Click;
             // 
             // guna2Panel2
             // 
@@ -299,7 +300,7 @@
             guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             guna2Button2.Dock = System.Windows.Forms.DockStyle.Bottom;
             guna2Button2.FillColor = System.Drawing.Color.FromArgb(24, 25, 53);
-            guna2Button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            guna2Button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold);
             guna2Button2.ForeColor = System.Drawing.Color.Gainsboro;
             guna2Button2.HoverState.BorderColor = System.Drawing.Color.Navy;
             guna2Button2.HoverState.FillColor = System.Drawing.Color.Blue;
@@ -338,7 +339,7 @@
             // text_val
             // 
             text_val.AutoSize = true;
-            text_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            text_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             text_val.Location = new System.Drawing.Point(107, 52);
             text_val.Name = "text_val";
             text_val.Size = new System.Drawing.Size(0, 25);
@@ -411,7 +412,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = System.Drawing.Color.White;
-            label2.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold);
             label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             label2.Location = new System.Drawing.Point(121, 116);
             label2.Name = "label2";
@@ -423,7 +424,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = System.Drawing.Color.White;
-            label1.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("Bahnschrift", 22.2F, System.Drawing.FontStyle.Bold);
             label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             label1.Location = new System.Drawing.Point(53, 32);
             label1.Name = "label1";

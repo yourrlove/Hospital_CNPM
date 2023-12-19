@@ -116,5 +116,12 @@ namespace Hospital.Views.Pharmacist
             image_val.Image = Properties.Resources.icons8_dashboard_48;
             container(new Prescription());
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            text_val.Text = "Prescription";
+            image_val.Image = Properties.Resources.icons8_dashboard_48;
+            container(new BillCheckup());
+        }
     }
 }

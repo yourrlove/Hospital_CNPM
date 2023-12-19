@@ -46,17 +46,22 @@
             sqlConnection1 = new Microsoft.Data.SqlClient.SqlConnection();
             lb_pre_bill = new System.Windows.Forms.Label();
             dtgv_patientBill = new Guna.UI2.WinForms.Guna2DataGridView();
+            donKhamBenhBindingSource = new System.Windows.Forms.BindingSource(components);
+            donKhamBindingSource = new System.Windows.Forms.BindingSource(components);
             hoaDonBenhNhanBindingSource = new System.Windows.Forms.BindingSource(components);
-            hdidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tenhoadonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ngayxuatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tongtienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            thanhtoanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            donKhamBenhBindingSource1 = new System.Windows.Forms.BindingSource(components);
+            bNIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenKhoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            tenPhongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            giakhamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtgv_medicinePrescription).BeginInit();
             ((System.ComponentModel.ISupportInitialize)donThuocBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)donThuocBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_patientBill).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)donKhamBenhBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)donKhamBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hoaDonBenhNhanBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)donKhamBenhBindingSource1).BeginInit();
             SuspendLayout();
             // 
             // dtgv_medicinePrescription
@@ -193,8 +198,8 @@
             dtgv_patientBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dtgv_patientBill.ColumnHeadersHeight = 40;
             dtgv_patientBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dtgv_patientBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { hdidDataGridViewTextBoxColumn, tenhoadonDataGridViewTextBoxColumn, ngayxuatDataGridViewTextBoxColumn, tongtienDataGridViewTextBoxColumn, thanhtoanDataGridViewTextBoxColumn });
-            dtgv_patientBill.DataSource = hoaDonBenhNhanBindingSource;
+            dtgv_patientBill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { bNIDDataGridViewTextBoxColumn, tenKhoaDataGridViewTextBoxColumn, tenPhongDataGridViewTextBoxColumn, giakhamDataGridViewTextBoxColumn });
+            dtgv_patientBill.DataSource = donKhamBenhBindingSource1;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -235,47 +240,50 @@
             dtgv_patientBill.CellClick += dtgv_patientBill_CellClick;
             dtgv_patientBill.CellContentClick += dtgv_patientBill_CellContentClick;
             // 
+            // donKhamBenhBindingSource
+            // 
+            donKhamBenhBindingSource.DataSource = typeof(DTO.DonKhamBenh);
+            // 
+            // donKhamBindingSource
+            // 
+            donKhamBindingSource.DataSource = typeof(DTO.DonKham);
+            // 
             // hoaDonBenhNhanBindingSource
             // 
             hoaDonBenhNhanBindingSource.DataSource = typeof(DTO.HoaDonBenhNhan);
             // 
-            // hdidDataGridViewTextBoxColumn
+            // donKhamBenhBindingSource1
             // 
-            hdidDataGridViewTextBoxColumn.DataPropertyName = "hd_id";
-            hdidDataGridViewTextBoxColumn.HeaderText = "hd_id";
-            hdidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            hdidDataGridViewTextBoxColumn.Name = "hdidDataGridViewTextBoxColumn";
-            hdidDataGridViewTextBoxColumn.Visible = false;
+            donKhamBenhBindingSource1.DataSource = typeof(DTO.DonKhamBenh);
             // 
-            // tenhoadonDataGridViewTextBoxColumn
+            // bNIDDataGridViewTextBoxColumn
             // 
-            tenhoadonDataGridViewTextBoxColumn.DataPropertyName = "tenhoadon";
-            tenhoadonDataGridViewTextBoxColumn.HeaderText = "tenhoadon";
-            tenhoadonDataGridViewTextBoxColumn.MinimumWidth = 6;
-            tenhoadonDataGridViewTextBoxColumn.Name = "tenhoadonDataGridViewTextBoxColumn";
+            bNIDDataGridViewTextBoxColumn.DataPropertyName = "BN_ID";
+            bNIDDataGridViewTextBoxColumn.HeaderText = "BN_ID";
+            bNIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            bNIDDataGridViewTextBoxColumn.Name = "bNIDDataGridViewTextBoxColumn";
+            bNIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // ngayxuatDataGridViewTextBoxColumn
+            // tenKhoaDataGridViewTextBoxColumn
             // 
-            ngayxuatDataGridViewTextBoxColumn.DataPropertyName = "ngayxuat";
-            ngayxuatDataGridViewTextBoxColumn.HeaderText = "ngayxuat";
-            ngayxuatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            ngayxuatDataGridViewTextBoxColumn.Name = "ngayxuatDataGridViewTextBoxColumn";
+            tenKhoaDataGridViewTextBoxColumn.DataPropertyName = "tenKhoa";
+            tenKhoaDataGridViewTextBoxColumn.HeaderText = "tenKhoa";
+            tenKhoaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tenKhoaDataGridViewTextBoxColumn.Name = "tenKhoaDataGridViewTextBoxColumn";
             // 
-            // tongtienDataGridViewTextBoxColumn
+            // tenPhongDataGridViewTextBoxColumn
             // 
-            tongtienDataGridViewTextBoxColumn.DataPropertyName = "tongtien";
-            tongtienDataGridViewTextBoxColumn.HeaderText = "tongtien";
-            tongtienDataGridViewTextBoxColumn.MinimumWidth = 6;
-            tongtienDataGridViewTextBoxColumn.Name = "tongtienDataGridViewTextBoxColumn";
-            tongtienDataGridViewTextBoxColumn.Visible = false;
+            tenPhongDataGridViewTextBoxColumn.DataPropertyName = "tenPhong";
+            tenPhongDataGridViewTextBoxColumn.HeaderText = "tenPhong";
+            tenPhongDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tenPhongDataGridViewTextBoxColumn.Name = "tenPhongDataGridViewTextBoxColumn";
             // 
-            // thanhtoanDataGridViewTextBoxColumn
+            // giakhamDataGridViewTextBoxColumn
             // 
-            thanhtoanDataGridViewTextBoxColumn.DataPropertyName = "thanhtoan";
-            thanhtoanDataGridViewTextBoxColumn.HeaderText = "thanhtoan";
-            thanhtoanDataGridViewTextBoxColumn.MinimumWidth = 6;
-            thanhtoanDataGridViewTextBoxColumn.Name = "thanhtoanDataGridViewTextBoxColumn";
-            thanhtoanDataGridViewTextBoxColumn.Visible = false;
+            giakhamDataGridViewTextBoxColumn.DataPropertyName = "giakham";
+            giakhamDataGridViewTextBoxColumn.HeaderText = "giakham";
+            giakhamDataGridViewTextBoxColumn.MinimumWidth = 6;
+            giakhamDataGridViewTextBoxColumn.Name = "giakhamDataGridViewTextBoxColumn";
             // 
             // MedicinePrescription
             // 
@@ -293,7 +301,10 @@
             ((System.ComponentModel.ISupportInitialize)donThuocBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)donThuocBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_patientBill).EndInit();
+            ((System.ComponentModel.ISupportInitialize)donKhamBenhBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)donKhamBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)hoaDonBenhNhanBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)donKhamBenhBindingSource1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -312,10 +323,15 @@
         private System.Windows.Forms.Label lb_pre_bill;
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_patientBill;
         private System.Windows.Forms.BindingSource hoaDonBenhNhanBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hdidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenhoadonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayxuatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tongtienDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thanhtoanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource donKhamBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource donKhamBenhBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bNIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenKhoaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenPhongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giakhamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource donKhamBenhBindingSource1;
     }
 }

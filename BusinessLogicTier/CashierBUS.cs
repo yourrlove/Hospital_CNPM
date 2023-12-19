@@ -38,6 +38,7 @@ namespace BusinessLogicTier
         }
 
 
+
         // ------------------------ CHI TIET DON THUOC Function --------------------
         public string TenDon(int DT_ID)
         {
@@ -120,6 +121,28 @@ namespace BusinessLogicTier
         public System.Drawing.Image LoadImage(int thuocId)
         {
             return ThuocDBContext.LoadImage(thuocId);
+        }
+
+        // ------------------ PHAN CHIA BENH NHAN Fuction -------------------
+        public void AssignPatient(int BN_ID, int PH_ID)
+        {
+            PhanChiaBenhNhanDBContext.AssignPatient(BN_ID, PH_ID);
+        }
+
+        public void deleteRecord(int BN_ID, int PH_ID)
+        {
+            PhanChiaBenhNhanDBContext.deleteRecord(BN_ID, PH_ID);
+        }
+
+        //---------------------- DON KHAM Function ---------------------------------
+        public BindingList<DonKhamBenh> LoadDonKham(int BN_ID)
+        {
+            return DonKhamDBContext.LoadDonKham(BN_ID);
+        }
+
+        public void DeleteDonKham(int BN_ID)
+        {
+            DonKhamDBContext.DeleteDonKham(BN_ID);
         }
     }
 }

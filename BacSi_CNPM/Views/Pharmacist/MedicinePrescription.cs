@@ -96,7 +96,6 @@ namespace Hospital.Views.Pharmacist
             if (e.RowIndex >= 0 && e.RowIndex < dtgv_medicinePrescription.Rows.Count)
             {
                 var cellValue = dtgv_medicinePrescription.Rows[e.RowIndex].Cells[0].Value;
-                // MessageBox.Show("Donthuoc ID " + Convert.ToString(cellValue));
                 if (cellValue != null)
                 {
                     int DT_ID = Convert.ToInt32(cellValue);
@@ -110,7 +109,7 @@ namespace Hospital.Views.Pharmacist
         {
             try
             {
-                bindingSource1.DataSource = cashier.GetHoaDonBenhNhan(BN_ID);
+                bindingSource1.DataSource = cashier.LoadDonKham(BN_ID);
                 this.dtgv_patientBill.DataSource = bindingSource1;
                 this.dtgv_patientBill.AutoGenerateColumns = true;
                 this.dtgv_patientBill.BorderStyle = BorderStyle.Fixed3D;
@@ -129,15 +128,19 @@ namespace Hospital.Views.Pharmacist
             if (e.RowIndex >= 0 && e.RowIndex < dtgv_patientBill.Rows.Count)
             {
                 var cellValue = dtgv_patientBill.Rows[e.RowIndex].Cells[0].Value;
-                var cellValue1 = dtgv_patientBill.Rows[e.RowIndex].Cells[3].Value;
-                var cellValue2 = dtgv_patientBill.Rows[e.RowIndex].Cells[4].Value;
+                var cellValue1 = dtgv_patientBill.Rows[e.RowIndex].Cells[1].Value;
+                var cellValue2 = dtgv_patientBill.Rows[e.RowIndex].Cells[2].Value;
+                var cellValue3 = dtgv_patientBill.Rows[e.RowIndex].Cells[3].Value;
+                var cellValue4 = dtgv_patientBill.Rows[e.RowIndex].Cells[4].Value;
 
                 if (cellValue != null)
                 {
-                    int HD_ID = Convert.ToInt32(cellValue);
-                    int tongtien = Convert.ToInt32(cellValue1);
-                    string thanhtoan = Convert.ToString(cellValue2);
-                    showMiddleForm(new BillDetail(HD_ID, tongtien, thanhtoan));
+                    int BN_ID = Convert.ToInt32(cellValue);
+                    string tenkhoa = Convert.ToString(cellValue1);
+                    string tenphong = Convert.ToString(cellValue2);
+                    string giakham = Convert.ToString(cellValue3);
+                    int PH_ID = Convert.ToInt32(cellValue4);
+                    showMiddleForm(new FirstBill(BN_ID, tenkhoa, tenphong, giakham, PH_ID));
                 }
             }
         }
