@@ -15,12 +15,12 @@ namespace DTO
         [Key, Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int BA_ID { get; set; }
-        [Required]
-        [AllowNull, StringLength(50)]
-        public string TenBenhAn { get; set; }
+        [StringLength(50)]
+        public string? TenBenhAn { get; set; }
         [AllowNull, StringLength(50)]
         public string? TrieuChung { get; set; }
         public int BN_ID { get; set; }
+        [Required(ErrorMessage = "Date created is required!")]
         public DateTime Ngay { get; set; }
         //[ForeignKey("BN_ID")]
         //public BenhNhan BenhNhan { get; set; }

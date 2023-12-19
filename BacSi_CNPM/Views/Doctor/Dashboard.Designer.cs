@@ -66,11 +66,9 @@
             label7 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            label4 = new System.Windows.Forms.Label();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             label2 = new System.Windows.Forms.Label();
             monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            uC_Button1 = new User_Controls.UC_Button();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             label3 = new System.Windows.Forms.Label();
             uC_PictureBox1 = new User_Controls.UC_PictureBox();
@@ -191,9 +189,7 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = System.Drawing.Color.White;
-            guna2Panel1.Controls.Add(label4);
             guna2Panel1.Controls.Add(guna2Panel4);
-            guna2Panel1.Controls.Add(uC_Button1);
             guna2Panel1.Controls.Add(guna2Panel2);
             guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -203,16 +199,6 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new System.Drawing.Size(396, 887);
             guna2Panel1.TabIndex = 126;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(25, 702);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(109, 31);
-            label4.TabIndex = 5;
-            label4.Text = "Function";
             // 
             // guna2Panel4
             // 
@@ -240,32 +226,11 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new System.Drawing.Point(25, 69);
+            monthCalendar1.Location = new System.Drawing.Point(25, 68);
             monthCalendar1.Margin = new System.Windows.Forms.Padding(9, 11, 9, 11);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 3;
             monthCalendar1.DateChanged += monthCalendar1_DateChanged;
-            // 
-            // uC_Button1
-            // 
-            uC_Button1.BackColor = System.Drawing.Color.Blue;
-            uC_Button1.BackgroundColor = System.Drawing.Color.Blue;
-            uC_Button1.BorderColor = System.Drawing.Color.Blue;
-            uC_Button1.BorderRadius = 0;
-            uC_Button1.BorderSize = 0;
-            uC_Button1.FlatAppearance.BorderSize = 0;
-            uC_Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            uC_Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            uC_Button1.FontSize = 9;
-            uC_Button1.ForeColor = System.Drawing.Color.White;
-            uC_Button1.Location = new System.Drawing.Point(25, 770);
-            uC_Button1.Name = "uC_Button1";
-            uC_Button1.Size = new System.Drawing.Size(188, 50);
-            uC_Button1.TabIndex = 2;
-            uC_Button1.Text = "New Prescription";
-            uC_Button1.TextColor = System.Drawing.Color.White;
-            uC_Button1.UseVisualStyleBackColor = false;
-            uC_Button1.Click += uC_Button1_Click;
             // 
             // guna2Panel2
             // 
@@ -835,7 +800,6 @@
             guna2Panel3.ResumeLayout(false);
             guna2Panel3.PerformLayout();
             guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
             guna2Panel4.ResumeLayout(false);
             guna2Panel4.PerformLayout();
             guna2Panel2.ResumeLayout(false);
@@ -864,9 +828,7 @@
         private System.Windows.Forms.Label label1;
         private User_Controls.UC_PictureBox uC_PictureBox1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private User_Controls.UC_Button uC_Button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label3;

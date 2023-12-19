@@ -50,3 +50,16 @@ E:\Reception1\DTO\obj\Debug\net7.0\DTO.dll
 E:\Reception1\DTO\obj\Debug\net7.0\refint\DTO.dll
 E:\Reception1\DTO\obj\Debug\net7.0\DTO.pdb
 E:\Reception1\DTO\obj\Debug\net7.0\ref\DTO.dll
+D:\new-recept ui\DTO\bin\Debug\net7.0\DTO.deps.json
+D:\new-recept ui\DTO\bin\Debug\net7.0\DTO.dll
+D:\new-recept ui\DTO\bin\Debug\net7.0\DTO.pdb
+D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.sourcelink.json
+D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.dll
+D:\new-recept ui\DTO\obj\Debug\net7.0\refint\DTO.dll
+D:\new-recept ui\DTO\obj\Debug\net7.0\DTO.pdb
+D:\new-recept ui\DTO\obj\Debug\net7.0\ref\DTO.dll

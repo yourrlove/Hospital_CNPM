@@ -3,6 +3,7 @@ using DataAccessTier;
 using DTO;
 using Hospital.Properties;
 using Hospital.User_Controls;
+using Hospital.Views.Receptionist;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,61 +19,19 @@ namespace Hospital.Views.Doctor
 {
     public partial class Requests : Form
     {
-        DoctorRoomBUS room;
-        System.Windows.Forms.BindingSource binding;
-        List<int> data = new List<int>();
+        private DoctorRoomBUS room;
+        private System.Windows.Forms.BindingSource binding;
+        private List<int> data = new List<int>();
 
         private Form fm;
         private int selectedRowIndex;
-        private int BS_ID;
-        private int PH_ID;
-        private int KH_ID;
+        private int BN_ID_active; //BN_ID record is being editted
 
-        public Requests(int BS_ID, int PH_ID, int KH_ID)
+        public Requests()
         {
-            this.BS_ID = BS_ID;
-            this.PH_ID = PH_ID;
-            this.KH_ID = KH_ID;
-            room = new DoctorRoomBUS();
+            room = DoctorRoomBUS.GetInstance();
             binding = new BindingSource();
             InitializeComponent();
-        }
-
-        private void showMiddleForm(Form showForm)
-        {
-            Form fm = new Form();
-            try
-            {
-                using (showForm)
-                {
-                    fm.StartPosition = FormStartPosition.Manual;
-                    fm.FormBorderStyle = FormBorderStyle.None;
-                    fm.Opacity = .70d;
-                    fm.BackColor = Color.Black;
-                    fm.WindowState = FormWindowState.Maximized;
-                    fm.TopMost = true;
-                    fm.Location = this.Location;
-                    fm.ShowInTaskbar = false;
-                    fm.Show();
-                    showForm.StartPosition = FormStartPosition.CenterScreen;
-                    showForm.TopMost = true;
-                    showForm.Owner = fm;
-                    showForm.ShowDialog();
-
-                    fm.Dispose();
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-            finally
-            {
-                fm.Dispose();
-            }
         }
 
         private void label1_patientnum_Click(object sender, EventArgs e)
@@ -80,54 +39,41 @@ namespace Hospital.Views.Doctor
 
         }
 
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Patient_Load(object sender, EventArgs e)
         {
-            data = room.GetListWaitingPatients(PH_ID);
+            initializePatients();
+        }
 
-            int x = 300;
-            int y = 36;
+        private void initializePatients()
+        {
+            data = room.GetListWaitingPatients(room.PH_ID);
+
+            int x = 250;
+            int y = 26;
             int i = 0;
-            for(; i < data.Count; i++)
+            for (; i < data.Count; i++)
             {
+                if (i >= 5) break;
                 WaitingPatient waitingPatient = new WaitingPatient();
                 waitingPatient.Location = new Point(x, y);
                 this.guna2Panel1.Controls.Add(waitingPatient);
                 int index = data[i];
                 waitingPatient.Click += (sender, EventArgs) => WaitingPatient_Click(sender, EventArgs, index);
-                x += 180;
+                x += 140;
             }
 
-            for (; i < 3; i++)
+            for (; i < 5; i++)
             {
                 WaitingPatient waitingPatient = new WaitingPatient();
                 waitingPatient.Location = new Point(x, y);
                 waitingPatient.BackColor = Color.Silver;
                 this.guna2Panel1.Controls.Add(waitingPatient);
-                x += 180;
+                x += 140;
             }
             this.requestCount.Text = data.Count().ToString();
         }
 
-
-        private void addRequest_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void container(object _form)
         {
@@ -146,24 +92,61 @@ namespace Hospital.Views.Doctor
 
         private void WaitingPatient_Click(object sender, EventArgs e, int BN_ID)
         {
-            if (fm == null || fm.IsDisposed)
+            if (fm == null || fm.IsDisposed || BN_ID_active != BN_ID)
             {
-                container(new PatientDetail(BN_ID, BS_ID, PH_ID, KH_ID));
+                BN_ID_active = room.BN_ID = BN_ID;
+                room.sender = sender;
+                container(new PatientInformation());
             }
             else
             {
                 fm.Activate(); // Bring the existing form to the front
-            }
+            } 
         }
 
         private void uC_Button_Next_Click(object sender, EventArgs e)
         {
-            Form targetForm = Application.OpenForms["PatientDetail"];
-            if (targetForm != null)
+
+            if (room.temp1.list.Count > 0)
             {
-                targetForm.Close();
+                var confirmResult = MessageBox.Show("Are you sure ?? This record's prescription will be lost if not save!!",
+                                     "Move to Next Patient!!",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    room.temp1.list.Clear();
+                    room.temp1.prescriptionName = string.Empty;
+                    room.temp1.createDate = DateTime.Now;
+                    Form targetForm = Application.OpenForms["PatientDetail"];
+                    if (targetForm != null)
+                    {
+                        targetForm.Close();
+                        room.MovePatient(BN_ID_active, room.PH_ID);
+                    }
+                    initializePatients();
+                }
+                else
+                {
+                    // If 'No', do something here.
+                }
+                RefreshForm();
+            }
+        }
+
+        private void RefreshForm()
+        {
+            if (Application.OpenForms["DoctorForm"].Controls["DoctorMainPanel"].Controls.Count > 0)
+            {
+                Application.OpenForms["DoctorForm"].Controls["DoctorMainPanel"].Controls.Clear();
             }
 
+            // Add new subform after clearing
+            Requests newForm = new Requests();
+            newForm.TopLevel = false;
+            Application.OpenForms["DoctorForm"].Controls["DoctorMainPanel"].Controls.Add(newForm);
+            newForm.Dock = DockStyle.Fill;
+            newForm.Show();
+            this.Dispose();
         }
     }
 }

@@ -13,44 +13,30 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tulpep.NotificationWindow;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Hospital.Views.Receptionist
 {
     public partial class PatientRegistation : Form
     {
+
         private bool isUnderlined = false; //tạo biến bool khi nào sử dụng underline
         private ReceptionBUS reception;
         private Dictionary<int, string> specialists, rooms;
         private BenhAn record;
         private BenhNhan patient;
-        private int KH_ID, PH_ID, BN_ID;
 
         public PatientRegistation()
         {
             InitializeComponent();
-            reception = new ReceptionBUS();
+            reception = ReceptionBUS.GetInstance();
             specialists = rooms = new Dictionary<int, string>();
             record = new BenhAn();
             patient = new BenhNhan();
-            KH_ID = PH_ID = BN_ID = -1;
-        }
 
-        public PatientRegistation(int BN_ID)
-        {
-            InitializeComponent();
-            reception = new ReceptionBUS();
-            specialists = rooms = new Dictionary<int, string>();
-            record = new BenhAn();
-            patient = new BenhNhan();
-            KH_ID = PH_ID = -1;
-            this.BN_ID = BN_ID;
-
-            if (BN_ID > 0)
+            if (reception.BN_ID > 0)
             {
-
-                BenhNhan patient = reception.GetBenhNhan(BN_ID);
+                BenhNhan patient = reception.GetBenhNhan(reception.BN_ID);
                 HoTen.Text = patient.HoTen;
                 Nu.Checked = (patient.GioiTinh == "Nu");
                 Nam.Checked = (patient.GioiTinh == "Nam");
@@ -59,7 +45,17 @@ namespace Hospital.Views.Receptionist
                 SoDienThoai.Text = patient.SoDienThoai;
                 ChieuCao.Text = patient.ChieuCao.ToString();
                 CanNang.Text = patient.CanNang.ToString();
-                NhomMau.SelectedItem = patient.NhomMau.ToString();
+                NhomMau.SelectedItem = (patient.NhomMau == null) ? null : patient.NhomMau.ToString();
+               
+                HoTen.ReadOnly = true;
+                Nu.Enabled = false;
+                Nam.Enabled = false;
+                NgaySinh.Enabled = false;
+                DiaChi.ReadOnly = true;
+                SoDienThoai.ReadOnly = true;
+                ChieuCao.ReadOnly = true;
+                CanNang.ReadOnly = true;
+                NhomMau.Enabled = false;
             }
         }
 
@@ -76,7 +72,7 @@ namespace Hospital.Views.Receptionist
         private void uC_Button_Save_Click(object sender, EventArgs e)
         {
 
-            string sex;
+            string sex; 
             if (Nu.Checked)
             {
                 sex = "Nu";
@@ -91,35 +87,19 @@ namespace Hospital.Views.Receptionist
             string telInput = SoDienThoai.Text;
             string addressInput = DiaChi.Text;
 
-            //string 
-
-
             // Update the user instance with input values
             patient.HoTen = nameInput;
             patient.GioiTinh = sex;
             patient.SoDienThoai = telInput;
             patient.NgaySinh = DoBInput;
             patient.DiaChi = addressInput;
+            patient.ChieuCao = (double.TryParse(ChieuCao.Text, out double result1)) ? double.Parse(ChieuCao.Text) : 0;
+            patient.CanNang = (double.TryParse(CanNang.Text, out double result2)) ? double.Parse(CanNang.Text) : 0;
+            patient.NhomMau = (NhomMau.SelectedItem == null) ? null : NhomMau.SelectedItem.ToString();
+
 
             // Clear any existing error messages
             errorProvider1.Clear();
-
-
-            if (!Nu.Checked && !Nam.Checked)
-            {
-                // Clear any existing error for the control before setting a new one
-                errorProvider1.SetError(Nu, "Please select your gender!");
-            }
-
-            if (this.TenKhoa.SelectedIndex == -1)
-            {
-                errorProvider1.SetError(TenKhoa, "Please select specialist!");
-            }
-
-            if (this.TenPhong.SelectedIndex == -1)
-            {
-                errorProvider1.SetError(TenPhong, "Please select room!");
-            }
 
             // Validate the model using data annotations
             var results = new List<ValidationResult>();
@@ -127,20 +107,51 @@ namespace Hospital.Views.Receptionist
             bool isValid = Validator.TryValidateObject(patient, context, results, true);
 
 
+            if (!Nu.Checked && !Nam.Checked)
+            {
+                // Clear any existing error for the control before setting a new one
+                errorProvider1.SetError(Nu, "Please select your gender!");
+                isValid = false;
+            }
+
+            if (this.TenBenhAn.Text == "")
+            {
+                errorProvider1.SetError(TenBenhAn, "Please enter record name!");
+                isValid = false;
+            }
+
+            if (this.TenKhoa.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(TenKhoa, "Please select specialist!");
+                isValid = false;
+            }
+
+            if (this.TenPhong.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(TenPhong, "Please select room!");
+                isValid = false;
+            }
+
             if (isValid)
             {
-                PH_ID = rooms.FirstOrDefault(x => x.Value == this.TenPhong.Text).Key;
-                reception.PatientRegistration(
+                reception.PH_ID = rooms.FirstOrDefault(x => x.Value == this.TenPhong.Text).Key;
+                if(!reception.PatientRegistration(
                     patient,
-                    this.ChieuCao.Text,
-                    this.CanNang.Text,
-                    this.NhomMau.Text,
+                    this.TenBenhAn.Text,
                     this.TrieuChung.Text,
                     this.Ngay.Value,
-                    PH_ID,
-                    KH_ID
-                    );
-                successNotification();
+                    reception.PH_ID,
+                    reception.KH_ID,
+                    reception.BN_ID
+                    )  && reception.BN_ID <= 0) 
+                {
+                    Notification.ErrorNotification("Patient Information Existed!");
+
+                } else
+                {
+                    Notification.SucccessNotification("Add Patient!");
+                    ClearAllInformation();
+                }
             }
             else
             {
@@ -158,56 +169,73 @@ namespace Hospital.Views.Receptionist
                         errorProvider1.SetError(textBox, result.ErrorMessage);
                     }
                 }
-                warningNotification();
 
             }
         }
 
 
-
         private void uC_Button_Delete_Click(object sender, EventArgs e)
+        {
+            // Clear any existing error messages
+            errorProvider1.Clear();
+            ClearMedicalInformation();
+        }
+
+        private void ClearMedicalInformation()
+        {
+            if(reception.BN_ID <= 0)
+            {
+                HoTen.Text = string.Empty;
+                Nu.Checked = false;
+                Nam.Checked = false;
+                SoDienThoai.Text = string.Empty;
+                NhomMau.Text = string.Empty;
+                CanNang.Text = string.Empty;
+                NgaySinh.Value = DateTime.Now;
+                ChieuCao.Text = string.Empty;
+                DiaChi.Text = string.Empty;
+            }
+
+            TenPhong.SelectedIndex = -1;
+            TenKhoa.SelectedIndex = -1;
+            TenBenhAn.Text = string.Empty;
+            TrieuChung.Text = string.Empty;
+            Ngay.Value = DateTime.Now;
+        }
+
+        private void ClearAllInformation()
         {
             HoTen.Text = string.Empty;
             Nu.Checked = false;
             Nam.Checked = false;
             SoDienThoai.Text = string.Empty;
             NhomMau.Text = string.Empty;
-            TenPhong.SelectedIndex = -1;
-            TenKhoa.SelectedIndex = -1;
+            CanNang.Text = string.Empty;
             NgaySinh.Value = DateTime.Now;
             ChieuCao.Text = string.Empty;
             DiaChi.Text = string.Empty;
+            TenPhong.SelectedIndex = -1;
+            TenKhoa.SelectedIndex = -1;
+            TenBenhAn.Text = string.Empty;
             TrieuChung.Text = string.Empty;
-            CanNang.Text = string.Empty;
             Ngay.Value = DateTime.Now;
-            //dateTimePicker2.Value = DateTime.Now;
-            successNotification();
         }
+
 
         private void guna2ComboBox_Specialist_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             this.TenPhong.Items.Clear();
-            if (TenKhoa.SelectedIndex >= 0)
+            if(TenKhoa.SelectedIndex >= 0)
             {
                 string specialist = this.TenKhoa.SelectedItem.ToString();
-                KH_ID = specialists.FirstOrDefault(x => x.Value == specialist).Key;
-                var data = reception.GetRoomInfor(KH_ID);
+                reception.KH_ID = specialists.FirstOrDefault(x => x.Value == specialist).Key;
+                var data = reception.GetRoomInfor(reception.KH_ID);
                 foreach (var room in data)
                 {
                     this.TenPhong.Items.Add(room.TenPhong);
-                }
+                }   
             }
-        }
-
-        private void panel_registerForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void HoTen_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         #region event handle for text box
@@ -359,38 +387,5 @@ namespace Hospital.Views.Receptionist
         }
 
         #endregion
-
-        //Warning pop up notification
-        private void warningNotification()
-        {
-            PopupNotifier warning = new PopupNotifier();
-            warning.Image = (Image)Properties.Resources.ResourceManager.GetObject("errorcolor");
-            warning.BodyColor = Color.FromArgb(220, 53, 69);
-            warning.TitleText = "Warning!";
-            warning.TitleColor = Color.Black;
-            warning.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
-
-            warning.ContentText = "You must enter the required information";
-            warning.ContentColor = Color.White;
-            warning.ContentFont = new Font("Century Gothic", 12);
-            warning.Popup();
-        }
-
-        //success pop up notification 
-        private void successNotification()
-        {
-            PopupNotifier success = new PopupNotifier();
-            success.Image = (Image)Properties.Resources.ResourceManager.GetObject("successcolor");
-            success.BodyColor = Color.FromArgb(40, 167, 69);
-            success.TitleText = "Success!";
-            success.TitleColor = Color.Black;
-            success.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
-
-            success.ContentText = "Success!";
-            success.ContentColor = Color.White;
-            success.ContentFont = new Font("Century Gothic", 12);
-            success.Popup();
-        }
-        
     }
 }

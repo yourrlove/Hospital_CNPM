@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Reception1\\DTO\\DTO.csproj": {}
+    "D:\\new-recept ui\\DTO\\DTO.csproj": {}
   },
   "projects": {
-    "E:\\Reception1\\DTO\\DTO.csproj": {
+    "D:\\new-recept ui\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Reception1\\DTO\\DTO.csproj",
+        "projectUniqueName": "D:\\new-recept ui\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "E:\\Reception1\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\Ngo Phat\\.nuget\\packages\\",
-        "outputPath": "E:\\Reception1\\DTO\\obj\\",
+        "projectPath": "D:\\new-recept ui\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\LEGION 5\\.nuget\\packages\\",
+        "outputPath": "D:\\new-recept ui\\DTO\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ngo Phat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\LEGION 5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,6 +43,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

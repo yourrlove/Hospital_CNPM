@@ -24,5 +24,19 @@ namespace DataAccessTier
             }
             catch { return false; }
         }
+
+        public static List<int>? GetListRecords(int KH_ID)
+        {
+            try
+            {
+                var dbContext = new QuanLiBenhAnDBContext();
+                return dbContext.QuanLiBenhAn.Where(p => p.KH_ID == KH_ID).Select(p => p.BA_ID).ToList();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
     }
 }

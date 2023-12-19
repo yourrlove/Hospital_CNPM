@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -8,9 +11,10 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class Medicine : INotifyPropertyChanged
+    public class ThuocDOC : INotifyPropertyChanged
     {
         // These fields hold the values for the public properties.
+        private int tH_ID;
         private string name = string.Empty;
         private int quantity = 0;
         private string buoi = String.Empty;
@@ -26,6 +30,15 @@ namespace DTO
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+        public int TH_ID 
+        {
+            get
+            {
+                return this.tH_ID;
+            }
+            set { this.tH_ID = value; }
         }
 
         public string Name
@@ -80,4 +93,252 @@ namespace DTO
         }
     }
 
+    public class PatientRecord : INotifyPropertyChanged
+    {
+        // These fields hold the values for the public properties.
+        private int bA_ID = 0;
+        private int bN_ID = 0;
+        private string? recordName = String.Empty;
+        private string  patientName = String.Empty;
+        private string patientSex = String.Empty;
+        private string patientDoB = string.Empty;
+        private string tel = string.Empty;
+        private string checkIn = String.Empty;
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // This method is called by the Set accessor of each property.
+        // The CallerMemberName attribute that is applied to the optional propertyName
+        // parameter causes the property name of the caller to be substituted as an argument.
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public int BA_ID
+        {
+            get
+            {
+                return this.bA_ID;
+            }
+
+            set
+            {
+                if (value != this.bA_ID)
+                {
+                    this.bA_ID = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+        public int BN_ID
+        {
+            get
+            {
+                return this.bN_ID;
+            }
+
+            set
+            {
+                if (value != this.bN_ID)
+                {
+                    this.bN_ID = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+        public string? RecordName
+        {
+            get
+            {
+                return this.recordName;
+            }
+
+            set
+            {
+                if (value != this.recordName)
+                {
+                    this.recordName = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+        public string PatientName
+        {
+            get
+            {
+                return this.patientName;
+            }
+
+            set
+            {
+                if (value != this.patientName)
+                {
+                    this.patientName = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public string PatientSex
+        {
+            get
+            {
+                return this.patientSex;
+            }
+
+            set
+            {
+                if (value != this.patientSex)
+                {
+                    this.patientSex = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+        public string PatientDoB
+        {
+            get
+            {
+                return this.patientDoB;
+            }
+
+            set
+            {
+                if (value != this.patientDoB)
+                {
+                    this.patientDoB = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+        public string Tel
+        {
+            get
+            {
+                return this.tel;
+            }
+
+            set
+            {
+                if (value != this.tel)
+                {
+                    this.tel = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+        public string CheckIn
+        {
+            get
+            {
+                return this.checkIn;
+            }
+
+            set
+            {
+                if (value != this.checkIn)
+                {
+                    this.checkIn = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+    }
+
+    public class MedicinesTemporary
+    {
+        public string prescriptionName;
+        public DateTime createDate;
+        public List<ThuocDOC> list;
+
+        public MedicinesTemporary()
+        {
+            prescriptionName = string.Empty;
+            createDate = DateTime.Now;
+            list = new List<ThuocDOC>();
+        }
+    }
+
+    public class BenhAn2
+    {
+        [Required(ErrorMessage = "Record name is required!")]
+        [StringLength(50)]
+        public string TenBenhAn { get; set; }
+        [Required(ErrorMessage = "Date created is required!")]
+        public DateTime Ngay { get; set; }
+    }
+
+    public class BenhAn3
+    {
+        public int DT_ID { get; set; }
+        public string? TenBenhAn { get; set; }
+        public string? TrieuChung { get; set; }
+        public string Ngay { get; set; }
+        public string? TSBenhLi { get; set; }
+    }
+
+    public class PatientInfor
+    {
+        public string HoTen { set; get; }
+        public string GioiTinh { get; set; }
+        public string NgaySinh { set; get; }
+        public string ChieuCao { get; set; }
+        public string CanNang {  get; set; }
+        public string NhomMau { get; set; }
+        public string DiaChi { get; set; }
+        public string SoDienThoai { get; set; }
+        public string TenBenhAn { set; get; }
+        public string TrieuChung { set; get; }
+        public string CheckIn { set; get; }
+    }
+
+    public class PatientInfor2
+    {
+        public string HoTen { set; get; }
+        public string GioiTinh { get; set; }
+        public string NgaySinh { set; get; }
+        public string ChieuCao { get; set; }
+        public string CanNang { get; set; }
+        public string TenBenhAn { set; get; }
+        public string TrieuChung { set; get; }
+    }
+
+    public class Record
+    {
+        public string TenBenhAn { get; set; }
+        public string? TrieuChung { get; set; }
+        public string Ngay { get; set; }
+        public string? TSBenhLi { get; set; }
+        public string HoTen { set; get; }
+        public string GioiTinh { get; set; }
+        public string NgaySinh { set; get; }
+        public string DiaChi { get; set; }
+        public string SoDienThoai { get; set; }
+        public string? NhomMau { get; set; }
+        public string? CanNang { get; set; }
+        public string? ChieuCao { get; set; }
+        public string TenKhoa {  get; set; }
+        public string BacSi {  get; set; }
+
+        public string TenDonThuoc {  get; set; }
+        public List<ThuocDOC> lists { get; set; }
+    }
+
+
+    public class DonThuocDetail
+    {
+        public string NgayKeDon { get; set; }
+        public string TenDonThuoc { get; set; }
+        public List<ThuocDOC>? Lists {  get; set; }
+    }
 }
+
+
+
+
