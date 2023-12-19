@@ -61,6 +61,7 @@ namespace Hospital.Views.Cashier
         }
         private void btnEditPharmacist_Click(object sender, EventArgs e)
         {
+            showMiddleForm(new EditCashierInformation());
         }
     }
 }

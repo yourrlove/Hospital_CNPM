@@ -87,7 +87,7 @@ namespace Hospital.Views.Cashier
                 this.dtgv_bill.Columns[1].Visible = false;
                 this.dtgv_bill.AllowUserToAddRows = false;
 
-                TongTien_text.Text = Convert.ToString(TongTien(DT_ID)) + " (dong)";
+                TongTien_text.Text = Convert.ToString(TongTien(DT_ID)) + " (VND)";
 
 
             }
@@ -147,7 +147,7 @@ namespace Hospital.Views.Cashier
 
         public bool isSave = false;
         public bool ispaid = false;
-        public bool isOK = false; 
+        public bool isOK = false;
         string thanhtoan;
         /// <summary>
         /// The button has many events
@@ -179,7 +179,7 @@ namespace Hospital.Views.Cashier
                     double tongtien = TongTien(curr.DT_ID);
                     int TN_ID = 1;
                     int BN_ID = curr.patient;
-                    if(isOK == false) 
+                    if (isOK == false)
                     {
                         cashier.addHoaDon(NgayLap, tongtien, TN_ID, BN_ID, thanhtoan);
 
@@ -206,7 +206,7 @@ namespace Hospital.Views.Cashier
                         cashier.addHoaDonDS(HD_ID, BN_ID);
                         isOK = true;
                     }
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -492,6 +492,11 @@ namespace Hospital.Views.Cashier
         }
 
         private void lb_thanhtoan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TongTien_text_Click(object sender, EventArgs e)
         {
 
         }

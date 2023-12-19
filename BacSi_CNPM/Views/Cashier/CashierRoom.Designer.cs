@@ -291,7 +291,7 @@
             btn_billcheckup.Image = (System.Drawing.Image)resources.GetObject("btn_billcheckup.Image");
             btn_billcheckup.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             btn_billcheckup.ImageOffset = new System.Drawing.Point(10, 0);
-            btn_billcheckup.ImageSize = new System.Drawing.Size(32, 32);
+            btn_billcheckup.ImageSize = new System.Drawing.Size(38, 38);
             btn_billcheckup.Location = new System.Drawing.Point(3, 642);
             btn_billcheckup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btn_billcheckup.Name = "btn_billcheckup";
@@ -447,7 +447,7 @@
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.Color = System.Drawing.Color.DimGray;
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges29;
-            guna2PictureBox1.Size = new System.Drawing.Size(1134, 539);
+            guna2PictureBox1.Size = new System.Drawing.Size(1134, 732);
             guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 19;
             guna2PictureBox1.TabStop = false;

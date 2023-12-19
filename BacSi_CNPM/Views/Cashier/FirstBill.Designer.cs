@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirstBill));
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -53,8 +53,6 @@
             lb_giakham = new System.Windows.Forms.Label();
             age = new System.Windows.Forms.Label();
             lb_age = new System.Windows.Forms.Label();
-            price = new System.Windows.Forms.Label();
-            totalbill = new System.Windows.Forms.Label();
             phong = new System.Windows.Forms.Label();
             lb_phong = new System.Windows.Forms.Label();
             so = new System.Windows.Forms.Label();
@@ -65,6 +63,8 @@
             print = new Guna.UI2.WinForms.Guna2Button();
             btn_save = new Guna.UI2.WinForms.Guna2Button();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            totalbill = new System.Windows.Forms.Label();
+            price = new System.Windows.Forms.Label();
             printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             printPreviewDialog2 = new System.Windows.Forms.PrintPreviewDialog();
@@ -78,20 +78,19 @@
             // 
             guna2Panel1.Controls.Add(guna2ShadowPanel2);
             guna2Panel1.Controls.Add(guna2ShadowPanel1);
-            guna2Panel1.Controls.Add(print);
-            guna2Panel1.Controls.Add(btn_save);
             guna2Panel1.Controls.Add(guna2Button1);
             guna2Panel1.Controls.Add(totalbill);
             guna2Panel1.Controls.Add(price);
-            guna2Panel1.CustomizableEdges = customizableEdges11;
+            guna2Panel1.CustomizableEdges = customizableEdges7;
             guna2Panel1.Location = new System.Drawing.Point(12, 12);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel1.Size = new System.Drawing.Size(829, 465);
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel1.Size = new System.Drawing.Size(829, 441);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2ShadowPanel2
             // 
+            guna2ShadowPanel2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             guna2ShadowPanel2.Controls.Add(btn_banking);
             guna2ShadowPanel2.Controls.Add(btn_cash);
@@ -112,6 +111,7 @@
             btn_banking.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btn_banking.Font = new System.Drawing.Font("Segoe UI", 9F);
             btn_banking.ForeColor = System.Drawing.Color.White;
+            btn_banking.HoverState.FillColor = System.Drawing.Color.Blue;
             btn_banking.Location = new System.Drawing.Point(26, 206);
             btn_banking.Name = "btn_banking";
             btn_banking.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -129,6 +129,7 @@
             btn_cash.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
             btn_cash.Font = new System.Drawing.Font("Segoe UI", 9F);
             btn_cash.ForeColor = System.Drawing.Color.White;
+            btn_cash.HoverState.FillColor = System.Drawing.Color.Blue;
             btn_cash.Location = new System.Drawing.Point(26, 99);
             btn_cash.Name = "btn_cash";
             btn_cash.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -148,6 +149,7 @@
             // 
             // guna2ShadowPanel1
             // 
+            guna2ShadowPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             guna2ShadowPanel1.Controls.Add(khoa);
             guna2ShadowPanel1.Controls.Add(lb_khoa);
@@ -183,9 +185,9 @@
             lb_khoa.AutoSize = true;
             lb_khoa.Location = new System.Drawing.Point(317, 245);
             lb_khoa.Name = "lb_khoa";
-            lb_khoa.Size = new System.Drawing.Size(50, 20);
+            lb_khoa.Size = new System.Drawing.Size(96, 20);
             lb_khoa.TabIndex = 17;
-            lb_khoa.Text = "Khoa: ";
+            lb_khoa.Text = "Department: ";
             // 
             // gia
             // 
@@ -201,14 +203,14 @@
             lb_giakham.AutoSize = true;
             lb_giakham.Location = new System.Drawing.Point(317, 181);
             lb_giakham.Name = "lb_giakham";
-            lb_giakham.Size = new System.Drawing.Size(73, 20);
+            lb_giakham.Size = new System.Drawing.Size(100, 20);
             lb_giakham.TabIndex = 15;
-            lb_giakham.Text = "Gia Kham";
+            lb_giakham.Text = "Examine Free:";
             // 
             // age
             // 
             age.AutoSize = true;
-            age.Location = new System.Drawing.Point(438, 113);
+            age.Location = new System.Drawing.Point(433, 114);
             age.Name = "age";
             age.Size = new System.Drawing.Size(36, 20);
             age.TabIndex = 14;
@@ -219,32 +221,14 @@
             lb_age.AutoSize = true;
             lb_age.Location = new System.Drawing.Point(317, 114);
             lb_age.Name = "lb_age";
-            lb_age.Size = new System.Drawing.Size(94, 20);
+            lb_age.Size = new System.Drawing.Size(95, 20);
             lb_age.TabIndex = 13;
-            lb_age.Text = "patient's age";
-            // 
-            // price
-            // 
-            price.AutoSize = true;
-            price.Location = new System.Drawing.Point(434, 386);
-            price.Name = "price";
-            price.Size = new System.Drawing.Size(41, 20);
-            price.TabIndex = 12;
-            price.Text = "Price";
-            // 
-            // totalbill
-            // 
-            totalbill.AutoSize = true;
-            totalbill.Location = new System.Drawing.Point(338, 386);
-            totalbill.Name = "totalbill";
-            totalbill.Size = new System.Drawing.Size(42, 20);
-            totalbill.TabIndex = 11;
-            totalbill.Text = "Total";
+            lb_age.Text = "Patient's age:";
             // 
             // phong
             // 
             phong.AutoSize = true;
-            phong.Location = new System.Drawing.Point(138, 245);
+            phong.Location = new System.Drawing.Point(103, 245);
             phong.Name = "phong";
             phong.Size = new System.Drawing.Size(52, 20);
             phong.TabIndex = 10;
@@ -255,14 +239,14 @@
             lb_phong.AutoSize = true;
             lb_phong.Location = new System.Drawing.Point(30, 245);
             lb_phong.Name = "lb_phong";
-            lb_phong.Size = new System.Drawing.Size(51, 20);
+            lb_phong.Size = new System.Drawing.Size(52, 20);
             lb_phong.TabIndex = 9;
-            lb_phong.Text = "Phong";
+            lb_phong.Text = "Room:";
             // 
             // so
             // 
             so.AutoSize = true;
-            so.Location = new System.Drawing.Point(138, 181);
+            so.Location = new System.Drawing.Point(147, 181);
             so.Name = "so";
             so.Size = new System.Drawing.Size(24, 20);
             so.TabIndex = 8;
@@ -273,14 +257,14 @@
             sdt.AutoSize = true;
             sdt.Location = new System.Drawing.Point(30, 181);
             sdt.Name = "sdt";
-            sdt.Size = new System.Drawing.Size(95, 20);
+            sdt.Size = new System.Drawing.Size(111, 20);
             sdt.TabIndex = 7;
-            sdt.Text = "so dien thoai";
+            sdt.Text = "Phone Number:";
             // 
             // gioitinh
             // 
             gioitinh.AutoSize = true;
-            gioitinh.Location = new System.Drawing.Point(122, 110);
+            gioitinh.Location = new System.Drawing.Point(78, 110);
             gioitinh.Name = "gioitinh";
             gioitinh.Size = new System.Drawing.Size(63, 20);
             gioitinh.TabIndex = 6;
@@ -291,9 +275,9 @@
             lb_gioitinh.AutoSize = true;
             lb_gioitinh.Location = new System.Drawing.Point(30, 110);
             lb_gioitinh.Name = "lb_gioitinh";
-            lb_gioitinh.Size = new System.Drawing.Size(60, 20);
+            lb_gioitinh.Size = new System.Drawing.Size(35, 20);
             lb_gioitinh.TabIndex = 5;
-            lb_gioitinh.Text = "gioitinh";
+            lb_gioitinh.Text = "Sex:";
             // 
             // patientName
             // 
@@ -307,16 +291,22 @@
             // 
             // print
             // 
-            print.CustomizableEdges = customizableEdges5;
+            print.BackColor = System.Drawing.Color.Transparent;
+            print.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
+            print.BorderThickness = 1;
+            print.CustomizableEdges = customizableEdges9;
             print.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             print.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             print.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
             print.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
+            print.FillColor = System.Drawing.Color.Transparent;
             print.Font = new System.Drawing.Font("Segoe UI", 9F);
-            print.ForeColor = System.Drawing.Color.White;
-            print.Location = new System.Drawing.Point(692, 373);
+            print.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
+            print.HoverState.FillColor = System.Drawing.Color.Blue;
+            print.HoverState.ForeColor = System.Drawing.Color.White;
+            print.Location = new System.Drawing.Point(704, 466);
             print.Name = "print";
-            print.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            print.ShadowDecoration.CustomizableEdges = customizableEdges10;
             print.Size = new System.Drawing.Size(100, 44);
             print.TabIndex = 2;
             print.Text = "Print";
@@ -324,16 +314,23 @@
             // 
             // btn_save
             // 
-            btn_save.CustomizableEdges = customizableEdges7;
+            btn_save.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            btn_save.BackColor = System.Drawing.Color.Transparent;
+            btn_save.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
+            btn_save.BorderThickness = 1;
+            btn_save.CustomizableEdges = customizableEdges11;
             btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
             btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
+            btn_save.FillColor = System.Drawing.Color.Transparent;
             btn_save.Font = new System.Drawing.Font("Segoe UI", 9F);
-            btn_save.ForeColor = System.Drawing.Color.White;
-            btn_save.Location = new System.Drawing.Point(582, 373);
+            btn_save.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
+            btn_save.HoverState.FillColor = System.Drawing.Color.Blue;
+            btn_save.HoverState.ForeColor = System.Drawing.Color.White;
+            btn_save.Location = new System.Drawing.Point(553, 466);
             btn_save.Name = "btn_save";
-            btn_save.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_save.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btn_save.Size = new System.Drawing.Size(104, 44);
             btn_save.TabIndex = 1;
             btn_save.Text = "Save";
@@ -341,7 +338,8 @@
             // 
             // guna2Button1
             // 
-            guna2Button1.CustomizableEdges = customizableEdges9;
+            guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            guna2Button1.CustomizableEdges = customizableEdges5;
             guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
@@ -350,9 +348,29 @@
             guna2Button1.ForeColor = System.Drawing.Color.White;
             guna2Button1.Location = new System.Drawing.Point(13, 357);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button1.Size = new System.Drawing.Size(777, 10);
             guna2Button1.TabIndex = 0;
+            // 
+            // totalbill
+            // 
+            totalbill.AutoSize = true;
+            totalbill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            totalbill.Location = new System.Drawing.Point(13, 396);
+            totalbill.Name = "totalbill";
+            totalbill.Size = new System.Drawing.Size(64, 28);
+            totalbill.TabIndex = 11;
+            totalbill.Text = "Total:";
+            // 
+            // price
+            // 
+            price.AutoSize = true;
+            price.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            price.Location = new System.Drawing.Point(91, 396);
+            price.Name = "price";
+            price.Size = new System.Drawing.Size(54, 28);
+            price.TabIndex = 12;
+            price.Text = "Price";
             // 
             // printPreviewDialog1
             // 
@@ -386,8 +404,10 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(857, 491);
+            ClientSize = new System.Drawing.Size(857, 522);
             Controls.Add(guna2Panel1);
+            Controls.Add(btn_save);
+            Controls.Add(print);
             Name = "FirstBill";
             Text = "FirstBill";
             guna2Panel1.ResumeLayout(false);

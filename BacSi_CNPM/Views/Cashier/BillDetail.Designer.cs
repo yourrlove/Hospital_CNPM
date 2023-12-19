@@ -64,9 +64,9 @@
             dtgv_billdetail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dtgv_billdetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -84,10 +84,13 @@
             dtgv_billdetail.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_billdetail.Location = new System.Drawing.Point(25, 97);
             dtgv_billdetail.Name = "dtgv_billdetail";
+            dtgv_billdetail.ReadOnly = true;
             dtgv_billdetail.RowHeadersVisible = false;
             dtgv_billdetail.RowHeadersWidth = 51;
             dtgv_billdetail.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dtgv_billdetail.RowTemplate.Height = 40;
+            dtgv_billdetail.RowTemplate.ReadOnly = true;
+            dtgv_billdetail.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             dtgv_billdetail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             dtgv_billdetail.Size = new System.Drawing.Size(523, 398);
             dtgv_billdetail.TabIndex = 0;
@@ -104,7 +107,7 @@
             dtgv_billdetail.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             dtgv_billdetail.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dtgv_billdetail.ThemeStyle.HeaderStyle.Height = 50;
-            dtgv_billdetail.ThemeStyle.ReadOnly = false;
+            dtgv_billdetail.ThemeStyle.ReadOnly = true;
             dtgv_billdetail.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             dtgv_billdetail.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dtgv_billdetail.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -120,6 +123,7 @@
             thidDataGridViewTextBoxColumn.HeaderText = "th_id";
             thidDataGridViewTextBoxColumn.MinimumWidth = 6;
             thidDataGridViewTextBoxColumn.Name = "thidDataGridViewTextBoxColumn";
+            thidDataGridViewTextBoxColumn.ReadOnly = true;
             thidDataGridViewTextBoxColumn.Visible = false;
             // 
             // tenthuocDataGridViewTextBoxColumn
@@ -128,6 +132,7 @@
             tenthuocDataGridViewTextBoxColumn.HeaderText = "Medicine";
             tenthuocDataGridViewTextBoxColumn.MinimumWidth = 6;
             tenthuocDataGridViewTextBoxColumn.Name = "tenthuocDataGridViewTextBoxColumn";
+            tenthuocDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // soluongDataGridViewTextBoxColumn
             // 
@@ -135,6 +140,7 @@
             soluongDataGridViewTextBoxColumn.HeaderText = "Quantity";
             soluongDataGridViewTextBoxColumn.MinimumWidth = 6;
             soluongDataGridViewTextBoxColumn.Name = "soluongDataGridViewTextBoxColumn";
+            soluongDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // giabanDataGridViewTextBoxColumn
             // 
@@ -142,6 +148,7 @@
             giabanDataGridViewTextBoxColumn.HeaderText = "Price";
             giabanDataGridViewTextBoxColumn.MinimumWidth = 6;
             giabanDataGridViewTextBoxColumn.Name = "giabanDataGridViewTextBoxColumn";
+            giabanDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dongiaDataGridViewTextBoxColumn
             // 
@@ -149,6 +156,7 @@
             dongiaDataGridViewTextBoxColumn.HeaderText = "Total Cost";
             dongiaDataGridViewTextBoxColumn.MinimumWidth = 6;
             dongiaDataGridViewTextBoxColumn.Name = "dongiaDataGridViewTextBoxColumn";
+            dongiaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // thuocHoaDonBindingSource
             // 
@@ -164,7 +172,7 @@
             // 
             lb_thanhtoan.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             lb_thanhtoan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            lb_thanhtoan.Location = new System.Drawing.Point(414, 45);
+            lb_thanhtoan.Location = new System.Drawing.Point(428, 45);
             lb_thanhtoan.Name = "lb_thanhtoan";
             lb_thanhtoan.Size = new System.Drawing.Size(111, 26);
             lb_thanhtoan.TabIndex = 13;
@@ -176,7 +184,7 @@
             label1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label1.BackColor = System.Drawing.Color.FromArgb(94, 148, 255);
             label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(208, 36);
+            label1.Location = new System.Drawing.Point(253, 42);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(169, 35);
             label1.TabIndex = 12;
@@ -214,7 +222,7 @@
             // 
             lb_tongtien.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             lb_tongtien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 163);
-            lb_tongtien.Location = new System.Drawing.Point(351, 546);
+            lb_tongtien.Location = new System.Drawing.Point(351, 548);
             lb_tongtien.Name = "lb_tongtien";
             lb_tongtien.Size = new System.Drawing.Size(197, 32);
             lb_tongtien.TabIndex = 9;
@@ -236,6 +244,7 @@
             Name = "BillDetail";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "BillDetail";
+            Load += BillDetail_Load;
             ((System.ComponentModel.ISupportInitialize)dtgv_billdetail).EndInit();
             ((System.ComponentModel.ISupportInitialize)thuocHoaDonBindingSource).EndInit();
             ResumeLayout(false);

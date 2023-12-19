@@ -48,3 +48,16 @@ C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\DTO.dll
 C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\refint\DTO.dll
 C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\DTO.pdb
 C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\ref\DTO.dll
+E:\Cashier Final\DTO\bin\Debug\net7.0\DTO.deps.json
+E:\Cashier Final\DTO\bin\Debug\net7.0\DTO.dll
+E:\Cashier Final\DTO\bin\Debug\net7.0\DTO.pdb
+E:\Cashier Final\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+E:\Cashier Final\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Cashier Final\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+E:\Cashier Final\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+E:\Cashier Final\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+E:\Cashier Final\DTO\obj\Debug\net7.0\DTO.sourcelink.json
+E:\Cashier Final\DTO\obj\Debug\net7.0\DTO.dll
+E:\Cashier Final\DTO\obj\Debug\net7.0\refint\DTO.dll
+E:\Cashier Final\DTO\obj\Debug\net7.0\DTO.pdb
+E:\Cashier Final\DTO\obj\Debug\net7.0\ref\DTO.dll

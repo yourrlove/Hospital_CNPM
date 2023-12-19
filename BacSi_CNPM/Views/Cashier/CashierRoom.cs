@@ -150,7 +150,10 @@ namespace Hospital.Views.Cashier
                 {
                     currentButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("home_white");
                 }
-
+                else if (clickedButton == btn_billcheckup)
+                {
+                    clickedButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("bill_white");
+                }
             }
         }
 
@@ -181,6 +184,10 @@ namespace Hospital.Views.Cashier
                     else if (previousBtn == btnHome)
                     {
                         previousBtn.Image = (Image)Properties.Resources.ResourceManager.GetObject("home");
+                    }
+                    else if (previousBtn == btn_billcheckup)
+                    {
+                        previousBtn.Image = (Image)Properties.Resources.ResourceManager.GetObject("bill");
                     }
                 }
             }
@@ -237,8 +244,9 @@ namespace Hospital.Views.Cashier
 
         private void btn_billcheckup_Click(object sender, EventArgs e)
         {
-            text_val.Text = "Prescription";
-            image_val.Image = Properties.Resources.icons8_dashboard_48;
+            ActivateButton(sender);
+            text_val.Text = "Bill checkup";
+            image_val.Image = (Image)Properties.Resources.ResourceManager.GetObject("billcolor");
             container(new BillCheckup());
         }
     }

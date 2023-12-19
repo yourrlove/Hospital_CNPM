@@ -24,7 +24,7 @@ namespace Hospital.Views.Cashier
             cashier = CashierBUS.GetInstance();
             InitializeComponent();
             LoadHoaDon(HD_ID);
-            lb_tongtien.Text = Convert.ToString(tongtien) + "(dong)";
+            lb_tongtien.Text = Convert.ToString(tongtien) + " (VND)";
             lb_thanhtoan.Text = thanhtoan;
         }
         private void LoadHoaDon(int HD_ID)
@@ -48,6 +48,11 @@ namespace Hospital.Views.Cashier
         }
 
         private void lb_tongtien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BillDetail_Load(object sender, EventArgs e)
         {
 
         }

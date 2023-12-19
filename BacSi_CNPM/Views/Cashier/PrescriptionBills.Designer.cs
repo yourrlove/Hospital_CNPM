@@ -234,9 +234,9 @@
             save.Font = new System.Drawing.Font("Segoe UI", 9F);
             save.FontSize = 9;
             save.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            save.Location = new System.Drawing.Point(792, 538);
+            save.Location = new System.Drawing.Point(754, 606);
             save.Name = "save";
-            save.Size = new System.Drawing.Size(118, 40);
+            save.Size = new System.Drawing.Size(131, 51);
             save.TabIndex = 5;
             save.Text = "Save";
             save.TextColor = System.Drawing.Color.FromArgb(0, 0, 192);
@@ -366,18 +366,20 @@
             // TongTien_text
             // 
             TongTien_text.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            TongTien_text.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            TongTien_text.Location = new System.Drawing.Point(546, 538);
+            TongTien_text.BackColor = System.Drawing.Color.WhiteSmoke;
+            TongTien_text.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            TongTien_text.Location = new System.Drawing.Point(811, 538);
             TongTien_text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             TongTien_text.Name = "TongTien_text";
             TongTien_text.Size = new System.Drawing.Size(227, 40);
             TongTien_text.TabIndex = 9;
             TongTien_text.Text = "Tong Tien";
             TongTien_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            TongTien_text.Click += TongTien_text_Click;
             // 
             // guna2Button1
             // 
-            guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -398,7 +400,7 @@
             label_TongTien.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label_TongTien.BackColor = System.Drawing.Color.FromArgb(94, 148, 255);
             label_TongTien.ForeColor = System.Drawing.Color.White;
-            label_TongTien.Location = new System.Drawing.Point(428, 538);
+            label_TongTien.Location = new System.Drawing.Point(703, 539);
             label_TongTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label_TongTien.Name = "label_TongTien";
             label_TongTien.Size = new System.Drawing.Size(93, 40);
@@ -420,10 +422,10 @@
             print_btn.Font = new System.Drawing.Font("Segoe UI", 9F);
             print_btn.FontSize = 9;
             print_btn.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            print_btn.Location = new System.Drawing.Point(926, 538);
+            print_btn.Location = new System.Drawing.Point(910, 606);
             print_btn.Margin = new System.Windows.Forms.Padding(2);
             print_btn.Name = "print_btn";
-            print_btn.Size = new System.Drawing.Size(112, 40);
+            print_btn.Size = new System.Drawing.Size(128, 52);
             print_btn.TabIndex = 12;
             print_btn.Text = "Print";
             print_btn.TextColor = System.Drawing.Color.FromArgb(0, 0, 192);
@@ -448,7 +450,7 @@
             // 
             lb_thanhtoan.BackColor = System.Drawing.Color.Transparent;
             lb_thanhtoan.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 163);
-            lb_thanhtoan.Location = new System.Drawing.Point(0, 0);
+            lb_thanhtoan.Location = new System.Drawing.Point(0, 10);
             lb_thanhtoan.Name = "lb_thanhtoan";
             lb_thanhtoan.Size = new System.Drawing.Size(246, 54);
             lb_thanhtoan.TabIndex = 13;
@@ -489,10 +491,10 @@
             btn_baking.Font = new System.Drawing.Font("Segoe UI", 9F);
             btn_baking.ForeColor = System.Drawing.Color.White;
             btn_baking.HoverState.FillColor = System.Drawing.Color.Blue;
-            btn_baking.Location = new System.Drawing.Point(20, 254);
+            btn_baking.Location = new System.Drawing.Point(20, 236);
             btn_baking.Name = "btn_baking";
             btn_baking.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btn_baking.Size = new System.Drawing.Size(210, 45);
+            btn_baking.Size = new System.Drawing.Size(210, 47);
             btn_baking.TabIndex = 15;
             btn_baking.Text = "Internet banking";
             btn_baking.Click += btn_baking_Click;
@@ -546,7 +548,7 @@
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.SystemColors.Control;
-            ClientSize = new System.Drawing.Size(1060, 657);
+            ClientSize = new System.Drawing.Size(1060, 669);
             Controls.Add(lb_prescriptionName);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(print_btn);
