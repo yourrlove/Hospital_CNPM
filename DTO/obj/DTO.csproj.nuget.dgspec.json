@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj": {}
+    "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "Tulpep.NotificationWindow": {
+              "target": "Package",
+              "version": "[1.1.38, )"
             }
           },
           "imports": [

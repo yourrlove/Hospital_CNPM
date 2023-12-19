@@ -45,3 +45,18 @@ C:\Users\ADMIN\Documents\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAcces
 C:\Users\ADMIN\Documents\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
 C:\Users\ADMIN\Documents\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
 C:\Users\ADMIN\Documents\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\bin\Debug\net7.0\DTO.dll
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+C:\Users\ADMIN\Desktop\new cashier\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll

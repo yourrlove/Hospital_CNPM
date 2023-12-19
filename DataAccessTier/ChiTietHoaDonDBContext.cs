@@ -70,5 +70,24 @@ namespace DataAccessTier
             }
 
         }
+
+        public static bool CheckHD(int HD_ID)
+        {
+            try
+            {
+                using (var dbContext = new ChiTietHoaDonDBContext())
+                {
+                    var existingRecord = dbContext.ChiTietHoaDon.FirstOrDefault(record => record.HD_ID == HD_ID);
+                    return existingRecord != null;
+
+                }
+            }
+            catch (Exception ex)
+            {
+               
+                return false;
+            }
+        }
+
     }
 }

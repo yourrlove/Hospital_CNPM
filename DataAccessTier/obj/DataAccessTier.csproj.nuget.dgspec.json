@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DataAccessTier\\DataAccessTier.csproj": {}
+    "C:\\Users\\ADMIN\\Desktop\\new cashier\\DataAccessTier\\DataAccessTier.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DataAccessTier\\DataAccessTier.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\new cashier\\DataAccessTier\\DataAccessTier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DataAccessTier\\DataAccessTier.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DataAccessTier\\DataAccessTier.csproj",
         "projectName": "DataAccessTier",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DataAccessTier\\DataAccessTier.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DataAccessTier\\DataAccessTier.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DataAccessTier\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DataAccessTier\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj"
+              "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj"
               }
             }
           }
@@ -51,6 +51,10 @@
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Tulpep.NotificationWindow": {
+              "target": "Package",
+              "version": "[1.1.38, )"
             }
           },
           "imports": [
@@ -73,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -112,6 +116,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "Tulpep.NotificationWindow": {
+              "target": "Package",
+              "version": "[1.1.38, )"
             }
           },
           "imports": [

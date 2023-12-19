@@ -142,7 +142,5 @@ namespace DataAccessTier
                 return new List<BenhNhan>();
             }
         }
-
-       
     }
 }

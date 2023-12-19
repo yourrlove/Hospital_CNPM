@@ -65,10 +65,10 @@ namespace DTO
 
     public class DonKhamBenh
     {
-        public int BN_ID {  set; get; }
+        public int BN_ID { set; get; }
         public string tenKhoa { set; get; }
-        public string tenPhong {  set; get; }
+        public string tenPhong { set; get; }
         public double giakham { set; get; }
-        public int PH_ID {  set; get; }
+        public int PH_ID { set; get; }
     }
 }

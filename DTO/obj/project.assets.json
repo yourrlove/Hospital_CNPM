@@ -960,6 +960,15 @@
             "rid": "win"
           }
         }
+      },
+      "Tulpep.NotificationWindow/1.1.38": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Tulpep.NotificationWindow.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Tulpep.NotificationWindow.dll": {}
+        }
       }
     }
   },
@@ -2609,11 +2618,24 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Tulpep.NotificationWindow/1.1.38": {
+      "sha512": "cotu1DDvSiSqvkGIY0SOh1QN5NgXTiWJEspZCx34My+p0q9ONvtPYUZELyN+Fpo0U/KyAG5B0wEiiFdaMCesag==",
+      "type": "package",
+      "path": "tulpep.notificationwindow/1.1.38",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Tulpep.NotificationWindow.dll",
+        "tulpep.notificationwindow.1.1.38.nupkg.sha512",
+        "tulpep.notificationwindow.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.14",
+      "Tulpep.NotificationWindow >= 1.1.38"
     ]
   },
   "packageFolders": {
@@ -2622,11 +2644,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj",
       "projectName": "DTO",
-      "projectPath": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\DTO.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\DTO.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Documents\\Hospital_CNPM\\DTO\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\Desktop\\new cashier\\DTO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2658,6 +2680,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[7.0.14, )"
+          },
+          "Tulpep.NotificationWindow": {
+            "target": "Package",
+            "version": "[1.1.38, )"
           }
         },
         "imports": [
@@ -2679,5 +2705,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Tulpep.NotificationWindow 1.1.38' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Tulpep.NotificationWindow",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

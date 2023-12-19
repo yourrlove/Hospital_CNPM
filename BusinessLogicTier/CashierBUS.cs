@@ -38,7 +38,6 @@ namespace BusinessLogicTier
         }
 
 
-
         // ------------------------ CHI TIET DON THUOC Function --------------------
         public string TenDon(int DT_ID)
         {
@@ -67,6 +66,11 @@ namespace BusinessLogicTier
         public BindingList<ThuocHoaDon> loadHoaDon(int HD_ID)
         {
             return ChiTietHoaDonDBContext.loadHoaDon(HD_ID);
+        }
+
+        public bool CheckHD(int HD_ID)
+        {
+            return ChiTietHoaDonDBContext.CheckHD(HD_ID);
         }
 
         //------------------------ DON THUOC Function ------------------------------

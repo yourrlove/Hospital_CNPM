@@ -36,3 +36,15 @@ C:\Users\ADMIN\Documents\Hospital_CNPM\DTO\obj\Debug\net7.0\DTO.dll
 C:\Users\ADMIN\Documents\Hospital_CNPM\DTO\obj\Debug\net7.0\refint\DTO.dll
 C:\Users\ADMIN\Documents\Hospital_CNPM\DTO\obj\Debug\net7.0\DTO.pdb
 C:\Users\ADMIN\Documents\Hospital_CNPM\DTO\obj\Debug\net7.0\ref\DTO.dll
+C:\Users\ADMIN\Desktop\new cashier\DTO\bin\Debug\net7.0\DTO.deps.json
+C:\Users\ADMIN\Desktop\new cashier\DTO\bin\Debug\net7.0\DTO.dll
+C:\Users\ADMIN\Desktop\new cashier\DTO\bin\Debug\net7.0\DTO.pdb
+C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\DTO.dll
+C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\refint\DTO.dll
+C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\DTO.pdb
+C:\Users\ADMIN\Desktop\new cashier\DTO\obj\Debug\net7.0\ref\DTO.dll

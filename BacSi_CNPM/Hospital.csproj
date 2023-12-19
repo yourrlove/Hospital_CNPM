@@ -35,6 +35,7 @@
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
     <PackageReference Include="Syncfusion.Pdf.WinForms" Version="23.2.7" />
+    <PackageReference Include="Tulpep.NotificationWindow" Version="1.1.38" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicTier\BusinessLogicTier.csproj" />

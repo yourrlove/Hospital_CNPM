@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Views.Doctor;
-using Hospital.Views.Pharmacist;
+using Hospital.Views.Cashier;
 //using Hospital.Views.Login;
 //using Hospital.Views.Receptionist;
 
@@ -23,7 +23,7 @@ namespace Hospital
             if (Environment.OSVersion.Version.Major >= 6) SetProcessDPIAware();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PharmacistRoom());
+            Application.Run(new CashierRoom());
             //Application.Run(new Form2());
         }
     }

@@ -10,8 +10,8 @@ namespace DataAccessTier
 {
     public class PhanChiaBenhNhanDBContext : DBConnection
     {
-        DbSet<PhanChiaBenhNhan> PhanChiaBenhNhan {  get; set; }
-        public PhanChiaBenhNhanDBContext () { }
+        DbSet<PhanChiaBenhNhan> PhanChiaBenhNhan { get; set; }
+        public PhanChiaBenhNhanDBContext() { }
 
         public static void AssignPatient(int BN_ID, int PH_ID)
         {
@@ -47,7 +47,7 @@ namespace DataAccessTier
                     }
                     else
                     {
-                      
+
                     }
                 }
             }
@@ -58,5 +58,4 @@ namespace DataAccessTier
 
 
     }
-
 }

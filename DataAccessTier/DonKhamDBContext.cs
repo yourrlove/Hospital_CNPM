@@ -1,6 +1,5 @@
 ﻿using DTO;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +13,7 @@ namespace DataAccessTier
     {
         DbSet<DonKham> DonKham { get; set; }
         DbSet<BenhNhan> BenhNhan { get; set; }
-        DbSet<Khoa> Khoa {  get; set; }
+        DbSet<Khoa> Khoa { get; set; }
         DbSet<PhongBenh> PhongBenh { get; set; }
         public DonKhamDBContext() { }
 
@@ -52,7 +51,7 @@ namespace DataAccessTier
                                                 BN_ID = BN_ID,
                                                 tenKhoa = tenkhoa,
                                                 tenPhong = tenphong,
-                                                giakham = giakham, 
+                                                giakham = giakham,
                                                 PH_ID = query.PH_ID,
                                             }
                                         };
@@ -61,14 +60,14 @@ namespace DataAccessTier
                     }
                     else
                     {
-                        return null; 
+                        return new BindingList<DonKhamBenh>();
                     }
                 }
             }
             catch (Exception ex)
             {
 
-                return null;
+                return new BindingList<DonKhamBenh>();
             }
         }
 
@@ -78,7 +77,7 @@ namespace DataAccessTier
             {
                 using (var dbContext = new DonKhamDBContext())
                 {
-             
+
                     var deleted = dbContext.DonKham.FirstOrDefault(t => t.BN_ID == BN_ID);
 
                     if (deleted != null)
@@ -94,7 +93,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
-                
+
             }
         }
 

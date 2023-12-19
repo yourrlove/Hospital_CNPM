@@ -15,3 +15,20 @@ C:\Users\ADMIN\Documents\Hospital_CNPM\BusinessLogicTier\obj\Debug\net7.0\Busine
 C:\Users\ADMIN\Documents\Hospital_CNPM\BusinessLogicTier\obj\Debug\net7.0\refint\BusinessLogicTier.dll
 C:\Users\ADMIN\Documents\Hospital_CNPM\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.pdb
 C:\Users\ADMIN\Documents\Hospital_CNPM\BusinessLogicTier\obj\Debug\net7.0\ref\BusinessLogicTier.dll
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\bin\Debug\net7.0\BusinessLogicTier.deps.json
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\bin\Debug\net7.0\BusinessLogicTier.dll
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\bin\Debug\net7.0\BusinessLogicTier.pdb
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\bin\Debug\net7.0\DataAccessTier.dll
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\bin\Debug\net7.0\DTO.dll
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\bin\Debug\net7.0\DataAccessTier.pdb
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\bin\Debug\net7.0\DTO.pdb
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.dll
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\refint\BusinessLogicTier.dll
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\BusinessLogicTier.pdb
+C:\Users\ADMIN\Desktop\new cashier\BusinessLogicTier\obj\Debug\net7.0\ref\BusinessLogicTier.dll
