@@ -20,7 +20,7 @@ namespace Hospital.Views.Cashier
         private int bn_id;
         private bool isSave = false;
         private bool ispaid = false;
-        private bool accept = false;
+        private bool isOK = false;
         private string thanhtoan;
 
         public FirstBill(int BN_ID, string tenkhoa, string tenphong, string giakham, int PH_ID)
@@ -46,155 +46,6 @@ namespace Hospital.Views.Cashier
             age.Text = patient.NgaySinh.ToShortDateString();
             so.Text = patient.SoDienThoai.ToString();
             gioitinh.Text = patient.GioiTinh.ToString();
-
-        }
-
-
-
-
-        // banking
-        private void printDocument2_PrintPage_1(object sender, PrintPageEventArgs e)
-        {
-            Font normalFont = new Font("times new roman", 15, FontStyle.Regular);
-            Font headingFont = new Font("times new roman", 20, FontStyle.Bold);
-            Font headertable = new Font("times new roman", 15, FontStyle.Bold);
-            Font ita = new Font("times new roman", 15, FontStyle.Italic);
-
-            StringFormat rightAlignFormat = new StringFormat();
-            rightAlignFormat.Alignment = StringAlignment.Far;
-
-            string[] lines = {
-                "Benh Vien Hoan My",
-                "Dia Chi: 79/12 Thien Duong Vinh Cuu",
-                "Hotline: 1900 8067",
-                "Website: hoanmithienduong.vn"
-            };
-
-            List<BenhNhan> listBenhNhan = cashier.getPatientName(bn_id);
-            BenhNhan benhnhan = listBenhNhan.FirstOrDefault();
-
-            StringFormat centerFormat = new StringFormat();
-            centerFormat.Alignment = StringAlignment.Center;
-
-            StringFormat format = new StringFormat();
-            format.Alignment = StringAlignment.Far;
-
-            // Set margin
-            int centerPoint = 330;
-            int leftMargin = 50;
-            int topMargin = 50;
-            int regionHeight = 100;
-            int rightMargin = 10;
-
-            foreach (string line in lines)
-            {
-                e.Graphics.DrawString(line, normalFont, Brushes.Black, new RectangleF(450, topMargin, 350, 30), format);
-                topMargin += 30;
-            }
-
-            int centerY = topMargin + 50 + (regionHeight - topMargin) / 2;
-
-            var image = (Image)Hospital.Properties.Resources.ResourceManager.GetObject("logo");
-            e.Graphics.DrawImage(image, new RectangleF(100, 40, 150, 150));
-
-
-            e.Graphics.DrawString("MOI BAN QUET MA", headingFont, Brushes.Black, new Point(centerPoint, centerY));
-
-            DateTime myDateTime = DateTime.Now;
-            DateTime adjustedDateTime = myDateTime.AddMinutes(3);
-
-            e.Graphics.DrawString($"Ma QR co thoi han den: {adjustedDateTime.ToString("yyyy-MM-dd HH:mm:ss")}", normalFont, Brushes.Black, new Point(100, 250));
-            e.Graphics.DrawString($"Tong Tien:", headertable, Brushes.Black, new Point(100, 280));
-            string totalbill = gia.Text.ToString();
-            e.Graphics.DrawString($"{Convert.ToString(totalbill)} (dong)", headertable, Brushes.Black, new Point(250, 280));
-            var qrcode = (Image)Hospital.Properties.Resources.ResourceManager.GetObject("QR");
-            e.Graphics.DrawImage(qrcode, new RectangleF(200, 400, 400, 500));
-        }
-
-        // print bill
-        private void print_Click(object sender, EventArgs e)
-        {
-            if (isSave == true && ispaid == true)
-            {
-
-                this.Hide();
-                printPreviewDialog2.Document = printDocument1;
-
-                printPreviewDialog2.Left = Left - 200;
-                printPreviewDialog2.Top = Top;
-                printPreviewDialog2.Width = 800;
-                printPreviewDialog2.Height = 1600;
-
-                DialogResult result = printPreviewDialog2.ShowDialog(this);
-
-                if (result == DialogResult.OK)
-                {
-                    string fileName = $"Document_{DateTime.Now.ToString("yyyyMMddHHmmss")}.pdf";
-
-                    using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-                    {
-                        saveFileDialog.ShowDialog();
-                        this.Activate();
-                    }
-                }
-                cashier.DeleteDonKham(bn_id);
-                //this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Please choose the payment methods or save the record");
-            }
-
-        }
-
-        //banking
-        private void btn_banking_Click(object sender, EventArgs e)
-        {
-            thanhtoan = "Internet banking";
-            ispaid = true;
-            MessageBox.Show(thanhtoan);
-
-            this.Hide();
-            printPreviewDialog2.Document = printDocument2;
-
-            printPreviewDialog2.Left = Left - 200;
-            printPreviewDialog2.Top = Top;
-            printPreviewDialog2.Width = 800;
-            printPreviewDialog2.Height = 1600;
-
-            DialogResult result = printPreviewDialog2.ShowDialog(this);
-
-            if (result == DialogResult.OK)
-            {
-                string fileName = $"Document_{DateTime.Now.ToString("yyyyMMddHHmmss")}.pdf";
-
-                using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-                {
-                    saveFileDialog.ShowDialog();
-                    this.Activate();
-                }
-            }
-            this.Show();
-        }
-        private void btn_cash_Click(object sender, EventArgs e)
-        {
-            ispaid = true;
-            thanhtoan = "Tien mat";
-        }
-
-        private void btn_save_Click_2(object sender, EventArgs e)
-        {
-            if (isSave == false && ispaid == true)
-            {
-                cashier.AssignPatient(bn_id, ph_id);
-                double giakham = Convert.ToDouble(gia.Text);
-                cashier.addHoaDon(DateTime.Now, giakham, 1, bn_id, thanhtoan);
-                isSave = true;
-            }
-            else
-            {
-                MessageBox.Show("Please choose payment methods");
-            }
 
         }
 
@@ -242,7 +93,7 @@ namespace Hospital.Views.Cashier
                 cashier.addHoaDon(DateTime.Now, giakham, 1, bn_id, thanhtoan);
                 isSave = true;
             }
-            else
+            else if(ispaid == false)
             {
                 MessageBox.Show("Please choose payment methods");
             }

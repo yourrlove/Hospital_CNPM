@@ -147,6 +147,7 @@ namespace Hospital.Views.Cashier
 
         public bool isSave = false;
         public bool ispaid = false;
+        public bool isOK = false; 
         string thanhtoan;
         /// <summary>
         /// The button has many events
@@ -178,30 +179,34 @@ namespace Hospital.Views.Cashier
                     double tongtien = TongTien(curr.DT_ID);
                     int TN_ID = 1;
                     int BN_ID = curr.patient;
-                    //MessageBox.Show(Convert.ToString("benh Nhan" + BN_ID));
-                    cashier.addHoaDon(NgayLap, tongtien, TN_ID, BN_ID, thanhtoan);
-
-                    int HD_ID = cashier.getLastHD_ID();
-                    //int DT_ID = curr.DT_ID+1;
-                    //MessageBox.Show(Convert.ToString("Hoa Don" + HD_ID));
-                    BindingList<donthuocLoaded> HoaDon = cashier.Kiemtradonthuoc(curr.DT_ID);
-
-
-                    foreach (var i in HoaDon)
+                    if(isOK == false) 
                     {
-                        double gia = cashier.getGiaBanThuoc(i.TH_ID);
+                        cashier.addHoaDon(NgayLap, tongtien, TN_ID, BN_ID, thanhtoan);
 
-                        int hd_id = HD_ID;
-                        int th_id = i.TH_ID;
-                        int soluong = i.SoLuong;
-                        cashier.updateSoLuongThuoc(th_id, soluong);
-                        double dongia = Convert.ToDouble(i.SoLuong) * gia;
-                        //MessageBox.Show(Convert.ToString("Thuoc " + th_id));
-                        cashier.addChiTietHoaDon(hd_id, th_id, soluong, dongia);
+                        int HD_ID = cashier.getLastHD_ID();
+                        //int DT_ID = curr.DT_ID+1;
+                        //MessageBox.Show(Convert.ToString("Hoa Don" + HD_ID));
+                        BindingList<donthuocLoaded> HoaDon = cashier.Kiemtradonthuoc(curr.DT_ID);
+
+
+                        foreach (var i in HoaDon)
+                        {
+                            double gia = cashier.getGiaBanThuoc(i.TH_ID);
+
+                            int hd_id = HD_ID;
+                            int th_id = i.TH_ID;
+                            int soluong = i.SoLuong;
+                            cashier.updateSoLuongThuoc(th_id, soluong);
+                            double dongia = Convert.ToDouble(i.SoLuong) * gia;
+                            //MessageBox.Show(Convert.ToString("Thuoc " + th_id));
+                            cashier.addChiTietHoaDon(hd_id, th_id, soluong, dongia);
+                        }
+
+
+                        cashier.addHoaDonDS(HD_ID, BN_ID);
+                        isOK = true;
                     }
-
-
-                    cashier.addHoaDonDS(HD_ID, BN_ID);
+                    
                 }
                 catch (Exception ex)
                 {
