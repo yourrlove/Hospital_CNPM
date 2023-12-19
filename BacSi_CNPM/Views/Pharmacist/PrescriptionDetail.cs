@@ -1,4 +1,5 @@
-﻿using DataAccessTier;
+﻿using BussinessLogicTier;
+using DataAccessTier;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,10 @@ namespace Hospital.Views.Pharmacist
     public partial class PrescriptionDetail : Form
     {
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
+        private PharmacistBUS pharmacist;
         public PrescriptionDetail(int HD_ID, int BN_ID)
         {
+            pharmacist = PharmacistBUS.GetInstance();
             InitializeComponent();
             LoadHoaDon(HD_ID);
             curr.HD_ID = HD_ID;
@@ -31,7 +34,7 @@ namespace Hospital.Views.Pharmacist
         /// <param name="BN_ID"></param>
         private void displayName(int BN_ID)
         {
-            patient_name.Text = BenhNhanDBContext.getName(BN_ID);
+            patient_name.Text = pharmacist.getName(BN_ID);
         }
 
         /// <summary>
@@ -42,7 +45,7 @@ namespace Hospital.Views.Pharmacist
         {
             try
             {
-                bindingSource.DataSource = ChiTietHoaDonDBContext.getHoaDon(HD_ID);
+                bindingSource.DataSource = pharmacist.getHoaDon(HD_ID);
                 this.dtgv_donthuoc.DataSource = bindingSource;
                 //this.dtgv_donthuoc.AutoGenerateColumns = true;
                 //this.dtgv_donthuoc.Columns[0].Visible = false;
@@ -72,11 +75,6 @@ namespace Hospital.Views.Pharmacist
                     // container(new PrescriptionDetail(HD_ID));
                 }
             }
-        }
-
-        private void PrescriptionDetail_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

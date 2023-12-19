@@ -83,7 +83,6 @@
             panel_container.ShadowDecoration.CustomizableEdges = customizableEdges2;
             panel_container.Size = new System.Drawing.Size(1152, 322);
             panel_container.TabIndex = 0;
-            panel_container.Paint += panel_container_Paint;
             // 
             // text_val
             // 
@@ -164,7 +163,6 @@
             dtgv_patient.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_patient.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_patient.CellClick += dtgv_patient_CellClick;
-            dtgv_patient.CellContentClick += dtgv_patient_CellContentClick;
             // 
             // hDIDDataGridViewTextBoxColumn
             // 
@@ -220,7 +218,6 @@
             default_panel.ShadowDecoration.CustomizableEdges = customizableEdges10;
             default_panel.Size = new System.Drawing.Size(1152, 919);
             default_panel.TabIndex = 1;
-            default_panel.Paint += default_panel_Paint;
             // 
             // tx_search_completed_prescription
             // 
@@ -353,7 +350,6 @@
             dtgv_done_prescription.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_done_prescription.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_done_prescription.CellClick += dtgv_done_prescription_CellClick;
-            dtgv_done_prescription.CellContentClick += dtgv_done_prescription_CellContentClick;
             // 
             // hDIDDataGridViewTextBoxColumn1
             // 

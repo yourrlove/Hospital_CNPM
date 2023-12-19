@@ -42,6 +42,7 @@
     <PackageReference Include="Tulpep.NotificationWindow" Version="1.1.38" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BussinessLogicTier\BusinessLogicTier.csproj" />
     <ProjectReference Include="..\DataAccessTier\DataAccessTier.csproj" />
     <ProjectReference Include="..\DTO\DTO.csproj" />
   </ItemGroup>

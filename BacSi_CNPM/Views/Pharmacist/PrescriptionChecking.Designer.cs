@@ -67,7 +67,6 @@
             Prescription_Checking.ShadowDecoration.CustomizableEdges = customizableEdges4;
             Prescription_Checking.Size = new System.Drawing.Size(1134, 872);
             Prescription_Checking.TabIndex = 1;
-            Prescription_Checking.Paint += guna2Panel1_Paint;
             // 
             // btn_reciept
             // 
@@ -160,7 +159,6 @@
             dtgv_Updated.ThemeStyle.RowsStyle.Height = 50;
             dtgv_Updated.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_Updated.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
-            dtgv_Updated.CellContentClick += dtgv_Updated_CellContentClick;
             // 
             // hDIDDataGridViewTextBoxColumn
             // 
@@ -271,7 +269,6 @@
             Controls.Add(Prescription_Checking);
             Name = "PrescriptionChecking";
             Text = "PrescriptionChecking";
-            Load += PrescriptionChecking_Load;
             Prescription_Checking.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgv_Updated).EndInit();
             ((System.ComponentModel.ISupportInitialize)chiTietHoaDonBindingSource).EndInit();

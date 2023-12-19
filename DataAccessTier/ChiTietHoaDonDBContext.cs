@@ -47,8 +47,6 @@ namespace DataAccessTier
             }
 
         }
-        
-
 
         public static BindingList<HoaDonTonKho> getHoaDonTonkho(int HD_ID)
         {

@@ -1,0 +1,17 @@
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\bin\Debug\net7.0\BussinessLogicTier.deps.json
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\bin\Debug\net7.0\BussinessLogicTier.dll
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\bin\Debug\net7.0\BussinessLogicTier.pdb
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\bin\Debug\net7.0\DataAccessTier.dll
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\bin\Debug\net7.0\DTO.dll
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\bin\Debug\net7.0\DataAccessTier.pdb
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\bin\Debug\net7.0\DTO.pdb
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\BussinessLogicTier.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\BussinessLogicTier.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\BussinessLogicTier.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\BussinessLogicTier.AssemblyInfo.cs
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\BussinessLogicTier.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\BussinessLogicTier.csproj.CopyComplete
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\BussinessLogicTier.dll
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\refint\BussinessLogicTier.dll
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\BussinessLogicTier.pdb
+C:\Users\ADMIN\Desktop\phaar\BussinessLogicTier\obj\Debug\net7.0\ref\BussinessLogicTier.dll

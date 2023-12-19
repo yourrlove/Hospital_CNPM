@@ -227,7 +227,6 @@
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "PrescriptionDetail";
             Text = "PrescriptionDetail";
-            Load += PrescriptionDetail_Load;
             ((System.ComponentModel.ISupportInitialize)dtgv_donthuoc).EndInit();
             ((System.ComponentModel.ISupportInitialize)hoadonHTBindingSource).EndInit();
             guna2ShadowPanel1.ResumeLayout(false);

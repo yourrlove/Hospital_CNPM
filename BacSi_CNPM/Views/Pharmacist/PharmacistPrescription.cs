@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tulpep.NotificationWindow;
+using BussinessLogicTier;
 
 namespace Hospital.Views.Pharmacist
 {
@@ -17,9 +18,10 @@ namespace Hospital.Views.Pharmacist
     {
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
         private System.Windows.Forms.BindingSource bindingSource1 = new System.Windows.Forms.BindingSource();
-
+        private PharmacistBUS pharmacist;
         public PharmacistPrescription()
         {
+            pharmacist = PharmacistBUS.GetInstance();
             InitializeComponent();
             LoadHoaDon();
             LoadDonePrescription();
@@ -46,7 +48,7 @@ namespace Hospital.Views.Pharmacist
         {
             try
             {
-                bindingSource.DataSource = HoaDonDuocSiDBContext.ListHoaDon();
+                bindingSource.DataSource = pharmacist.ListHoaDon1();
                 this.dtgv_patient.DataSource = bindingSource;
                 //this.dtgv_patient.AutoGenerateColumns = true;
                 this.dtgv_patient.Columns[0].Visible = false;
@@ -65,7 +67,7 @@ namespace Hospital.Views.Pharmacist
         {
             try
             {
-                bindingSource1.DataSource = DonePrescriptionDBContext.ListHoaDon();
+                bindingSource1.DataSource = pharmacist.ListHoaDon();
                 this.dtgv_done_prescription.DataSource = bindingSource1;
                 //this.dtgv_done_prescription.AutoGenerateColumns = true;
                 this.dtgv_done_prescription.Columns[0].Visible = false;
@@ -102,24 +104,41 @@ namespace Hospital.Views.Pharmacist
                 }
             }
         }
+        /// <summary>
+        /// Load the bills of patients
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
             MessageBox.Show($"{Convert.ToString(curr.BN_ID)}");
             MessageBox.Show($"{Convert.ToString(curr.HD_ID)}");
             DonePrescriptionDBContext.addPrescription(curr.BN_ID, curr.HD_ID);
-            HoaDonDuocSiDBContext.deleteRecord(curr.BN_ID, curr.HD_ID);
+            HoaDonDuocSiDBContext.deleteRecord1(curr.BN_ID, curr.HD_ID);
             LoadHoaDon();
             LoadDonePrescription();
         }
         //success pop up notification 
 
+
+        /// <summary>
+        /// delete the prescription that has been done
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void guna2Button2_Click(object sender, EventArgs e)
         {
 
             DonePrescriptionDBContext.deleteRecord(curr.BN_ID, curr.HD_ID);
             LoadDonePrescription();
         }
+
+        /// <summary>
+        /// Get patient ID and bill ID of each prescription
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dtgv_done_prescription_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var cellValue = dtgv_done_prescription.Rows[e.RowIndex].Cells[0].Value;
@@ -131,36 +150,22 @@ namespace Hospital.Views.Pharmacist
 
         }
 
+
+        /// <summary>
+        /// Search prescription to give to patient
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tx_search_completed_prescription_TextChanged_1(object sender, EventArgs e)
         {
             if (tx_search_completed_prescription.Text != "")
             {
-                dtgv_done_prescription.DataSource = DonePrescriptionDBContext.SearchCompletedPrescription(tx_search_completed_prescription.Text);
+                dtgv_done_prescription.DataSource = pharmacist.SearchCompletedPrescription(tx_search_completed_prescription.Text);
             }
             else
             {
 
             }
-        }
-
-        private void default_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dtgv_patient_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel_container_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dtgv_done_prescription_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

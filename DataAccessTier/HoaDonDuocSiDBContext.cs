@@ -22,7 +22,7 @@ namespace DataAccessTier
         /// </summary>
         /// <returns>list of prescription </returns>
 
-        public static BindingList<listHTcho> ListHoaDon()
+        public static BindingList<listHTcho> ListHoaDon1()
         {
             try
             {
@@ -51,7 +51,7 @@ namespace DataAccessTier
         /// </summary>
         /// <param name="BN_ID"></param>
         /// <param name="HD_ID"></param>
-        public static void deleteRecord(int BN_ID, int HD_ID)
+        public static void deleteRecord1(int BN_ID, int HD_ID)
         {
             try
             {

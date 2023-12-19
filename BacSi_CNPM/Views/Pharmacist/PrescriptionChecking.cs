@@ -1,4 +1,5 @@
-﻿using DataAccessTier;
+﻿using BussinessLogicTier;
+using DataAccessTier;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -18,21 +19,17 @@ namespace Hospital.Views.Pharmacist
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
 
         private System.Windows.Forms.BindingSource bindingSource1 = new System.Windows.Forms.BindingSource();
-
+        private PharmacistBUS pharmacist;
         public PrescriptionChecking()
         {
+            pharmacist = PharmacistBUS.GetInstance();
             InitializeComponent();
             LoadNotRecievedPrescription();
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void LoadNotRecievedPrescription()
         {
-            bindingSource.DataSource = DonePrescriptionDBContext.ListHoaDon();
+            bindingSource.DataSource = pharmacist.ListHoaDon();
             this.dtgv_notRecieved.AutoGenerateColumns = true;
             this.dtgv_notRecieved.DataSource = bindingSource;
             this.dtgv_notRecieved.BorderStyle = BorderStyle.Fixed3D;
@@ -50,7 +47,7 @@ namespace Hospital.Views.Pharmacist
                 curr.HD_ID = Convert.ToInt32(cellValue);
 
                 BindingList<HoaDonTonKho> list = this.bindingSource1.DataSource as BindingList<HoaDonTonKho>;
-                bindingSource1.DataSource = ChiTietHoaDonDBContext.getHoaDonTonkho(curr.HD_ID);
+                bindingSource1.DataSource = pharmacist.getHoaDonTonkho(curr.HD_ID);
                 this.dtgv_Updated.AutoGenerateColumns = true;
                 this.dtgv_Updated.DataSource = bindingSource1;
             }
@@ -58,10 +55,10 @@ namespace Hospital.Views.Pharmacist
 
         private void btn_reciept_Click(object sender, EventArgs e)
         {
-            Dictionary<int, int> items = ThuocDBContext.UpdateItem(curr.HD_ID);
+            Dictionary<int, int> items = pharmacist.UpdateItem(curr.HD_ID);
             BindingList<HoaDonTonKho> list = this.bindingSource1.DataSource as BindingList<HoaDonTonKho>;
 
-            ThuocDBContext.UpdateQuantity(items);
+            pharmacist.UpdateQuantity(items);
 
             foreach (var item in items)
             {
@@ -87,23 +84,8 @@ namespace Hospital.Views.Pharmacist
             this.bindingSource1.DataSource = list;
             this.dtgv_Updated.DataSource = this.bindingSource1;
 
-            DonePrescriptionDBContext.deleteRecord(curr.BN_ID, curr.HD_ID);
+            pharmacist.deleteRecord(curr.BN_ID, curr.HD_ID);
             LoadNotRecievedPrescription();
-        }
-
-        private void dtgv_notRecieved_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void PrescriptionChecking_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtgv_Updated_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

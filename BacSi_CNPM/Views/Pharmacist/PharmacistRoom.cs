@@ -1,4 +1,5 @@
-﻿using Hospital.Views.Doctor;
+﻿using BussinessLogicTier;
+using Hospital.Views.Doctor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +19,10 @@ namespace Hospital.Views.Pharmacist
         private Guna.UI2.WinForms.Guna2Button currentButton;
         private int borderSize = 2;
         Bitmap myBitmap;
+        private PharmacistBUS pharmacist;
         public PharmacistRoom()
         {
+            pharmacist = PharmacistBUS.GetInstance();
             InitializeComponent();
             this.Padding = new Padding(borderSize);//Border size
             this.BackColor = Color.FromArgb(98, 102, 244);//Border color

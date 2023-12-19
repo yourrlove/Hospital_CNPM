@@ -237,7 +237,6 @@
             lb_gia.Size = new System.Drawing.Size(56, 23);
             lb_gia.TabIndex = 7;
             lb_gia.Text = "Price: ";
-            lb_gia.Click += lb_gia_Click;
             // 
             // lb_tonkho
             // 
@@ -260,7 +259,6 @@
             lb_ngaynhan.Size = new System.Drawing.Size(174, 23);
             lb_ngaynhan.TabIndex = 9;
             lb_ngaynhan.Text = "Manufactoring Date: ";
-            lb_ngaynhan.Click += lb_ngaynhan_Click;
             // 
             // lb_hethan
             // 
@@ -285,7 +283,6 @@
             picbox_medicineImage.Size = new System.Drawing.Size(350, 200);
             picbox_medicineImage.TabIndex = 12;
             picbox_medicineImage.TabStop = false;
-            picbox_medicineImage.Click += picbox_medicineImage_Click;
             // 
             // lb_chongchidinh
             // 
@@ -308,7 +305,6 @@
             lb_xuatxu.Size = new System.Drawing.Size(66, 23);
             lb_xuatxu.TabIndex = 14;
             lb_xuatxu.Text = "Origin: ";
-            lb_xuatxu.Click += lb_xuatxu_Click;
             // 
             // lb_tacdungphu
             // 
@@ -320,7 +316,6 @@
             lb_tacdungphu.Size = new System.Drawing.Size(95, 23);
             lb_tacdungphu.TabIndex = 15;
             lb_tacdungphu.Text = "Side effect:";
-            lb_tacdungphu.Click += lb_tacdungphu_Click;
             // 
             // medicineDetailsForm
             // 
@@ -529,7 +524,6 @@
             giaban.Size = new System.Drawing.Size(33, 23);
             giaban.TabIndex = 16;
             giaban.Text = "gia";
-            giaban.Click += giaban_Click;
             // 
             // SearchMedicine
             // 
@@ -545,7 +539,6 @@
             Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             Name = "SearchMedicine";
             Text = "SearchMedicine";
-            Load += SearchMedicine_Load;
             ((System.ComponentModel.ISupportInitialize)dtgv_SearchMedicine).EndInit();
             ((System.ComponentModel.ISupportInitialize)thuocBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)picbox_medicineImage).EndInit();

@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BussinessLogicTier;
 
 namespace Hospital.Views.Pharmacist
 {
     public partial class PharmacistDashboard : Form
     {
+        PharmacistBUS pharmacist;
         public PharmacistDashboard()
         {
             InitializeComponent();
+            pharmacist = PharmacistBUS.GetInstance();
         }
         private void showMiddleForm(Form showForm)
         {

@@ -1,4 +1,5 @@
-﻿using DataAccessTier;
+﻿using BussinessLogicTier;
+using DataAccessTier;
 using DTO;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
@@ -17,8 +18,10 @@ namespace Hospital.Views.Pharmacist
     {
 
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
+        private PharmacistBUS pharmacist;
         public SearchMedicine()
         {
+            pharmacist = PharmacistBUS.GetInstance();
             InitializeComponent();
             LoadThuoc();
             medicineDetailsForm.Visible = false;
@@ -56,7 +59,7 @@ namespace Hospital.Views.Pharmacist
         {
             if (searchBox.Text != "")
             {
-                dtgv_SearchMedicine.DataSource = ThuocDBContext.SearchThuoc(searchBox.Text);
+                dtgv_SearchMedicine.DataSource = pharmacist.SearchThuoc(searchBox.Text);
             }
             else
             {
@@ -64,6 +67,12 @@ namespace Hospital.Views.Pharmacist
             }
         }
 
+
+        /// <summary>
+        /// Load the image and medicine information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dtgv_SearchMedicine_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var cellValue = dtgv_SearchMedicine.Rows[e.RowIndex].Cells[0].Value;
@@ -73,7 +82,7 @@ namespace Hospital.Views.Pharmacist
                 curr.TH_ID = Convert.ToInt32(cellValue);
 
 
-                var image = ThuocDBContext.LoadImage(curr.TH_ID);
+                var image = pharmacist.LoadImage(curr.TH_ID);
                 if (image != null)
                 {
                     // Assuming you have a PictureBox named pictureBox
@@ -93,41 +102,6 @@ namespace Hospital.Views.Pharmacist
             tacdungphu.Text = dtgv_SearchMedicine.Rows[e.RowIndex].Cells[8].Value.ToString();
 
             medicineDetailsForm.Visible = true;
-
-        }
-
-        private void SearchMedicine_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_tacdungphu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_xuatxu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picbox_medicineImage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_ngaynhan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_gia_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void giaban_Click(object sender, EventArgs e)
-        {
 
         }
     }
