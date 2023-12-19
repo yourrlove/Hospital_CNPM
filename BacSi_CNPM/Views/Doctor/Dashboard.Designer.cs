@@ -573,6 +573,7 @@
             btnEditDoctor.TabIndex = 11;
             btnEditDoctor.Text = "Edit Information";
             btnEditDoctor.TextOffset = new System.Drawing.Point(10, 0);
+            btnEditDoctor.Click += btnEditDoctor_Click;
             // 
             // uC_PictureBox1
             // 
@@ -605,11 +606,11 @@
             // 
             cashierName.AutoSize = true;
             cashierName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            cashierName.Location = new System.Drawing.Point(88, 293);
+            cashierName.Location = new System.Drawing.Point(63, 300);
             cashierName.Name = "cashierName";
-            cashierName.Size = new System.Drawing.Size(189, 31);
+            cashierName.Size = new System.Drawing.Size(229, 31);
             cashierName.TabIndex = 9;
-            cashierName.Text = "Mr. Le Huu Bach";
+            cashierName.Text = "Mr. Dang Thanh Dat";
             // 
             // label2
             // 

@@ -46,7 +46,7 @@ namespace Hospital.Views.Doctor
             if (!room.temp1.list.IsNullOrEmpty())
             {
                 list.Clear();
-                foreach(var item in room.temp1.list)
+                foreach (var item in room.temp1.list)
                 {
                     list.Add(item);
                 }
@@ -152,7 +152,7 @@ namespace Hospital.Views.Doctor
 
         private void uC_Button_Save_Click(object sender, EventArgs e)
         {
-            if(Validate())
+            if (Validate())
             {
                 room.temp1.list.Clear();
                 foreach (var item in list)
@@ -162,7 +162,8 @@ namespace Hospital.Views.Doctor
                 room.temp1.prescriptionName = TenDonThuoc.Text ?? "";
                 room.temp1.createDate = NgayKeDon.Value;
                 Notification.SucccessNotification("Save Successfully!");
-            } else
+            }
+            else
             {
                 Notification.ErrorNotification("Fail to save!");
             }
@@ -195,6 +196,11 @@ namespace Hospital.Views.Doctor
                 isValid = false;
             }
             return isValid;
+        }
+
+        private void guna2DataGridView_Medicines_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -29,40 +29,34 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prescription));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             leftBar = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
             guna2TextBox_SearchMedicine = new Guna.UI2.WinForms.Guna2TextBox();
             guna2DataGridView_Medicines = new Guna.UI2.WinForms.Guna2DataGridView();
             dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,6 +81,7 @@
             NameMedicine = new System.Windows.Forms.Label();
             MedicineImage = new Guna.UI2.WinForms.Guna2PictureBox();
             rightBar = new Guna.UI2.WinForms.Guna2Panel();
+            label3 = new System.Windows.Forms.Label();
             NgayKeDon = new System.Windows.Forms.DateTimePicker();
             label14 = new System.Windows.Forms.Label();
             NamePrescription = new System.Windows.Forms.Label();
@@ -95,8 +90,6 @@
             uC_Button_Delete = new User_Controls.UC_Button();
             uC_Button_Save = new User_Controls.UC_Button();
             guna2ComboBox_Buoi = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            label3 = new System.Windows.Forms.Label();
             uC_Button_Add = new User_Controls.UC_Button();
             guna2DataGridView_KeDon = new Guna.UI2.WinForms.Guna2DataGridView();
             TH_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,7 +100,6 @@
             chiTietDonThuocBindingSource = new System.Windows.Forms.BindingSource(components);
             errorProvider1 = new System.Windows.Forms.ErrorProvider(components);
             leftBar.SuspendLayout();
-            guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView_Medicines).BeginInit();
             ((System.ComponentModel.ISupportInitialize)thuocDOCBindingSource).BeginInit();
@@ -118,7 +110,6 @@
             MedicineTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MedicineImage).BeginInit();
             rightBar.SuspendLayout();
-            guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView_KeDon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)medicineBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chiTietDonThuocBindingSource).BeginInit();
@@ -129,37 +120,26 @@
             // 
             leftBar.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             leftBar.BackColor = System.Drawing.Color.White;
-            leftBar.Controls.Add(guna2Panel1);
-            leftBar.Controls.Add(label2);
+            leftBar.BorderColor = System.Drawing.Color.Silver;
+            leftBar.BorderRadius = 10;
+            leftBar.BorderThickness = 2;
+            leftBar.Controls.Add(guna2PictureBox1);
+            leftBar.Controls.Add(label1);
             leftBar.Controls.Add(guna2TextBox_SearchMedicine);
             leftBar.Controls.Add(guna2DataGridView_Medicines);
-            leftBar.CustomizableEdges = customizableEdges7;
-            leftBar.Location = new System.Drawing.Point(1, 0);
+            leftBar.CustomizableEdges = customizableEdges5;
+            leftBar.Location = new System.Drawing.Point(23, 12);
             leftBar.Name = "leftBar";
-            leftBar.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            leftBar.Size = new System.Drawing.Size(658, 749);
+            leftBar.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            leftBar.Size = new System.Drawing.Size(636, 737);
             leftBar.TabIndex = 0;
-            // 
-            // guna2Panel1
-            // 
-            guna2Panel1.Controls.Add(guna2PictureBox1);
-            guna2Panel1.Controls.Add(label1);
-            guna2Panel1.CustomBorderColor = System.Drawing.Color.LightGray;
-            guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            guna2Panel1.CustomizableEdges = customizableEdges3;
-            guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new System.Drawing.Size(658, 55);
-            guna2Panel1.TabIndex = 5;
             // 
             // guna2PictureBox1
             // 
             guna2PictureBox1.CustomizableEdges = customizableEdges1;
             guna2PictureBox1.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new System.Drawing.Point(11, 3);
+            guna2PictureBox1.Location = new System.Drawing.Point(37, 15);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2PictureBox1.Size = new System.Drawing.Size(56, 45);
@@ -170,26 +150,16 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(65, 11);
+            label1.Location = new System.Drawing.Point(99, 23);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(123, 31);
+            label1.Size = new System.Drawing.Size(159, 31);
             label1.TabIndex = 0;
-            label1.Text = "Medicines";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label2.Location = new System.Drawing.Point(11, 96);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(133, 28);
-            label2.TabIndex = 4;
-            label2.Text = "All Medicines";
+            label1.Text = "All Medicines";
             // 
             // guna2TextBox_SearchMedicine
             // 
             guna2TextBox_SearchMedicine.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            guna2TextBox_SearchMedicine.CustomizableEdges = customizableEdges5;
+            guna2TextBox_SearchMedicine.CustomizableEdges = customizableEdges3;
             guna2TextBox_SearchMedicine.DefaultText = "";
             guna2TextBox_SearchMedicine.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
             guna2TextBox_SearchMedicine.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
@@ -200,13 +170,13 @@
             guna2TextBox_SearchMedicine.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             guna2TextBox_SearchMedicine.IconLeft = (System.Drawing.Image)resources.GetObject("guna2TextBox_SearchMedicine.IconLeft");
             guna2TextBox_SearchMedicine.IconLeftSize = new System.Drawing.Size(32, 32);
-            guna2TextBox_SearchMedicine.Location = new System.Drawing.Point(357, 96);
+            guna2TextBox_SearchMedicine.Location = new System.Drawing.Point(324, 19);
             guna2TextBox_SearchMedicine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2TextBox_SearchMedicine.Name = "guna2TextBox_SearchMedicine";
             guna2TextBox_SearchMedicine.PasswordChar = '\0';
             guna2TextBox_SearchMedicine.PlaceholderText = "Search Medicines...";
             guna2TextBox_SearchMedicine.SelectedText = "";
-            guna2TextBox_SearchMedicine.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2TextBox_SearchMedicine.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBox_SearchMedicine.Size = new System.Drawing.Size(286, 41);
             guna2TextBox_SearchMedicine.TabIndex = 1;
             guna2TextBox_SearchMedicine.TabStop = false;
@@ -243,14 +213,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             guna2DataGridView_Medicines.DefaultCellStyle = dataGridViewCellStyle3;
             guna2DataGridView_Medicines.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            guna2DataGridView_Medicines.Location = new System.Drawing.Point(11, 169);
+            guna2DataGridView_Medicines.Location = new System.Drawing.Point(37, 82);
             guna2DataGridView_Medicines.Name = "guna2DataGridView_Medicines";
             guna2DataGridView_Medicines.RowHeadersVisible = false;
             guna2DataGridView_Medicines.RowHeadersWidth = 51;
             guna2DataGridView_Medicines.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             guna2DataGridView_Medicines.RowTemplate.Height = 40;
             guna2DataGridView_Medicines.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            guna2DataGridView_Medicines.Size = new System.Drawing.Size(632, 561);
+            guna2DataGridView_Medicines.Size = new System.Drawing.Size(573, 631);
             guna2DataGridView_Medicines.TabIndex = 3;
             guna2DataGridView_Medicines.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             guna2DataGridView_Medicines.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -274,6 +244,7 @@
             guna2DataGridView_Medicines.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             guna2DataGridView_Medicines.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             guna2DataGridView_Medicines.CellClick += guna2DataGridView_Medicines_CellClick;
+            guna2DataGridView_Medicines.CellContentClick += guna2DataGridView_Medicines_CellContentClick;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -361,10 +332,10 @@
             bottomBar.Controls.Add(tabControl1);
             bottomBar.CustomBorderColor = System.Drawing.Color.LightGray;
             bottomBar.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            bottomBar.CustomizableEdges = customizableEdges21;
+            bottomBar.CustomizableEdges = customizableEdges17;
             bottomBar.Location = new System.Drawing.Point(0, 749);
             bottomBar.Name = "bottomBar";
-            bottomBar.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            bottomBar.ShadowDecoration.CustomizableEdges = customizableEdges18;
             bottomBar.Size = new System.Drawing.Size(1382, 228);
             bottomBar.TabIndex = 1;
             // 
@@ -452,12 +423,11 @@
             // 
             // MedicineImage
             // 
-            MedicineImage.CustomizableEdges = customizableEdges19;
-            MedicineImage.Image = (System.Drawing.Image)resources.GetObject("MedicineImage.Image");
+            MedicineImage.CustomizableEdges = customizableEdges15;
             MedicineImage.ImageRotate = 0F;
             MedicineImage.Location = new System.Drawing.Point(19, 17);
             MedicineImage.Name = "MedicineImage";
-            MedicineImage.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            MedicineImage.ShadowDecoration.CustomizableEdges = customizableEdges16;
             MedicineImage.Size = new System.Drawing.Size(179, 145);
             MedicineImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             MedicineImage.TabIndex = 0;
@@ -467,6 +437,10 @@
             // 
             rightBar.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             rightBar.BackColor = System.Drawing.Color.White;
+            rightBar.BorderColor = System.Drawing.Color.Silver;
+            rightBar.BorderRadius = 10;
+            rightBar.BorderThickness = 2;
+            rightBar.Controls.Add(label3);
             rightBar.Controls.Add(NgayKeDon);
             rightBar.Controls.Add(label14);
             rightBar.Controls.Add(NamePrescription);
@@ -475,15 +449,24 @@
             rightBar.Controls.Add(uC_Button_Delete);
             rightBar.Controls.Add(uC_Button_Save);
             rightBar.Controls.Add(guna2ComboBox_Buoi);
-            rightBar.Controls.Add(guna2Panel4);
             rightBar.Controls.Add(uC_Button_Add);
             rightBar.Controls.Add(guna2DataGridView_KeDon);
-            rightBar.CustomizableEdges = customizableEdges17;
-            rightBar.Location = new System.Drawing.Point(665, 0);
+            rightBar.CustomizableEdges = customizableEdges13;
+            rightBar.Location = new System.Drawing.Point(665, 12);
             rightBar.Name = "rightBar";
-            rightBar.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            rightBar.Size = new System.Drawing.Size(717, 749);
+            rightBar.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            rightBar.Size = new System.Drawing.Size(697, 737);
             rightBar.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            label3.Location = new System.Drawing.Point(19, 23);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(224, 31);
+            label3.TabIndex = 5;
+            label3.Text = "Prescription Details";
             // 
             // NgayKeDon
             // 
@@ -514,7 +497,7 @@
             // 
             // TenDonThuoc
             // 
-            TenDonThuoc.CustomizableEdges = customizableEdges9;
+            TenDonThuoc.CustomizableEdges = customizableEdges7;
             TenDonThuoc.DefaultText = "";
             TenDonThuoc.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
             TenDonThuoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
@@ -529,13 +512,13 @@
             TenDonThuoc.PasswordChar = '\0';
             TenDonThuoc.PlaceholderText = "";
             TenDonThuoc.SelectedText = "";
-            TenDonThuoc.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            TenDonThuoc.Size = new System.Drawing.Size(473, 31);
+            TenDonThuoc.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            TenDonThuoc.Size = new System.Drawing.Size(433, 31);
             TenDonThuoc.TabIndex = 19;
             // 
             // Quantity
             // 
-            Quantity.CustomizableEdges = customizableEdges11;
+            Quantity.CustomizableEdges = customizableEdges9;
             Quantity.DefaultText = "";
             Quantity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
             Quantity.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
@@ -544,13 +527,13 @@
             Quantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             Quantity.Font = new System.Drawing.Font("Segoe UI", 9F);
             Quantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            Quantity.Location = new System.Drawing.Point(19, 96);
+            Quantity.Location = new System.Drawing.Point(19, 82);
             Quantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Quantity.Name = "Quantity";
             Quantity.PasswordChar = '\0';
             Quantity.PlaceholderText = "Quantity";
             Quantity.SelectedText = "";
-            Quantity.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            Quantity.ShadowDecoration.CustomizableEdges = customizableEdges10;
             Quantity.Size = new System.Drawing.Size(167, 36);
             Quantity.TabIndex = 18;
             // 
@@ -561,6 +544,7 @@
             uC_Button_Delete.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Delete.BorderRadius = 0;
             uC_Button_Delete.BorderSize = 1;
+            uC_Button_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
             uC_Button_Delete.FlatAppearance.BorderSize = 0;
             uC_Button_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             uC_Button_Delete.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -582,6 +566,7 @@
             uC_Button_Save.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Save.BorderRadius = 0;
             uC_Button_Save.BorderSize = 1;
+            uC_Button_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             uC_Button_Save.FlatAppearance.BorderSize = 0;
             uC_Button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             uC_Button_Save.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -600,7 +585,7 @@
             // 
             guna2ComboBox_Buoi.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             guna2ComboBox_Buoi.BackColor = System.Drawing.Color.Transparent;
-            guna2ComboBox_Buoi.CustomizableEdges = customizableEdges13;
+            guna2ComboBox_Buoi.CustomizableEdges = customizableEdges11;
             guna2ComboBox_Buoi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             guna2ComboBox_Buoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             guna2ComboBox_Buoi.FocusedColor = System.Drawing.Color.FromArgb(94, 148, 255);
@@ -609,35 +594,12 @@
             guna2ComboBox_Buoi.ForeColor = System.Drawing.Color.FromArgb(68, 88, 112);
             guna2ComboBox_Buoi.ItemHeight = 30;
             guna2ComboBox_Buoi.Items.AddRange(new object[] { "Buoi sang", "Buoi trua", "Buoi toi" });
-            guna2ComboBox_Buoi.Location = new System.Drawing.Point(223, 96);
+            guna2ComboBox_Buoi.Location = new System.Drawing.Point(203, 82);
             guna2ComboBox_Buoi.Name = "guna2ComboBox_Buoi";
-            guna2ComboBox_Buoi.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2ComboBox_Buoi.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2ComboBox_Buoi.Size = new System.Drawing.Size(157, 36);
             guna2ComboBox_Buoi.StartIndex = 0;
             guna2ComboBox_Buoi.TabIndex = 14;
-            // 
-            // guna2Panel4
-            // 
-            guna2Panel4.Controls.Add(label3);
-            guna2Panel4.CustomBorderColor = System.Drawing.Color.LightGray;
-            guna2Panel4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            guna2Panel4.CustomizableEdges = customizableEdges15;
-            guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            guna2Panel4.Location = new System.Drawing.Point(0, 0);
-            guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2Panel4.Size = new System.Drawing.Size(717, 55);
-            guna2Panel4.TabIndex = 11;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            label3.Location = new System.Drawing.Point(33, 17);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(224, 31);
-            label3.TabIndex = 5;
-            label3.Text = "Prescription Details";
             // 
             // uC_Button_Add
             // 
@@ -646,12 +608,13 @@
             uC_Button_Add.BorderColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Add.BorderRadius = 0;
             uC_Button_Add.BorderSize = 1;
+            uC_Button_Add.Cursor = System.Windows.Forms.Cursors.Hand;
             uC_Button_Add.FlatAppearance.BorderSize = 0;
             uC_Button_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             uC_Button_Add.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Add.FontSize = 9;
             uC_Button_Add.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            uC_Button_Add.Location = new System.Drawing.Point(566, 91);
+            uC_Button_Add.Location = new System.Drawing.Point(534, 82);
             uC_Button_Add.Name = "uC_Button_Add";
             uC_Button_Add.Size = new System.Drawing.Size(130, 41);
             uC_Button_Add.TabIndex = 10;
@@ -698,7 +661,7 @@
             guna2DataGridView_KeDon.RowHeadersVisible = false;
             guna2DataGridView_KeDon.RowHeadersWidth = 51;
             guna2DataGridView_KeDon.RowTemplate.Height = 29;
-            guna2DataGridView_KeDon.Size = new System.Drawing.Size(677, 324);
+            guna2DataGridView_KeDon.Size = new System.Drawing.Size(637, 336);
             guna2DataGridView_KeDon.TabIndex = 12;
             guna2DataGridView_KeDon.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             guna2DataGridView_KeDon.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -786,8 +749,6 @@
             Load += Prescription_Load;
             leftBar.ResumeLayout(false);
             leftBar.PerformLayout();
-            guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView_Medicines).EndInit();
             ((System.ComponentModel.ISupportInitialize)thuocDOCBindingSource).EndInit();
@@ -800,8 +761,6 @@
             ((System.ComponentModel.ISupportInitialize)MedicineImage).EndInit();
             rightBar.ResumeLayout(false);
             rightBar.PerformLayout();
-            guna2Panel4.ResumeLayout(false);
-            guna2Panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView_KeDon).EndInit();
             ((System.ComponentModel.ISupportInitialize)medicineBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)chiTietDonThuocBindingSource).EndInit();
@@ -820,11 +779,9 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView_Medicines;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox_SearchMedicine;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel rightBar;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView_KeDon;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private User_Controls.UC_Button uC_Button_Add;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox_Buoi;
         private System.Windows.Forms.Label NameMedicine;
@@ -835,7 +792,6 @@
         private System.Windows.Forms.Label ExpireDay;
         private System.Windows.Forms.Label contraindicated;
         private System.Windows.Forms.Label Manufacturor;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.BindingSource thuocBindingSource;
         private System.Windows.Forms.BindingSource chiTietDonThuocBindingSource;
         private Guna.UI2.WinForms.Guna2TextBox Quantity;

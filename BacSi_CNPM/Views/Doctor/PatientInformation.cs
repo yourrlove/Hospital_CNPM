@@ -74,5 +74,10 @@ namespace Hospital.Views.Doctor
 
             }
         }
+
+        private void panel_registerForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

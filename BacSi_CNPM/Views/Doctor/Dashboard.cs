@@ -12,7 +12,7 @@ namespace Hospital.Views.Doctor
 {
     public partial class Dashboard : Form
     {
-        
+
         public Dashboard()
         {
             InitializeComponent();
@@ -117,8 +117,13 @@ namespace Hospital.Views.Doctor
 
         private void uC_Button1_Click(object sender, EventArgs e)
         {
-            
-           // showMiddleForm(new Prescription());
+
+            // showMiddleForm(new Prescription());
+        }
+
+        private void btnEditDoctor_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

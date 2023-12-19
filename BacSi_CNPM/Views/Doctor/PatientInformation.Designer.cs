@@ -138,7 +138,7 @@
             uC_Button_Resolve.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Resolve.FontSize = 9;
             uC_Button_Resolve.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            uC_Button_Resolve.Location = new System.Drawing.Point(827, 609);
+            uC_Button_Resolve.Location = new System.Drawing.Point(827, 661);
             uC_Button_Resolve.Margin = new System.Windows.Forms.Padding(4);
             uC_Button_Resolve.Name = "uC_Button_Resolve";
             uC_Button_Resolve.Size = new System.Drawing.Size(169, 58);
@@ -168,7 +168,7 @@
             panel_registerForm.Controls.Add(Height);
             panel_registerForm.Controls.Add(Weight);
             panel_registerForm.FillColor = System.Drawing.Color.White;
-            panel_registerForm.Location = new System.Drawing.Point(146, 13);
+            panel_registerForm.Location = new System.Drawing.Point(146, 65);
             panel_registerForm.Margin = new System.Windows.Forms.Padding(4);
             panel_registerForm.Name = "panel_registerForm";
             panel_registerForm.Radius = 10;
@@ -176,6 +176,7 @@
             panel_registerForm.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
             panel_registerForm.Size = new System.Drawing.Size(850, 536);
             panel_registerForm.TabIndex = 50;
+            panel_registerForm.Paint += panel_registerForm_Paint;
             // 
             // RecordName
             // 

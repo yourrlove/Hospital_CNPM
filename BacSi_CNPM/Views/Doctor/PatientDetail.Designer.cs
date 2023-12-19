@@ -64,6 +64,7 @@
             label1 = new System.Windows.Forms.Label();
             errorProvider1 = new System.Windows.Forms.ErrorProvider(components);
             TenBenhAn = new System.Windows.Forms.Label();
+            TienSu = new System.Windows.Forms.RichTextBox();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).BeginInit();
             guna2ContextMenuStrip1.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.BackColor = System.Drawing.Color.FromArgb(242, 245, 250);
             guna2Panel1.Controls.Add(Ngay);
             guna2Panel1.Controls.Add(label4);
             guna2Panel1.Controls.Add(uC_PictureBox1);
@@ -124,9 +126,9 @@
             uC_PictureBox1.BorderSize = 2;
             uC_PictureBox1.GradientAngle = 50F;
             uC_PictureBox1.Image = (System.Drawing.Image)resources.GetObject("uC_PictureBox1.Image");
-            uC_PictureBox1.Location = new System.Drawing.Point(43, 12);
+            uC_PictureBox1.Location = new System.Drawing.Point(89, 12);
             uC_PictureBox1.Name = "uC_PictureBox1";
-            uC_PictureBox1.Size = new System.Drawing.Size(154, 154);
+            uC_PictureBox1.Size = new System.Drawing.Size(174, 174);
             uC_PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             uC_PictureBox1.TabIndex = 0;
             uC_PictureBox1.TabStop = false;
@@ -135,7 +137,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label6.Location = new System.Drawing.Point(43, 189);
+            label6.Location = new System.Drawing.Point(12, 214);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(71, 28);
             label6.TabIndex = 8;
@@ -145,7 +147,7 @@
             // 
             PatientName.AutoSize = true;
             PatientName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            PatientName.Location = new System.Drawing.Point(120, 189);
+            PatientName.Location = new System.Drawing.Point(89, 214);
             PatientName.Name = "PatientName";
             PatientName.Size = new System.Drawing.Size(136, 28);
             PatientName.TabIndex = 9;
@@ -155,7 +157,7 @@
             // 
             label_12.AutoSize = true;
             label_12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label_12.Location = new System.Drawing.Point(43, 237);
+            label_12.Location = new System.Drawing.Point(12, 262);
             label_12.Name = "label_12";
             label_12.Size = new System.Drawing.Size(134, 28);
             label_12.TabIndex = 17;
@@ -165,7 +167,7 @@
             // 
             DoB.AutoSize = true;
             DoB.Font = new System.Drawing.Font("Segoe UI", 12F);
-            DoB.Location = new System.Drawing.Point(183, 237);
+            DoB.Location = new System.Drawing.Point(152, 262);
             DoB.Name = "DoB";
             DoB.Size = new System.Drawing.Size(34, 28);
             DoB.TabIndex = 18;
@@ -175,7 +177,7 @@
             // 
             BloodType.AutoSize = true;
             BloodType.Font = new System.Drawing.Font("Segoe UI", 12F);
-            BloodType.Location = new System.Drawing.Point(160, 423);
+            BloodType.Location = new System.Drawing.Point(129, 448);
             BloodType.Name = "BloodType";
             BloodType.Size = new System.Drawing.Size(27, 28);
             BloodType.TabIndex = 22;
@@ -185,7 +187,7 @@
             // 
             label_17.AutoSize = true;
             label_17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label_17.Location = new System.Drawing.Point(43, 283);
+            label_17.Location = new System.Drawing.Point(12, 308);
             label_17.Name = "label_17";
             label_17.Size = new System.Drawing.Size(49, 28);
             label_17.TabIndex = 19;
@@ -195,7 +197,7 @@
             // 
             label18.AutoSize = true;
             label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label18.Location = new System.Drawing.Point(43, 423);
+            label18.Location = new System.Drawing.Point(12, 448);
             label18.Name = "label18";
             label18.Size = new System.Drawing.Size(119, 28);
             label18.TabIndex = 21;
@@ -205,7 +207,7 @@
             // 
             Sex.AutoSize = true;
             Sex.Font = new System.Drawing.Font("Segoe UI", 12F);
-            Sex.Location = new System.Drawing.Point(104, 283);
+            Sex.Location = new System.Drawing.Point(73, 308);
             Sex.Name = "Sex";
             Sex.Size = new System.Drawing.Size(55, 28);
             Sex.TabIndex = 20;
@@ -215,7 +217,7 @@
             // 
             Weight.AutoSize = true;
             Weight.Font = new System.Drawing.Font("Segoe UI", 12F);
-            Weight.Location = new System.Drawing.Point(131, 375);
+            Weight.Location = new System.Drawing.Point(100, 400);
             Weight.Name = "Weight";
             Weight.Size = new System.Drawing.Size(61, 28);
             Weight.TabIndex = 16;
@@ -225,7 +227,7 @@
             // 
             Height.AutoSize = true;
             Height.Font = new System.Drawing.Font("Segoe UI", 12F);
-            Height.Location = new System.Drawing.Point(128, 331);
+            Height.Location = new System.Drawing.Point(97, 356);
             Height.Name = "Height";
             Height.Size = new System.Drawing.Size(71, 28);
             Height.TabIndex = 14;
@@ -235,7 +237,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label12.Location = new System.Drawing.Point(43, 375);
+            label12.Location = new System.Drawing.Point(12, 400);
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(82, 28);
             label12.TabIndex = 15;
@@ -245,7 +247,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label10.Location = new System.Drawing.Point(43, 331);
+            label10.Location = new System.Drawing.Point(12, 356);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(79, 28);
             label10.TabIndex = 13;
@@ -255,7 +257,7 @@
             // 
             label.AutoSize = true;
             label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label.Location = new System.Drawing.Point(414, 76);
+            label.Location = new System.Drawing.Point(414, 95);
             label.Name = "label";
             label.Size = new System.Drawing.Size(105, 28);
             label.TabIndex = 28;
@@ -275,7 +277,7 @@
             // 
             label27.AutoSize = true;
             label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label27.Location = new System.Drawing.Point(414, 22);
+            label27.Location = new System.Drawing.Point(414, 32);
             label27.Name = "label27";
             label27.Size = new System.Drawing.Size(139, 28);
             label27.TabIndex = 30;
@@ -294,7 +296,7 @@
             uC_Button_Prescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Prescription.FontSize = 9;
             uC_Button_Prescription.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            uC_Button_Prescription.Location = new System.Drawing.Point(665, 730);
+            uC_Button_Prescription.Location = new System.Drawing.Point(663, 741);
             uC_Button_Prescription.Name = "uC_Button_Prescription";
             uC_Button_Prescription.Size = new System.Drawing.Size(188, 50);
             uC_Button_Prescription.TabIndex = 31;
@@ -316,7 +318,7 @@
             uC_Button_Save.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Save.FontSize = 9;
             uC_Button_Save.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            uC_Button_Save.Location = new System.Drawing.Point(883, 730);
+            uC_Button_Save.Location = new System.Drawing.Point(883, 741);
             uC_Button_Save.Name = "uC_Button_Save";
             uC_Button_Save.Size = new System.Drawing.Size(188, 50);
             uC_Button_Save.TabIndex = 33;
@@ -350,7 +352,9 @@
             // TrieuChung
             // 
             TrieuChung.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            TrieuChung.Location = new System.Drawing.Point(414, 119);
+            TrieuChung.BackColor = System.Drawing.Color.White;
+            TrieuChung.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            TrieuChung.Location = new System.Drawing.Point(414, 132);
             TrieuChung.Name = "TrieuChung";
             TrieuChung.Size = new System.Drawing.Size(657, 85);
             TrieuChung.TabIndex = 39;
@@ -366,6 +370,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             Prescription.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             Prescription.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            Prescription.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -385,7 +390,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             Prescription.DefaultCellStyle = dataGridViewCellStyle3;
             Prescription.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
-            Prescription.Location = new System.Drawing.Point(414, 481);
+            Prescription.Location = new System.Drawing.Point(414, 411);
             Prescription.Name = "Prescription";
             Prescription.ReadOnly = true;
             Prescription.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -400,7 +405,7 @@
             Prescription.RowHeadersVisible = false;
             Prescription.RowHeadersWidth = 51;
             Prescription.RowTemplate.Height = 29;
-            Prescription.Size = new System.Drawing.Size(657, 211);
+            Prescription.Size = new System.Drawing.Size(657, 306);
             Prescription.TabIndex = 41;
             Prescription.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             Prescription.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -423,13 +428,12 @@
             Prescription.ThemeStyle.RowsStyle.Height = 29;
             Prescription.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             Prescription.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
-            Prescription.CellContentClick += Prescription_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(414, 439);
+            label1.Location = new System.Drawing.Point(414, 368);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(125, 28);
             label1.TabIndex = 42;
@@ -444,20 +448,32 @@
             // 
             TenBenhAn.AutoSize = true;
             TenBenhAn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            TenBenhAn.Location = new System.Drawing.Point(573, 12);
+            TenBenhAn.Location = new System.Drawing.Point(559, 22);
             TenBenhAn.Name = "TenBenhAn";
             TenBenhAn.Size = new System.Drawing.Size(104, 41);
             TenBenhAn.TabIndex = 44;
             TenBenhAn.Text = "label2";
             // 
+            // TienSu
+            // 
+            TienSu.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            TienSu.Location = new System.Drawing.Point(414, 266);
+            TienSu.Name = "TienSu";
+            TienSu.Size = new System.Drawing.Size(657, 88);
+            TienSu.TabIndex = 40;
+            TienSu.Text = "";
+            TienSu.TextChanged += TienSu_TextChanged;
+            // 
             // PatientDetail
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(242, 245, 250);
             ClientSize = new System.Drawing.Size(1113, 829);
             Controls.Add(Prescription);
             Controls.Add(TenBenhAn);
             Controls.Add(label1);
+            Controls.Add(TienSu);
             Controls.Add(TrieuChung);
             Controls.Add(uC_Button_Save);
             Controls.Add(uC_Button_Prescription);
@@ -513,5 +529,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label TenBenhAn;
+        private System.Windows.Forms.RichTextBox TienSu;
     }
 }
