@@ -6,6 +6,39 @@ namespace BusinessLogicTier
 {
     public class ReceptionBUS
     {
+        public int TT_ID;
+        public int BN_ID;
+        public int BA_ID;
+        public int BS_ID;
+        public int PH_ID;
+        public int KH_ID;
+        public bool edit;
+
+
+        // Singleton Design Patter
+        public static ReceptionBUS instance;
+
+        private ReceptionBUS()
+        {
+            TT_ID = 0;
+            BN_ID = 0;
+            BA_ID = 0;
+            BS_ID = 0;
+            PH_ID = 0;
+            KH_ID = 0;
+            edit = false;
+        }
+
+        public static ReceptionBUS GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new ReceptionBUS();
+            }
+            return instance;
+        }
+        //
+
         /// <summary>
         /// 
         /// </summary>
@@ -13,74 +46,58 @@ namespace BusinessLogicTier
         /// <param name="record"></param>
         public bool PatientRegistration(
             BenhNhan patient,
-            string height,
-            string weight,
-            string bloodType,
+            string recordName,
             string symtomp,
             DateTime checkIn,
             int PH_ID,
-            int KH_ID
+            int KH_ID,
+            int BN_ID
             )
         {
             try
             {
-
-                BenhNhanDBContext.AddPatient(patient);
-
-                int BN_ID = BenhNhanDBContext.GetLastestBN_ID();
-
-
+                if (BN_ID <= 0)
+                {
+                    if(BenhNhanDBContext.CheckPatientExist(patient.HoTen, patient.NgaySinh.Date.ToString("dd/MM/yyyy"), patient.SoDienThoai))
+                    {
+                        return false;
+                    }
+                    BenhNhanDBContext.AddPatient(patient);
+                    BN_ID = BenhNhanDBContext.GetLastestBN_ID();
+                } 
                 PhanChiaBNDBContext.AddPatient(BN_ID, PH_ID);
-
                 BenhAn record = new BenhAn();
-                record.TenBenhAn = null;
+                record.TenBenhAn = recordName;
                 record.BN_ID = BN_ID;
                 record.Ngay = checkIn;
                 record.TrieuChung = symtomp;
                 BenhAnDBContext.AddRecord(record);
-
-                int BS_ID = (int)PhanCongBSDBContext.GetPCBS_ID(PH_ID);
-                int BA_ID = (int)BenhAnDBContext.GetLatestBAID();
-
-                QuanLiBenhAnDBContext.AddQuanLiBenhAn(KH_ID, BA_ID);
-                QuanLiBenhAnBSDBContext.AddBS_BA(BS_ID, BA_ID);
-
+                //QuanLiBenhAnDBContext.AddQuanLiBenhAn(KH_ID, BA_ID);
+                //QuanLiBenhAnBSDBContext.AddBS_BA(BS_ID, BA_ID);
                 return true;
-
-            } catch
+            } catch 
             {
                 return false;
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="phone"></param>
-        /// <returns></returns>
-        //public List<(string, string, DateTime)> SearchRecord(string name, string phone)
-        //{
-        //    var patient = BenhNhanDBContext.FindByNameAndPhone(name, phone).First();
-        //    var records = BenhAnDBContext.FindRecordByBN_ID(patient.BN_ID);
-        //    List<(string, string, DateTime)> list = new List<(string, string, DateTime)>();
-
-        //    foreach (var record in records)
-        //    {
-        //        list.Add((patient.HoTen, record.TenBenhAnh, record.Ngay));
-        //    }
-        //    return list;
-        //}
-
-        public List<PatientRecord>? SearchRecord(string name, DateTime DoB, string sex)
+        public List<BenhNhanCheckup>? SearchRecord(string name, string tel)
         {
             name = name.ToLower();
-            return BenhAnDBContext.FindPatientRecord(name, DoB, sex);
+            if(name == "")
+            {
+                name = "-1";
+            }
+            if (tel == "")
+            {
+                tel = "-1";
+            }
+            return BenhNhanDBContext.FindBenhNhanInfor(name, tel);
         }
 
-        public BindingList<BenhNhan>? GetListPatients()
+        public List<BenhNhanCheckup>? GetListPatients()
         {
-            return BenhNhanDBContext.GetListPatient();
+            return BenhNhanDBContext.GetListBenhNhan();
         }
 
 

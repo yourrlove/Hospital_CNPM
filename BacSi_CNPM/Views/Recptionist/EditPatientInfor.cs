@@ -15,38 +15,41 @@ namespace Hospital.Views.Recptionist
     public partial class EditPatientInfor : Form
     {
         ReceptionBUS reception;
-        private int patientID;
-        public EditPatientInfor(int BN_ID)
+        private string patientName;
+        private string patientSex;
+        private DateTime patientDate;
+        private string patientAddress;
+        private string patientTel;
+        private string patientWeight;
+        private string patientHeight;
+        private string patientBloodType;
+
+        public EditPatientInfor()
         {
-            reception = new ReceptionBUS();
-            patientID = BN_ID;
+            reception = ReceptionBUS.GetInstance();
             InitializeComponent();
 
-            if (patientID != null)
+            if (reception.BN_ID != 0)
             {
-                BenhNhan patient = reception.GetBenhNhan(patientID);
-                guna2TextBox_Name.Text = patient.HoTen;
+                BenhNhan patient = reception.GetBenhNhan(reception.BN_ID);
+                guna2TextBox_Name.Text = patientName = patient.HoTen;
                 radioButton_Female.Checked = (patient.GioiTinh == "Nu");
                 radioButton_Male.Checked = (patient.GioiTinh == "Nam");
-                dateTimePicker_DoB.Value = patient.NgaySinh;
-                Address.Text = patient.DiaChi;
-                guna2TextBox_Tel.Text = patient.SoDienThoai;
-                ChieuCao.Text = patient.ChieuCao.ToString();
-                CanNang.Text = patient.CanNang.ToString();
-                NhomMau.SelectedItem = patient.NhomMau.ToString();
+                patientSex = patient.GioiTinh;
+                dateTimePicker_DoB.Value = patientDate = patient.NgaySinh;
+                Address.Text = patientAddress = patient.DiaChi;
+                guna2TextBox_Tel.Text = patientTel = patient.SoDienThoai;
+                ChieuCao.Text = patientHeight = patient.ChieuCao.ToString();
+                CanNang.Text = patientWeight = patient.CanNang.ToString();
+                NhomMau.SelectedItem = patientBloodType = (patient.NhomMau == null) ? null : patient.NhomMau.ToString();
             }
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void EditPatientInfor_Load(object sender, EventArgs e)
         {
-            if (patientID != 0)
+            if (reception.BN_ID != 0)
             {
-                BenhNhan patient = reception.GetBenhNhan(patientID);
+                BenhNhan patient = reception.GetBenhNhan(reception.BN_ID);
                 guna2TextBox_Name.Text = patient.HoTen;
                 radioButton_Female.Checked = (patient.GioiTinh == "Nu");
                 radioButton_Male.Checked = (patient.GioiTinh == "Nam");
@@ -55,10 +58,10 @@ namespace Hospital.Views.Recptionist
                 guna2TextBox_Tel.Text = patient.SoDienThoai;
                 ChieuCao.Text = patient.ChieuCao.ToString();
                 CanNang.Text = patient.CanNang.ToString();
-                NhomMau.SelectedItem = patient.NhomMau.ToString();
+                NhomMau.SelectedItem = (patient.NhomMau == null) ? null : patient.NhomMau.ToString();
+
             }
         }
-
 
         private void uC_Button_Confirm_Click(object sender, EventArgs e)
         {
@@ -74,14 +77,21 @@ namespace Hospital.Views.Recptionist
 
             try
             {
-                reception.UpdatePatient(
-                patientID,
-                guna2TextBox_Name.Text,
-                sex,
-                dateTimePicker_DoB.Value,
-                Address.Text,
-                guna2TextBox_Tel.Text
-                );
+                if(IsChanging())
+                {
+                    reception.UpdatePatient(
+                    reception.BN_ID,
+                    guna2TextBox_Name.Text,
+                    sex,
+                    dateTimePicker_DoB.Value,
+                    Address.Text,
+                    guna2TextBox_Tel.Text
+                    );
+                } else
+                {
+                    reception.edit = false;
+                }
+
                 this.Close();
             }
             catch (Exception ex)
@@ -92,13 +102,29 @@ namespace Hospital.Views.Recptionist
 
         private void uC_Button_Delete_Click(object sender, EventArgs e)
         {
-            guna2TextBox_Name.Text = string.Empty;
-            radioButton_Female.Checked = false;
-            radioButton_Male.Checked = false;
-            guna2TextBox_Tel.Text = string.Empty;
-            dateTimePicker_DoB.Value = DateTime.Now;
-            Address.Text = string.Empty;
 
+            guna2TextBox_Name.Text = patientName;
+            radioButton_Female.Checked = (patientSex == "Nu");
+            radioButton_Male.Checked = (patientSex == "Nam");
+            dateTimePicker_DoB.Value = patientDate;
+            Address.Text = patientAddress;
+            guna2TextBox_Tel.Text = patientTel;
+            ChieuCao.Text = patientHeight;
+            CanNang.Text = patientWeight;
+            NhomMau.SelectedItem = patientBloodType;
+            reception.edit = false;
+        }
+
+        public bool IsChanging()
+        {
+            return (guna2TextBox_Name.Text != patientName)
+            || (radioButton_Female.Checked && (patientSex != "Nu")) || (radioButton_Male.Checked && (patientSex != "Nam"))
+            || (dateTimePicker_DoB.Value != patientDate)
+            || (Address.Text != patientAddress)
+            || (ChieuCao.Text != patientHeight)
+            || (CanNang.Text != patientWeight)
+            || (guna2TextBox_Tel.Text != patientTel)
+            || (NhomMau.SelectedItem.ToString() != patientBloodType);
         }
     }
 }

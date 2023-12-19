@@ -88,7 +88,7 @@ namespace Hospital.User_Controls
 
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.BorderSize = 0;
-            this.Size = new Size(150, 40);
+            this.Size = new Size(130, 70);
             this.BackColor = Color.Blue;
             this.ForeColor = Color.White;
             this.Resize += new EventHandler(Button_Resize);

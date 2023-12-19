@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DataAccessTier\DataAccessTier.csproj" />
     <ProjectReference Include="..\DTO\DTO.csproj" />
   </ItemGroup>

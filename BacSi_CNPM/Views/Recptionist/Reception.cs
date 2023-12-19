@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using BusinessLogicTier;
+using Guna.UI2.WinForms;
 using Hospital.User_Controls;
 using Hospital.Views.Doctor;
 using Hospital.Views.Recptionist;
@@ -19,7 +20,9 @@ namespace Hospital.Views.Receptionist
     public partial class Reception : Form
     {
         private int borderSize = 2;
-        public Reception()
+        private ReceptionBUS reception;
+
+        public Reception(int TT_ID)
         {
             InitializeComponent();
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("vi-VN");
@@ -27,12 +30,8 @@ namespace Hospital.Views.Receptionist
             this.BackColor = Color.FromArgb(98, 102, 244);//Border color
             CollapseMenu();
 
-        }
-
-        private void ReceptionForm_Load(object sender, EventArgs e)
-        {
-
-
+            reception = ReceptionBUS.GetInstance();
+            reception.TT_ID = TT_ID;
         }
         private void CollapseMenu()
         {
@@ -61,43 +60,6 @@ namespace Hospital.Views.Receptionist
                 }
             }
         }
-        private void showFormMiddle(Form showForm)
-        {
-            Form fm = new Form();
-            try
-            {
-                using (showForm)
-                {
-                    fm.StartPosition = FormStartPosition.Manual;
-                    fm.FormBorderStyle = FormBorderStyle.None;
-                    fm.Opacity = .70d;
-                    fm.BackColor = Color.Black;
-                    fm.WindowState = FormWindowState.Maximized;
-                    fm.TopMost = true;
-                    fm.Location = this.Location;
-                    fm.ShowInTaskbar = false;
-                    fm.Show();
-                    showForm.StartPosition = FormStartPosition.CenterScreen;
-                    showForm.TopMost = true;
-                    showForm.Owner = fm;
-                    showForm.ShowDialog();
-
-                    fm.Dispose();
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-            finally
-            {
-                fm.Dispose();
-            }
-        }
-
         private void LoadForm(object Form)
         {
             if (this.mainPanelReception.Controls.Count > 0)
@@ -128,16 +90,6 @@ namespace Hospital.Views.Receptionist
             //MessageBox.Show("May dung r do");
         }
 
-        private void mainPanelReception_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void menuBtn_Click(object sender, EventArgs e)
         {
             CollapseMenu();
@@ -148,16 +100,6 @@ namespace Hospital.Views.Receptionist
             header_val.Text = "Patient Registration";
             guna2PictureBox2_val.Image = (Image)Properties.Resources.ResourceManager.GetObject("registerpatient");
             LoadForm(new PatientRegistation());
-        }
-
-        private void topBar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Reception_Load(object sender, EventArgs e)
@@ -182,7 +124,7 @@ namespace Hospital.Views.Receptionist
             InitializeComponent();
             RightToLeftLayout = true;
             Reception_Load(sender, e);
-            
+
             /*CultureInfo newCulture;
             switch (changeLanguage.SelectedIndex)
             {
@@ -202,18 +144,25 @@ namespace Hospital.Views.Receptionist
             UpdateLanguageForAllForms();*/
 
         }
-        /*private void UpdateLanguageForAllForms()
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is Reception)
-                {
-                    form.Controls.Clear();
-                    InitializeComponent();
-                    form.RightToLeftLayout = RightToLeftLayout;
-                }
 
-            }
-        }*/
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        /*private void UpdateLanguageForAllForms()
+{
+   foreach (Form form in Application.OpenForms)
+   {
+       if (form is Reception)
+       {
+           form.Controls.Clear();
+           InitializeComponent();
+           form.RightToLeftLayout = RightToLeftLayout;
+       }
+
+   }
+}*/
     }
 }

@@ -55,7 +55,7 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            monthCalendar1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             monthCalendar1.Location = new System.Drawing.Point(33, 59);
             monthCalendar1.Margin = new System.Windows.Forms.Padding(9, 11, 9, 11);
             monthCalendar1.Name = "monthCalendar1";
@@ -66,7 +66,7 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = System.Drawing.Color.Transparent;
-            label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             label6.ForeColor = System.Drawing.Color.RoyalBlue;
             label6.Location = new System.Drawing.Point(89, 16);
             label6.Name = "label6";
@@ -81,7 +81,7 @@
             tabControl1.Controls.Add(tabPage2_DoctorMajor2);
             tabControl1.Controls.Add(tabPage1_DoctorMajor3);
             tabControl1.Controls.Add(tabPage2_DoctorMajor4);
-            tabControl1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            tabControl1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             tabControl1.ItemSize = new System.Drawing.Size(175, 50);
             tabControl1.Location = new System.Drawing.Point(12, 109);
             tabControl1.Name = "tabControl1";
@@ -99,7 +99,6 @@
             tabPage1_DoctorMajor1.TabIndex = 0;
             tabPage1_DoctorMajor1.Text = "Major 1";
             tabPage1_DoctorMajor1.UseVisualStyleBackColor = true;
-            tabPage1_DoctorMajor1.Click += tabPage1_DoctorMajor1_Click;
             // 
             // tabPage2_DoctorMajor2
             // 
@@ -152,7 +151,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             label5.Location = new System.Drawing.Point(118, 294);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(119, 28);
@@ -162,7 +161,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             label1.Location = new System.Drawing.Point(53, 263);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(259, 31);
@@ -205,7 +204,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             label2.ForeColor = System.Drawing.Color.Navy;
             label2.Location = new System.Drawing.Point(18, 17);
             label2.Name = "label2";
@@ -229,7 +228,7 @@
             // 
             label4.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold);
             label4.ForeColor = System.Drawing.Color.White;
             label4.Location = new System.Drawing.Point(200, 16);
             label4.Name = "label4";

@@ -66,21 +66,22 @@ namespace Hospital.Views.Login
                 if (role != null)
                 {
                     Form form = new Form();
-                    role = login.Validate(usernameInput, passwordInput).Substring(0, 2);
-                    if (role == "BS")
+                    role = login.Validate(usernameInput, passwordInput).Substring(0, 3);
+                    if (role.Contains("doc"))
                     {
                         form = new DoctorForm();
                     }
-                    else if (role == "TT")
+                    else if (role.Contains("rec"))
                     {
-                        form = new Reception();
+                        form = new Reception(1);
                     } 
                     Program.ReturnForm = form;
                     UserSuccessfullyAuthenticated = true;
                     this.Close();
-                }else
+                }
+                else
                     {
-                        MessageBox.Show("Username & Password are not correct!");
+                        Notification.ErrorNotification("The Username or Password is Incorrect!");
                     }
                 }
                 else

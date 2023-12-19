@@ -106,14 +106,13 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             label13.ForeColor = System.Drawing.Color.White;
             label13.Location = new System.Drawing.Point(59, 15);
             label13.Name = "label13";
             label13.Size = new System.Drawing.Size(274, 31);
             label13.TabIndex = 4;
             label13.Text = "Edit Patient Information";
-            label13.Click += label13_Click;
             // 
             // guna2PictureBox1
             // 
@@ -137,7 +136,7 @@
             Address.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             Address.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             Address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            Address.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Address.Font = new System.Drawing.Font("Segoe UI", 9F);
             Address.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             Address.Location = new System.Drawing.Point(121, 422);
             Address.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -152,7 +151,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label10.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             label10.Location = new System.Drawing.Point(31, 120);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(60, 23);
@@ -162,7 +161,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label4.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             label4.Location = new System.Drawing.Point(31, 422);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(74, 23);
@@ -178,7 +177,7 @@
             guna2TextBox_Tel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             guna2TextBox_Tel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             guna2TextBox_Tel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            guna2TextBox_Tel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            guna2TextBox_Tel.Font = new System.Drawing.Font("Segoe UI", 9F);
             guna2TextBox_Tel.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             guna2TextBox_Tel.Location = new System.Drawing.Point(121, 252);
             guna2TextBox_Tel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -193,7 +192,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label12.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             label12.Location = new System.Drawing.Point(31, 262);
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(34, 23);
@@ -203,7 +202,7 @@
             // radioButton_Male
             // 
             radioButton_Male.AutoSize = true;
-            radioButton_Male.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            radioButton_Male.Font = new System.Drawing.Font("Segoe UI", 12F);
             radioButton_Male.Location = new System.Drawing.Point(121, 189);
             radioButton_Male.Name = "radioButton_Male";
             radioButton_Male.Size = new System.Drawing.Size(75, 32);
@@ -215,7 +214,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label7.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             label7.Location = new System.Drawing.Point(31, 339);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(111, 23);
@@ -225,7 +224,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label11.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             label11.Location = new System.Drawing.Point(31, 196);
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(40, 23);
@@ -248,7 +247,7 @@
             guna2TextBox_Name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             guna2TextBox_Name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             guna2TextBox_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            guna2TextBox_Name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            guna2TextBox_Name.Font = new System.Drawing.Font("Segoe UI", 9F);
             guna2TextBox_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             guna2TextBox_Name.Location = new System.Drawing.Point(121, 111);
             guna2TextBox_Name.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -263,7 +262,7 @@
             // radioButton_Female
             // 
             radioButton_Female.AutoSize = true;
-            radioButton_Female.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            radioButton_Female.Font = new System.Drawing.Font("Segoe UI", 12F);
             radioButton_Female.Location = new System.Drawing.Point(252, 189);
             radioButton_Female.Name = "radioButton_Female";
             radioButton_Female.Size = new System.Drawing.Size(59, 32);
@@ -281,7 +280,7 @@
             uC_Button_Delete.BorderSize = 1;
             uC_Button_Delete.FlatAppearance.BorderSize = 0;
             uC_Button_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            uC_Button_Delete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            uC_Button_Delete.Font = new System.Drawing.Font("Segoe UI", 12F);
             uC_Button_Delete.FontSize = 12;
             uC_Button_Delete.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Delete.Location = new System.Drawing.Point(485, 668);
@@ -302,7 +301,7 @@
             uC_Button_Confirm.BorderSize = 1;
             uC_Button_Confirm.FlatAppearance.BorderSize = 0;
             uC_Button_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            uC_Button_Confirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            uC_Button_Confirm.Font = new System.Drawing.Font("Segoe UI", 12F);
             uC_Button_Confirm.FontSize = 12;
             uC_Button_Confirm.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
             uC_Button_Confirm.Location = new System.Drawing.Point(278, 668);
@@ -323,7 +322,7 @@
             CanNang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             CanNang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             CanNang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            CanNang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            CanNang.Font = new System.Drawing.Font("Segoe UI", 9F);
             CanNang.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             CanNang.Location = new System.Drawing.Point(335, 527);
             CanNang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -344,7 +343,7 @@
             ChieuCao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             ChieuCao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
             ChieuCao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            ChieuCao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            ChieuCao.Font = new System.Drawing.Font("Segoe UI", 9F);
             ChieuCao.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             ChieuCao.Location = new System.Drawing.Point(121, 527);
             ChieuCao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -359,7 +358,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             label1.Location = new System.Drawing.Point(243, 529);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(68, 23);
@@ -369,7 +368,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             label2.Location = new System.Drawing.Point(31, 529);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(65, 23);
@@ -384,7 +383,7 @@
             NhomMau.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             NhomMau.FocusedColor = System.Drawing.Color.FromArgb(94, 148, 255);
             NhomMau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            NhomMau.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            NhomMau.Font = new System.Drawing.Font("Segoe UI", 10F);
             NhomMau.ForeColor = System.Drawing.Color.FromArgb(68, 88, 112);
             NhomMau.ItemHeight = 30;
             NhomMau.Items.AddRange(new object[] { "A", "B", "AB", "O" });
@@ -397,7 +396,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label18.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             label18.Location = new System.Drawing.Point(459, 529);
             label18.Name = "label18";
             label18.Size = new System.Drawing.Size(98, 23);

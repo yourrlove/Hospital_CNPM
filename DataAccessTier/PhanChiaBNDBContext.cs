@@ -72,5 +72,22 @@ namespace DataAccessTier
                 return null;
             }
         }
+
+        public static bool DeletePatientInRoom(int BN_ID, int PH_ID)
+        {
+            try
+            {
+                var dbContext = new PhanChiaBNDBContext();
+                dbContext.Remove(dbContext.PhanChiaBenhNhan.Single(a => a.BN_ID == BN_ID && a.PH_ID == PH_ID));
+                dbContext.SaveChanges();
+                return true;
+
+            } catch (Exception ex) 
+            { 
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+
+        }
     }
 }

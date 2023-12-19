@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms.Suite;
+﻿using BusinessLogicTier;
+using Guna.UI2.WinForms.Suite;
 using Hospital.User_Controls;
 using System;
 using System.Collections.Generic;
@@ -19,12 +20,11 @@ namespace Hospital.Views.Doctor
 
     public partial class DoctorForm : Form
     {
-        private int BS_ID = 6;
-        private int PH_ID = 2;
-        private int KH_ID = 1;
+        private DoctorRoomBUS room;
         public DoctorForm()
         {
             InitializeComponent();
+            room = DoctorRoomBUS.GetInstance();
             //CollapseMenu();
         }
 
@@ -73,19 +73,11 @@ namespace Hospital.Views.Doctor
         }
 
 
-
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             label1_val.Text = "Messages";
             guna2PictureBox1_val.Image = Properties.Resources.icons8_dashboard_48;
         }
-
 
 
         private void Dashboard_Click(object sender, EventArgs e)
@@ -99,21 +91,22 @@ namespace Hospital.Views.Doctor
 
         private void container(object _form)
         {
-            if (guna2Panel_container.Controls.Count > 0) { guna2Panel_container.Controls.Clear(); }
+            if (DoctorMainPanel.Controls.Count > 0) {
+                if (DoctorMainPanel.Controls["Requests"]  != null)
+                {
+                    Requests obj = (Requests)Application.OpenForms["Requests"];
+                    obj.Close();
+                }
+                DoctorMainPanel.Controls.Clear(); 
+            }
             Form fm = _form as Form;
             fm.TopLevel = false;
             fm.FormBorderStyle = FormBorderStyle.None;
             fm.Dock = DockStyle.Fill;
-            guna2Panel_container.Controls.Add(fm);
-            guna2Panel_container.Tag = fm;
+            DoctorMainPanel.Controls.Add(fm);
+            DoctorMainPanel.Tag = fm;
             fm.Show();
         }
-
-        private void guna2Panel1_container_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
         #region SlidingMenu
         private void menuBtn_Click(object sender, EventArgs e)
@@ -165,45 +158,12 @@ namespace Hospital.Views.Doctor
             showMiddleForm(new Setting());
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void uC_Button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void guna2ControlBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel_container_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
         //button Requests
         private void btnRequest_Click(object sender, EventArgs e)
         {
             label1_val.Text = "Requests";
             guna2PictureBox1_val.Image = Properties.Resources.icons8_user_50;
-            container(new Requests(BS_ID, PH_ID, KH_ID));
+            container(new Requests());
         }
 
         private void topBar_Paint(object sender, PaintEventArgs e)

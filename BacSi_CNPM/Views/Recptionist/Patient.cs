@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicTier;
 using DataAccessTier;
+using DTO;
 using Guna.UI2.WinForms.Suite;
 using Hospital.Views.Recptionist;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Tulpep.NotificationWindow;
@@ -25,41 +22,44 @@ namespace Hospital.Views.Receptionist
         ReceptionBUS reception;
         private int selectedRowIndex = 0;
         private System.Windows.Forms.BindingSource bindingSource = new System.Windows.Forms.BindingSource();
-        List<PatientRecord> records;
+        private List<BenhNhanCheckup> lists;
 
         public ListPatient()
         {
-            reception = new ReceptionBUS();
+            reception = ReceptionBUS.GetInstance();
             InitializeComponent();
-            Sex.SelectedItem = null;
-            records = new List<PatientRecord>();
-            records = reception.GetOldPatientRecords();
-        }
-
-        private void label1_patientnum_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            lists = new List<BenhNhanCheckup>();
+            lists = reception.GetListPatients();
+            this.DataGridViewPatientList.ClearSelection();
+            reception.BN_ID = 0;
         }
 
         private void ListPatient_Load(object sender, EventArgs e)
         {
+            this.DataGridViewPatientList.ClearSelection();
             RefreshList(1);
+
         }
 
         private void guna2Button_Filter_Click(object sender, EventArgs e)
         {
-            string name = Name.Texts ?? "";
-            DateTime DoB = this.DoB.Value;
-            string sex = (Sex.SelectedItem != null) ? Sex.SelectedItem.ToString() : "";
-            var list = reception.SearchRecord(name, DoB, sex);
-            bindingSource.DataSource = list;
-            this.DataGridViewPatientList.DataSource = bindingSource;
-            this.label_patientcount.Text = bindingSource.Count.ToString();
+            string name = PatientName.Texts ?? "";
+            string tel = Tel.Texts ?? "";
+            if(name != "" || tel != "")
+            {
+                var list = reception.SearchRecord(name, tel);
+                bindingSource.DataSource = list;
+                this.DataGridViewPatientList.DataSource = bindingSource;
+                this.label_patientcount.Text = bindingSource.Count.ToString();
+                selectedRowIndex = 0;
+            } else
+            {
+                bindingSource.Clear();
+                this.DataGridViewPatientList.DataSource = bindingSource;
+                this.label_patientcount.Text = "0";
+                selectedRowIndex = -1;
+            }
+ 
         }
 
         private void DataGridViewPatientList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -71,43 +71,18 @@ namespace Hospital.Views.Receptionist
                 selectedRowIndex = e.RowIndex;
             }
         }
-        //success pop up notification 
-        private void successNotification()
-        {
-            PopupNotifier success = new PopupNotifier();
-            success.Image = (Image)Properties.Resources.ResourceManager.GetObject("successcolor");
-            success.BodyColor = Color.FromArgb(40, 167, 69);
-            success.TitleText = "Delete Successfully!";
-            success.TitleColor = Color.Black;
-            success.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
 
-            success.ContentText = "Success!";
-            success.ContentColor = Color.White;
-            success.ContentFont = new Font("Century Gothic", 12);
-            success.Popup();
-        }
-        private void warningNotification()
-        {
-            PopupNotifier warning = new PopupNotifier();
-            warning.Image = (Image)Properties.Resources.ResourceManager.GetObject("errorcolor");
-            warning.BodyColor = Color.FromArgb(220, 53, 69);
-            warning.TitleText = "Warning!";
-            warning.TitleColor = Color.Black;
-            warning.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
-
-            warning.ContentText = "Failed!";
-            warning.ContentColor = Color.White;
-            warning.ContentFont = new Font("Century Gothic", 12);
-            warning.Popup();
-        }
         private void guna2Button4_Edit_Click(object sender, EventArgs e)
         {
             try
             {
-                if (selectedRowIndex >= 0)
+                if (selectedRowIndex >= 0 && DataGridViewPatientList.Rows[selectedRowIndex].Cells[0].Value != null)
                 {
                     int BN_ID = int.Parse(this.DataGridViewPatientList.Rows[selectedRowIndex].Cells[0].Value.ToString());
-                    Form showForm = new EditPatientInfor(BN_ID);
+                    reception.BN_ID = BN_ID;
+                    reception.edit = true;
+
+                    Form showForm = new EditPatientInfor();
                     Form fm = new Form();
                     fm.StartPosition = FormStartPosition.Manual;
                     fm.FormBorderStyle = FormBorderStyle.None;
@@ -117,15 +92,21 @@ namespace Hospital.Views.Receptionist
                     fm.TopMost = true;
                     fm.Location = this.Location;
                     fm.ShowInTaskbar = false;
-                    fm.Show();
+                    //fm.Show();
                     showForm.StartPosition = FormStartPosition.CenterScreen;
                     showForm.TopMost = true;
                     showForm.Owner = fm;
                     showForm.ShowDialog();
-
                     fm.Dispose();
+
+                    if(reception.edit)
+                    {
+                        Notification.SucccessNotification("Change Successfully!");
+                    }
+
+                    RefreshList(0);
                 }
-                RefreshList(0);
+
             }
             catch (Exception ex)
             {
@@ -139,14 +120,14 @@ namespace Hospital.Views.Receptionist
 
             try
             {
-                if (flag == 0)
+                if(flag == 0)
                 {
-                    records = reception.GetOldPatientRecords();
+                    lists = reception.GetListPatients();
                 }
                 this.DataGridViewPatientList.ClearSelection();
-                bindingSource.DataSource = records;
+                bindingSource.DataSource = lists;
                 this.DataGridViewPatientList.DataSource = bindingSource;
-                this.label_patientcount.Text = records.Count.ToString();
+                this.label_patientcount.Text = lists.Count.ToString();
             }
             catch (SqlException)
             {
@@ -156,23 +137,21 @@ namespace Hospital.Views.Receptionist
 
         private void guna2Button5_Delete_Click(object sender, EventArgs e)
         {
-            if (selectedRowIndex >= 0)
+            if (selectedRowIndex >= 0 && DataGridViewPatientList.Rows[selectedRowIndex].Cells[0].Value != null)
             {
-
-                int BN_ID = int.Parse(this.DataGridViewPatientList.Rows[selectedRowIndex].Cells[1].Value.ToString());
-                MessageBox.Show(BN_ID.ToString());
+                int BN_ID = int.Parse(this.DataGridViewPatientList.Rows[selectedRowIndex].Cells[0].Value.ToString());
                 reception.DeletePatient(BN_ID);
                 RefreshList(0);
-                
             }
-            successNotification();
         }
 
         private void Create_Click(object sender, EventArgs e)
         {
-            if (selectedRowIndex >= 0)
+            
+            if (selectedRowIndex >= 0 && DataGridViewPatientList.Rows[selectedRowIndex].Cells[0].Value != null)
             {
                 int BN_ID = int.Parse(this.DataGridViewPatientList.Rows[selectedRowIndex].Cells[0].Value.ToString());
+                reception.BN_ID = BN_ID;
                 // Create and show the new child form (PatientRegistation)
 
                 if (Application.OpenForms["Reception"].Controls["mainPanelReception"].Controls.Count != 0)
@@ -180,39 +159,21 @@ namespace Hospital.Views.Receptionist
                     Application.OpenForms["Reception"].Controls["mainPanelReception"].Controls.Clear();
                 }
 
-                // Add new subform after clearing
-                PatientRegistation patientRegist = new PatientRegistation(BN_ID);
+                // Add new subform after clearing 
+                PatientRegistation patientRegist = new PatientRegistation();
                 patientRegist.TopLevel = false;
                 Application.OpenForms["Reception"].Controls["mainPanelReception"].Controls.Add(patientRegist);
                 patientRegist.Dock = DockStyle.Fill;
                 patientRegist.Show();
-                this.Close();
                 this.Dispose();
             }
         }
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            Name.Texts = "";
-            DoB.Value = DateTime.Now;
-            Sex.SelectedIndex = -1;
+            PatientName.Texts = "";
+            Tel.Texts = "";
             RefreshList(1);
-            
-        }
-
-        private void DataGridViewPatientList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label_patientcount_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

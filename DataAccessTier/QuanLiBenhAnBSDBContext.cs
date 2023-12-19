@@ -24,5 +24,15 @@ namespace DataAccessTier
             }
             catch { return false; }
         }
+
+        public static int GetBSID(int BA_ID)
+        {
+            try
+            {
+                var dbContext = new QuanLiBenhAnBSDBContext();
+                return dbContext.QuanLiBenhAnBS.Single(p => p.BA_ID == BA_ID).BS_ID;
+            }
+            catch { return 0; }
+        }
     }
 }

@@ -246,6 +246,7 @@
             btnLogOut.Name = "btnLogOut";
             btnLogOut.ShadowDecoration.CustomizableEdges = customizableEdges15;
             btnLogOut.Tag = "Logout";
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // topBar
             // 
@@ -264,7 +265,6 @@
             resources.ApplyResources(topBar, "topBar");
             topBar.Name = "topBar";
             topBar.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            topBar.Paint += topBar_Paint;
             // 
             // label3
             // 
@@ -338,7 +338,6 @@
             resources.ApplyResources(mainPanelReception, "mainPanelReception");
             mainPanelReception.Name = "mainPanelReception";
             mainPanelReception.ShadowDecoration.CustomizableEdges = customizableEdges29;
-            mainPanelReception.Paint += mainPanelReception_Paint;
             // 
             // banner_welcome
             // 

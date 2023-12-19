@@ -24,7 +24,7 @@ namespace Hospital.Views.Receptionist
         public DashBoard()
         {
             InitializeComponent();
-            reception = new ReceptionBUS();
+            reception = ReceptionBUS.GetInstance();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -65,11 +65,6 @@ namespace Hospital.Views.Receptionist
                 }
                 K_idx++;
             }
-
-        }
-
-        private void tabPage1_DoctorMajor1_Click(object sender, EventArgs e)
-        {
 
         }
     }

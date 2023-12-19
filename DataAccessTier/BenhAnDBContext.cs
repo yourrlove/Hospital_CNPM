@@ -3,26 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccessTier
 {
-    public class PatientRecord
-    {
-        public int BA_ID {  get; set; }
-        public int BN_ID { get; set; }
-        public string? RecordName {  get; set; }
-        public string PatientName {  get; set; }
-
-        public string PatientSex {  get; set; }
-        public string PatientDoB {  get; set; }
-        public string Tel {  get; set; }
-        public string CheckIn {  get; set; }
-
-    }
-
     /// <summary>
     /// 
     /// </summary>
@@ -30,7 +17,7 @@ namespace DataAccessTier
     {
         public DbSet<BenhAn> BenhAn { get; set; }
         public DbSet<BenhNhan> BenhNhan { get; set; }
-
+        public DbSet<ChiTietBenhAn> ChiTietBenhAn {  get; set; }
         public DbSet<PhanChiaBenhNhan> PhanChiaBenhNhan { get; set; }
         public BenhAnDBContext() { }
 
@@ -45,11 +32,11 @@ namespace DataAccessTier
             try
             {
                 var dbContext = new BenhAnDBContext();
-                return dbContext.BenhAn.FirstOrDefault(record => record.BN_ID == BN_ID);
+                return dbContext.BenhAn.OrderByDescending(p=>p.BA_ID).FirstOrDefault();
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message); 
             }
             return null;
         }
@@ -170,7 +157,7 @@ namespace DataAccessTier
 
         }
 
-        public static List<PatientRecord>? FindPatientRecord(string name, DateTime DoB, string sex)
+        public static BenhAn3? FindPatientRecord(int BA_ID)
         {
             try
             {
@@ -178,19 +165,17 @@ namespace DataAccessTier
 
                 var item = (
                      from record in dbContext.BenhAn
-                     join patient in dbContext.BenhNhan on record.BN_ID equals patient.BN_ID
-                     where patient.HoTen.Contains(name) && patient.GioiTinh == sex && patient.NgaySinh <= DoB
-                     select new PatientRecord
+                     join detail in dbContext.ChiTietBenhAn on record.BA_ID equals detail.BA_ID
+                     where record.BA_ID == BA_ID
+                     select new BenhAn3
                      {
-                         BA_ID = record.BA_ID,
-                         BN_ID = patient.BN_ID,
-                         PatientName = patient.HoTen,
-                         PatientSex = patient.GioiTinh,
-                         PatientDoB = patient.NgaySinh.Date.ToString("dd/MM/yyyy"),
-                         RecordName = record.TenBenhAn ?? "",
-                         CheckIn = record.Ngay.Date.ToString("dd/MM/yyyy")
-                     }).ToList();
-                return item;
+                         DT_ID = detail.DT_ID,
+                         TenBenhAn = record.TenBenhAn ?? "",
+                         TrieuChung = record.TrieuChung ?? "",
+                         TSBenhLi = detail.TSBenhLi ?? "",
+                         Ngay = record.Ngay.Date.ToString("dd/MM/yyyy")
+                     });
+                return item.FirstOrDefault();
             }
             catch (Exception ex)
             {
@@ -199,16 +184,16 @@ namespace DataAccessTier
 
         }
 
-        public static List<PatientRecord> GetPatientRecord(int PH_ID)
+        public static List<PatientRecord> GetPatientRecord(int KH_ID)
         {
             try
             {
                 var dbContext = new BenhAnDBContext();
-                var listBNID = PhanChiaBNDBContext.GetListBNID(PH_ID);
+                var listBAID = QuanLiBenhAnDBContext.GetListRecords(KH_ID);
                 var item = (
                      from record in dbContext.BenhAn
                      join patient in dbContext.BenhNhan on record.BN_ID equals patient.BN_ID
-                     where listBNID.Contains(record.BN_ID)
+                     where listBAID.Contains(record.BA_ID)
                      select new PatientRecord
                      {
                          BA_ID = record.BA_ID,
@@ -229,12 +214,12 @@ namespace DataAccessTier
 
         }
 
-        public static List<PatientRecord> FindByRecordName(string name, int PH_ID)
+        public static List<PatientRecord> FindByRecordName(string pattern, int KH_ID)
         {
             try
             {
-                var data = GetPatientRecord(PH_ID);
-                return data.Where(d => d.RecordName.ToLower().Contains(name)).ToList();
+                var data = GetPatientRecord(KH_ID);
+                return data.Where(d => d.RecordName.ToLower().Contains(pattern) || d.PatientName.ToLower().Contains(pattern)).ToList();
             }
             catch (Exception e)
             {
@@ -256,6 +241,55 @@ namespace DataAccessTier
             }
         }
 
+        public static bool UpdateRecord(int BA_ID, string recordName, string symtomp, DateTime createDate)
+        {
+            try
+            {
+                var dbContext = new BenhAnDBContext();
+                var record = dbContext.BenhAn.Find(BA_ID);
+                if (record != null)
+                {
+                    record.TenBenhAn = recordName ?? record.TenBenhAn;
+                    record.TrieuChung = symtomp ?? record.TrieuChung;
+                    record.Ngay = createDate;
+                }
+                dbContext.SaveChanges();
+                return true;
+            } catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return false;
+            }
+        }
 
+        public static List<PatientRecord>? GetPatientRecordInKhoa(int KH_ID)
+        {
+            try
+            {
+                var dbContext = new BenhAnDBContext();
+                var listBAID = QuanLiBenhAnDBContext.GetListRecords(KH_ID); 
+                var item = (
+                     from record in dbContext.BenhAn
+                     join patient in dbContext.BenhNhan on record.BN_ID equals patient.BN_ID
+                     where listBAID.Contains(record.BA_ID)
+                     select new PatientRecord
+                     {
+                         BA_ID = record.BA_ID,
+                         BN_ID = patient.BN_ID,
+                         PatientName = patient.HoTen,
+                         PatientSex = patient.GioiTinh,
+                         PatientDoB = patient.NgaySinh.Date.ToString("dd/MM/yyyy"),
+                         Tel = patient.SoDienThoai,
+                         RecordName = record.TenBenhAn ?? "",
+                         CheckIn = record.Ngay.Date.ToString("dd/MM/yyyy")
+                     }).ToList();
+                return item;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
     }
 }

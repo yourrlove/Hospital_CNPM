@@ -1,7 +1,6 @@
 ﻿using BusinessLogicTier;
 using DataAccessTier;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.IdentityModel.Tokens;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,20 +16,23 @@ namespace Hospital.Views.Doctor
 {
     public partial class Medical : Form
     {
-        DoctorRoomBUS room;
-        System.Windows.Forms.BindingSource binding;
-        List<PatientRecord> data = new List<PatientRecord>();
+
+        private DoctorRoomBUS room;
+        private System.Windows.Forms.BindingSource binding;
+        private List<PatientRecord> data = new List<PatientRecord>();
+        private int selectedIndex;
         public Medical()
         {
-            room = new DoctorRoomBUS();
+            room = DoctorRoomBUS.GetInstance();
             binding = new System.Windows.Forms.BindingSource();
+            selectedIndex = 0;
             InitializeComponent();
             Load_DatagrigView_Records();
         }
 
         void Load_DatagrigView_Records()
         {
-            data = room.GetPatientRecords(4);
+            data = room.GetPatientRecords(room.KH_ID);
             binding.DataSource = data;
             //bind datagridview to binding source
             dgvRecords.DataSource = binding;
@@ -38,32 +40,77 @@ namespace Hospital.Views.Doctor
         }
 
 
-        private void Medical_Load(object sender, EventArgs e)
-        {
-            Load_DatagrigView_Records();
-
-        }
-        private void dgvRecords_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void guna2TextBox_Search_TextChanged(object sender, EventArgs e)
         {
             if (guna2TextBox_Search.PlaceholderText != "")
             {
-                var foundData = room.FindPatientRecords(guna2TextBox_Search.Text, 2);
+                var foundData = room.FindPatientRecords(guna2TextBox_Search.Text, room.KH_ID);
                 this.recordCount.Text = foundData.Count().ToString();
                 binding.DataSource = foundData;
                 dgvRecords.DataSource = binding;
 
             }
-            else 
+            else
             {
                 binding.DataSource = data;
                 dgvRecords.DataSource = binding;
             }
 
+        }
+
+        private void dgvRecords_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(selectedIndex > 0 && dgvRecords.Rows[selectedIndex].Cells[0].Value != null)
+            {
+                room.BA_ID = (int)dgvRecords.Rows[selectedIndex].Cells[0].Value;
+                showMiddleForm(new MedicalRecord());
+            }
+
+        }
+
+        private void showMiddleForm(Form showForm)
+        {
+            Form fm = new Form();
+            try
+            {
+                using (showForm)
+                {
+                    fm.StartPosition = FormStartPosition.Manual;
+                    fm.FormBorderStyle = FormBorderStyle.None;
+                    fm.Opacity = .70d;
+                    fm.BackColor = Color.Black;
+                    fm.WindowState = FormWindowState.Maximized;
+                    fm.TopMost = true;
+                    fm.Location = this.Location;
+                    fm.ShowInTaskbar = false;
+                    fm.Show();
+                    showForm.StartPosition = FormStartPosition.CenterScreen;
+                    showForm.TopMost = true;
+                    showForm.Owner = fm;
+                    showForm.ShowDialog();
+
+                    fm.Dispose();
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                fm.Dispose();
+            }
+        }
+
+        private void dgvRecords_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex > 0)
+            {
+                selectedIndex = e.RowIndex;
+            }
         }
     }
 }

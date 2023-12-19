@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientDetail));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            Checkin = new System.Windows.Forms.DateTimePicker();
-            label5 = new System.Windows.Forms.Label();
+            Ngay = new System.Windows.Forms.DateTimePicker();
             label4 = new System.Windows.Forms.Label();
             uC_PictureBox1 = new User_Controls.UC_PictureBox();
             label6 = new System.Windows.Forms.Label();
@@ -53,34 +56,31 @@
             Height = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
-            label8 = new System.Windows.Forms.Label();
-            Doctor = new System.Windows.Forms.Label();
-            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            label22 = new System.Windows.Forms.Label();
-            label_15 = new System.Windows.Forms.Label();
-            Room = new System.Windows.Forms.Label();
             label = new System.Windows.Forms.Label();
             label26 = new System.Windows.Forms.Label();
             label27 = new System.Windows.Forms.Label();
             uC_Button_Prescription = new User_Controls.UC_Button();
             uC_Button_Save = new User_Controls.UC_Button();
-            Specialist = new System.Windows.Forms.Label();
             guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             gfhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            RecordName = new Guna.UI2.WinForms.Guna2TextBox();
+            TenBenhAn = new Guna.UI2.WinForms.Guna2TextBox();
             TrieuChung = new System.Windows.Forms.RichTextBox();
+            Prescription = new Guna.UI2.WinForms.Guna2DataGridView();
+            label1 = new System.Windows.Forms.Label();
+            errorProvider1 = new System.Windows.Forms.ErrorProvider(components);
+            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             TienSu = new System.Windows.Forms.RichTextBox();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).BeginInit();
-            guna2Panel2.SuspendLayout();
             guna2ContextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Prescription).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel1
             // 
-            guna2Panel1.Controls.Add(dateTimePicker2);
-            guna2Panel1.Controls.Add(Checkin);
-            guna2Panel1.Controls.Add(label5);
+            guna2Panel1.Controls.Add(Ngay);
             guna2Panel1.Controls.Add(label4);
             guna2Panel1.Controls.Add(uC_PictureBox1);
             guna2Panel1.Controls.Add(label6);
@@ -105,34 +105,17 @@
             guna2Panel1.Size = new System.Drawing.Size(377, 829);
             guna2Panel1.TabIndex = 2;
             // 
-            // dateTimePicker2
+            // Ngay
             // 
-            dateTimePicker2.Location = new System.Drawing.Point(118, 573);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new System.Drawing.Size(250, 27);
-            dateTimePicker2.TabIndex = 7;
-            // 
-            // Checkin
-            // 
-            Checkin.Location = new System.Drawing.Point(118, 513);
-            Checkin.Name = "Checkin";
-            Checkin.Size = new System.Drawing.Size(250, 27);
-            Checkin.TabIndex = 6;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(10, 571);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(110, 28);
-            label5.TabIndex = 5;
-            label5.Text = "Check-out:";
+            Ngay.Location = new System.Drawing.Point(118, 513);
+            Ngay.Name = "Ngay";
+            Ngay.Size = new System.Drawing.Size(250, 27);
+            Ngay.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             label4.Location = new System.Drawing.Point(12, 511);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(96, 28);
@@ -158,7 +141,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             label6.Location = new System.Drawing.Point(43, 189);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(71, 28);
@@ -168,7 +151,7 @@
             // PatientName
             // 
             PatientName.AutoSize = true;
-            PatientName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            PatientName.Font = new System.Drawing.Font("Segoe UI", 12F);
             PatientName.Location = new System.Drawing.Point(120, 189);
             PatientName.Name = "PatientName";
             PatientName.Size = new System.Drawing.Size(136, 28);
@@ -178,18 +161,17 @@
             // label_12
             // 
             label_12.AutoSize = true;
-            label_12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label_12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             label_12.Location = new System.Drawing.Point(43, 237);
             label_12.Name = "label_12";
             label_12.Size = new System.Drawing.Size(134, 28);
             label_12.TabIndex = 17;
             label_12.Text = "Date of Birth:";
-            label_12.Click += label_DoB_Click;
             // 
             // DoB
             // 
             DoB.AutoSize = true;
-            DoB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            DoB.Font = new System.Drawing.Font("Segoe UI", 12F);
             DoB.Location = new System.Drawing.Point(183, 237);
             DoB.Name = "DoB";
             DoB.Size = new System.Drawing.Size(34, 28);
@@ -199,7 +181,7 @@
             // BloodType
             // 
             BloodType.AutoSize = true;
-            BloodType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            BloodType.Font = new System.Drawing.Font("Segoe UI", 12F);
             BloodType.Location = new System.Drawing.Point(160, 423);
             BloodType.Name = "BloodType";
             BloodType.Size = new System.Drawing.Size(27, 28);
@@ -209,7 +191,7 @@
             // label_17
             // 
             label_17.AutoSize = true;
-            label_17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label_17.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             label_17.Location = new System.Drawing.Point(43, 283);
             label_17.Name = "label_17";
             label_17.Size = new System.Drawing.Size(49, 28);
@@ -219,7 +201,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             label18.Location = new System.Drawing.Point(43, 423);
             label18.Name = "label18";
             label18.Size = new System.Drawing.Size(119, 28);
@@ -229,7 +211,7 @@
             // Sex
             // 
             Sex.AutoSize = true;
-            Sex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Sex.Font = new System.Drawing.Font("Segoe UI", 12F);
             Sex.Location = new System.Drawing.Point(104, 283);
             Sex.Name = "Sex";
             Sex.Size = new System.Drawing.Size(55, 28);
@@ -239,7 +221,7 @@
             // Weight
             // 
             Weight.AutoSize = true;
-            Weight.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Weight.Font = new System.Drawing.Font("Segoe UI", 12F);
             Weight.Location = new System.Drawing.Point(131, 375);
             Weight.Name = "Weight";
             Weight.Size = new System.Drawing.Size(61, 28);
@@ -249,7 +231,7 @@
             // Height
             // 
             Height.AutoSize = true;
-            Height.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Height.Font = new System.Drawing.Font("Segoe UI", 12F);
             Height.Location = new System.Drawing.Point(128, 331);
             Height.Name = "Height";
             Height.Size = new System.Drawing.Size(71, 28);
@@ -259,7 +241,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             label12.Location = new System.Drawing.Point(43, 375);
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(82, 28);
@@ -269,83 +251,18 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             label10.Location = new System.Drawing.Point(43, 331);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(79, 28);
             label10.TabIndex = 13;
             label10.Text = "Height:";
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label8.Location = new System.Drawing.Point(16, 26);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(98, 28);
-            label8.TabIndex = 10;
-            label8.Text = "Taken by:";
-            // 
-            // Doctor
-            // 
-            Doctor.AutoSize = true;
-            Doctor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Doctor.Location = new System.Drawing.Point(120, 26);
-            Doctor.Name = "Doctor";
-            Doctor.Size = new System.Drawing.Size(78, 28);
-            Doctor.TabIndex = 11;
-            Doctor.Text = "Dr. ABC";
-            // 
-            // guna2Panel2
-            // 
-            guna2Panel2.BackColor = System.Drawing.Color.PaleGreen;
-            guna2Panel2.Controls.Add(label8);
-            guna2Panel2.Controls.Add(Doctor);
-            guna2Panel2.CustomizableEdges = customizableEdges9;
-            guna2Panel2.Location = new System.Drawing.Point(415, 31);
-            guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel2.Size = new System.Drawing.Size(250, 80);
-            guna2Panel2.TabIndex = 12;
-            // 
-            // label22
-            // 
-            label22.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            label22.AutoSize = true;
-            label22.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label22.Location = new System.Drawing.Point(725, 31);
-            label22.Name = "label22";
-            label22.Size = new System.Drawing.Size(101, 28);
-            label22.TabIndex = 25;
-            label22.Text = "Specialist:";
-            // 
-            // label_15
-            // 
-            label_15.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            label_15.AutoSize = true;
-            label_15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label_15.Location = new System.Drawing.Point(725, 72);
-            label_15.Name = "label_15";
-            label_15.Size = new System.Drawing.Size(70, 28);
-            label_15.TabIndex = 26;
-            label_15.Text = "Room:";
-            // 
-            // Room
-            // 
-            Room.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            Room.AutoSize = true;
-            Room.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Room.Location = new System.Drawing.Point(797, 72);
-            Room.Name = "Room";
-            Room.Size = new System.Drawing.Size(45, 28);
-            Room.TabIndex = 27;
-            Room.Text = "302";
-            // 
             // label
             // 
             label.AutoSize = true;
-            label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label.Location = new System.Drawing.Point(415, 283);
+            label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            label.Location = new System.Drawing.Point(414, 95);
             label.Name = "label";
             label.Size = new System.Drawing.Size(105, 28);
             label.TabIndex = 28;
@@ -354,8 +271,8 @@
             // label26
             // 
             label26.AutoSize = true;
-            label26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label26.Location = new System.Drawing.Point(415, 466);
+            label26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            label26.Location = new System.Drawing.Point(414, 223);
             label26.Name = "label26";
             label26.Size = new System.Drawing.Size(159, 28);
             label26.TabIndex = 29;
@@ -364,8 +281,8 @@
             // label27
             // 
             label27.AutoSize = true;
-            label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label27.Location = new System.Drawing.Point(415, 189);
+            label27.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            label27.Location = new System.Drawing.Point(414, 32);
             label27.Name = "label27";
             label27.Size = new System.Drawing.Size(139, 28);
             label27.TabIndex = 30;
@@ -381,10 +298,10 @@
             uC_Button_Prescription.BorderSize = 0;
             uC_Button_Prescription.FlatAppearance.BorderSize = 0;
             uC_Button_Prescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            uC_Button_Prescription.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            uC_Button_Prescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Prescription.FontSize = 9;
             uC_Button_Prescription.ForeColor = System.Drawing.Color.White;
-            uC_Button_Prescription.Location = new System.Drawing.Point(638, 678);
+            uC_Button_Prescription.Location = new System.Drawing.Point(662, 752);
             uC_Button_Prescription.Name = "uC_Button_Prescription";
             uC_Button_Prescription.Size = new System.Drawing.Size(188, 50);
             uC_Button_Prescription.TabIndex = 31;
@@ -403,27 +320,17 @@
             uC_Button_Save.BorderSize = 0;
             uC_Button_Save.FlatAppearance.BorderSize = 0;
             uC_Button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            uC_Button_Save.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            uC_Button_Save.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Save.FontSize = 9;
             uC_Button_Save.ForeColor = System.Drawing.Color.White;
-            uC_Button_Save.Location = new System.Drawing.Point(851, 678);
+            uC_Button_Save.Location = new System.Drawing.Point(883, 752);
             uC_Button_Save.Name = "uC_Button_Save";
             uC_Button_Save.Size = new System.Drawing.Size(188, 50);
             uC_Button_Save.TabIndex = 33;
             uC_Button_Save.Text = "Save";
             uC_Button_Save.TextColor = System.Drawing.Color.White;
             uC_Button_Save.UseVisualStyleBackColor = false;
-            // 
-            // Specialist
-            // 
-            Specialist.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            Specialist.AutoSize = true;
-            Specialist.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            Specialist.Location = new System.Drawing.Point(832, 31);
-            Specialist.Name = "Specialist";
-            Specialist.Size = new System.Drawing.Size(45, 28);
-            Specialist.TabIndex = 34;
-            Specialist.Text = "302";
+            uC_Button_Save.Click += uC_Button_Save_Click;
             // 
             // guna2ContextMenuStrip1
             // 
@@ -447,42 +354,134 @@
             gfhToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             gfhToolStripMenuItem.Text = "gfh";
             // 
-            // RecordName
+            // TenBenhAn
             // 
-            RecordName.CustomizableEdges = customizableEdges11;
-            RecordName.DefaultText = "";
-            RecordName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
-            RecordName.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
-            RecordName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            RecordName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
-            RecordName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            RecordName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            RecordName.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            RecordName.Location = new System.Drawing.Point(560, 189);
-            RecordName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            RecordName.Name = "RecordName";
-            RecordName.PasswordChar = '\0';
-            RecordName.PlaceholderText = "";
-            RecordName.SelectedText = "";
-            RecordName.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            RecordName.Size = new System.Drawing.Size(512, 28);
-            RecordName.TabIndex = 38;
-            RecordName.TextChanged += guna2TextBox1_TextChanged;
+            TenBenhAn.CustomizableEdges = customizableEdges9;
+            TenBenhAn.DefaultText = "";
+            TenBenhAn.DisabledState.BorderColor = System.Drawing.Color.FromArgb(208, 208, 208);
+            TenBenhAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(226, 226, 226);
+            TenBenhAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            TenBenhAn.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(138, 138, 138);
+            TenBenhAn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            TenBenhAn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            TenBenhAn.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
+            TenBenhAn.Location = new System.Drawing.Point(559, 32);
+            TenBenhAn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            TenBenhAn.Name = "TenBenhAn";
+            TenBenhAn.PasswordChar = '\0';
+            TenBenhAn.PlaceholderText = "";
+            TenBenhAn.SelectedText = "";
+            TenBenhAn.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            TenBenhAn.Size = new System.Drawing.Size(512, 28);
+            TenBenhAn.TabIndex = 38;
             // 
             // TrieuChung
             // 
-            TrieuChung.Location = new System.Drawing.Point(415, 320);
+            TrieuChung.Location = new System.Drawing.Point(414, 132);
             TrieuChung.Name = "TrieuChung";
-            TrieuChung.Size = new System.Drawing.Size(657, 101);
+            TrieuChung.Size = new System.Drawing.Size(657, 69);
             TrieuChung.TabIndex = 39;
             TrieuChung.Text = "";
             // 
+            // Prescription
+            // 
+            Prescription.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            Prescription.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            Prescription.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            Prescription.ColumnHeadersHeight = 22;
+            Prescription.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            Prescription.DefaultCellStyle = dataGridViewCellStyle7;
+            Prescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            Prescription.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            Prescription.Location = new System.Drawing.Point(0, 0);
+            Prescription.Name = "Prescription";
+            Prescription.ReadOnly = true;
+            Prescription.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            Prescription.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            Prescription.RowHeadersVisible = false;
+            Prescription.RowHeadersWidth = 51;
+            Prescription.RowTemplate.Height = 29;
+            Prescription.Size = new System.Drawing.Size(657, 76);
+            Prescription.TabIndex = 41;
+            Prescription.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            Prescription.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            Prescription.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            Prescription.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            Prescription.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            Prescription.ThemeStyle.BackColor = System.Drawing.Color.White;
+            Prescription.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            Prescription.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
+            Prescription.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            Prescription.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            Prescription.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            Prescription.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            Prescription.ThemeStyle.HeaderStyle.Height = 22;
+            Prescription.ThemeStyle.ReadOnly = true;
+            Prescription.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            Prescription.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            Prescription.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            Prescription.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            Prescription.ThemeStyle.RowsStyle.Height = 29;
+            Prescription.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
+            Prescription.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            label1.Location = new System.Drawing.Point(414, 440);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(125, 28);
+            label1.TabIndex = 42;
+            label1.Text = "Prescription:";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            errorProvider1.ContainerControl = this;
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            guna2CustomGradientPanel1.Controls.Add(Prescription);
+            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges11;
+            guna2CustomGradientPanel1.Location = new System.Drawing.Point(414, 481);
+            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2CustomGradientPanel1.Size = new System.Drawing.Size(657, 76);
+            guna2CustomGradientPanel1.TabIndex = 43;
+            // 
             // TienSu
             // 
-            TienSu.Location = new System.Drawing.Point(415, 497);
+            TienSu.Location = new System.Drawing.Point(414, 268);
             TienSu.Name = "TienSu";
-            TienSu.Size = new System.Drawing.Size(657, 101);
-            TienSu.TabIndex = 40;
+            TienSu.Size = new System.Drawing.Size(657, 91);
+            TienSu.TabIndex = 44;
             TienSu.Text = "";
             // 
             // PatientDetail
@@ -491,46 +490,39 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1113, 829);
             Controls.Add(TienSu);
+            Controls.Add(label1);
             Controls.Add(TrieuChung);
-            Controls.Add(RecordName);
-            Controls.Add(Specialist);
+            Controls.Add(TenBenhAn);
             Controls.Add(uC_Button_Save);
             Controls.Add(uC_Button_Prescription);
             Controls.Add(label27);
             Controls.Add(label26);
             Controls.Add(label);
-            Controls.Add(Room);
-            Controls.Add(label_15);
-            Controls.Add(label22);
-            Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
+            Controls.Add(guna2CustomGradientPanel1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Name = "PatientDetail";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "PatientDetail";
+            Text = "s";
             Load += PatientDetail_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).EndInit();
-            guna2Panel2.ResumeLayout(false);
-            guna2Panel2.PerformLayout();
             guna2ContextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)Prescription).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            guna2CustomGradientPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker Checkin;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker Ngay;
         private System.Windows.Forms.Label label4;
         private User_Controls.UC_PictureBox uC_PictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label PatientName;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label Doctor;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label Height;
         private System.Windows.Forms.Label label12;
@@ -541,23 +533,22 @@
         private System.Windows.Forms.Label Sex;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label BloodType;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label_15;
-        private System.Windows.Forms.Label Room;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private User_Controls.UC_Button uC_Button_Prescription;
         private User_Controls.UC_Button uC_Button_Save;
-        private System.Windows.Forms.Label Specialist;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gfhToolStripMenuItem;
-        private Guna.UI2.WinForms.Guna2TextBox RecordName;
+        private Guna.UI2.WinForms.Guna2TextBox TenBenhAn;
         private Guna.UI2.WinForms.Guna2TextBox Symtompy;
         private Guna.UI2.WinForms.Guna2TextBox MedicalHistorys;
         private System.Windows.Forms.RichTextBox Symtomp;
-        private System.Windows.Forms.RichTextBox MedicalHistory;
         private System.Windows.Forms.RichTextBox TrieuChung;
+        private Guna.UI2.WinForms.Guna2DataGridView Prescription;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private System.Windows.Forms.RichTextBox TienSu;
     }
 }

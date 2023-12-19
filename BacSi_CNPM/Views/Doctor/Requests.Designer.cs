@@ -33,15 +33,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel_PatientDetails = new Guna.UI2.WinForms.Guna2Panel();
             benhNhanBindingSource = new System.Windows.Forms.BindingSource(components);
             uC_Button2 = new User_Controls.UC_Button();
             uC_Button3 = new User_Controls.UC_Button();
             timer1 = new System.Windows.Forms.Timer(components);
-            sortRequest = new System.Windows.Forms.Label();
-            cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             numOfRequests = new System.Windows.Forms.Label();
             requestCount = new System.Windows.Forms.Label();
             uC_Button_Next = new User_Controls.UC_Button();
@@ -53,10 +49,10 @@
             // guna2Panel_PatientDetails
             // 
             guna2Panel_PatientDetails.CustomizableEdges = customizableEdges1;
-            guna2Panel_PatientDetails.Location = new System.Drawing.Point(0, 133);
+            guna2Panel_PatientDetails.Location = new System.Drawing.Point(0, 102);
             guna2Panel_PatientDetails.Name = "guna2Panel_PatientDetails";
             guna2Panel_PatientDetails.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel_PatientDetails.Size = new System.Drawing.Size(1152, 967);
+            guna2Panel_PatientDetails.Size = new System.Drawing.Size(1152, 998);
             guna2Panel_PatientDetails.TabIndex = 7;
             // 
             // benhNhanBindingSource
@@ -72,7 +68,7 @@
             uC_Button2.BorderSize = 0;
             uC_Button2.FlatAppearance.BorderSize = 0;
             uC_Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            uC_Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            uC_Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button2.FontSize = 9;
             uC_Button2.ForeColor = System.Drawing.Color.White;
             uC_Button2.Location = new System.Drawing.Point(3, 3);
@@ -92,7 +88,7 @@
             uC_Button3.BorderSize = 0;
             uC_Button3.FlatAppearance.BorderSize = 0;
             uC_Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            uC_Button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            uC_Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button3.FontSize = 9;
             uC_Button3.ForeColor = System.Drawing.Color.White;
             uC_Button3.Location = new System.Drawing.Point(92, 29);
@@ -103,46 +99,11 @@
             uC_Button3.TextColor = System.Drawing.Color.White;
             uC_Button3.UseVisualStyleBackColor = false;
             // 
-            // sortRequest
-            // 
-            sortRequest.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            sortRequest.AutoSize = true;
-            sortRequest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            sortRequest.Location = new System.Drawing.Point(138, 22);
-            sortRequest.Name = "sortRequest";
-            sortRequest.Size = new System.Drawing.Size(79, 28);
-            sortRequest.TabIndex = 2;
-            sortRequest.Text = "Sort By:";
-            // 
-            // cbStatus
-            // 
-            cbStatus.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            cbStatus.BackColor = System.Drawing.Color.FromArgb(245, 245, 250);
-            cbStatus.CustomizableEdges = customizableEdges3;
-            cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cbStatus.FillColor = System.Drawing.Color.Blue;
-            cbStatus.FocusedColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            cbStatus.ForeColor = System.Drawing.Color.White;
-            cbStatus.ItemHeight = 30;
-            cbStatus.Items.AddRange(new object[] { "Red", "Orange" });
-            cbStatus.Location = new System.Drawing.Point(138, 56);
-            cbStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            cbStatus.Name = "cbStatus";
-            cbStatus.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            cbStatus.Size = new System.Drawing.Size(117, 36);
-            cbStatus.StartIndex = 0;
-            cbStatus.TabIndex = 3;
-            cbStatus.TextOffset = new System.Drawing.Point(2, 0);
-            cbStatus.SelectedIndexChanged += guna2ComboBox1_SelectedIndexChanged;
-            // 
             // numOfRequests
             // 
             numOfRequests.AutoSize = true;
-            numOfRequests.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            numOfRequests.Location = new System.Drawing.Point(12, 64);
+            numOfRequests.Font = new System.Drawing.Font("Segoe UI", 12F);
+            numOfRequests.Location = new System.Drawing.Point(104, 48);
             numOfRequests.Name = "numOfRequests";
             numOfRequests.Size = new System.Drawing.Size(89, 28);
             numOfRequests.TabIndex = 1;
@@ -152,9 +113,9 @@
             // requestCount
             // 
             requestCount.AutoSize = true;
-            requestCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            requestCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
             requestCount.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            requestCount.Location = new System.Drawing.Point(28, 22);
+            requestCount.Location = new System.Drawing.Point(52, 22);
             requestCount.Name = "requestCount";
             requestCount.Size = new System.Drawing.Size(62, 42);
             requestCount.TabIndex = 0;
@@ -169,12 +130,12 @@
             uC_Button_Next.BorderSize = 0;
             uC_Button_Next.FlatAppearance.BorderSize = 0;
             uC_Button_Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            uC_Button_Next.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            uC_Button_Next.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Next.FontSize = 9;
             uC_Button_Next.ForeColor = System.Drawing.Color.White;
-            uC_Button_Next.Location = new System.Drawing.Point(12, 583);
+            uC_Button_Next.Location = new System.Drawing.Point(986, 26);
             uC_Button_Next.Name = "uC_Button_Next";
-            uC_Button_Next.Size = new System.Drawing.Size(188, 50);
+            uC_Button_Next.Size = new System.Drawing.Size(132, 50);
             uC_Button_Next.TabIndex = 4;
             uC_Button_Next.Text = "Next Patient";
             uC_Button_Next.TextColor = System.Drawing.Color.White;
@@ -183,19 +144,17 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Controls.Add(numOfRequests);
             guna2Panel1.Controls.Add(uC_Button_Next);
             guna2Panel1.Controls.Add(requestCount);
-            guna2Panel1.Controls.Add(numOfRequests);
-            guna2Panel1.Controls.Add(cbStatus);
-            guna2Panel1.Controls.Add(sortRequest);
             guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             guna2Panel1.Location = new System.Drawing.Point(0, 0);
             guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel1.Size = new System.Drawing.Size(1152, 126);
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel1.Size = new System.Drawing.Size(1152, 100);
             guna2Panel1.TabIndex = 0;
             // 
             // Requests
@@ -224,8 +183,6 @@
         private System.Windows.Forms.BindingSource benhNhanBindingSource;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_PatientDetails;
         private User_Controls.UC_Button uC_Button7;
-        private System.Windows.Forms.Label sortRequest;
-        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
         private System.Windows.Forms.Label numOfRequests;
         private System.Windows.Forms.Label requestCount;
         private User_Controls.UC_Button uC_Button_Next;

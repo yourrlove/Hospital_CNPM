@@ -167,7 +167,7 @@ namespace Hospital.User_Controls
         protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified)
         {
             // Set the default size (172x65) regardless of the specified size
-            base.SetBoundsCore(x, y, 172, 65, specified);
+            base.SetBoundsCore(x, y, 130, 70, specified);
         }
 
 
