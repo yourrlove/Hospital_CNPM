@@ -15,7 +15,7 @@ namespace BusinessLogicTier
         public bool edit;
 
 
-        // Singleton Design Patter
+        // Singleton Design Pattern
         public static ReceptionBUS instance;
 
         private ReceptionBUS()
