@@ -1,0 +1,80 @@
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DTO.dll
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.sourcelink.json
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+D:\Project-CNPM\Hospital_CNPM\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
+E:\RecepTest\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+E:\RecepTest\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+E:\RecepTest\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+E:\RecepTest\DataAccessTier\bin\Debug\net7.0\DTO.dll
+E:\RecepTest\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\DataAccessTier.sourcelink.json
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+E:\RecepTest\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
+D:\CNPM\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+D:\CNPM\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+D:\CNPM\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+D:\CNPM\DataAccessTier\bin\Debug\net7.0\DTO.dll
+D:\CNPM\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.sourcelink.json
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+D:\CNPM\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
+E:\Reception1\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+E:\Reception1\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+E:\Reception1\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+E:\Reception1\DataAccessTier\bin\Debug\net7.0\DTO.dll
+E:\Reception1\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\DataAccessTier.sourcelink.json
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+E:\Reception1\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
+D:\new-recept ui\DataAccessTier\bin\Debug\net7.0\DataAccessTier.deps.json
+D:\new-recept ui\DataAccessTier\bin\Debug\net7.0\DataAccessTier.dll
+D:\new-recept ui\DataAccessTier\bin\Debug\net7.0\DataAccessTier.pdb
+D:\new-recept ui\DataAccessTier\bin\Debug\net7.0\DTO.dll
+D:\new-recept ui\DataAccessTier\bin\Debug\net7.0\DTO.pdb
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.AssemblyInfo.cs
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.sourcelink.json
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.csproj.CopyComplete
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.dll
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\refint\DataAccessTier.dll
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\DataAccessTier.pdb
+D:\new-recept ui\DataAccessTier\obj\Debug\net7.0\ref\DataAccessTier.dll
