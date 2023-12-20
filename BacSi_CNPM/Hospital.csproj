@@ -5,11 +5,11 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <ApplicationIcon>medical_heh_care_doctor_hospital_icon_188998.ico</ApplicationIcon>
     <UseWPF>False</UseWPF>
     <StartupObject>Hospital.Program</StartupObject>
-    <PackageIcon>icons8-hospital-64.png</PackageIcon>
-    <ApplicationManifest>C:\Users\LEGION 5\Downloads\medical_heh_care_doctor_hospital_icon_188998.ico</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="medical_heh_care_doctor_hospital_icon_188998.ico" />
