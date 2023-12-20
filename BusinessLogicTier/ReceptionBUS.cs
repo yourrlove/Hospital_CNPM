@@ -13,6 +13,7 @@ namespace BusinessLogicTier
         public int PH_ID;
         public int KH_ID;
         public bool edit;
+        public string displayName;
 
 
         // Singleton Design Pattern

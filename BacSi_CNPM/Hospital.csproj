@@ -7,6 +7,7 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <UseWPF>False</UseWPF>
     <StartupObject>Hospital.Program</StartupObject>
+    <ApplicationIcon>medical_heh_care_doctor_hospital_icon_188998.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>True</Optimize>

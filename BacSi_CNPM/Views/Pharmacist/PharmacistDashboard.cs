@@ -18,6 +18,7 @@ namespace Hospital.Views.Pharmacist
         {
             InitializeComponent();
             pharmacist = PharmacistBUS.GetInstance();
+            userName.Text = pharmacist.displayName;
         }
         private void showMiddleForm(Form showForm)
         {

@@ -26,5 +26,45 @@ namespace DataAccessTier
             }
 
         }
+        public static int CountThuNgan()
+        {
+            try
+            {
+                var dbContext = new ThuNganDBContext();
+                return dbContext.ThuNgan.Count();
+            }
+            catch (Exception ex) { }
+            return 0;
+        }
+
+        public static List<ThuNgan> GetListThuNgan()
+        {
+            try
+            {
+                var dbContext = new ThuNganDBContext();
+                return dbContext.ThuNgan.ToList();
+            }
+            catch (Exception ex) { }
+            return null;
+        }
+
+        public static bool DeleteThuNgan(int TN_ID)
+        {
+            try
+            {
+                var dbContext = new ThuNganDBContext();
+                var account = dbContext.ThuNgan.Find(TN_ID);
+                if (account != null)
+                {
+                    dbContext.ThuNgan.Remove(account);
+                }
+                dbContext.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

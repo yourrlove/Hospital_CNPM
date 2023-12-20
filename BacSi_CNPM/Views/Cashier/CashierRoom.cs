@@ -21,10 +21,11 @@ namespace Hospital.Views.Cashier
         private Guna.UI2.WinForms.Guna2Button currentButton;
         private int borderSize = 2;
 
-        public CashierRoom(int TN_ID)
+        public CashierRoom(int TN_ID, string displayName)
         {
             cashier = CashierBUS.GetInstance();
             cashier.TN_ID = TN_ID;
+            cashier.displayName = displayName;
             InitializeComponent();
             this.Padding = new Padding(borderSize);//Border size
             this.BackColor = Color.FromArgb(98, 102, 244);//Border color

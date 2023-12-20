@@ -12,6 +12,7 @@ namespace BusinessLogicTier
         public int PH_ID;
         public int KH_ID;
         public object sender;
+        public string displayName;
 
         public MedicinesTemporary temp1;
 
@@ -25,6 +26,7 @@ namespace BusinessLogicTier
             BS_ID = 0;
             PH_ID = 2;
             KH_ID = 1;
+            displayName = string.Empty;
             sender = new object();
         }
         

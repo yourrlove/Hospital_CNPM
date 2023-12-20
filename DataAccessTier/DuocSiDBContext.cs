@@ -26,5 +26,47 @@ namespace DataAccessTier
             }
 
         }
+
+
+        public static int CountDuocSi()
+        {
+            try
+            {
+                var dbContext = new DuocSiDBContext();
+                return dbContext.DuocSi.Count();
+            }
+            catch (Exception ex) { }
+            return 0;
+        }
+
+        public static List<DuocSi> GetListDuocSi()
+        {
+            try
+            {
+                var dbContext = new DuocSiDBContext();
+                return dbContext.DuocSi.ToList();
+            }
+            catch (Exception ex) { }
+            return null;
+        }
+
+        public static bool DeleteDuocSi(int DS_ID)
+        {
+            try
+            {
+                var dbContext = new DuocSiDBContext();
+                var account = dbContext.DuocSi.Find(DS_ID);
+                if (account != null)
+                {
+                    dbContext.DuocSi.Remove(account);
+                }
+                dbContext.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

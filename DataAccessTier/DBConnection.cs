@@ -11,7 +11,8 @@ namespace DataAccessTier
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=hospitaldatabase.database.windows.net;Database=hospital;User Id=thanhdat;Password=dangdat@123;Trusted_connection=False;Encrypt=True;",
+            optionsBuilder.UseSqlServer(
+                "Server=LAPTOP-ECTV8EAG\\SQLEXPRESS;Database=hospital_007;Trusted_Connection=True;TrustServerCertificate=True;Min Pool Size=5;Max Pool Size=100;Connection Timeout=30;",
 
             options => options.EnableRetryOnFailure());
         }
@@ -19,3 +20,4 @@ namespace DataAccessTier
 }
 
 //"Server=LAPTOP-ECTV8EAG\\SQLEXPRESS;Database=hospital_007;Trusted_Connection=True;TrustServerCertificate=True;Min Pool Size=5;Max Pool Size=100;Connection Timeout=30;",
+//"Server=hospitaldatabase.database.windows.net;Database=hospital;User Id=thanhdat;Password=dangdat@123;Trusted_connection=False;Encrypt=True;",

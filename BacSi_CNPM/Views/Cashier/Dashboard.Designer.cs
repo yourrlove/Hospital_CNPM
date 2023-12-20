@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             info_panel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            uC_PictureBox1 = new User_Controls.UC_PictureBox();
             btnEditCashier = new Guna.UI2.WinForms.Guna2Button();
             label1 = new System.Windows.Forms.Label();
-            cashierName = new System.Windows.Forms.Label();
+            userName = new System.Windows.Forms.Label();
             label11 = new System.Windows.Forms.Label();
             calendar_panel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label2 = new System.Windows.Forms.Label();
             monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            uC_PictureBox1 = new User_Controls.UC_PictureBox();
             label3 = new System.Windows.Forms.Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             info_panel.SuspendLayout();
-            calendar_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).BeginInit();
+            calendar_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             info_panel.Controls.Add(uC_PictureBox1);
             info_panel.Controls.Add(btnEditCashier);
             info_panel.Controls.Add(label1);
-            info_panel.Controls.Add(cashierName);
+            info_panel.Controls.Add(userName);
             info_panel.Controls.Add(label11);
             info_panel.FillColor = System.Drawing.Color.White;
             info_panel.Location = new System.Drawing.Point(792, 12);
@@ -69,6 +69,22 @@
             info_panel.Size = new System.Drawing.Size(348, 492);
             info_panel.TabIndex = 137;
             // 
+            // uC_PictureBox1
+            // 
+            uC_PictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            uC_PictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
+            uC_PictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
+            uC_PictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            uC_PictureBox1.BorderSize = 2;
+            uC_PictureBox1.GradientAngle = 50F;
+            uC_PictureBox1.Image = (System.Drawing.Image)resources.GetObject("uC_PictureBox1.Image");
+            uC_PictureBox1.Location = new System.Drawing.Point(89, 75);
+            uC_PictureBox1.Name = "uC_PictureBox1";
+            uC_PictureBox1.Size = new System.Drawing.Size(192, 192);
+            uC_PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            uC_PictureBox1.TabIndex = 12;
+            uC_PictureBox1.TabStop = false;
+            // 
             // btnEditCashier
             // 
             btnEditCashier.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
@@ -76,7 +92,7 @@
             btnEditCashier.BorderRadius = 4;
             btnEditCashier.BorderThickness = 1;
             btnEditCashier.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnEditCashier.CustomizableEdges = customizableEdges7;
+            btnEditCashier.CustomizableEdges = customizableEdges5;
             btnEditCashier.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             btnEditCashier.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             btnEditCashier.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
@@ -91,7 +107,7 @@
             btnEditCashier.Location = new System.Drawing.Point(70, 406);
             btnEditCashier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnEditCashier.Name = "btnEditCashier";
-            btnEditCashier.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnEditCashier.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnEditCashier.Size = new System.Drawing.Size(224, 56);
             btnEditCashier.TabIndex = 11;
             btnEditCashier.Text = "Edit Information";
@@ -108,15 +124,15 @@
             label1.TabIndex = 10;
             label1.Text = "Cashier";
             // 
-            // cashierName
+            // userName
             // 
-            cashierName.AutoSize = true;
-            cashierName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            cashierName.Location = new System.Drawing.Point(89, 289);
-            cashierName.Name = "cashierName";
-            cashierName.Size = new System.Drawing.Size(189, 31);
-            cashierName.TabIndex = 9;
-            cashierName.Text = "Mr. Le Huu Bach";
+            userName.AutoSize = true;
+            userName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            userName.Location = new System.Drawing.Point(89, 289);
+            userName.Name = "userName";
+            userName.Size = new System.Drawing.Size(189, 31);
+            userName.TabIndex = 9;
+            userName.Text = "Mr. Le Huu Bach";
             // 
             // label11
             // 
@@ -166,22 +182,6 @@
             monthCalendar1.ShowWeekNumbers = true;
             monthCalendar1.TabIndex = 1;
             // 
-            // uC_PictureBox1
-            // 
-            uC_PictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            uC_PictureBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            uC_PictureBox1.BorderColor2 = System.Drawing.Color.HotPink;
-            uC_PictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            uC_PictureBox1.BorderSize = 2;
-            uC_PictureBox1.GradientAngle = 50F;
-            uC_PictureBox1.Image = (System.Drawing.Image)resources.GetObject("uC_PictureBox1.Image");
-            uC_PictureBox1.Location = new System.Drawing.Point(89, 75);
-            uC_PictureBox1.Name = "uC_PictureBox1";
-            uC_PictureBox1.Size = new System.Drawing.Size(192, 192);
-            uC_PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            uC_PictureBox1.TabIndex = 12;
-            uC_PictureBox1.TabStop = false;
-            // 
             // label3
             // 
             label3.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
@@ -198,12 +198,12 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges9;
+            guna2PictureBox1.CustomizableEdges = customizableEdges7;
             guna2PictureBox1.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new System.Drawing.Point(26, 145);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2PictureBox1.Size = new System.Drawing.Size(724, 676);
             guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 140;
@@ -225,9 +225,9 @@
             Load += Dashboard_Load;
             info_panel.ResumeLayout(false);
             info_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).EndInit();
             calendar_panel.ResumeLayout(false);
             calendar_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)uC_PictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -239,7 +239,7 @@
         private Guna.UI2.WinForms.Guna2Button btnEditCashier;
         private User_Controls.UC_PictureBox uC_PictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label cashierName;
+        private System.Windows.Forms.Label userName;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2ShadowPanel calendar_panel;
         private System.Windows.Forms.Label label2;

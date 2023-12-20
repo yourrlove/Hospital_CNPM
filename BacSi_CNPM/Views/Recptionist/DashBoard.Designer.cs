@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             label6 = new System.Windows.Forms.Label();
             tabControl1 = new System.Windows.Forms.TabControl();
@@ -40,7 +40,7 @@
             tabPage2_DoctorMajor4 = new System.Windows.Forms.TabPage();
             info_panel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label5 = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
+            userName = new System.Windows.Forms.Label();
             uC_PictureBox1 = new User_Controls.UC_PictureBox();
             calendar_panel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label2 = new System.Windows.Forms.Label();
@@ -135,7 +135,7 @@
             info_panel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             info_panel.BackColor = System.Drawing.Color.Transparent;
             info_panel.Controls.Add(label5);
-            info_panel.Controls.Add(label1);
+            info_panel.Controls.Add(userName);
             info_panel.Controls.Add(uC_PictureBox1);
             info_panel.Controls.Add(label6);
             info_panel.FillColor = System.Drawing.Color.White;
@@ -158,15 +158,15 @@
             label5.TabIndex = 10;
             label5.Text = "Receptionist";
             // 
-            // label1
+            // userName
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            label1.Location = new System.Drawing.Point(53, 263);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(259, 31);
-            label1.TabIndex = 9;
-            label1.Text = "Ms. Ho Ngoc Tuong Vy";
+            userName.AutoSize = true;
+            userName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            userName.Location = new System.Drawing.Point(53, 263);
+            userName.Name = "userName";
+            userName.Size = new System.Drawing.Size(259, 31);
+            userName.TabIndex = 9;
+            userName.Text = "Ms. Ho Ngoc Tuong Vy";
             // 
             // uC_PictureBox1
             // 
@@ -217,10 +217,10 @@
             guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             guna2Panel1.BackColor = System.Drawing.Color.RoyalBlue;
             guna2Panel1.Controls.Add(label4);
-            guna2Panel1.CustomizableEdges = customizableEdges1;
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Location = new System.Drawing.Point(12, 14);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new System.Drawing.Size(754, 80);
             guna2Panel1.TabIndex = 126;
             // 
@@ -272,7 +272,7 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel info_panel;
         private Guna.UI2.WinForms.Guna2ShadowPanel calendar_panel;
         private User_Controls.UC_PictureBox uC_PictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label userName;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label5;

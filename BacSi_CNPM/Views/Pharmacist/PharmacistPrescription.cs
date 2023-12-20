@@ -111,9 +111,6 @@ namespace Hospital.Views.Pharmacist
         /// <param name="e"></param>
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show($"{Convert.ToString(curr.BN_ID)}");
-            MessageBox.Show($"{Convert.ToString(curr.HD_ID)}");
             DonePrescriptionDBContext.addPrescription(curr.BN_ID, curr.HD_ID);
             HoaDonDuocSiDBContext.deleteRecord1(curr.BN_ID, curr.HD_ID);
             LoadHoaDon();
@@ -166,6 +163,11 @@ namespace Hospital.Views.Pharmacist
             {
 
             }
+        }
+
+        private void listHTchoBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

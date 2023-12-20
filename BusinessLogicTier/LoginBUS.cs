@@ -58,5 +58,11 @@ namespace BusinessLogicTier
             return 0;
 
         }
+
+        public string? GetDisplayName(string UserID)
+        {
+            
+            return AccountDBContext.GetDisplayName(UserID);
+        }
     }
 }

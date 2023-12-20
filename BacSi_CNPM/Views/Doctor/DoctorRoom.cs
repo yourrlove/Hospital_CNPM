@@ -26,13 +26,14 @@ namespace Hospital.Views.Doctor
         private Color defaultButtonColor = Color.FromArgb(24, 25, 53);
         private Guna.UI2.WinForms.Guna2Button currentButton;
         private int borderSize = 2;
-        public DoctorForm(int BS_ID)
+        public DoctorForm(int BS_ID, string displayName)
         {
             InitializeComponent();
             room = DoctorRoomBUS.GetInstance();
             this.Padding = new Padding(borderSize);//Border size
             this.BackColor = Color.FromArgb(98, 102, 244);//Border color
             room.BS_ID = BS_ID;
+            room.displayName = displayName;
             CollapseMenu();
         }
 

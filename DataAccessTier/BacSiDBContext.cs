@@ -58,5 +58,46 @@ namespace DataAccessTier
             }
             
         }
+
+        public static int CountDoctors()
+        {
+            try
+            {
+                var dbContext = new BacSiDBContext();
+                return dbContext.BacSi.Count();
+            }
+            catch (Exception ex) { }
+            return 0;
+        }
+
+        public static List<BacSi> GetListBacSi()
+        {
+            try
+            {
+                var dbContext = new BacSiDBContext();
+                return dbContext.BacSi.ToList();
+            }
+            catch (Exception ex) { }
+            return null;
+        }
+
+        public static bool DeleteBacSi(int BS_ID)
+        {
+            try
+            {
+                var dbContext = new BacSiDBContext();
+                var account = dbContext.BacSi.Find(BS_ID);
+                if (account != null)
+                {
+                    dbContext.BacSi.Remove(account);
+                }
+                dbContext.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

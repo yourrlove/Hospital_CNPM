@@ -43,16 +43,24 @@
             Prescription_Checking = new Guna.UI2.WinForms.Guna2Panel();
             btn_reciept = new Guna.UI2.WinForms.Guna2Button();
             dtgv_Updated = new Guna.UI2.WinForms.Guna2DataGridView();
-            hDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            tHIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             chiTietHoaDonBindingSource = new System.Windows.Forms.BindingSource(components);
             dtgv_notRecieved = new Guna.UI2.WinForms.Guna2DataGridView();
+            listHTchoBindingSource = new System.Windows.Forms.BindingSource(components);
+            listHTchoBindingSource1 = new System.Windows.Forms.BindingSource(components);
+            hoaDonTonKhoBindingSource = new System.Windows.Forms.BindingSource(components);
+            tonKhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            thnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            soluongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            dongiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            PaitentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Prescription_Checking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgv_Updated).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chiTietHoaDonBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_notRecieved).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)listHTchoBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)listHTchoBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hoaDonTonKhoBindingSource).BeginInit();
             SuspendLayout();
             // 
             // Prescription_Checking
@@ -115,8 +123,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dtgv_Updated.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgv_Updated.ColumnHeadersHeight = 50;
-            dtgv_Updated.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { hDIDDataGridViewTextBoxColumn, tHIDDataGridViewTextBoxColumn, soLuongDataGridViewTextBoxColumn, donGiaDataGridViewTextBoxColumn });
-            dtgv_Updated.DataSource = chiTietHoaDonBindingSource;
+            dtgv_Updated.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { tonKhoDataGridViewTextBoxColumn, thnameDataGridViewTextBoxColumn, soluongDataGridViewTextBoxColumn, dongiaDataGridViewTextBoxColumn });
+            dtgv_Updated.DataSource = hoaDonTonKhoBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -160,40 +168,6 @@
             dtgv_Updated.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(231, 229, 255);
             dtgv_Updated.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             // 
-            // hDIDDataGridViewTextBoxColumn
-            // 
-            hDIDDataGridViewTextBoxColumn.DataPropertyName = "HD_ID";
-            hDIDDataGridViewTextBoxColumn.HeaderText = "HD_ID";
-            hDIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            hDIDDataGridViewTextBoxColumn.Name = "hDIDDataGridViewTextBoxColumn";
-            hDIDDataGridViewTextBoxColumn.ReadOnly = true;
-            hDIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // tHIDDataGridViewTextBoxColumn
-            // 
-            tHIDDataGridViewTextBoxColumn.DataPropertyName = "TH_ID";
-            tHIDDataGridViewTextBoxColumn.HeaderText = "TH_ID";
-            tHIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            tHIDDataGridViewTextBoxColumn.Name = "tHIDDataGridViewTextBoxColumn";
-            tHIDDataGridViewTextBoxColumn.ReadOnly = true;
-            tHIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // soLuongDataGridViewTextBoxColumn
-            // 
-            soLuongDataGridViewTextBoxColumn.DataPropertyName = "SoLuong";
-            soLuongDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            soLuongDataGridViewTextBoxColumn.MinimumWidth = 6;
-            soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
-            soLuongDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // donGiaDataGridViewTextBoxColumn
-            // 
-            donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
-            donGiaDataGridViewTextBoxColumn.HeaderText = "Price";
-            donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
-            donGiaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // chiTietHoaDonBindingSource
             // 
             chiTietHoaDonBindingSource.DataSource = typeof(DTO.ChiTietHoaDon);
@@ -207,6 +181,7 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dtgv_notRecieved.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dtgv_notRecieved.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dtgv_notRecieved.AutoGenerateColumns = false;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
@@ -216,6 +191,8 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dtgv_notRecieved.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dtgv_notRecieved.ColumnHeadersHeight = 50;
+            dtgv_notRecieved.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { PhoneNumber, PaitentName });
+            dtgv_notRecieved.DataSource = listHTchoBindingSource1;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -260,6 +237,68 @@
             dtgv_notRecieved.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_notRecieved.CellClick += dtgv_notRecieved_CellClick;
             // 
+            // listHTchoBindingSource
+            // 
+            listHTchoBindingSource.DataSource = typeof(DTO.listHTcho);
+            // 
+            // listHTchoBindingSource1
+            // 
+            listHTchoBindingSource1.DataSource = typeof(DTO.listHTcho);
+            // 
+            // hoaDonTonKhoBindingSource
+            // 
+            hoaDonTonKhoBindingSource.DataSource = typeof(DTO.HoaDonTonKho);
+            // 
+            // tonKhoDataGridViewTextBoxColumn
+            // 
+            tonKhoDataGridViewTextBoxColumn.DataPropertyName = "TonKho";
+            tonKhoDataGridViewTextBoxColumn.HeaderText = "Invetory";
+            tonKhoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            tonKhoDataGridViewTextBoxColumn.Name = "tonKhoDataGridViewTextBoxColumn";
+            tonKhoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // thnameDataGridViewTextBoxColumn
+            // 
+            thnameDataGridViewTextBoxColumn.DataPropertyName = "th_name";
+            thnameDataGridViewTextBoxColumn.HeaderText = "Medicine";
+            thnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            thnameDataGridViewTextBoxColumn.Name = "thnameDataGridViewTextBoxColumn";
+            thnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // soluongDataGridViewTextBoxColumn
+            // 
+            soluongDataGridViewTextBoxColumn.DataPropertyName = "soluong";
+            soluongDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            soluongDataGridViewTextBoxColumn.MinimumWidth = 6;
+            soluongDataGridViewTextBoxColumn.Name = "soluongDataGridViewTextBoxColumn";
+            soluongDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dongiaDataGridViewTextBoxColumn
+            // 
+            dongiaDataGridViewTextBoxColumn.DataPropertyName = "dongia";
+            dongiaDataGridViewTextBoxColumn.HeaderText = "Price";
+            dongiaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            dongiaDataGridViewTextBoxColumn.Name = "dongiaDataGridViewTextBoxColumn";
+            dongiaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // PhoneNumber
+            // 
+            PhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            PhoneNumber.DataPropertyName = "sodienthoai";
+            PhoneNumber.HeaderText = "PhoneNumber";
+            PhoneNumber.MinimumWidth = 6;
+            PhoneNumber.Name = "PhoneNumber";
+            PhoneNumber.ReadOnly = true;
+            // 
+            // PaitentName
+            // 
+            PaitentName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            PaitentName.DataPropertyName = "tenbenhnhan";
+            PaitentName.HeaderText = "PatientName";
+            PaitentName.MinimumWidth = 6;
+            PaitentName.Name = "PaitentName";
+            PaitentName.ReadOnly = true;
+            // 
             // PrescriptionChecking
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -273,6 +312,9 @@
             ((System.ComponentModel.ISupportInitialize)dtgv_Updated).EndInit();
             ((System.ComponentModel.ISupportInitialize)chiTietHoaDonBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgv_notRecieved).EndInit();
+            ((System.ComponentModel.ISupportInitialize)listHTchoBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)listHTchoBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hoaDonTonKhoBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -282,9 +324,14 @@
         private Guna.UI2.WinForms.Guna2DataGridView dtgv_Updated;
         private System.Windows.Forms.BindingSource chiTietHoaDonBindingSource;
         private Guna.UI2.WinForms.Guna2Button btn_reciept;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hDIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tHIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource listHTchoBindingSource;
+        private System.Windows.Forms.BindingSource listHTchoBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tonKhoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dongiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource hoaDonTonKhoBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaitentName;
     }
 }

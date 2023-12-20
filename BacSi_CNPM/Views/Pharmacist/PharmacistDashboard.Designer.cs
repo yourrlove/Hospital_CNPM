@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PharmacistDashboard));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             info_panel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             btnEditPharmacist = new Guna.UI2.WinForms.Guna2Button();
             uC_PictureBox1 = new User_Controls.UC_PictureBox();
             label1 = new System.Windows.Forms.Label();
-            pharmacistName = new System.Windows.Forms.Label();
+            userName = new System.Windows.Forms.Label();
             label11 = new System.Windows.Forms.Label();
             calendar_panel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label2 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             info_panel.Controls.Add(btnEditPharmacist);
             info_panel.Controls.Add(uC_PictureBox1);
             info_panel.Controls.Add(label1);
-            info_panel.Controls.Add(pharmacistName);
+            info_panel.Controls.Add(userName);
             info_panel.Controls.Add(label11);
             info_panel.FillColor = System.Drawing.Color.White;
             info_panel.Location = new System.Drawing.Point(792, 17);
@@ -87,7 +87,7 @@
             btnEditPharmacist.BorderRadius = 4;
             btnEditPharmacist.BorderThickness = 1;
             btnEditPharmacist.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnEditPharmacist.CustomizableEdges = customizableEdges1;
+            btnEditPharmacist.CustomizableEdges = customizableEdges7;
             btnEditPharmacist.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             btnEditPharmacist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             btnEditPharmacist.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
@@ -102,7 +102,7 @@
             btnEditPharmacist.Location = new System.Drawing.Point(70, 402);
             btnEditPharmacist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             btnEditPharmacist.Name = "btnEditPharmacist";
-            btnEditPharmacist.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnEditPharmacist.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnEditPharmacist.Size = new System.Drawing.Size(224, 56);
             btnEditPharmacist.TabIndex = 11;
             btnEditPharmacist.Text = "Edit Information";
@@ -136,15 +136,15 @@
             label1.TabIndex = 10;
             label1.Text = "Pharmacist";
             // 
-            // pharmacistName
+            // userName
             // 
-            pharmacistName.AutoSize = true;
-            pharmacistName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            pharmacistName.Location = new System.Drawing.Point(70, 289);
-            pharmacistName.Name = "pharmacistName";
-            pharmacistName.Size = new System.Drawing.Size(225, 31);
-            pharmacistName.TabIndex = 9;
-            pharmacistName.Text = "Ms. Vo Thi Thu Tien";
+            userName.AutoSize = true;
+            userName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            userName.Location = new System.Drawing.Point(70, 289);
+            userName.Name = "userName";
+            userName.Size = new System.Drawing.Size(225, 31);
+            userName.TabIndex = 9;
+            userName.Text = "Ms. Vo Thi Thu Tien";
             // 
             // label11
             // 
@@ -212,12 +212,12 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges3;
+            guna2PictureBox1.CustomizableEdges = customizableEdges9;
             guna2PictureBox1.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new System.Drawing.Point(116, 37);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2PictureBox1.Size = new System.Drawing.Size(113, 99);
             guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 12;
@@ -262,12 +262,12 @@
             // 
             // guna2PictureBox2
             // 
-            guna2PictureBox2.CustomizableEdges = customizableEdges5;
+            guna2PictureBox2.CustomizableEdges = customizableEdges11;
             guna2PictureBox2.Image = (System.Drawing.Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
             guna2PictureBox2.Location = new System.Drawing.Point(127, 37);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2PictureBox2.Size = new System.Drawing.Size(113, 99);
             guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             guna2PictureBox2.TabIndex = 12;
@@ -326,7 +326,7 @@
         private Guna.UI2.WinForms.Guna2Button btnEditPharmacist;
         private User_Controls.UC_PictureBox uC_PictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label pharmacistName;
+        private System.Windows.Forms.Label userName;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2ShadowPanel calendar_panel;
         private System.Windows.Forms.Label label2;

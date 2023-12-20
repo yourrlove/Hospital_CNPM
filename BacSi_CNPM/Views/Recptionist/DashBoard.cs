@@ -29,6 +29,8 @@ namespace Hospital.Views.Receptionist
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
+            userName.Text = reception.displayName;
+
             Dictionary<int, string> khoaInfor = new Dictionary<int, string>();
             khoaInfor = KhoaDBContext.GetKhoa();
             int K_idx = 0;
