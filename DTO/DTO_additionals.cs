@@ -337,6 +337,135 @@ namespace DTO
         public string TenDonThuoc { get; set; }
         public List<ThuocDOC>? Lists {  get; set; }
     }
+
+    //* Cashier *//
+    public class Current
+    {
+        public int patient { get; set; }
+        public int DT_ID { get; set; }
+        public int TH_ID { get; set; }
+    }
+
+    public class HoaDonBenhNhan
+    {
+        [Required, Key]
+        public int hd_id { get; set; }
+        public string tenhoadon { get; set; }
+        public DateTime ngayxuat { get; set; }
+        public double tongtien { get; set; }
+        [Required, StringLength(50)]
+        public string thanhtoan { get; set; }
+    }
+
+
+    public class ThuocHoaDon
+    {
+        [Required, Key]
+        public int th_id { get; set; }
+        [StringLength(50)]
+        public string tenthuoc { get; set; }
+        public int soluong { get; set; }
+        public double giaban { get; set; }
+        public double dongia { get; set; }
+    }
+
+    /// <summary>
+    /// class to load the Prescription as a bill
+    /// </summary>
+    public class donthuocLoaded
+    {
+        public int DT_ID { get; set; }
+        public int TH_ID { get; set; }
+        public string TenThuoc { set; get; }
+        public string LieuDung { set; get; }
+        public int SoLuong { set; get; }
+        public double DonGia { set; get; }
+    }
+    /// <summary>
+    /// Load medicines information the the number of these medicine in storage
+    /// </summary>
+    public class donthuocHT
+    {
+        public int DT_ID { set; get; }
+        public int TH_ID { set; get; }
+        public string TenThuoc { set; get; }
+        public string LieuDung { get; set; }
+        public int SoLuong { get; set; }
+        public int TonKho { get; set; }
+
+    }
+
+    public class DonKhamBenh
+    {
+        public int BN_ID { set; get; }
+        public string tenKhoa { set; get; }
+        public string tenPhong { set; get; }
+        public double giakham { set; get; }
+        public int PH_ID { set; get; }
+    }
+    public class Current1
+    {
+        public int BN_ID { get; set; }
+        public int HD_ID { get; set; }
+        public int TH_ID { get; set; }
+    }
+    /// <summary>
+    /// class to display the Bill
+    /// </summary>
+    /// 
+    public class hoadonHT
+    {
+        public int hd_id { get; set; }
+        public int th_id { get; set; }
+        public string th_name { get; set; }
+        public int soluong { get; set; }
+        public double dongia { get; set; }
+    }
+
+
+    public class HoaDonTonKho : hoadonHT, INotifyPropertyChanged
+    {
+        private int tonkho;
+        public int TonKho
+        {
+            get
+            {
+                return this.tonkho;
+            }
+            set
+            {
+                if (value != this.tonkho)
+                {
+                    this.tonkho = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+
+
+    /// <summary>
+    /// class to display the list of prescription for pharmacist 
+    /// </summary>
+
+    public class listHTcho
+    {
+        [Key]
+        public int HD_ID { get; set; }
+        public int BN_ID { get; set; }
+        public string sodienthoai { get; set; }
+        public string tenbenhnhan { get; set; }
+    }
+    ///
+
 }
 
 

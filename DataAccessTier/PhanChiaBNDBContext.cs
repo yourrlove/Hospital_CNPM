@@ -27,9 +27,9 @@ namespace DataAccessTier
                 return dbContext.PhanChiaBenhNhan.Where(p => p.PH_ID == PH_ID).Select(p => p.BN_ID).ToList();
             } catch(Exception ex)
             {
-              
+                return new List<int>();
             }
-            return null;
+            
         }
 
 
@@ -57,8 +57,11 @@ namespace DataAccessTier
                 var dbContext = new PhanChiaBNDBContext();
                 return dbContext.PhanChiaBenhNhan.Where(p => p.PH_ID == PH_ID).Count();
             }
-            catch (Exception ex) { }
-            return -1;
+            catch (Exception ex) 
+            {
+                return -1;
+            }
+            
         }
 
         public static List<int> GetListBNID(int PH_ID)
@@ -69,7 +72,7 @@ namespace DataAccessTier
                 return dbContext.PhanChiaBenhNhan.Where(p => p.PH_ID == PH_ID).Select(p => p.BN_ID).ToList();
             } catch (Exception ex)
             {
-                return null;
+                return new List<int>();
             }
         }
 

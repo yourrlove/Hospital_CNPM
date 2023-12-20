@@ -51,7 +51,7 @@
             // PatientName
             // 
             PatientName.AutoSize = true;
-            PatientName.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            PatientName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             PatientName.Location = new System.Drawing.Point(23, 93);
             PatientName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             PatientName.Name = "PatientName";
@@ -62,66 +62,66 @@
             // Height
             // 
             Height.AutoSize = true;
-            Height.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            Height.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             Height.Location = new System.Drawing.Point(23, 248);
             Height.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             Height.Name = "Height";
-            Height.Size = new System.Drawing.Size(70, 23);
+            Height.Size = new System.Drawing.Size(71, 23);
             Height.TabIndex = 13;
             Height.Text = "Height :";
             // 
             // Weight
             // 
             Weight.AutoSize = true;
-            Weight.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            Weight.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             Weight.Location = new System.Drawing.Point(355, 248);
             Weight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             Weight.Name = "Weight";
-            Weight.Size = new System.Drawing.Size(73, 23);
+            Weight.Size = new System.Drawing.Size(74, 23);
             Weight.TabIndex = 15;
             Weight.Text = "Weight :";
             // 
             // DoB
             // 
             DoB.AutoSize = true;
-            DoB.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            DoB.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             DoB.Location = new System.Drawing.Point(23, 191);
             DoB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             DoB.Name = "DoB";
-            DoB.Size = new System.Drawing.Size(116, 23);
+            DoB.Size = new System.Drawing.Size(117, 23);
             DoB.TabIndex = 17;
             DoB.Text = "Date of Birth :";
             // 
             // Sex
             // 
             Sex.AutoSize = true;
-            Sex.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            Sex.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             Sex.Location = new System.Drawing.Point(22, 141);
             Sex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             Sex.Name = "Sex";
-            Sex.Size = new System.Drawing.Size(45, 23);
+            Sex.Size = new System.Drawing.Size(46, 23);
             Sex.TabIndex = 19;
             Sex.Text = "Sex :";
             // 
             // BloodType
             // 
             BloodType.AutoSize = true;
-            BloodType.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            BloodType.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             BloodType.Location = new System.Drawing.Point(23, 299);
             BloodType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             BloodType.Name = "BloodType";
-            BloodType.Size = new System.Drawing.Size(103, 23);
+            BloodType.Size = new System.Drawing.Size(104, 23);
             BloodType.TabIndex = 21;
             BloodType.Text = "Blood Type :";
             // 
             // Symtomp
             // 
             Symtomp.AutoSize = true;
-            Symtomp.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            Symtomp.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             Symtomp.Location = new System.Drawing.Point(22, 415);
             Symtomp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             Symtomp.Name = "Symtomp";
-            Symtomp.Size = new System.Drawing.Size(92, 23);
+            Symtomp.Size = new System.Drawing.Size(93, 23);
             Symtomp.TabIndex = 28;
             Symtomp.Text = "Symtomp :";
             // 
@@ -138,7 +138,7 @@
             uC_Button_Resolve.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Resolve.FontSize = 9;
             uC_Button_Resolve.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            uC_Button_Resolve.Location = new System.Drawing.Point(827, 609);
+            uC_Button_Resolve.Location = new System.Drawing.Point(827, 661);
             uC_Button_Resolve.Margin = new System.Windows.Forms.Padding(4);
             uC_Button_Resolve.Name = "uC_Button_Resolve";
             uC_Button_Resolve.Size = new System.Drawing.Size(169, 58);
@@ -168,7 +168,7 @@
             panel_registerForm.Controls.Add(Height);
             panel_registerForm.Controls.Add(Weight);
             panel_registerForm.FillColor = System.Drawing.Color.White;
-            panel_registerForm.Location = new System.Drawing.Point(146, 13);
+            panel_registerForm.Location = new System.Drawing.Point(146, 65);
             panel_registerForm.Margin = new System.Windows.Forms.Padding(4);
             panel_registerForm.Name = "panel_registerForm";
             panel_registerForm.Radius = 10;
@@ -180,11 +180,11 @@
             // RecordName
             // 
             RecordName.AutoSize = true;
-            RecordName.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            RecordName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             RecordName.Location = new System.Drawing.Point(22, 357);
             RecordName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             RecordName.Name = "RecordName";
-            RecordName.Size = new System.Drawing.Size(123, 23);
+            RecordName.Size = new System.Drawing.Size(124, 23);
             RecordName.TabIndex = 55;
             RecordName.Text = "Record Name :";
             // 
@@ -215,7 +215,7 @@
             // CheckIn
             // 
             CheckIn.AutoSize = true;
-            CheckIn.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            CheckIn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             CheckIn.Location = new System.Drawing.Point(22, 474);
             CheckIn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             CheckIn.Name = "CheckIn";
@@ -227,6 +227,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(242, 245, 250);
             ClientSize = new System.Drawing.Size(1113, 829);
             Controls.Add(panel_registerForm);
             Controls.Add(uC_Button_Resolve);

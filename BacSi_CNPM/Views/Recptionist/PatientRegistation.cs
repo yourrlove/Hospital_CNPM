@@ -142,7 +142,8 @@ namespace Hospital.Views.Receptionist
                     this.Ngay.Value,
                     reception.PH_ID,
                     reception.KH_ID,
-                    reception.BN_ID
+                    reception.BN_ID,
+                    reception.TT_ID
                     )  && reception.BN_ID <= 0) 
                 {
                     Notification.ErrorNotification("Patient Information Existed!");

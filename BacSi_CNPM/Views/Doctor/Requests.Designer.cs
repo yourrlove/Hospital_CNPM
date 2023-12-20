@@ -33,7 +33,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2Panel_PatientDetails = new Guna.UI2.WinForms.Guna2Panel();
             benhNhanBindingSource = new System.Windows.Forms.BindingSource(components);
             uC_Button2 = new User_Controls.UC_Button();
             uC_Button3 = new User_Controls.UC_Button();
@@ -42,18 +41,10 @@
             requestCount = new System.Windows.Forms.Label();
             uC_Button_Next = new User_Controls.UC_Button();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            guna2Panel_PatientDetails = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)benhNhanBindingSource).BeginInit();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // guna2Panel_PatientDetails
-            // 
-            guna2Panel_PatientDetails.CustomizableEdges = customizableEdges1;
-            guna2Panel_PatientDetails.Location = new System.Drawing.Point(0, 102);
-            guna2Panel_PatientDetails.Name = "guna2Panel_PatientDetails";
-            guna2Panel_PatientDetails.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel_PatientDetails.Size = new System.Drawing.Size(1152, 998);
-            guna2Panel_PatientDetails.TabIndex = 7;
             // 
             // benhNhanBindingSource
             // 
@@ -102,10 +93,10 @@
             // numOfRequests
             // 
             numOfRequests.AutoSize = true;
-            numOfRequests.Font = new System.Drawing.Font("Segoe UI", 12F);
-            numOfRequests.Location = new System.Drawing.Point(104, 48);
+            numOfRequests.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic);
+            numOfRequests.Location = new System.Drawing.Point(110, 48);
             numOfRequests.Name = "numOfRequests";
-            numOfRequests.Size = new System.Drawing.Size(89, 28);
+            numOfRequests.Size = new System.Drawing.Size(90, 28);
             numOfRequests.TabIndex = 1;
             numOfRequests.Text = "Requests";
             numOfRequests.Click += label1_patientnum_Click;
@@ -113,29 +104,31 @@
             // requestCount
             // 
             requestCount.AutoSize = true;
-            requestCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
-            requestCount.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            requestCount.Location = new System.Drawing.Point(52, 22);
+            requestCount.Font = new System.Drawing.Font("Segoe UI", 31.8000011F, System.Drawing.FontStyle.Bold);
+            requestCount.ForeColor = System.Drawing.Color.RoyalBlue;
+            requestCount.Location = new System.Drawing.Point(12, 26);
             requestCount.Name = "requestCount";
-            requestCount.Size = new System.Drawing.Size(62, 42);
+            requestCount.Size = new System.Drawing.Size(92, 72);
             requestCount.TabIndex = 0;
             requestCount.Text = "20";
             // 
             // uC_Button_Next
             // 
+            uC_Button_Next.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             uC_Button_Next.BackColor = System.Drawing.Color.Blue;
             uC_Button_Next.BackgroundColor = System.Drawing.Color.Blue;
             uC_Button_Next.BorderColor = System.Drawing.Color.Blue;
             uC_Button_Next.BorderRadius = 0;
             uC_Button_Next.BorderSize = 0;
+            uC_Button_Next.Cursor = System.Windows.Forms.Cursors.Hand;
             uC_Button_Next.FlatAppearance.BorderSize = 0;
             uC_Button_Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             uC_Button_Next.Font = new System.Drawing.Font("Segoe UI", 9F);
             uC_Button_Next.FontSize = 9;
             uC_Button_Next.ForeColor = System.Drawing.Color.White;
-            uC_Button_Next.Location = new System.Drawing.Point(986, 26);
+            uC_Button_Next.Location = new System.Drawing.Point(966, 26);
             uC_Button_Next.Name = "uC_Button_Next";
-            uC_Button_Next.Size = new System.Drawing.Size(132, 50);
+            uC_Button_Next.Size = new System.Drawing.Size(152, 50);
             uC_Button_Next.TabIndex = 4;
             uC_Button_Next.Text = "Next Patient";
             uC_Button_Next.TextColor = System.Drawing.Color.White;
@@ -147,24 +140,35 @@
             guna2Panel1.Controls.Add(numOfRequests);
             guna2Panel1.Controls.Add(uC_Button_Next);
             guna2Panel1.Controls.Add(requestCount);
-            guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            guna2Panel1.CustomizableEdges = customizableEdges3;
+            guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
+            guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             guna2Panel1.Location = new System.Drawing.Point(0, 0);
             guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new System.Drawing.Size(1152, 100);
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.Size = new System.Drawing.Size(1152, 109);
             guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Panel_PatientDetails
+            // 
+            guna2Panel_PatientDetails.CustomizableEdges = customizableEdges3;
+            guna2Panel_PatientDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            guna2Panel_PatientDetails.Location = new System.Drawing.Point(0, 109);
+            guna2Panel_PatientDetails.Name = "guna2Panel_PatientDetails";
+            guna2Panel_PatientDetails.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel_PatientDetails.Size = new System.Drawing.Size(1152, 810);
+            guna2Panel_PatientDetails.TabIndex = 1;
             // 
             // Requests
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(242, 245, 250);
-            ClientSize = new System.Drawing.Size(1152, 1102);
-            Controls.Add(guna2Panel1);
+            ClientSize = new System.Drawing.Size(1152, 919);
             Controls.Add(guna2Panel_PatientDetails);
+            Controls.Add(guna2Panel1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "Requests";
@@ -181,11 +185,11 @@
         private User_Controls.UC_Button uC_Button2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.BindingSource benhNhanBindingSource;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel_PatientDetails;
         private User_Controls.UC_Button uC_Button7;
         private System.Windows.Forms.Label numOfRequests;
         private System.Windows.Forms.Label requestCount;
         private User_Controls.UC_Button uC_Button_Next;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel_PatientDetails;
     }
 }

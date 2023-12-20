@@ -20,8 +20,11 @@ namespace DataAccessTier
                 var dbContext = new PhanCongBSDBContext();
                 return dbContext.PhanCongBS.ToDictionary(p => p.PH_ID, p => p.BS_ID);
             }
-            catch (Exception ex) { }
-            return null;
+            catch (Exception ex) 
+            {
+                return new Dictionary<int, int>();
+            }
+            
         }
 
         public static int? GetPCBS_ID(int PH_ID)
@@ -31,8 +34,11 @@ namespace DataAccessTier
                 var dbContext = new PhanCongBSDBContext();
                 return dbContext.PhanCongBS.SingleOrDefault(p => p.PH_ID == PH_ID).BS_ID;
             }
-            catch (Exception ex) { }
-            return null;
+            catch (Exception ex) 
+            {
+                return 0;
+            }
+            
         }
     }
 }

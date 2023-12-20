@@ -17,8 +17,6 @@ namespace DTO
         [StringLength(50)]
         public string TenPhong { set; get; }
         public int SucChua { set; get; }
-
-        [StringLength(50)]
         public int KH_ID { get; set; }
     }
 }

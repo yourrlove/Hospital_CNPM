@@ -2,6 +2,7 @@
 using Guna.UI2.WinForms;
 using Hospital.User_Controls;
 using Hospital.Views.Doctor;
+using Hospital.Views.Login;
 using Hospital.Views.Recptionist;
 using System;
 using System.Collections.Generic;
@@ -147,7 +148,15 @@ namespace Hospital.Views.Receptionist
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Do you want to exit application?",
+                         "Confirmation",
+                         MessageBoxButtons.YesNo);
 
+            if (result == DialogResult.Yes)
+            {
+                Application.Restart();
+
+            }
         }
 
 

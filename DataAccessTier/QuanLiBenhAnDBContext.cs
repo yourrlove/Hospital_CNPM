@@ -35,7 +35,7 @@ namespace DataAccessTier
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return null;
+                return new List<int>();
             }
         }
     }

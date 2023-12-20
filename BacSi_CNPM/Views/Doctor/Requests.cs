@@ -101,7 +101,7 @@ namespace Hospital.Views.Doctor
             else
             {
                 fm.Activate(); // Bring the existing form to the front
-            } 
+            }
         }
 
         private void uC_Button_Next_Click(object sender, EventArgs e)
@@ -147,6 +147,11 @@ namespace Hospital.Views.Doctor
             newForm.Dock = DockStyle.Fill;
             newForm.Show();
             this.Dispose();
+        }
+
+        private void guna2Panel_PatientDetails_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

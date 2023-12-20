@@ -33,15 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medical));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvRecords = new Guna.UI2.WinForms.Guna2DataGridView();
             bAIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bNIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,9 +50,6 @@
             patientRecordBindingSource = new System.Windows.Forms.BindingSource(components);
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2TextBox_Search = new Guna.UI2.WinForms.Guna2TextBox();
-            cbAccept = new Guna.UI2.WinForms.Guna2ComboBox();
-            sortRequest = new System.Windows.Forms.Label();
-            btnPrint = new Guna.UI2.WinForms.Guna2Button();
             numOfRecords = new System.Windows.Forms.Label();
             recordCount = new System.Windows.Forms.Label();
             patientRecordBindingSource1 = new System.Windows.Forms.BindingSource(components);
@@ -118,7 +111,7 @@
             dgvRecords.RowTemplate.DividerHeight = 5;
             dgvRecords.RowTemplate.Height = 50;
             dgvRecords.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            dgvRecords.Size = new System.Drawing.Size(1128, 779);
+            dgvRecords.Size = new System.Drawing.Size(1128, 736);
             dgvRecords.TabIndex = 3;
             dgvRecords.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             dgvRecords.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -170,7 +163,7 @@
             // 
             patientNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             patientNameDataGridViewTextBoxColumn.DataPropertyName = "PatientName";
-            patientNameDataGridViewTextBoxColumn.HeaderText = "Ho Ten";
+            patientNameDataGridViewTextBoxColumn.HeaderText = "Full Name";
             patientNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             patientNameDataGridViewTextBoxColumn.Name = "patientNameDataGridViewTextBoxColumn";
             patientNameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -180,7 +173,7 @@
             // 
             patientSexDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             patientSexDataGridViewTextBoxColumn.DataPropertyName = "PatientSex";
-            patientSexDataGridViewTextBoxColumn.HeaderText = "Gioi Tinh";
+            patientSexDataGridViewTextBoxColumn.HeaderText = "Sex";
             patientSexDataGridViewTextBoxColumn.MinimumWidth = 6;
             patientSexDataGridViewTextBoxColumn.Name = "patientSexDataGridViewTextBoxColumn";
             patientSexDataGridViewTextBoxColumn.ReadOnly = true;
@@ -190,7 +183,7 @@
             // 
             patientDoBDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             patientDoBDataGridViewTextBoxColumn.DataPropertyName = "PatientDoB";
-            patientDoBDataGridViewTextBoxColumn.HeaderText = "Ngay Sinh";
+            patientDoBDataGridViewTextBoxColumn.HeaderText = "Date of birth";
             patientDoBDataGridViewTextBoxColumn.MinimumWidth = 6;
             patientDoBDataGridViewTextBoxColumn.Name = "patientDoBDataGridViewTextBoxColumn";
             patientDoBDataGridViewTextBoxColumn.ReadOnly = true;
@@ -200,7 +193,7 @@
             // 
             recordNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             recordNameDataGridViewTextBoxColumn.DataPropertyName = "RecordName";
-            recordNameDataGridViewTextBoxColumn.HeaderText = "Ten Benh An";
+            recordNameDataGridViewTextBoxColumn.HeaderText = "Record's Name";
             recordNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             recordNameDataGridViewTextBoxColumn.Name = "recordNameDataGridViewTextBoxColumn";
             recordNameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -210,7 +203,7 @@
             // 
             checkInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             checkInDataGridViewTextBoxColumn.DataPropertyName = "CheckIn";
-            checkInDataGridViewTextBoxColumn.HeaderText = "Ngay Kham";
+            checkInDataGridViewTextBoxColumn.HeaderText = "Examine Date";
             checkInDataGridViewTextBoxColumn.MinimumWidth = 6;
             checkInDataGridViewTextBoxColumn.Name = "checkInDataGridViewTextBoxColumn";
             checkInDataGridViewTextBoxColumn.ReadOnly = true;
@@ -227,21 +220,19 @@
             // guna2Panel1
             // 
             guna2Panel1.Controls.Add(guna2TextBox_Search);
-            guna2Panel1.Controls.Add(cbAccept);
-            guna2Panel1.Controls.Add(sortRequest);
-            guna2Panel1.Controls.Add(btnPrint);
             guna2Panel1.Controls.Add(numOfRecords);
             guna2Panel1.Controls.Add(recordCount);
-            guna2Panel1.CustomizableEdges = customizableEdges7;
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             guna2Panel1.Location = new System.Drawing.Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new System.Drawing.Size(1152, 113);
             guna2Panel1.TabIndex = 4;
             // 
             // guna2TextBox_Search
             // 
+            guna2TextBox_Search.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
             guna2TextBox_Search.BorderRadius = 20;
             guna2TextBox_Search.CustomizableEdges = customizableEdges1;
             guna2TextBox_Search.DefaultText = "";
@@ -253,7 +244,8 @@
             guna2TextBox_Search.Font = new System.Drawing.Font("Segoe UI", 9F);
             guna2TextBox_Search.HoverState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
             guna2TextBox_Search.IconLeft = (System.Drawing.Image)resources.GetObject("guna2TextBox_Search.IconLeft");
-            guna2TextBox_Search.Location = new System.Drawing.Point(214, 33);
+            guna2TextBox_Search.IconLeftSize = new System.Drawing.Size(24, 24);
+            guna2TextBox_Search.Location = new System.Drawing.Point(241, 41);
             guna2TextBox_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             guna2TextBox_Search.Name = "guna2TextBox_Search";
             guna2TextBox_Search.PasswordChar = '\0';
@@ -262,75 +254,14 @@
             guna2TextBox_Search.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2TextBox_Search.Size = new System.Drawing.Size(515, 44);
             guna2TextBox_Search.TabIndex = 8;
+            guna2TextBox_Search.TextOffset = new System.Drawing.Point(10, 0);
             guna2TextBox_Search.TextChanged += guna2TextBox_Search_TextChanged;
-            // 
-            // cbAccept
-            // 
-            cbAccept.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            cbAccept.BackColor = System.Drawing.Color.FromArgb(245, 245, 250);
-            cbAccept.CustomizableEdges = customizableEdges3;
-            cbAccept.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            cbAccept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cbAccept.FillColor = System.Drawing.Color.Blue;
-            cbAccept.FocusedColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            cbAccept.FocusedState.BorderColor = System.Drawing.Color.FromArgb(94, 148, 255);
-            cbAccept.Font = new System.Drawing.Font("Segoe UI", 10F);
-            cbAccept.ForeColor = System.Drawing.Color.White;
-            cbAccept.ItemHeight = 30;
-            cbAccept.Items.AddRange(new object[] { "Taken", "Untaken" });
-            cbAccept.Location = new System.Drawing.Point(838, 33);
-            cbAccept.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            cbAccept.Name = "cbAccept";
-            cbAccept.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            cbAccept.Size = new System.Drawing.Size(117, 36);
-            cbAccept.StartIndex = 0;
-            cbAccept.TabIndex = 6;
-            cbAccept.TextOffset = new System.Drawing.Point(2, 0);
-            // 
-            // sortRequest
-            // 
-            sortRequest.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            sortRequest.AutoSize = true;
-            sortRequest.Font = new System.Drawing.Font("Segoe UI", 12F);
-            sortRequest.Location = new System.Drawing.Point(753, 33);
-            sortRequest.Name = "sortRequest";
-            sortRequest.Size = new System.Drawing.Size(79, 28);
-            sortRequest.TabIndex = 5;
-            sortRequest.Text = "Sort By:";
-            // 
-            // btnPrint
-            // 
-            btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            btnPrint.BorderColor = System.Drawing.Color.Gray;
-            btnPrint.BorderThickness = 1;
-            btnPrint.CustomizableEdges = customizableEdges5;
-            btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(169, 169, 169);
-            btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(141, 141, 141);
-            btnPrint.FillColor = System.Drawing.Color.Transparent;
-            btnPrint.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            btnPrint.ForeColor = System.Drawing.Color.Black;
-            btnPrint.HoverState.FillColor = System.Drawing.Color.Azure;
-            btnPrint.HoverState.ForeColor = System.Drawing.Color.White;
-            btnPrint.HoverState.Image = (System.Drawing.Image)resources.GetObject("resource.Image");
-            btnPrint.Image = (System.Drawing.Image)resources.GetObject("btnPrint.Image");
-            btnPrint.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            btnPrint.ImageSize = new System.Drawing.Size(32, 32);
-            btnPrint.Location = new System.Drawing.Point(989, 21);
-            btnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            btnPrint.Name = "btnPrint";
-            btnPrint.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnPrint.Size = new System.Drawing.Size(142, 56);
-            btnPrint.TabIndex = 7;
-            btnPrint.Text = "Print";
-            btnPrint.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // numOfRecords
             // 
             numOfRecords.AutoSize = true;
-            numOfRecords.Font = new System.Drawing.Font("Segoe UI", 12F);
-            numOfRecords.Location = new System.Drawing.Point(114, 49);
+            numOfRecords.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
+            numOfRecords.Location = new System.Drawing.Point(110, 48);
             numOfRecords.Name = "numOfRecords";
             numOfRecords.Size = new System.Drawing.Size(81, 28);
             numOfRecords.TabIndex = 3;
@@ -339,11 +270,11 @@
             // recordCount
             // 
             recordCount.AutoSize = true;
-            recordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold);
+            recordCount.Font = new System.Drawing.Font("Segoe UI", 31.8000011F, System.Drawing.FontStyle.Bold);
             recordCount.ForeColor = System.Drawing.Color.FromArgb(0, 0, 192);
-            recordCount.Location = new System.Drawing.Point(56, 27);
+            recordCount.Location = new System.Drawing.Point(12, 20);
             recordCount.Name = "recordCount";
-            recordCount.Size = new System.Drawing.Size(62, 42);
+            recordCount.Size = new System.Drawing.Size(92, 72);
             recordCount.TabIndex = 2;
             recordCount.Text = "20";
             // 
@@ -359,7 +290,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1152, 1102);
+            ClientSize = new System.Drawing.Size(1152, 919);
             Controls.Add(guna2Panel1);
             Controls.Add(dgvRecords);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -386,9 +317,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label numOfRecords;
         private System.Windows.Forms.Label recordCount;
-        private Guna.UI2.WinForms.Guna2Button btnPrint;
-        private Guna.UI2.WinForms.Guna2ComboBox cbAccept;
-        private System.Windows.Forms.Label sortRequest;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource patientRecordBindingSource;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox_Search;

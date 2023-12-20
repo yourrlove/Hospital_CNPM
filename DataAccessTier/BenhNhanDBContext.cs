@@ -28,6 +28,8 @@ namespace DataAccessTier
         public DbSet<BenhAn> BenhAn { get; set; }
         public DbSet<BenhNhan> BenhNhan { get; set; }
         public DbSet<PhanChiaBenhNhan> PhanChiaBenhNhan { get; set; }
+        public DbSet<HoaDon> HoaDon { get; set; }
+
         public BenhNhanDBContext() { }
 
         /// <summary>
@@ -44,9 +46,8 @@ namespace DataAccessTier
 
             } catch (Exception e)
             {
-
+                return new BindingList<BenhNhan> ();
             }
-            return null;
         }
 
         public static List<BenhNhanCheckup>? GetListBenhNhan()
@@ -75,7 +76,7 @@ namespace DataAccessTier
             {
 
             }
-            return null;
+            return new List<BenhNhanCheckup>();
         }
 
         public static List<BenhNhanCheckup>? FindBenhNhanInfor(string name, string tel)
@@ -106,7 +107,7 @@ namespace DataAccessTier
             {
 
             }
-            return null;
+            return new List<BenhNhanCheckup>();
         }
 
 
@@ -135,27 +136,6 @@ namespace DataAccessTier
         }
 
         /// <summary>
-        /// Find Patient Record by their name and phone
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="phone"></param>
-        /// <returns></returns>
-        //public static List<BenhNhan>? FindByNameAndPhone(string name, string phone)
-        //{
-        //    try
-        //    {
-        //        var dbContext = new BenhNhanDBContext();
-        //        return dbContext.BenhNhan.Where(record => record.HoTen.ToLower().Contains(name)).ToList();
-
-        //    }
-        //    catch (Exception e)
-        //    {
-
-        //    }
-        //    return null;
-        //}
-
-        /// <summary>
         /// 
         /// </summary>
         /// <param name="ID"></param>
@@ -170,7 +150,7 @@ namespace DataAccessTier
             {
 
             }
-            return null;
+            return new BenhNhan();
         }
 
         public static int? GetNofPatients() 
@@ -182,9 +162,9 @@ namespace DataAccessTier
             }
             catch (Exception e)
             {
-
+                return 0;
             }
-            return 0;
+            
         }
 
         public static void UpdatePatient(int BN_ID, string HoTen, string GioiTinh, DateTime NgaySinh, string DiaChi, string SDT)
@@ -218,7 +198,7 @@ namespace DataAccessTier
             }
             catch (Exception e)
             {
-                return null;
+                return new List<int>();
             }
         }
 
@@ -292,7 +272,107 @@ namespace DataAccessTier
             }
             catch (Exception e)
             {
-                return null;
+                return new PatientInfor();
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// Search the patients based on patient's name and patient's phone number
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns>List of patient</returns>
+        public static BindingList<BenhNhan>? SearchPatient(string s)
+        {
+            if (s != "")
+            {
+                var dbContext = new BenhNhanDBContext();
+                dbContext.BenhNhan.Where(t => t.HoTen.Contains(s) || t.SoDienThoai.Contains(s)).Load();
+                return dbContext.BenhNhan.Local.ToBindingList();
+            }
+            return new BindingList<BenhNhan>();
+        }
+
+        public static List<BenhNhan> getPatientName(int BN_ID)
+        {
+            try
+            {
+                using (var dbContext = new BenhNhanDBContext())
+                {
+                    var query = (from bn in dbContext.BenhNhan
+                                 where bn.BN_ID == BN_ID
+                                 select new BenhNhan
+                                 {
+                                     BN_ID = bn.BN_ID,
+                                     HoTen = bn.HoTen,
+                                     GioiTinh = bn.GioiTinh,
+                                     NgaySinh = bn.NgaySinh,
+                                     DiaChi = bn.DiaChi,
+                                     SoDienThoai = bn.SoDienThoai,
+                                     CanNang = bn.CanNang,
+                                     ChieuCao = bn.ChieuCao,
+                                     NhomMau = bn.NhomMau
+                                 }).ToList();
+
+                    return new List<BenhNhan>(query);
+                }
+            }
+            catch
+            {
+                return new List<BenhNhan>();
+            }
+        }
+
+        public static BindingList<HoaDonBenhNhan> GetHoaDonBenhNhan(int BN_ID)
+        {
+            try
+            {
+                using (var dbContext = new BenhNhanDBContext())
+                {
+                    var query = (from hd in dbContext.HoaDon
+                                 join ba in dbContext.BenhAn on hd.HD_ID equals ba.BA_ID
+                                 where hd.BN_ID == BN_ID
+                                 select new HoaDonBenhNhan
+                                 {
+                                     hd_id = hd.HD_ID,
+                                     tenhoadon = ba.TenBenhAn,
+                                     ngayxuat = hd.NgayLap,
+                                     tongtien = hd.TongTien,
+                                     thanhtoan = hd.ThanhToan
+                                 }).ToList();
+                    var distinctResults = query.Distinct().ToList();
+                    return new BindingList<HoaDonBenhNhan>(distinctResults);
+                }
+            }
+            catch (Exception ex)
+            {
+                return new BindingList<HoaDonBenhNhan>();
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="BN_ID"></param>
+        /// <returns> patient name </returns>
+        public static string getName(int BN_ID)
+        {
+            try
+            {
+                using (var dbContext = new BenhNhanDBContext())
+                {
+                    var query = (from bn in dbContext.BenhNhan
+                                 where bn.BN_ID == BN_ID
+                                 select bn.HoTen).FirstOrDefault();
+
+                    return query != null ? query.ToString() : "No matching record found";
+                }
+            }
+            catch (Exception e)
+            {
+                return "";
             }
         }
     }

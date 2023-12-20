@@ -51,7 +51,8 @@ namespace BusinessLogicTier
             DateTime checkIn,
             int PH_ID,
             int KH_ID,
-            int BN_ID
+            int BN_ID,
+            int TT_ID
             )
         {
             try
@@ -64,16 +65,13 @@ namespace BusinessLogicTier
                     }
                     BenhNhanDBContext.AddPatient(patient);
                     BN_ID = BenhNhanDBContext.GetLastestBN_ID();
-                } 
-                PhanChiaBNDBContext.AddPatient(BN_ID, PH_ID);
+                }
                 BenhAn record = new BenhAn();
                 record.TenBenhAn = recordName;
                 record.BN_ID = BN_ID;
                 record.Ngay = checkIn;
                 record.TrieuChung = symtomp;
-                BenhAnDBContext.AddRecord(record);
-                //QuanLiBenhAnDBContext.AddQuanLiBenhAn(KH_ID, BA_ID);
-                //QuanLiBenhAnBSDBContext.AddBS_BA(BS_ID, BA_ID);
+                DonKhamDBContext.AddDonKham(TT_ID, PH_ID, KH_ID, record);
                 return true;
             } catch 
             {

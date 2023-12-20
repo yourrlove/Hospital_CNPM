@@ -13,10 +13,6 @@ namespace DTO
     {
         public int KH_ID { get; set; }
         public int BA_ID { get; set; }
-        //[ForeignKey("BA_ID")]
-        //public BenhAn BenhAn { get; set; }
-        //[ForeignKey("KH_ID")]
-        //public Khoa Khoa { get; set; }
     }
 
 }

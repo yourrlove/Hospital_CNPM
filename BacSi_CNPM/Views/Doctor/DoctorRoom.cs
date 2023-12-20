@@ -1,6 +1,7 @@
 ﻿using BusinessLogicTier;
 using Guna.UI2.WinForms.Suite;
 using Hospital.User_Controls;
+using Hospital.Views.Login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,11 +22,18 @@ namespace Hospital.Views.Doctor
     public partial class DoctorForm : Form
     {
         private DoctorRoomBUS room;
-        public DoctorForm()
+        private Color clickedButtonColor = Color.Blue;
+        private Color defaultButtonColor = Color.FromArgb(24, 25, 53);
+        private Guna.UI2.WinForms.Guna2Button currentButton;
+        private int borderSize = 2;
+        public DoctorForm(int BS_ID)
         {
             InitializeComponent();
             room = DoctorRoomBUS.GetInstance();
-            //CollapseMenu();
+            this.Padding = new Padding(borderSize);//Border size
+            this.BackColor = Color.FromArgb(98, 102, 244);//Border color
+            room.BS_ID = BS_ID;
+            CollapseMenu();
         }
 
         private void showMiddleForm(Form showForm)
@@ -64,63 +72,12 @@ namespace Hospital.Views.Doctor
                 fm.Dispose();
             }
         }
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            guna2ShadowForm1.SetShadowForm(this);
-           // dropDownMenu1.IsMainMenu = true;
-            //dropDownMenu1.PrimaryColor = Color.Orange;
-            //dropDownMenu1.MenuItemTextColor = Color.OrangeRed;
-        }
-
-
-        private void guna2Button5_Click(object sender, EventArgs e)
-        {
-            label1_val.Text = "Messages";
-            guna2PictureBox1_val.Image = Properties.Resources.icons8_dashboard_48;
-        }
-
-
-        private void Dashboard_Click(object sender, EventArgs e)
-        {
-            label1_val.Text = "Dashboard Overview";
-            guna2PictureBox1_val.Image = Properties.Resources.icons8_dashboard_48;
-            container(new Dashboard());
-        }
-
-
-
-        private void container(object _form)
-        {
-            if (DoctorMainPanel.Controls.Count > 0) {
-                if (DoctorMainPanel.Controls["Requests"]  != null)
-                {
-                    Requests obj = (Requests)Application.OpenForms["Requests"];
-                    obj.Close();
-                }
-                DoctorMainPanel.Controls.Clear(); 
-            }
-            Form fm = _form as Form;
-            fm.TopLevel = false;
-            fm.FormBorderStyle = FormBorderStyle.None;
-            fm.Dock = DockStyle.Fill;
-            DoctorMainPanel.Controls.Add(fm);
-            DoctorMainPanel.Tag = fm;
-            fm.Show();
-        }
-
-        #region SlidingMenu
-        private void menuBtn_Click(object sender, EventArgs e)
-        {
-           // CollapseMenu();
-        }
         private void CollapseMenu()
         {
-            if (this.sidebar.Width > 200)
+            if (this.sidebar.Width > 200) //Collapse menu
             {
                 sidebar.Width = 75;
                 logoPictueBox.Visible = false;
-                menuBtn.Visible = true;
-                menuBtn.BringToFront();
                 menuBtn.Dock = DockStyle.Top;
                 foreach (Button menuButton in sidebar.Controls.OfType<Button>())
                 {
@@ -128,7 +85,6 @@ namespace Hospital.Views.Doctor
                     menuButton.ImageAlign = ContentAlignment.MiddleCenter;
                     menuButton.Padding = new Padding(0);
                 }
-
             }
             else
             { //Expand menu
@@ -143,32 +99,170 @@ namespace Hospital.Views.Doctor
                 }
             }
         }
-        #endregion
+
+        private void ActivateButton(object btnSender)
+        {
+            if (btnSender is Guna.UI2.WinForms.Guna2Button clickedButton)
+            {
+                if (currentButton != null)
+                {
+                    // Reset the previous button to its default state
+                    DisableButton();
+                }
+
+                // Set the new current button
+                currentButton = clickedButton;
+
+                // Change the appearance of the new current button
+                currentButton.FillColor = clickedButtonColor;
+                currentButton.ForeColor = Color.White;
+                currentButton.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+
+                // Determine which image to use based on the button clicked
+                if (clickedButton == btnDashboard)
+                {
+                    currentButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("dashboard_white");
+                }
+                else if (clickedButton == btnRequest)
+                {
+                    currentButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("request_white");
+                }
+                else if (clickedButton == btnMedicalRecord)
+                {
+                    currentButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("medicalRecord_white");
+                }
+                else if (clickedButton == btnHome)
+                {
+                    currentButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("home_white");
+                }
+
+            }
+        }
+
+
+
+        //Change to previous state if another button is clicked
+        private void DisableButton()
+        {
+            foreach (Guna.UI2.WinForms.Guna2Button previousBtn in sidebar.Controls.OfType<Guna.UI2.WinForms.Guna2Button>())
+            {
+                if (previousBtn.GetType() == typeof(Guna.UI2.WinForms.Guna2Button))
+                {
+                    previousBtn.FillColor = defaultButtonColor;
+                    previousBtn.ForeColor = Color.White;
+                    previousBtn.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+                    if (previousBtn == btnDashboard)
+                    {
+                        previousBtn.Image = (Image)Properties.Resources.ResourceManager.GetObject("dashboard");
+                    }
+                    else if (previousBtn == btnRequest)
+                    {
+                        previousBtn.Image = (Image)Properties.Resources.ResourceManager.GetObject("request");
+                    }
+                    else if (previousBtn == btnMedicalRecord)
+                    {
+                        previousBtn.Image = (Image)Properties.Resources.ResourceManager.GetObject("medicalRecord");
+                    }
+                    else if (previousBtn == btnHome)
+                    {
+                        previousBtn.Image = (Image)Properties.Resources.ResourceManager.GetObject("home");
+                    }
+                }
+            }
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            text_val.Text = "Messages";
+            image_val.Image = Properties.Resources.icons8_dashboard_48;
+        }
+
+
+        private void Dashboard_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            text_val.Text = "Dashboard Overview";
+            image_val.Image = Properties.Resources.icons8_dashboard_48;
+            container(new Dashboard());
+        }
+
+
+
+        private void container(object _form)
+        {
+            if (DoctorMainPanel.Controls.Count > 0)
+            {
+                if (DoctorMainPanel.Controls["Requests"] != null)
+                {
+                    Requests obj = (Requests)Application.OpenForms["Requests"];
+                    obj.Close();
+                }
+                DoctorMainPanel.Controls.Clear();
+            }
+            Form fm = _form as Form;
+            fm.TopLevel = false;
+            fm.FormBorderStyle = FormBorderStyle.None;
+            fm.Dock = DockStyle.Fill;
+            DoctorMainPanel.Controls.Add(fm);
+            DoctorMainPanel.Tag = fm;
+            fm.Show();
+        }
+
+        private void menuBtn_Click(object sender, EventArgs e)
+        {
+            CollapseMenu();
+        }
+
 
         private void btnMedicalRecord_Click(object sender, EventArgs e)
         {
-            label1_val.Text = "Medical Record";
-            guna2PictureBox1_val.Image = (Image)Properties.Resources.ResourceManager.GetObject("icons8-medical-64");
+            ActivateButton(sender);
+            text_val.Text = "Medical Record";
+            image_val.Image = (Image)Properties.Resources.ResourceManager.GetObject("icons8-medical-64");
             container(new Medical());
         }
 
 
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            showMiddleForm(new Setting());
-        }
-
         //button Requests
         private void btnRequest_Click(object sender, EventArgs e)
         {
-            label1_val.Text = "Requests";
-            guna2PictureBox1_val.Image = Properties.Resources.icons8_user_50;
+            ActivateButton(sender);
+            text_val.Text = "Requests";
+            image_val.Image = Properties.Resources.icons8_user_50;
             container(new Requests());
         }
 
         private void topBar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        //Change color when click on the button on menu side bar
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            this.Controls.Clear();
+            InitializeComponent();
+            RightToLeftLayout = true;
+            DoctorForm_Load(sender, e);
+        }
+
+        private void DoctorForm_Load(object sender, EventArgs e)
+        {
+            guna2ShadowForm1.SetShadowForm(this);
+            ActivateButton(btnHome);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to exit application?",
+             "Confirmation",
+             MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Restart();
+            }
         }
     }
 }

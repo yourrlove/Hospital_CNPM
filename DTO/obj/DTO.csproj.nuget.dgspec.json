@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[7.0.14, )"
             },
+            "Syncfusion.Pdf.WinForms": {
+              "target": "Package",
+              "version": "[24.1.41, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[8.0.0, )"

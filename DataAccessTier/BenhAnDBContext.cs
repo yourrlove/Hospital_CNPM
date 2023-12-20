@@ -36,9 +36,10 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message); 
+                Console.WriteLine(ex.Message);
+                return new BenhAn();
             }
-            return null;
+            
         }
 
         /// <summary>
@@ -55,7 +56,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
-
+                return new List<BenhAn>();
             }
             return null;
         }
@@ -111,9 +112,9 @@ namespace DataAccessTier
 
             } catch ( Exception ex)
             {
-
+                return -1;
             }
-            return -1;
+            
         }
 
         public static int NumberOfRecordInRoom(int PH_ID)
@@ -124,9 +125,9 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
-
+                return -1;
             }
-            return -1;
+            
         }
 
         public static List<PatientRecord>? GetAllPatientRecord()
@@ -152,7 +153,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
-                return null;
+                return new List<PatientRecord>();
             }
 
         }
@@ -179,7 +180,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
-                return null;
+                return new BenhAn3();
             }
 
         }
@@ -209,7 +210,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
-                return null;
+                return new List<PatientRecord>();
             }
 
         }
@@ -225,7 +226,7 @@ namespace DataAccessTier
             {
 
             }
-            return null;
+            return new List<PatientRecord>();
         }
 
         public static int? GetLatestBAID()
@@ -287,7 +288,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
-                return null;
+                return new List<PatientRecord>();
             }
 
         }

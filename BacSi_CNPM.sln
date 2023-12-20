@@ -14,9 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{0DE3AE73
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controller", "Controller", "{F385321C-2FC7-4619-9A2F-66EE5D21E57C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicTier", "BusinessLogicTier\BusinessLogicTier.csproj", "{1246F888-96D6-4A86-BF51-844564A20180}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{B40831C7-C1B3-408A-A107-68FAA4491E32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogicTier", "BusinessLogicTier\BusinessLogicTier.csproj", "{1246F888-96D6-4A86-BF51-844564A20180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,10 +38,6 @@ Global
 		{1246F888-96D6-4A86-BF51-844564A20180}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1246F888-96D6-4A86-BF51-844564A20180}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1246F888-96D6-4A86-BF51-844564A20180}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B40831C7-C1B3-408A-A107-68FAA4491E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B40831C7-C1B3-408A-A107-68FAA4491E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B40831C7-C1B3-408A-A107-68FAA4491E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B40831C7-C1B3-408A-A107-68FAA4491E32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

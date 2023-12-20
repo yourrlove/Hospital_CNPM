@@ -27,8 +27,7 @@ namespace DTO
         [StringLength(50)]
         public string TacDungPhu { get; set; }
         public byte[] ImageData { get; set; }
-        //List<ChiTietHoaDon> ChiTietHoaDons { get; set; }
-        //List<ChiTietDonThuoc> ChiTietDonThuocs { get; set; }
+   
     }
 
 }

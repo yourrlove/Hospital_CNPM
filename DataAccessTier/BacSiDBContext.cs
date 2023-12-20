@@ -21,7 +21,7 @@ namespace DataAccessTier
                 return dbContext.BacSi.Find(BS_ID);
             }
             catch (Exception ex) { }
-            return null;
+            return new BacSi();
         }
 
         public static int? FindKH_ID(int BS_ID)
@@ -43,7 +43,20 @@ namespace DataAccessTier
                 return dbContext.BacSi.Find(BS_ID).HoTen;
             }
             catch (Exception ex) { }
-            return null;
+            return "";
+        }
+
+        public static int GetID(string UserID)
+        {
+            try
+            {
+                var dbContext = new BacSiDBContext();
+                return dbContext.BacSi.Where(p => p.User_ID == UserID).FirstOrDefault().BS_ID;
+            }
+            catch (Exception ex) {
+                return 0;
+            }
+            
         }
     }
 }

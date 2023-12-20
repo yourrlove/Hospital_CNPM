@@ -23,8 +23,9 @@ using System;
 //var _data = BenhAnDBContext.FindRecordByBN_ID(29);
 //Console.WriteLine(_data.BA_ID);
 
-var data = BenhAnDBContext.FindPatientRecord(42);
-Console.WriteLine(data.TenBenhAn);
+var data = new DonKhamDBContext();
+data.DonKham.Add(new DonKham { BN_ID = 36, KH_ID = 4, TT_ID = 23, Ngay = DateTime.Now, PH_ID = 2, TenBenhAn = "ASd", TrieuChung = "AS" });
+data.SaveChanges();
 //DonThuocDetail donThuocDetail = DonThuocDBContext.GetDonThuocDetail(6);
 //var data = CTDTDBContext.GetMedicines(6);
 //Console.WriteLine(donThuocDetail.TenDonThuoc);

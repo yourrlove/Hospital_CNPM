@@ -206,3 +206,6 @@ D:\new-recept ui\test\obj\Debug\net7.0\test.pdb
 D:\new-recept ui\test\obj\Debug\net7.0\test.genruntimeconfig.cache
 D:\new-recept ui\test\obj\Debug\net7.0\ref\test.dll
 D:\new-recept ui\test\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\new-recept ui\test\bin\Debug\net7.0\Syncfusion.Compression.Base.dll
+D:\new-recept ui\test\bin\Debug\net7.0\Syncfusion.Licensing.dll
+D:\new-recept ui\test\bin\Debug\net7.0\Syncfusion.Pdf.Base.dll

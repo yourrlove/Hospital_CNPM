@@ -15,14 +15,29 @@ namespace DataAccessTier
 
         public static Dictionary<int, string> GetKhoa()
         {
-            var dbContext = new KhoaDBContext();
-            return dbContext.Khoa.ToDictionary(k => k.KH_ID, k => k.TenKhoa);
+            try
+            {
+                var dbContext = new KhoaDBContext();
+                return dbContext.Khoa.ToDictionary(k => k.KH_ID, k => k.TenKhoa);
+            }
+            catch
+            {
+                return new Dictionary<int, string>();
+            }
+            
         }
 
         public static string GetKhoaName(int KH_ID)
         {
-            var dbContext = new KhoaDBContext();
-            return dbContext.Khoa.Find(KH_ID).TenKhoa;
+            try
+            {
+                var dbContext = new KhoaDBContext();
+                return dbContext.Khoa.Find(KH_ID).TenKhoa;
+            }
+            catch
+            {
+                return "";
+            }
         }
     }
 }

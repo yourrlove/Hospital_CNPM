@@ -1,0 +1,16 @@
+D:\new-recept ui\DataAccessTier\bin\Release\net7.0\DataAccessTier.deps.json
+D:\new-recept ui\DataAccessTier\bin\Release\net7.0\DataAccessTier.dll
+D:\new-recept ui\DataAccessTier\bin\Release\net7.0\DataAccessTier.pdb
+D:\new-recept ui\DataAccessTier\bin\Release\net7.0\DTO.dll
+D:\new-recept ui\DataAccessTier\bin\Release\net7.0\DTO.pdb
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\DataAccessTier.csproj.AssemblyReference.cache
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\DataAccessTier.GeneratedMSBuildEditorConfig.editorconfig
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\DataAccessTier.AssemblyInfoInputs.cache
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\DataAccessTier.AssemblyInfo.cs
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\DataAccessTier.csproj.CoreCompileInputs.cache
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\DataAccessTier.sourcelink.json
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\DataAccessTier.csproj.CopyComplete
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\DataAccessTier.dll
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\refint\DataAccessTier.dll
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\DataAccessTier.pdb
+D:\new-recept ui\DataAccessTier\obj\Release\net7.0\ref\DataAccessTier.dll

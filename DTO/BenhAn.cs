@@ -16,19 +16,12 @@ namespace DTO
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int BA_ID { get; set; }
         [StringLength(50)]
-        public string? TenBenhAn { get; set; }
-        [AllowNull, StringLength(50)]
+        [Required]
+        public string TenBenhAn { get; set; }
+        [StringLength(50)]
         public string? TrieuChung { get; set; }
         public int BN_ID { get; set; }
         [Required(ErrorMessage = "Date created is required!")]
         public DateTime Ngay { get; set; }
-        //[ForeignKey("BN_ID")]
-        //public BenhNhan BenhNhan { get; set; }
-
-        //List<QuanLiBenhAn> QuanLiBenhAns { get; set; }
-        //List<ChiTietBenhAn> ChiTietBenhAns { get; set; }
-        //List<BS_BA> BS_BA { get; set; }
-
-        //List<PhanChiaDonThuoc> PhanChiaDonThuocs { get; set; }
     }
 }

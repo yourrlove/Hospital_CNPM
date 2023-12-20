@@ -15,6 +15,7 @@ namespace DTO
         public string username { get; set; }
         [Required(ErrorMessage = "Password is required.")]
         public string password { get; set; }
+        [StringLength(50)]
         public string displayName { get; set; }
     }
 }

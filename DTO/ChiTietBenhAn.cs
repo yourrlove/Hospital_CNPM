@@ -17,10 +17,6 @@ namespace DTO
         public int DT_ID { get; set; }
         [StringLength(50)]
         public string? TSBenhLi { get; set; } // Tien su benh ly
-        //[ForeignKey("BA_ID")]
-        //public BenhAn BenhAn { get; set; }
-        //[ForeignKey("DT_ID")]
-        //public DonThuoc DonThuoc { get; set; }
     }
 }
 

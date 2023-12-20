@@ -18,15 +18,28 @@ namespace DataAccessTier
 
         public static List<PhongBenh> GetRooms(int KH_ID)
         {
+            try
+            {
                 var dbContext = new PhongBenhDBContext();
 
                 return dbContext.PhongBenh.Where(room => room.KH_ID == KH_ID).ToList();
+            }
+            catch 
+            { 
+                return new List<PhongBenh>();
+            }
+                
         }
 
         public static Dictionary<int , string> GetALLRoomID()
         {
-            var dbContext = new PhongBenhDBContext();
-            return dbContext.PhongBenh.ToDictionary(room => room.PH_ID, room => room.TenPhong);
+            try
+            {
+                var dbContext = new PhongBenhDBContext();
+                return dbContext.PhongBenh.ToDictionary(room => room.PH_ID, room => room.TenPhong);
+            }
+            catch { return new Dictionary<int , string>(); }
+            
         }
 
         public static bool IsRoomFull(int nofCurrentWaiting, int PH_ID)
@@ -42,8 +55,16 @@ namespace DataAccessTier
 
         public static string GetRoomName(int PH_ID)
         {
-            var dbContext = new PhongBenhDBContext();
-            return dbContext.PhongBenh.Single(r => r.PH_ID == PH_ID).TenPhong;
+            try
+            {
+                var dbContext = new PhongBenhDBContext();
+                return dbContext.PhongBenh.Single(r => r.PH_ID == PH_ID).TenPhong;
+            }
+            catch
+            {
+                return "";
+            }
+            
         }
 
         public static PhongBenh? FindById(int PH_ID)
@@ -53,8 +74,11 @@ namespace DataAccessTier
                 var dbContext = new PhongBenhDBContext();
                 return dbContext.PhongBenh.Find(PH_ID);
             }
-            catch (Exception ex) { }
-            return null;
+            catch (Exception ex) 
+            {
+                return new PhongBenh();
+            }
+            
         }
     }
 }

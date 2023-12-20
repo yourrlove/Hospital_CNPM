@@ -11,6 +11,7 @@
           "BusinessLogicTier": "1.0.0",
           "DTO": "1.0.0",
           "DataAccessTier": "1.0.0",
+          "Syncfusion.Pdf.WinForms": "24.1.41",
           "System.Drawing.Common": "8.0.0"
         },
         "runtime": {
@@ -385,6 +386,34 @@
           }
         }
       },
+      "Syncfusion.Compression.Base/24.1.41": {
+        "runtime": {
+          "lib/net46/Syncfusion.Compression.Base.dll": {
+            "assemblyVersion": "24.1460.41.0",
+            "fileVersion": "24.1460.41.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/24.1.41": {
+        "runtime": {
+          "lib/net7.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "24.1.41.0",
+            "fileVersion": "24.1.41.0"
+          }
+        }
+      },
+      "Syncfusion.Pdf.WinForms/24.1.41": {
+        "dependencies": {
+          "Syncfusion.Compression.Base": "24.1.41",
+          "Syncfusion.Licensing": "24.1.41"
+        },
+        "runtime": {
+          "lib/net46/Syncfusion.Pdf.Base.dll": {
+            "assemblyVersion": "24.1460.41.0",
+            "fileVersion": "24.1460.41.0"
+          }
+        }
+      },
       "System.Configuration.ConfigurationManager/6.0.1": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "6.0.0",
@@ -543,6 +572,7 @@
         "dependencies": {
           "DTO": "1.0.0",
           "DataAccessTier": "1.0.0",
+          "Syncfusion.Pdf.WinForms": "24.1.41",
           "System.Drawing.Common": "8.0.0"
         },
         "runtime": {
@@ -553,6 +583,7 @@
         "dependencies": {
           "DTO": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Syncfusion.Pdf.WinForms": "24.1.41",
           "System.Drawing.Common": "8.0.0"
         },
         "runtime": {
@@ -562,6 +593,7 @@
       "DTO/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Syncfusion.Pdf.WinForms": "24.1.41",
           "System.Drawing.Common": "8.0.0"
         },
         "runtime": {
@@ -799,6 +831,27 @@
       "sha512": "sha512-9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
       "path": "microsoft.win32.systemevents/8.0.0",
       "hashPath": "microsoft.win32.systemevents.8.0.0.nupkg.sha512"
+    },
+    "Syncfusion.Compression.Base/24.1.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eoKX2n83Pv0P24jdBFD5FiToTjuO46gSwtQOctrJbf1TggPzXAOWF5QItlRE6Ej0Ir+nn8Tnbda8svx+e7tizw==",
+      "path": "syncfusion.compression.base/24.1.41",
+      "hashPath": "syncfusion.compression.base.24.1.41.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/24.1.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/8l+5x11RGlQhn3lv6S4AuwOM3i1kbt8Eul5gZ45rHbcEWM6Pt1so71j71w3sE+blkPSDJ2nhdiXQQLBFTKi3g==",
+      "path": "syncfusion.licensing/24.1.41",
+      "hashPath": "syncfusion.licensing.24.1.41.nupkg.sha512"
+    },
+    "Syncfusion.Pdf.WinForms/24.1.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xJyktIWWh9XUQcrBC2wIsNKZNfHVmKVNHrSSbIkRDKNu3i5Gp9itTTPohLAcM8NaMABp7tl+CoWbarabfIDr8g==",
+      "path": "syncfusion.pdf.winforms/24.1.41",
+      "hashPath": "syncfusion.pdf.winforms.24.1.41.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/6.0.1": {
       "type": "package",

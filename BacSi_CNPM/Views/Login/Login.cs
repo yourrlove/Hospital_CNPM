@@ -1,7 +1,9 @@
 ﻿using BusinessLogicTier;
 using DTO;
 using Guna.UI2.WinForms;
+using Hospital.Views.Cashier;
 using Hospital.Views.Doctor;
+using Hospital.Views.Pharmacist;
 using Hospital.Views.Receptionist;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
@@ -18,15 +20,16 @@ using System.Windows.Forms;
 namespace Hospital.Views.Login
 {
 
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
         private LoginBUS login;
         private Account account;
+ 
         public bool UserSuccessfullyAuthenticated { get; private set; }
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
-            login = new LoginBUS();
+            login = LoginBUS.GetInstance();
             account = new Account();
         }
 
@@ -62,20 +65,27 @@ namespace Hospital.Views.Login
 
             if (isValid)
             {
-                string role = login.Validate(usernameInput, passwordInput);
-                if (role != null)
+                string userID = login.Validate(usernameInput, passwordInput);
+                if (userID != null)
                 {
                     Form form = new Form();
-                    role = login.Validate(usernameInput, passwordInput).Substring(0, 3);
+                    string role = login.Validate(usernameInput, passwordInput).Substring(0, 3);
                     if (role.Contains("doc"))
                     {
-                        form = new DoctorForm();
+                        form = new DoctorForm((int)login.GetID(userID, role));
+
                     }
                     else if (role.Contains("rec"))
                     {
-                        form = new Reception(1);
-                    } 
-                    Program.ReturnForm = form;
+                        form = new Reception((int)login.GetID(userID, role));
+                    } else if(role.Contains("cas"))
+                    {
+                        form = new CashierRoom((int)login.GetID(userID, role));
+                    } else if(role.Contains("pha"))
+                    {
+                        form = new PharmacistRoom();
+                    }
+                    Program.ReturnLogInForm = form;
                     UserSuccessfullyAuthenticated = true;
                     this.Close();
                 }

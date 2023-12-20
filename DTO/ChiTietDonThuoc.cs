@@ -13,7 +13,6 @@ namespace DTO
     public class ChiTietDonThuoc
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Required]
         public int DT_ID { get; set; }
         public int TH_ID { get; set; }
         public int SoLuong { get; set; }

@@ -34,7 +34,5 @@ namespace DTO
         public double? CanNang { get; set; }
         public double? ChieuCao { get; set; }
 
-        //List<BenhAn> BenhAns { get; set; }
-        //List<HoaDon> HoaDons { get; set; }
     }
 }
