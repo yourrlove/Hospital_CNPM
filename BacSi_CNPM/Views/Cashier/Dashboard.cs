@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicTier;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,13 @@ namespace Hospital.Views.Cashier
 
     public partial class Dashboard : Form
     {
+        private CashierBUS cashier;
+        
         public Dashboard()
         {
             InitializeComponent();
+            cashier = CashierBUS.GetInstance();
+            userName.Text = cashier.displayName;
         }
 
         private void Dashboard_Load(object sender, EventArgs e)

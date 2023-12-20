@@ -72,18 +72,18 @@ namespace Hospital.Views.Login
                     string role = login.Validate(usernameInput, passwordInput).Substring(0, 3);
                     if (role.Contains("doc"))
                     {
-                        form = new DoctorForm((int)login.GetID(userID, role));
-
+                        form = new DoctorForm((int)login.GetID(userID, role), login.GetDisplayName(userID));
+                        
                     }
                     else if (role.Contains("rec"))
                     {
-                        form = new Reception((int)login.GetID(userID, role));
+                        form = new Reception((int)login.GetID(userID, role), login.GetDisplayName(userID));
                     } else if(role.Contains("cas"))
                     {
-                        form = new CashierRoom((int)login.GetID(userID, role));
+                        form = new CashierRoom((int)login.GetID(userID, role), login.GetDisplayName(userID));
                     } else if(role.Contains("pha"))
                     {
-                        form = new PharmacistRoom();
+                        form = new PharmacistRoom(login.GetDisplayName(userID));
                     }
                     Program.ReturnLogInForm = form;
                     UserSuccessfullyAuthenticated = true;

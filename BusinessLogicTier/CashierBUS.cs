@@ -8,9 +8,13 @@ namespace BusinessLogicTier
     {
         private static CashierBUS instance;
         public int TN_ID;
+        public string displayName;
+
+
         private CashierBUS()
         {
             TN_ID = 0;
+            displayName = string.Empty;
         }
         public static CashierBUS GetInstance()
         {

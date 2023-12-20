@@ -208,6 +208,16 @@ namespace DataAccessTier
             }
         }
 
+        public static List<Thuoc> GetListThuoc()
+        {
+            try
+            {
+                var dbContext = new ThuocDBContext();
+                return dbContext.Thuoc.ToList();
+            }
+            catch { return new List<Thuoc>(); }
+        }
+
     }
 }
 

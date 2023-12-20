@@ -466,6 +466,13 @@ namespace DTO
     }
     ///
 
+    public class TotalEmployees
+    {
+        public int totalReceptionists { get; set; }
+        public int totalPharmacists { get; set; }
+        public int totalCashiers { get; set; }
+        public int totalDoctors { get; set; }
+    }
 }
 
 

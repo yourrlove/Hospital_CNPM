@@ -23,7 +23,7 @@ namespace Hospital.Views.Receptionist
         private int borderSize = 2;
         private ReceptionBUS reception;
 
-        public Reception(int TT_ID)
+        public Reception(int TT_ID, string displayName)
         {
             InitializeComponent();
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("vi-VN");
@@ -33,6 +33,7 @@ namespace Hospital.Views.Receptionist
 
             reception = ReceptionBUS.GetInstance();
             reception.TT_ID = TT_ID;
+            reception.displayName = displayName;
         }
         private void CollapseMenu()
         {

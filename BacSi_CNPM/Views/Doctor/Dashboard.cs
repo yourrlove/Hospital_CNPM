@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicTier;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,13 @@ namespace Hospital.Views.Doctor
 {
     public partial class Dashboard : Form
     {
+        private DoctorRoomBUS room;
 
         public Dashboard()
         {
             InitializeComponent();
+            room = DoctorRoomBUS.GetInstance();
+            userName.Text = room.displayName;
         }
 
         private void showMiddleForm(Form showForm)

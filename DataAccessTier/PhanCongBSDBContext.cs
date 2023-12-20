@@ -40,5 +40,25 @@ namespace DataAccessTier
             }
             
         }
+
+
+        public static bool DeletePCBS(int BS_ID)
+        {
+            try
+            {
+                var dbContext = new PhanCongBSDBContext();
+                var account = dbContext.PhanCongBS.Where(p => p.BS_ID == BS_ID).FirstOrDefault();
+                if (account != null)
+                {
+                    dbContext.PhanCongBS.Remove(account);
+                }
+                dbContext.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

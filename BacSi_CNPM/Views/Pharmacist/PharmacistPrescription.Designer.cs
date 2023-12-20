@@ -60,12 +60,12 @@
             label1 = new System.Windows.Forms.Label();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             dtgv_done_prescription = new Guna.UI2.WinForms.Guna2DataGridView();
+            listHTchoBindingSource1 = new System.Windows.Forms.BindingSource(components);
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             hDIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bNIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             sodienthoaiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             tenbenhnhanDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            listHTchoBindingSource1 = new System.Windows.Forms.BindingSource(components);
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dtgv_patient).BeginInit();
             ((System.ComponentModel.ISupportInitialize)listHTchoBindingSource).BeginInit();
             default_panel.SuspendLayout();
@@ -171,6 +171,7 @@
             hDIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             hDIDDataGridViewTextBoxColumn.Name = "hDIDDataGridViewTextBoxColumn";
             hDIDDataGridViewTextBoxColumn.ReadOnly = true;
+            hDIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // bNIDDataGridViewTextBoxColumn
             // 
@@ -179,6 +180,7 @@
             bNIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             bNIDDataGridViewTextBoxColumn.Name = "bNIDDataGridViewTextBoxColumn";
             bNIDDataGridViewTextBoxColumn.ReadOnly = true;
+            bNIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // sodienthoaiDataGridViewTextBoxColumn
             // 
@@ -199,6 +201,7 @@
             // listHTchoBindingSource
             // 
             listHTchoBindingSource.DataSource = typeof(DTO.listHTcho);
+            listHTchoBindingSource.CurrentChanged += listHTchoBindingSource_CurrentChanged;
             // 
             // default_panel
             // 
@@ -351,38 +354,6 @@
             dtgv_done_prescription.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(71, 69, 94);
             dtgv_done_prescription.CellClick += dtgv_done_prescription_CellClick;
             // 
-            // hDIDDataGridViewTextBoxColumn1
-            // 
-            hDIDDataGridViewTextBoxColumn1.DataPropertyName = "HD_ID";
-            hDIDDataGridViewTextBoxColumn1.HeaderText = "HD_ID";
-            hDIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            hDIDDataGridViewTextBoxColumn1.Name = "hDIDDataGridViewTextBoxColumn1";
-            hDIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // bNIDDataGridViewTextBoxColumn1
-            // 
-            bNIDDataGridViewTextBoxColumn1.DataPropertyName = "BN_ID";
-            bNIDDataGridViewTextBoxColumn1.HeaderText = "BN_ID";
-            bNIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            bNIDDataGridViewTextBoxColumn1.Name = "bNIDDataGridViewTextBoxColumn1";
-            bNIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // sodienthoaiDataGridViewTextBoxColumn1
-            // 
-            sodienthoaiDataGridViewTextBoxColumn1.DataPropertyName = "sodienthoai";
-            sodienthoaiDataGridViewTextBoxColumn1.HeaderText = "Phone Number";
-            sodienthoaiDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            sodienthoaiDataGridViewTextBoxColumn1.Name = "sodienthoaiDataGridViewTextBoxColumn1";
-            sodienthoaiDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // tenbenhnhanDataGridViewTextBoxColumn1
-            // 
-            tenbenhnhanDataGridViewTextBoxColumn1.DataPropertyName = "tenbenhnhan";
-            tenbenhnhanDataGridViewTextBoxColumn1.HeaderText = "Patient's Name";
-            tenbenhnhanDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            tenbenhnhanDataGridViewTextBoxColumn1.Name = "tenbenhnhanDataGridViewTextBoxColumn1";
-            tenbenhnhanDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // listHTchoBindingSource1
             // 
             listHTchoBindingSource1.DataSource = typeof(DTO.listHTcho);
@@ -411,6 +382,40 @@
             guna2Button1.TabIndex = 18;
             guna2Button1.Text = "Done";
             guna2Button1.Click += guna2Button1_Click;
+            // 
+            // hDIDDataGridViewTextBoxColumn1
+            // 
+            hDIDDataGridViewTextBoxColumn1.DataPropertyName = "HD_ID";
+            hDIDDataGridViewTextBoxColumn1.HeaderText = "HD_ID";
+            hDIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            hDIDDataGridViewTextBoxColumn1.Name = "hDIDDataGridViewTextBoxColumn1";
+            hDIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            hDIDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // bNIDDataGridViewTextBoxColumn1
+            // 
+            bNIDDataGridViewTextBoxColumn1.DataPropertyName = "BN_ID";
+            bNIDDataGridViewTextBoxColumn1.HeaderText = "BN_ID";
+            bNIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            bNIDDataGridViewTextBoxColumn1.Name = "bNIDDataGridViewTextBoxColumn1";
+            bNIDDataGridViewTextBoxColumn1.ReadOnly = true;
+            bNIDDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // sodienthoaiDataGridViewTextBoxColumn1
+            // 
+            sodienthoaiDataGridViewTextBoxColumn1.DataPropertyName = "sodienthoai";
+            sodienthoaiDataGridViewTextBoxColumn1.HeaderText = "Phone Number";
+            sodienthoaiDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            sodienthoaiDataGridViewTextBoxColumn1.Name = "sodienthoaiDataGridViewTextBoxColumn1";
+            sodienthoaiDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // tenbenhnhanDataGridViewTextBoxColumn1
+            // 
+            tenbenhnhanDataGridViewTextBoxColumn1.DataPropertyName = "tenbenhnhan";
+            tenbenhnhanDataGridViewTextBoxColumn1.HeaderText = "Patient's Name";
+            tenbenhnhanDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            tenbenhnhanDataGridViewTextBoxColumn1.Name = "tenbenhnhanDataGridViewTextBoxColumn1";
+            tenbenhnhanDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // PharmacistPrescription
             // 
@@ -443,6 +448,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox tx_search_completed_prescription;
         private System.Windows.Forms.BindingSource listHTchoBindingSource;
+        private System.Windows.Forms.BindingSource listHTchoBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hDIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bNIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoaiDataGridViewTextBoxColumn;
@@ -451,6 +457,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bNIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoaiDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenbenhnhanDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource listHTchoBindingSource1;
     }
 }

@@ -8,6 +8,13 @@ namespace BussinessLogicTier
     public class PharmacistBUS
     {
         private static PharmacistBUS instance;
+        public string displayName;
+
+        private PharmacistBUS()
+        {
+            displayName = string.Empty;
+        }
+
         public static PharmacistBUS GetInstance()
         {
             if (instance == null)

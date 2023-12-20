@@ -21,13 +21,15 @@ namespace Hospital.Views.Pharmacist
         private int borderSize = 2;
         Bitmap myBitmap;
         private PharmacistBUS pharmacist;
-        public PharmacistRoom()
+        public PharmacistRoom(string displayName)
         {
             pharmacist = PharmacistBUS.GetInstance();
+            pharmacist.displayName = displayName;
             InitializeComponent();
             this.Padding = new Padding(borderSize);//Border size
             this.BackColor = Color.FromArgb(98, 102, 244);//Border color
             CollapseMenu();
+            
         }
 
         /// <summary>
